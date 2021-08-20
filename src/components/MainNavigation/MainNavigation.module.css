@@ -1,6 +1,4 @@
-.NavBar {
- width: 100%;  
-}
+
 
 .header {
     height: 5rem;
@@ -28,37 +26,36 @@
     color: #FFFFFF;
     }
   
-    .NavBar .MobileNavigation  {
-      display: none;
-  }
+     .NavBar .Navigation  {
+      display: flex;
+  } 
   
    
   @media (max-width: 990px) {
-      .Navigation {
+        .NavBar .Navigation {
           display:none;
-      }
+      } 
   
-      .MobileNavigation {
+      .NavBar .MobileNavigation {
           display: flex;
           align-items: center;
           background-color: #2C7A7A ;
       }
   
-      .Hamburger {
-        color:#FFF8E1;
-        size: 32px;
+      .NavBar .Hamburger {
+          display: flex;
           position: absolute;
           cursor: pointer;
           top: 1.312rem;
           right: 6.25%;
-          bottom: 18.75%;        }
+          bottom: 18.75%;       
+         }
+         
           
   }
-
-
-  .NavBar nav ul {
-    list-style: none;
-    display: flex;
+    .MobileNavigation nav ul {
+    list-style: none; 
+    display: flex; 
     flex-direction: column;
     position: absolute; 
     top: 10%; 
@@ -69,12 +66,12 @@
     border-radius: 3%;
   }
 
-  .NavBar nav ul li a{
+  .MobileNavigation nav ul li a{
     text-decoration: none;
     font-size: 3rem;
     font-weight: 700;
     color: #FFF8E1;
+  } 
 
 
-
-  }
+ 

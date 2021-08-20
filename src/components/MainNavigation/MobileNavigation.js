@@ -7,17 +7,15 @@ import {RiMenu3Line} from "react-icons/ri";
 import {RiCloseLine} from "react-icons/ri"
 
 
-
-
 const MobileNavigation = () => {
-const [showMenu, setShowMenu] = useState(false);
+   const [showMenu, setShowMenu] = useState(false);
 
-const menuHandler = () => {
-    setShowMenu(!showMenu);
-}
+   const menuHandler = () => {
+       setShowMenu(!showMenu);
+   }
 
-const hamburgerIcon = <RiMenu3Line className={classes.Hamburger}  onClick={menuHandler}/>
-const closeIcon = <RiCloseLine className={classes.Hamburger} onClick={menuHandler}/>
+   const hamburgerIcon = <RiMenu3Line className={classes.Hamburger} size="32px" color="#FFF8E1" onClick={menuHandler}/>
+   const closeIcon = <RiCloseLine className={classes.Hamburger} size="32px" color="#FFF8E1" onClick={menuHandler}/>
 
 
 
