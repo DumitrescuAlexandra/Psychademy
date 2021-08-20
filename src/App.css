@@ -2,15 +2,15 @@
 h1 {
     font-size: 36px;
     position: absolute;
-width: 12rem;
-left: 15%;
-top: 20%;
-color: #FFF8E1;
-font-family: Merriweather;
-font-style: normal;
-font-weight: 520;
-font-size: 6.25rem;
-line-height: 6rem;
-letter-spacing: 0.0325em;
+    width: 12rem;
+    left: 15%;
+    top: 20%;
+    color: #FFF8E1;
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: 520;
+    font-size: 6.25rem;
+    line-height: 6rem;
+    letter-spacing: 0.0325em;
 }
 
