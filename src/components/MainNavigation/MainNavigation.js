@@ -6,7 +6,7 @@ const MainNavigation = () => {
   return (
     <div className={classes.NavBar}>
     <header className={classes.header}>
-        <span className={classes.brand}> Ciprian Pertea </span>
+        <span className={classes.brand}> Ciprian Pertea - CBT</span>
         <Navigation />
         <MobileNavigation/>
     </header>
