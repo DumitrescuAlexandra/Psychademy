@@ -3,47 +3,47 @@ import classes from "./NavigationButtons.module.css";
 import { Fragment } from "react";
 
 const NavigationButtons = () => {
-    return (
+  return (
     <Fragment>
-        <div className={classes.navigation_buttons}>
-            <div className={classes.nav_card}>
-                <div className={classes.nav_icon}>
-                    <img src={"/Images/about.svg"} alt={"about"} ></img>
-                </div>
-                    <div >
-                        <span className={classes.nav_btn}> About </span>
-                    </div>
-                <div className={classes.nav_next}>
-                    <img src={"/Images/arrow.svg"} alt={"arrow"} ></img>
-                </div>
-            </div>
-        
-            <div className={classes.nav_card}>
-                <div className={classes.nav_icon}>
-                    <img src={"/Images/services.svg"} alt={"services"} ></img>
-                </div>
-            <div >
-                <span className={classes.nav_btn}> Services </span>
-            </div>
-            <div className={classes.nav_next}>
-                <img src={"/Images/arrow.svg"} alt={"arrow"} ></img>
-            </div>
+      <div className={classes.navigation_buttons}>
+        <div className={classes.nav_card}>
+          <div className={classes.nav_icon}>
+            <img src={"/Images/about.svg"} alt={"about"}></img>
+          </div>
+          <div>
+            <span className={classes.nav_btn}> About </span>
+          </div>
+          <div className={classes.nav_next}>
+            <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
+          </div>
         </div>
-        
-                <div className={classes.nav_card}>
-                    <div className={classes.nav_icon}>
-                        <img src={"/Images/contact.svg"} alt={"contact"} ></img>
-                    </div>
-                <div >
-                    <span className={classes.nav_btn}> Contact </span>
-                </div>
-                    <div className={classes.nav_next}>
-                        <img src={"/Images/arrow.svg"} alt={"arrow"} ></img>
-                    </div>
-            </div>
-            </div>
-        
-    </Fragment>)
-}
+
+        <div className={classes.nav_card}>
+          <div className={classes.nav_icon}>
+            <img src={"/Images/services.svg"} alt={"services"}></img>
+          </div>
+          <div>
+            <span className={classes.nav_btn}> Services </span>
+          </div>
+          <div className={classes.nav_next}>
+            <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
+          </div>
+        </div>
+
+        <div className={classes.nav_card}>
+          <div className={classes.nav_icon}>
+            <img src={"/Images/contact.svg"} alt={"contact"}></img>
+          </div>
+          <div>
+            <span className={classes.nav_btn}> Contact </span>
+          </div>
+          <div className={classes.nav_next}>
+            <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+  );
+};
 
 export default NavigationButtons;
