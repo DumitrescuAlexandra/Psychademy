@@ -6,6 +6,7 @@ const Navigation = () => {
         <nav className={classes.Navigation}>
             <NavLinks />
         </nav>
+        
     );
 }
 

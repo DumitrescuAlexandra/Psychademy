@@ -1,7 +1,17 @@
-.nav_btn {
+.navigation_buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+}
 
-height: 48px;
+.nav_card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
 width: 274px;
+height: 48px;
 margin-left: 48px;
 margin-right: 48px;
 margin-top: 356px;
@@ -9,18 +19,40 @@ border-radius: 8px;
 
 background: #054343;
 border: 1px solid #387359;
+}
 
+.nav_btn {
 
-position: absolute;
 font-family: Lato;
 font-style: normal;
 font-weight: bold;
 font-size: 18px;
 color: #FFF8E1;
 line-height: 28px;
+background: inherit;
 }
 
 
 
+.nav_icon {
+    height: 19px;
+width: 21px;
+left: 1px;
+top: 2px;
+border-radius: 0px;
 
+padding-left: 6%;
+left: 4.17%;
+right: 8.33%;
+top: 8.33%;
+bottom: 12.5%;
+}
+
+.nav_next {
+    padding: 15px;
+    left: 68.92%;
+right: -49.85%;
+top: 12.5%;
+bottom: 43.38%;
+}
 
