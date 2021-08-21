@@ -1,16 +1,17 @@
 
-h1 {
-    font-size: 36px;
+p  {
     position: absolute;
-    width: 12rem;
-    left: 15%;
-    top: 20%;
-    color: #FFF8E1;
+    width: 196px;
+    height: 135px;
+    left: 51px;
+    top: 81px;
+    z-index: 1;
+    
     font-family: Merriweather;
     font-style: normal;
-    font-weight: 520;
-    font-size: 6.25rem;
-    line-height: 6rem;
-    letter-spacing: 0.0325em;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+    color: #FFF8E1;
 }
 

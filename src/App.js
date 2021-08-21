@@ -2,17 +2,15 @@ import './App.css';
 import { Fragment } from 'react';
 
 import MainNavigation from './components/MainNavigation/MainNavigation';
-// import NavigationButton from './components/MainNavigation/NavigationButton';
+import NavigationButtons from './components/MainNavigation/NavigationButtons';
 
 
 function App() {
   return (<Fragment>
     <MainNavigation />
-    <h1> Adapt. Improvise. Overcome.</h1>
-    {/* <NavigationButton>dsadsadsadsa</NavigationButton>
-    <NavigationButton>dsadsadsa</NavigationButton>
-    <NavigationButton>dsadsadsadsa</NavigationButton>
-    <NavigationButton>dsadsaad</NavigationButton> */}
+    <div ><p className={".motto"}> Adapt. Improvise. Overcome.</p></div>
+    <NavigationButtons>dsadsadsadsa</NavigationButtons>
+    
     </Fragment>
   );
 }

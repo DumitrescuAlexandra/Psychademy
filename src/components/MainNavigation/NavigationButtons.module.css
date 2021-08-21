@@ -1,0 +1,26 @@
+.nav_btn {
+
+height: 48px;
+width: 274px;
+margin-left: 48px;
+margin-right: 48px;
+margin-top: 356px;
+border-radius: 8px;
+
+background: #054343;
+border: 1px solid #387359;
+
+
+position: absolute;
+font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+color: #FFF8E1;
+line-height: 28px;
+}
+
+
+
+
+

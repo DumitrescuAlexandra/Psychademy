@@ -1,27 +1,21 @@
-.header {
-    height: 5rem;
-    display: flex;
-    padding: 0 10%;
-    justify-content: space-between;
-    align-items: center;
-  }
+
   
   .brand {
-    width: 100%;
-    height: 1.18rem;
-    left: 2rem;
-    top: 1.312rem;
-    padding-top: 0.3rem;
+    position: absolute;
+width: 131px;
+height: 19px;
+left: 24px;
+top: 19px;
 
-    font-style: normal;
-    font-weight: bold;
-    font-size: 2.3rem;
-    line-height: 2.18rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: 0.015em;
+text-transform: uppercase;
 
-
-    color: #FFFFFF;
+color: #FFFFFF;
     }
   
      .NavBar .Navigation  {
@@ -63,6 +57,8 @@
     padding: 10% 5%;
     background-color: #2C7A7A;
     border-radius: 3%;
+    overflow: visible;
+z-index: 2;
   }
     
   .NavLinks ul {
@@ -74,6 +70,11 @@
     font-size: 3rem;
     font-weight: 700;
     color: #FFF8E1;
+  }
+
+  .NavLinks li a:hover{
+    color: #FF9D46;
+    border-bottom: #FF9D46 solid 2px;
   }
 
  

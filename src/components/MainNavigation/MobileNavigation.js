@@ -14,8 +14,8 @@ const MobileNavigation = () => {
        setShowMenu(!showMenu);
    }
 
-   const hamburgerIcon = <RiMenu3Line className={classes.Hamburger} size="32px" color="#FFF8E1" onClick={menuHandler}/>
-   const closeIcon = <RiCloseLine className={classes.Hamburger} size="32px" color="#FFF8E1" onClick={menuHandler}/>
+   const hamburgerIcon = <RiMenu3Line className={classes.Hamburger} size="24px" color="#FFF8E1" onClick={menuHandler}/>
+   const closeIcon = <RiCloseLine className={classes.Hamburger} size="24px" color="#FFF8E1" onClick={menuHandler}/>
 
 
 
