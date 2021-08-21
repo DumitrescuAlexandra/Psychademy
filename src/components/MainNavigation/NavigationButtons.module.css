@@ -20,6 +20,10 @@
   background: #054343;
   border: 1px solid #387359;
 }
+.nav_card:last-child {
+  margin-top: 60px;
+  background: #78ddb1;
+}
 
 .nav_btn {
   font-family: Lato;
@@ -27,6 +31,15 @@
   font-weight: bold;
   font-size: 18px;
   color: #fff8e1;
+  line-height: 28px;
+  background: inherit;
+}
+.nav_btn_dark {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  color: #074343;
   line-height: 28px;
   background: inherit;
 }

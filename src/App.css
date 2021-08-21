@@ -1,17 +1,38 @@
+p {
+  position: absolute;
+  width: 196px;
+  height: 135px;
+  left: 51px;
+  top: 81px;
+  z-index: 1;
 
-p  {
-    position: absolute;
-    width: 196px;
-    height: 135px;
-    left: 51px;
-    top: 81px;
-    z-index: 1;
-    
-    font-family: Merriweather;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 45px;
-    color: #FFF8E1;
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 45px;
+  color: #fff8e1;
 }
 
+.text_box {
+  height: 72px;
+  width: 274px;
+  left: 51px;
+  top: 228px;
+  border-radius: nullpx;
+}
+
+h2 {
+  position: absolute;
+  width: 274px;
+  height: 72px;
+  left: 51px;
+  top: 228px;
+
+  color: #ffffff;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}

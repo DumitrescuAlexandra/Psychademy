@@ -41,6 +41,18 @@ const NavigationButtons = () => {
             <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
           </div>
         </div>
+
+        <div className={classes.nav_card}>
+          <div className={classes.nav_icon}>
+            <img src={"/Images/patient-dark.svg"} alt={"patient"}></img>
+          </div>
+          <div>
+            <span className={classes.nav_btn_dark}> Patient zone </span>
+          </div>
+          <div className={classes.nav_next}>
+            <img src={"/Images/arrow-dark.svg"} alt={"arrow"}></img>
+          </div>
+        </div>
       </div>
     </Fragment>
   );
