@@ -1,3 +1,8 @@
+.navBar {
+  display: flex;
+  justify-content: space-between;
+}
+
 .brand {
   position: absolute;
   width: 131px;
@@ -8,17 +13,7 @@
   color: #ffffff;
 }
 
-.NavBar .Navigation {
-  display: flex;
-}
-
-.NavBar .MobileNavigation {
-  display: flex;
-  align-items: center;
-  background-color: #2c7a7a;
-}
-
-.NavBar .Hamburger {
+.hamburger {
   display: flex;
   position: absolute;
   cursor: pointer;
@@ -27,7 +22,13 @@
   bottom: 18.75%;
 }
 
-.NavLinks {
+.navBar .mobileNavigation {
+  display: flex;
+  align-items: center;
+  background-color: #2c7a7a;
+}
+
+.navLinks {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -42,24 +43,24 @@
   z-index: 2;
 }
 
-.NavLinks ul {
+.navLinks ul {
   list-style: none;
 }
 
-.NavLinks a {
+.navLinks a {
   text-decoration: none;
   font-size: 3rem;
   font-weight: 700;
   color: #fff8e1;
 }
 
-.NavLinks li a:hover {
+.navLinks li a:hover {
   color: #ff9d46;
   border-bottom: #ff9d46 solid 2px;
 }
 
 @media (max-width: 990px) {
-  .NavBar .Navigation {
+  .navBar .navigation {
     display: none;
   }
 }

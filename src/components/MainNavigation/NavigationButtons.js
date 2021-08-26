@@ -10,7 +10,7 @@ const NavigationButtons = () => {
           <div className={classes.nav_icon}>
             <img src={"/Images/about.svg"} alt={"about"}></img>
           </div>
-          <div className={classes.nav_btn}>About </div>
+          <div className={classes.nav_btn}>About&nbsp;&nbsp;&nbsp; </div>
           <div className={classes.nav_next}>
             <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
           </div>
