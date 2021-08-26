@@ -20,7 +20,7 @@
   border: 1px solid #387359;
 }
 .nav_card:last-child {
-  margin-top: 60px;
+  margin-top: 16%;
   background: #78ddb1;
 }
 
@@ -29,7 +29,6 @@
   font-size: 1.2rem;
   color: #fff8e1;
   line-height: 1.75rem;
-  background: inherit;
 }
 .nav_btn_dark {
   font-family: Lato;
@@ -38,27 +37,15 @@
   font-size: 1.2rem;
   color: #074343;
   line-height: 1.75rem;
-  background: inherit;
 }
 
 .nav_icon {
   height: 19px;
   width: 21px;
-  left: 1px;
-  top: 2px;
-  border-radius: 0px;
 
-  padding-left: 6%;
-  left: 4.17%;
-  right: 8.33%;
-  top: 8.33%;
-  bottom: 12.5%;
+  padding-left: 8%;
 }
 
 .nav_next {
-  padding: 15px;
-  left: 68.92%;
-  right: -49.85%;
-  top: 12.5%;
-  bottom: 43.38%;
+  padding: 8%;
 }
