@@ -10,10 +10,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 75%;
   height: 48px;
-  width: 274px;
-  height: 48px;
-  margin-top: 12px;
+  margin-top: 4%;
   border-radius: 8px;
 
   background: #054343;
@@ -29,10 +28,9 @@
   font-size: 1.2rem;
   color: #fff8e1;
   line-height: 1.75rem;
+  padding-right: 15%;
 }
 .nav_btn_dark {
-  font-family: Lato;
-  font-style: normal;
   font-weight: bold;
   font-size: 1.2rem;
   color: #074343;
@@ -47,5 +45,5 @@
 }
 
 .nav_next {
-  padding: 8%;
+  padding-right: 8%;
 }

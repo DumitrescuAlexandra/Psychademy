@@ -10,9 +10,7 @@ const NavigationButtons = () => {
           <div className={classes.nav_icon}>
             <img src={"/Images/about.svg"} alt={"about"}></img>
           </div>
-          <div>
-            <span className={classes.nav_btn}> About </span>
-          </div>
+          <div className={classes.nav_btn}>About </div>
           <div className={classes.nav_next}>
             <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
           </div>
@@ -22,9 +20,7 @@ const NavigationButtons = () => {
           <div className={classes.nav_icon}>
             <img src={"/Images/services.svg"} alt={"services"}></img>
           </div>
-          <div>
-            <span className={classes.nav_btn}> Services </span>
-          </div>
+          <div className={classes.nav_btn}>Services </div>
           <div className={classes.nav_next}>
             <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
           </div>
@@ -34,9 +30,7 @@ const NavigationButtons = () => {
           <div className={classes.nav_icon}>
             <img src={"/Images/contact.svg"} alt={"contact"}></img>
           </div>
-          <div>
-            <span className={classes.nav_btn}> Contact </span>
-          </div>
+          <div className={classes.nav_btn}>Contact </div>
           <div className={classes.nav_next}>
             <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
           </div>
@@ -46,9 +40,7 @@ const NavigationButtons = () => {
           <div className={classes.nav_icon}>
             <img src={"/Images/patient-dark.svg"} alt={"patient"}></img>
           </div>
-          <div>
-            <span className={classes.nav_btn_dark}> Patient zone </span>
-          </div>
+          <div className={classes.nav_btn_dark}> Patient zone </div>
           <div className={classes.nav_next}>
             <img src={"/Images/arrow-dark.svg"} alt={"arrow"}></img>
           </div>
