@@ -8,11 +8,13 @@ function App() {
   return (
     <Fragment>
       <MainNavigation />
-      <p className={".motto"}> Adapt. Improvise. Overcome.</p>
-      <h2>
-        I can help you gain control over your cognitive resources and
-        mastercraft your destiny.
-      </h2>
+      <div className={".hero"}>
+        <p className={".title"}> Adapt. Improvise. Overcome.</p>
+        <p className={".motto"}>
+          I can help you gain control over your cognitive resources and
+          mastercraft your destiny.
+        </p>
+      </div>
       <NavigationButtons />
     </Fragment>
   );

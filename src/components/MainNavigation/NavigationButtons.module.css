@@ -1,9 +1,8 @@
 .navigation_buttons {
   display: flex;
   flex-direction: column;
-  margin-top: 356px;
-  margin-left: 48px;
-  margin-right: 48px;
+  align-items: center;
+  margin-top: 40vh;
 }
 
 .nav_card {
@@ -26,21 +25,19 @@
 }
 
 .nav_btn {
-  font-family: Lato;
-  font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.2rem;
   color: #fff8e1;
-  line-height: 28px;
+  line-height: 1.75rem;
   background: inherit;
 }
 .nav_btn_dark {
   font-family: Lato;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.2rem;
   color: #074343;
-  line-height: 28px;
+  line-height: 1.75rem;
   background: inherit;
 }
 

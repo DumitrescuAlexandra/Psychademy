@@ -1,80 +1,65 @@
+.brand {
+  position: absolute;
+  width: 131px;
+  height: 19px;
+  left: 24px;
+  top: 19px;
 
-  
-  .brand {
-    position: absolute;
-width: 131px;
-height: 19px;
-left: 24px;
-top: 19px;
+  color: #ffffff;
+}
 
-font-family: Lato;
-font-style: normal;
-font-weight: bold;
-font-size: 16px;
-line-height: 19px;
-letter-spacing: 0.015em;
-text-transform: uppercase;
+.NavBar .Navigation {
+  display: flex;
+}
 
-color: #FFFFFF;
-    }
-  
-     .NavBar .Navigation  {
-      display: flex;
-  } 
-  
-   
-  @media (max-width: 990px) {
-        .NavBar .Navigation {
-          display:none;
-      } 
-  
-      .NavBar .MobileNavigation {
-          display: flex;
-          align-items: center;
-          background-color: #2C7A7A ;
-      }
-  
-      .NavBar .Hamburger {
-          display: flex;
-          position: absolute;
-          cursor: pointer;
-          top: 1.312rem;
-          right: 6.25%;
-          bottom: 18.75%;       
-         }
-         
-         
+.NavBar .MobileNavigation {
+  display: flex;
+  align-items: center;
+  background-color: #2c7a7a;
+}
+
+.NavBar .Hamburger {
+  display: flex;
+  position: absolute;
+  cursor: pointer;
+  top: 1.312rem;
+  right: 6.25%;
+  bottom: 18.75%;
+}
+
+.NavLinks {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 75%;
+  top: 8%;
+  line-height: 6rem;
+  left: 8%;
+  padding: 10% 5%;
+  background-color: #2c7a7a;
+  border-radius: 3%;
+  overflow: visible;
+  z-index: 2;
+}
+
+.NavLinks ul {
+  list-style: none;
+}
+
+.NavLinks a {
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff8e1;
+}
+
+.NavLinks li a:hover {
+  color: #ff9d46;
+  border-bottom: #ff9d46 solid 2px;
+}
+
+@media (max-width: 990px) {
+  .NavBar .Navigation {
+    display: none;
   }
-
-  .NavLinks {
-    display: flex; 
-    flex-direction: column;
-    position: absolute; 
-    width: 75%;
-    top: 8%; 
-    line-height: 6rem;
-    left: 8%;
-    padding: 10% 5%;
-    background-color: #2C7A7A;
-    border-radius: 3%;
-    overflow: visible;
-z-index: 2;
-  }
-    
-  .NavLinks ul {
-    list-style: none;
-  }
-
-  .NavLinks a{
-    text-decoration: none;
-    font-size: 3rem;
-    font-weight: 700;
-    color: #FFF8E1;
-  }
-
-  .NavLinks li a:hover{
-    color: #FF9D46;
-    border-bottom: #FF9D46 solid 2px;
-  }
-
- 
+}
