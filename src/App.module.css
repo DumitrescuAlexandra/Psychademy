@@ -6,7 +6,6 @@
 
 body {
   display: flex;
-  flex-direction: column;
 
   font-family: "Lato", sans-serif;
   font-size: 16px;
@@ -17,30 +16,28 @@ body {
 }
 
 .hero {
+  padding-top: 22.5%;
+  padding-left: 15%;
+
+  flex-wrap: wrap;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .title {
-  width: 75%;
-  height: 55%;
-  left: 20;
-  top: 32%;
-  z-index: 1;
+  padding-right: 35.5%;
+  padding-bottom: 3.5%;
 
   font-family: Merriweather;
-  font-style: normal;
-  font-weight: bold;
+  font-weight: 550;
   font-size: 2.25rem;
   line-height: 3rem;
   color: #fff8e1;
 }
 
 .motto {
-  width: 274px;
-  height: 72px;
-  left: 51px;
-  top: 228px;
+  padding-right: 15%;
 
   color: #ffffff;
   font-family: Lato;

@@ -1,4 +1,4 @@
-import "./App.css";
+import classes from "./App.module.css";
 import { Fragment } from "react";
 
 import MainNavigation from "./components/MainNavigation/MainNavigation";
@@ -8,9 +8,9 @@ function App() {
   return (
     <Fragment>
       <MainNavigation />
-      <div className={".hero"}>
-        <p className={".title"}> Adapt. Improvise. Overcome.</p>
-        <p className={".motto"}>
+      <div className={classes.hero}>
+        <p className={classes.title}> Adapt. Improvise. Overcome.</p>
+        <p className={classes.motto}>
           I can help you gain control over your cognitive resources and
           mastercraft your destiny.
         </p>
