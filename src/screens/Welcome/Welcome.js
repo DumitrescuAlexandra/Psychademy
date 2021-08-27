@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import classes from "./Welcome.module.css";
 
-import MainNavigation from "../components/MainNavigation/MainNavigation";
-import NavigationButtons from "../components/MainNavigation/NavigationButtons";
+import MainNavigation from "../../components/MainNavigation/MainNavigation";
+import NavigationButtons from "../../components/MainNavigation/NavigationButtons";
 
 const Welcome = () => {
   return (

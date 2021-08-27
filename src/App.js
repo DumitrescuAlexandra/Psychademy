@@ -1,7 +1,7 @@
 import "./App.css";
 import { Fragment } from "react";
 
-import Welcome from "./Home page/Welcome";
+import Welcome from "./screens/Welcome/Welcome";
 
 function App() {
   return (
