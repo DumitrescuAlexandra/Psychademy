@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import classes from "./MainNavigation.module.css";
 
 const NavLinks = () => {
@@ -6,16 +8,16 @@ const NavLinks = () => {
       <p> Menu </p>
       <ul>
         <li>
-          <a href="/#About">About </a>
+          <Link to="/About">About </Link>
         </li>
         <li>
-          <a href="/#Services">Services</a>
+          <Link to="/Services">Services</Link>
         </li>
         <li>
-          <a href="/#Contact">Contact</a>
+          <Link to="/Contact">Contact</Link>
         </li>
         <li>
-          <a href="/#PatientZone">Patient zone</a>
+          <Link to="/PatientZone">Patient Login</Link>
         </li>
       </ul>
     </div>

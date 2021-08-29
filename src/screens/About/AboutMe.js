@@ -11,9 +11,7 @@ const AboutMe = () => {
           <p className={classes.therapistName}>
             {" "}
             Ciprian Pertea{" "}
-            <br>
-              <span className={classes.profession}>Psychotherapist</span>
-            </br>
+            <span className={classes.profession}>Psychotherapist</span>
           </p>
         </div>
         <div className={classes.aboutMe}>
@@ -30,7 +28,7 @@ const AboutMe = () => {
           </div>
           <div className={classes.edField}>
             <img src={"/Images/bachelors.svg"} alt={"bachelors"}></img>
-            <p> Master's degree</p>
+            <p> Bachelor's degree</p>
           </div>
         </div>
       </div>

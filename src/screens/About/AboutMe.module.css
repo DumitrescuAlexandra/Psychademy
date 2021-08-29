@@ -11,6 +11,11 @@
 }
 
 .therapistCard img {
+  height: 25%;
+  width: 25%;
+}
+
+.therapistCard img {
   padding: 5%;
   border-radius: 50%;
 }
