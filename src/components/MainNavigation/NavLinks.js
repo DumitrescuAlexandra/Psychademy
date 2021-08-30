@@ -17,7 +17,7 @@ const NavLinks = () => {
           <Link to="/Contact">Contact</Link>
         </li>
         <li>
-          <Link to="/PatientZone">Patient Login</Link>
+          <Link to="/PatientLogin">Patient Login</Link>
         </li>
       </ul>
     </div>

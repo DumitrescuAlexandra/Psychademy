@@ -1,3 +1,36 @@
 .aboutBtn {
   display: flex;
+  align-items: center;
+}
+
+.aboutBtn a {
+  text-decoration: none;
+}
+
+.btn_aboutMe,
+.btn_aboutCBT {
+  text-align: center;
+  margin-top: 30%;
+  margin-left: 7%;
+  padding: 1.5%;
+  border-radius: 36px;
+  width: 7.5rem;
+  height: 2.5rem;
+  background-color: #487676;
+  color: #aae9e9;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.btn_aboutCBT {
+  margin-left: 3.5%;
+}
+
+.btn_aboutMe:hover,
+.btn_aboutMe:active,
+.btn_aboutCBT:hover,
+.btn_aboutCBT:active {
+  background-color: #78ddb1;
+  color: #074343;
 }

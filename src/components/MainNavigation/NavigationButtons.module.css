@@ -24,6 +24,30 @@
   background: #78ddb1;
 }
 
+.nav_card:hover {
+  text-shadow: 1.2px 1.2px 5px #141414;
+  background-color: #053737;
+  background-image: linear-gradient(#fff8e1, #ffffff),
+    linear-gradient(transparent, transparent);
+  background-size: 2 3px, auto;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  transition: all 0.3s ease-out;
+  background-size: 100% 3px, auto;
+}
+
+.nav_card:last-child:hover {
+  text-shadow: none;
+  background: #0cc072;
+  background-image: linear-gradient(#ff9d46, #ff9d46),
+    linear-gradient(transparent, transparent);
+  background-size: 2 3px, auto;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  transition: all 0.3s ease-out;
+  background-size: 100% 3px, auto;
+}
+
 .nav_btn {
   font-weight: bold;
   font-size: 1.2rem;

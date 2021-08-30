@@ -1,9 +1,12 @@
 import React from "react";
 import classes from "./NotFound.module.css";
+import { useHistory } from "react-router";
 
 const NotFound = () => {
+  const history = useHistory();
+
   const backHandler = () => {
-    console.log("redirection!!!");
+    history.push("/welcome");
   };
 
   return (

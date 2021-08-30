@@ -1,9 +1,9 @@
-import React, { Fragment } from "react";
+import React from "react";
 import classes from "./AboutMe.module.css";
 
 const AboutMe = () => {
   return (
-    <Fragment>
+    <div className={classes.therapistPage}>
       <div className={classes.therapist}>
         <div className={classes.therapistCard}>
           <img src={"/Images/therapist.jpg"} alt={"profile"}></img>
@@ -32,7 +32,7 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-    </Fragment>
+    </div>
   );
 };
 

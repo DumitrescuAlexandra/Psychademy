@@ -1,23 +1,33 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import classes from "./Buttons.module.css";
 
 const AboutButtons = () => {
+  const showAboutHandler = (event) => {
+    // event.preventDefault();
+    console.log("Activated!");
+  };
+
   return (
     <div className={classes.aboutBtn}>
-      <ul>
-        <li>
-          <NavLink activeClassName={classes.active} to="/aboutMe">
-            {" "}
-            About Me
-          </NavLink>
-        </li>
-        <li>
-          <NavLink activeClassName={classes.active} to="/aboutCNT">
-            {" "}
-            About CBT
-          </NavLink>
-        </li>
-      </ul>
+      <Link
+        className={classes.btn_aboutMe}
+        to="/about/aboutMe"
+        exact
+        onClick={showAboutHandler}
+      >
+        {" "}
+        About Me
+      </Link>
+
+      <Link
+        className={classes.btn_aboutCBT}
+        to="/about/aboutCBT"
+        exact
+        onClick={showAboutHandler}
+      >
+        {" "}
+        About CBT
+      </Link>
     </div>
   );
 };
