@@ -4,12 +4,6 @@
   align-items: center;
 }
 
-.therapist {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .therapistCard {
   display: flex;
   align-items: center;
@@ -47,9 +41,29 @@
   margin-left: 12px;
 }
 
+.theStory {
+  margin-left: 7vw;
+  margin-right: 7vw;
+  /* text-align: justify; */
+  line-height: 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #fff8e1;
+}
+.theStory p {
+  margin-bottom: 7.5%;
+}
+
+.therapist {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .aboutMe {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  margin: 5% auto 5% 7vw;
 }
 
 .aboutMe p {
@@ -65,4 +79,17 @@
 
 .edField {
   display: flex;
+  margin-top: 3%;
+  margin-left: 7vw;
+}
+
+.edField p {
+  font-size: 1rem;
+  color: #6ea5a5;
+  margin-left: 7vw;
+  margin-bottom: 1rem;
+  letter-spacing: -0.75px;
+}
+.edField:last-child {
+  margin-bottom: 3rem;
 }

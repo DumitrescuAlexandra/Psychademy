@@ -10,8 +10,8 @@
 .btn_aboutMe,
 .btn_aboutCBT {
   text-align: center;
-  margin-top: 30%;
-  margin-left: 7%;
+  margin-top: 10vh;
+  margin-left: min(7vw, 20vw);
   padding: 1.5%;
   border-radius: 36px;
   width: 7.5rem;

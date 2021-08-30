@@ -5,6 +5,8 @@ import { Fragment } from "react";
 
 import Welcome from "./screens/Welcome/Welcome";
 import About from "./screens/About/About";
+import AboutMe from "./screens/About/AboutMe";
+import AboutCBT from "./screens/About/AboutCBT";
 import Services from "./screens/Services/Services";
 import Contact from "./screens/Contact/Contact";
 import PatientLogin from "./screens/PatientLogin/PatientLogin";
@@ -20,8 +22,14 @@ function App() {
         <Route path="/welcome">
           <Welcome />
         </Route>
-        <Route path="/about" exact>
+        <Route path="/about">
           <About />
+          <Route path="/about/aboutMe" exact>
+            <AboutMe />
+          </Route>
+          <Route path="/about/aboutCBT" exact>
+            <AboutCBT />
+          </Route>
         </Route>
         <Route path="/services">
           <Services />

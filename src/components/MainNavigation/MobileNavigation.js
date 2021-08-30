@@ -32,6 +32,7 @@ const MobileNavigation = () => {
 
   return (
     <nav className={classes.mobileNavigation}>
+      <span className={classes.brand}> CIPRIAN PERTEA </span>
       {showMenu ? closeIcon : hamburgerIcon}
       {showMenu && <NavLinks />}
     </nav>
