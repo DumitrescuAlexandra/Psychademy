@@ -11,16 +11,20 @@ function FAQ({ faq, index, toggleFaq }) {
       <div className={classes.faq_question}>
         {" "}
         {faq.question}{" "}
-        <img
-          src={"/Images/downArrow.svg"}
-          alt={"down"}
-          classname={classes.arrDown}
-        ></img>
-        <img
-          src={"/Images/upArrow.svg"}
-          alt={"down"}
-          classname={classes.arrUp}
-        ></img>
+        {!faq.open && (
+          <img
+            src={"/Images/downArrow.svg"}
+            alt={"down"}
+            classname={classes.arrDown}
+          ></img>
+        )}
+        {faq.open && (
+          <img
+            src={"/Images/upArrow.svg"}
+            alt={"down"}
+            classname={classes.arrUp}
+          ></img>
+        )}
       </div>
       <div className={classes.faq_answer}> {faq.answer}</div>
     </div>

@@ -37,6 +37,7 @@
 .faqs .faq .faq_question {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   cursor: pointer;
 
   transition: all 0.4s ease;
@@ -51,7 +52,6 @@
 
 .faqs .faq .faq_question .img {
   position: absolute;
-  align-self: center;
   transform: translateY(-50%);
   margin-top: 50%;
   width: 30px;
