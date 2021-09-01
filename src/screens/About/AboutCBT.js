@@ -1,36 +1,17 @@
-import React, { Fragment } from "react";
+import React from "react";
 import classes from "./AboutCBT.module.css";
 
 import BackArrow from "../../UI/Buttons/BackArrow";
 import MobileNavigation from "../../components/MainNavigation/MobileNavigation";
+import Dropdown from "./Dropdown/Dropdown";
 
 const AboutCBT = () => {
   return (
-    <Fragment>
+    <div className={classes.aboutCBT}>
       <BackArrow />
       <MobileNavigation />
-      <div className={classes.aboutTitle}></div>
-      <div className={classes.dropdownItem}>
-        <div className={classes.dropdownFAQ}></div>
-        <div className={classes.dropdownAnswer}></div>
-      </div>
-      <div className={classes.dropdownItem}>
-        <div className={classes.dropdownFAQ}></div>
-        <div className={classes.dropdownAnswer}></div>
-      </div>
-      <div className={classes.dropdownItem}>
-        <div className={classes.dropdownFAQ}></div>
-        <div className={classes.dropdownAnswer}></div>
-      </div>
-      <div className={classes.dropdownItem}>
-        <div className={classes.dropdownFAQ}></div>
-        <div className={classes.dropdownAnswer}></div>
-      </div>
-      <div className={classes.dropdownItem}>
-        <div className={classes.dropdownFAQ}></div>
-        <div className={classes.dropdownAnswer}></div>
-      </div>
-    </Fragment>
+      <Dropdown />
+    </div>
   );
 };
 

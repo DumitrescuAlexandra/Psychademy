@@ -12,15 +12,15 @@
   text-align: center;
   margin-top: 10vh;
   margin-left: min(7vw, 20vw);
-  padding: 1.5%;
+  padding: 2%;
   border-radius: 36px;
   width: 7.5rem;
   height: 2.5rem;
   background-color: #487676;
   color: #aae9e9;
   border: none;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 .btn_aboutCBT {

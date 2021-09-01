@@ -23,7 +23,9 @@
   margin-top: 12%;
   background: #78ddb1;
 }
-
+.nav_card a {
+  text-decoration: none;
+}
 .nav_card:hover {
   text-shadow: 1.2px 1.2px 5px #141414;
   background-color: #053737;

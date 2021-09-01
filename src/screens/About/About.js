@@ -10,8 +10,6 @@ const About = () => {
     <Fragment>
       <div className={classes.navBar}></div>
       <div className={classes.title}></div>
-      {/* <button className={classes.btn_aboutMe}>About me</button>
-      <button className={classes.btn_aboutCBT}>About CBT</button> */}
       <AboutButtons />
       <AboutMe></AboutMe>
       <AboutCBT></AboutCBT>
