@@ -29,8 +29,9 @@
   padding: 12px;
 }
 
-.faqs .faq_open .faq_question {
+.faqs .faq.open .faq_question {
   margin-bottom: 12px;
+  background-color: lightcoral;
 }
 
 .faqs .faq .faq_question {

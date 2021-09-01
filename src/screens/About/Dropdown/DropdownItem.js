@@ -4,7 +4,7 @@ import classes from "./Dropdown.module.css";
 function FAQ({ faq, index, toggleFaq }) {
   return (
     <div
-      className={classes.faq + (faq.open ? ".open" : "")}
+      className={`${classes.faq}` + `${faq.open ? ".open" : ""}`}
       key={index}
       onClick={() => toggleFaq(index)}
     >
