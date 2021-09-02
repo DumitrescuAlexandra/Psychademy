@@ -1,4 +1,4 @@
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import "./App.css";
 import { Fragment } from "react";
@@ -16,18 +16,18 @@ function App() {
   return (
     <Fragment>
       <Switch>
-        <Route path="/" exact>
+        {/* <Route path="/">
           <Redirect to="/welcome" />
-        </Route>
+        </Route> */}
         <Route path="/welcome">
           <Welcome />
         </Route>
         <Route path="/about">
           <About />
-          <Route path="/about/aboutMe" exact>
+          <Route path="/about/aboutMe">
             <AboutMe />
           </Route>
-          <Route path="/about/aboutCBT" exact>
+          <Route path="/about/aboutCBT">
             <AboutCBT />
           </Route>
         </Route>

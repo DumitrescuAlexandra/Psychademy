@@ -5,7 +5,7 @@ import FAQ from "./DropdownItem";
 function Dropdown() {
   const [faqs, setFaqs] = useState([
     {
-      question: "What is cognitive and behavioral therapy (CBT)?",
+      question: "What is CBT?",
       answer:
         "Cognitive behavioral therapy (CBT) is a type of psychotherapeutic treatment that helps people learn how to identify and change destructive or disturbing thought patterns that have a negative influence on behavior and emotions. The benefits of CBT have been championed by psychologists for decades. But now, new research suggests that CBT can not only change our thought patterns, it can literally rewire our brains!",
       open: false,
@@ -52,7 +52,7 @@ function Dropdown() {
   return (
     <div className={classes.faqs}>
       {faqs.map((faq, i) => {
-        return <FAQ faq={faq} index={i} toggleFaq={toggleFaq} />;
+        return <FAQ faq={faq} index={i} key={i} toggleFaq={toggleFaq} />;
       })}
     </div>
   );
