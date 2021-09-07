@@ -35,9 +35,9 @@ function Services() {
     setCards(
       cards.map((card, i) => {
         if (i === index) {
-          card.open = !card.open;
+          card.flip = !card.flip;
         } else {
-          card.open = false;
+          card.flip = false;
         }
         return card;
       })

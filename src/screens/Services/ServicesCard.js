@@ -9,6 +9,13 @@ function ServicesCard({ card, index, toggleCard }) {
       onClick={() => toggleCard(index)}
     >
       <div className={classes.card_text}> {card.text} </div>
+      <div>
+        <img
+          className={classes.serviceIcon}
+          src={card.imgSrc}
+          alt={card.altText}
+        ></img>
+      </div>
     </div>
   );
 }

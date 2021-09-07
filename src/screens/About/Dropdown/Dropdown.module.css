@@ -1,3 +1,8 @@
+.faqs {
+  margin-top: 10%;
+  margin-left: -1rem;
+}
+
 .faq_question {
   color: #fff8e1;
   font-size: 1rem;
@@ -12,15 +17,6 @@
   line-height: 1.25rem;
   margin-top: 5%;
 }
-/* .faqs {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  max-width: 768px;
-  margin: 0 auto;
-  padding: 16px;
-} */
 
 .faqs .faq,
 .faqs .faq_open {

@@ -39,8 +39,8 @@ const ServicesAndFees = () => {
           {" "}
           Children
         </Link>
-        <Services />
       </div>
+      <Services />
     </div>
   );
 };

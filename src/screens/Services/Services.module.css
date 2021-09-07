@@ -38,6 +38,7 @@
   display: flex;
   align-items: center;
   position: relative;
+  margin: 7.5% 0;
 }
 
 .patientType a {
@@ -47,12 +48,10 @@
 .btn_adults,
 .btn_children {
   text-align: center;
-  margin-top: 10vh;
-  margin-left: min(7vw, 20vw);
-  padding: 2%;
+  padding: 1%;
   border-radius: 36px;
   width: 7.5rem;
-  height: 2.5rem;
+  height: 2rem;
   background-color: #487676;
   color: #aae9e9;
   border: none;
@@ -75,4 +74,21 @@
 .cards {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 8px;
+  margin: 0.5rem 0;
+  background-color: #1e5656;
+}
+
+.serviceIcon {
+  margin: 0.3rem;
+  width: 6rem;
+  height: 6rem;
 }
