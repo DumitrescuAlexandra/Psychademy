@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import classes from "./About.module.css";
 
 import AboutCBT from "./AboutCBT";
@@ -7,13 +7,13 @@ import AboutButtons from "../../UI/Buttons/Buttons";
 
 const About = () => {
   return (
-    <Fragment>
+    <div className={classes.aboutPage}>
       <div className={classes.navBar}></div>
       <div className={classes.title}></div>
       <AboutButtons />
       <AboutMe></AboutMe>
       <AboutCBT></AboutCBT>
-    </Fragment>
+    </div>
   );
 };
 

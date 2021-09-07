@@ -10,7 +10,7 @@ const ServicesAndFees = () => {
   };
 
   return (
-    <div>
+    <div className={classes.servicesAndFees}>
       <BackArrow />
       <p className={classes.title}>
         {" "}

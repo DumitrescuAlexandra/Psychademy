@@ -9,7 +9,7 @@
   align-items: center;
   background-color: #053737;
   height: 7.5rem;
-  margin: 10% 5% 10% 5%;
+  margin: 10% 5% 10% auto;
   border-radius: 15px;
 }
 
@@ -42,9 +42,7 @@
 }
 
 .theStory {
-  margin-left: 7vw;
   margin-right: 7vw;
-  /* text-align: justify; */
   line-height: 1.25rem;
   font-size: 0.85rem;
   font-weight: 400;
@@ -63,7 +61,7 @@
 .aboutMe {
   display: flex;
   align-items: flex-start;
-  margin: 5% auto 5% 7vw;
+  margin: 5% auto 5% 0;
 }
 
 .aboutMe p {
@@ -80,7 +78,6 @@
 .edField {
   display: flex;
   margin-top: 3%;
-  margin-left: 7vw;
 }
 
 .edField p {
