@@ -64,9 +64,7 @@
 }
 
 .btn_adults:hover,
-.btn_adults:active,
-.btn_children:hover,
-.btn_children:active {
+.btn_children:hover {
   background-color: #78ddb1;
   color: #074343;
 }

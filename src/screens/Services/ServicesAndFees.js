@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import classes from "./Services.module.css";
 import BackArrow from "../../UI/Buttons/BackArrow";
 import Services from "./Services";
 
-const ServicesAndFees = () => {
+const ServicesAndFees = (props) => {
+  // const [active, setActive] = useState(true);
+
   const pacientTypeHandler = () => {
     console.log("Patient type changed!");
+    // setActive(!active);
   };
 
   return (

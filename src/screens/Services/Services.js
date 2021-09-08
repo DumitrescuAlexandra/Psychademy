@@ -45,6 +45,26 @@ function Services() {
       price: "€75/session",
       flip: false,
     },
+    {
+      text: "Individual therapy session",
+      imgSrc: "/Images/service1.svg",
+      altText: "individual",
+      patient: "Child",
+      duration: "30-45 mins",
+      location: "office",
+      price: "€30/session",
+      flip: false,
+    },
+    {
+      text: "Clinical Psychological evaluation",
+      imgSrc: "/Images/service4.svg",
+      altText: "individual",
+      patient: "Child",
+      duration: "30-90 mins",
+      location: "office",
+      price: "€35-75",
+      flip: false,
+    },
   ]);
 
   const toggleCard = (index) => {
