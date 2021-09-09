@@ -11,10 +11,12 @@ import ServicesAndFees from "./screens/Services/ServicesAndFees";
 import Contact from "./screens/Contact/Contact";
 import PatientLogin from "./screens/PatientLogin/PatientLogin";
 import NotFound from "./screens/Not found/NotFound";
+import MainNavigation from "./components/MainNavigation/MainNavigation";
 
 function App() {
   return (
     <Fragment>
+      <MainNavigation />
       <Switch>
         <Route path="/" exact>
           <Redirect to="/welcome" />

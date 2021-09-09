@@ -1,7 +1,11 @@
+import React, { useState } from "react";
+
 import { Link } from "react-router-dom";
 import classes from "./Buttons.module.css";
 
 const AboutButtons = () => {
+  const [active, setActive] = useState("true");
+
   const showAboutHandler = (event) => {
     // event.preventDefault();
     console.log("Activated!");

@@ -1,14 +1,14 @@
 import React from "react";
 import classes from "./AboutMe.module.css";
 
-import MobileNavigation from "../../components/MainNavigation/MobileNavigation";
+// import MobileNavigation from "../../components/MainNavigation/MobileNavigation";
 import BackArrow from "../../UI/Buttons/BackArrow";
 
 const AboutMe = () => {
   return (
     <div className={classes.therapistPage}>
       <BackArrow />
-      <MobileNavigation />
+      {/* <MobileNavigation /> */}
       <div className={classes.therapist}>
         <div className={classes.therapistCard}>
           <img src={"/Images/therapist.jpg"} alt={"profile"}></img>

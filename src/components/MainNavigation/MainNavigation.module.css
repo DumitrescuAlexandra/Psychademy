@@ -4,11 +4,14 @@
 }
 
 .brand {
-  position: absolute;
-  width: 131px;
-  height: 19px;
-  left: 24px;
-  top: 19px;
+  position: relative;
+  width: 8rem;
+  height: 1.5rem;
+  left: 7vw;
+  top: 1.25rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+
   font-size: 1rem;
 
   color: #ffffff;
@@ -26,7 +29,6 @@
 .navBar .mobileNavigation {
   display: flex;
   align-items: center;
-  background-color: #2c7a7a;
 }
 
 .navLinks {

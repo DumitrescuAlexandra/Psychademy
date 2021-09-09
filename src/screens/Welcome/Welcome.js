@@ -1,13 +1,12 @@
 import React, { Fragment } from "react";
 import classes from "./Welcome.module.css";
 
-import MainNavigation from "../../components/MainNavigation/MainNavigation";
+// import MainNavigation from "../../components/MainNavigation/MainNavigation";
 import NavigationButtons from "../../components/MainNavigation/NavigationButtons";
 
 const Welcome = () => {
   return (
     <Fragment>
-      <MainNavigation />
       <div className={classes.hero}>
         <p className={classes.title}> Adapt. Improvise. Overcome.</p>
         <p className={classes.motto}>

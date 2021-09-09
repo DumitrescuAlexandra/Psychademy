@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router";
 
 import NavLinks from "./NavLinks";
 import classes from "./MainNavigation.module.css";
@@ -8,9 +9,14 @@ import { RiCloseLine } from "react-icons/ri";
 
 const MobileNavigation = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const history = useHistory();
 
   const menuHandler = () => {
     setShowMenu(!showMenu);
+  };
+
+  const logoHandler = () => {
+    history.push("/welcome");
   };
 
   const hamburgerIcon = (
@@ -32,7 +38,10 @@ const MobileNavigation = () => {
 
   return (
     <nav className={classes.mobileNavigation}>
-      <span className={classes.brand}> CIPRIAN PERTEA </span>
+      <p className={classes.brand} onClick={logoHandler}>
+        {" "}
+        PSYCHADEMY{" "}
+      </p>
       {showMenu ? closeIcon : hamburgerIcon}
       {showMenu && <NavLinks />}
     </nav>
