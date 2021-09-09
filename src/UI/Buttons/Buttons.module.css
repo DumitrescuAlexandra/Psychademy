@@ -7,8 +7,7 @@
   text-decoration: none;
 }
 
-.btn_aboutMe,
-.btn_aboutCBT {
+.btn_inactive {
   text-align: center;
   margin-top: 10vh;
   padding: 2%;
@@ -22,14 +21,14 @@
   font-weight: 600;
 }
 
-.btn_aboutCBT {
+.btn_inactive:last-child {
   margin-left: 3.5%;
 }
 
-.btn_aboutMe:hover,
-.btn_aboutMe:active,
-.btn_aboutCBT:hover,
-.btn_aboutCBT:active {
+.btn_inactive:hover,
+.btn_active,
+.btn_inactive:hover,
+.btn_active {
   background-color: #78ddb1;
   color: #074343;
 }
