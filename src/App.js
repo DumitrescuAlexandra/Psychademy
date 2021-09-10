@@ -16,7 +16,6 @@ import MainNavigation from "./components/MainNavigation/MainNavigation";
 function App() {
   return (
     <Fragment>
-      {/* <img src={"/Images/brain.svg"} alt={"brain"} className={".brain"}></img> */}
       <MainNavigation />
       <Switch>
         <Route path="/" exact>

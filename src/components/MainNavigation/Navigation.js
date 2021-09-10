@@ -1,12 +1,7 @@
-import NavLinks from "./NavLinks";
 import classes from "./MainNavigation.module.css";
 
 const Navigation = () => {
-  return (
-    <nav className={classes.navigation}>
-      <NavLinks />
-    </nav>
-  );
+  return <nav className={classes.navigation}></nav>;
 };
 
 export default Navigation;
