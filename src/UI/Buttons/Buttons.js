@@ -36,7 +36,6 @@ function Buttons() {
 
   return (
     <div className={classes.aboutSection}>
-      <BackArrow />
       <div className={classes.sectionTitle}>
         <p>Learn more about CBT</p>
         <p>therapist and therapy</p>

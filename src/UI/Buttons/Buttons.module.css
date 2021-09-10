@@ -22,6 +22,14 @@
   color: #ff9d46;
 }
 
+@media only screen and (min-width: 768px) {
+  .sectionTitle p {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    text-align: center;
+  }
+}
+
 .aboutBtn {
   width: 100%;
   display: flex;
@@ -45,9 +53,20 @@
   font-size: 0.85rem;
   font-weight: 600;
 }
-
+@media only screen and (min-width: 768px) {
+  .btn_inactive {
+    width: 8.5rem;
+    margin-top: 3rem;
+  }
+}
 .btn_inactive:last-child {
   margin-left: 3.5%;
+}
+
+@media only screen and (min-width: 768px) {
+  .btn_inactive:last-child {
+    margin-left: 7%;
+  }
 }
 
 .btn_inactive:hover,
