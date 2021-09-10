@@ -1,13 +1,24 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import React, { useState } from "react";
 import classes from "./Buttons.module.css";
+import BackArrow from "./BackArrow";
 
 function Buttons() {
   const [active, setActive] = useState({
     activeButton: null,
     buttons: [
-      { name: "About Me", path: "/about/aboutMe" },
-      { name: "About CBT", path: "/about/aboutCBT" },
+      {
+        name: "About Me",
+        path: "/about/aboutMe",
+        title1: "Learn about your",
+        title2: "personal therapist",
+      },
+      {
+        name: "About CBT",
+        path: "/about/aboutCBT",
+        title1: "Learn about the",
+        title2: "benefits of CBT",
+      },
     ],
   });
 
@@ -24,17 +35,25 @@ function Buttons() {
   };
 
   return (
-    <div className={classes.aboutBtn}>
-      {active.buttons.map((el, i) => (
-        <Link
-          key={i}
-          className={toggleActiveClass(i)}
-          onclick={toggleActiveHandler}
-          to={active.buttons[i].path}
-        >
-          {active.buttons[i].name}
-        </Link>
-      ))}
+    <div className={classes.aboutSection}>
+      <BackArrow />
+      <div className={classes.sectionTitle}>
+        <p>Learn more about CBT</p>
+        <p>therapist and therapy</p>
+      </div>
+      <div className={classes.aboutBtn}>
+        {active.buttons.map((el, i) => (
+          <NavLink
+            key={i}
+            className={toggleActiveClass(i)}
+            onClick={toggleActiveHandler}
+            to={active.buttons[i].path}
+            activeStyle={{ background: "#78ddb1", color: "#074343" }}
+          >
+            {active.buttons[i].name}
+          </NavLink>
+        ))}
+      </div>
     </div>
   );
 }

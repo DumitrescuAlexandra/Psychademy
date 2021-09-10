@@ -1,10 +1,12 @@
 import React from "react";
 import classes from "./Contact.module.css";
 import LocationMap from "../../Extras/LocationMap";
+import BackArrow from "../../UI/Buttons/BackArrow";
 
 const Contact = () => {
   return (
     <div className={classes.contactPage}>
+      <BackArrow />
       <p className={classes.contactTitle}> Contact </p>
 
       <div className={classes.contactWritten}>

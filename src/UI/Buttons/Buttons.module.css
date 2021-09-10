@@ -1,6 +1,31 @@
-.aboutBtn {
+.aboutSection {
   display: flex;
+  flex-direction: column;
   align-items: center;
+}
+
+.sectionTitle {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4vh;
+}
+
+.sectionTitle p {
+  font-family: Merriweather;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: #fff8e1;
+}
+
+.sectionTitle p:last-child {
+  color: #ff9d46;
+}
+
+.aboutBtn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .aboutBtn a {
@@ -9,11 +34,11 @@
 
 .btn_inactive {
   text-align: center;
-  margin-top: 10vh;
-  padding: 2%;
+  margin-top: 2rem;
+  padding: 1.5%;
   border-radius: 36px;
   width: 7.5rem;
-  height: 2.5rem;
+  height: 2rem;
   background-color: #487676;
   color: #aae9e9;
   border: none;
@@ -25,8 +50,6 @@
   margin-left: 3.5%;
 }
 
-.btn_inactive:hover,
-.btn_active,
 .btn_inactive:hover,
 .btn_active {
   background-color: #78ddb1;

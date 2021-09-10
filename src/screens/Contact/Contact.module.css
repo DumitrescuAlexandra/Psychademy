@@ -1,11 +1,13 @@
 .contactPage {
+  margin-left: 7vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
 .contactTitle {
-  margin: min(3.5rem) 7vw;
+  margin-top: min(2.5rem);
+  margin-bottom: min(2.5rem);
 
   font-family: Merriweather;
   font-weight: 900;
@@ -23,7 +25,6 @@
 }
 
 .write {
-  margin: auto 7vw;
   font-family: Merriweather;
   font-weight: 900;
   font-size: 1.25rem;
@@ -39,7 +40,6 @@
   align-items: center;
   justify-content: flex-start;
   margin-top: 0.5rem;
-  margin-left: 7vw;
 }
 
 .contactWhatsapp,

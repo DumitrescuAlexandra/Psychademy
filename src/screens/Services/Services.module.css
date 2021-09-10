@@ -34,19 +34,24 @@
   color: inherit;
 }
 
-.patientType {
+.clientType {
   display: flex;
   align-items: center;
   position: relative;
   margin: 7.5% 0;
 }
 
-.patientType a {
+.clientType a {
+  padding: 1%;
   text-decoration: none;
 }
 
-.btn_adults,
-.btn_children {
+.clientType a:last-child {
+  margin-left: 0.75rem;
+}
+
+.client_active,
+.client_inactive {
   text-align: center;
   padding: 2%;
   border-radius: 36px;
@@ -59,12 +64,7 @@
   font-weight: 600;
 }
 
-.btn_children {
-  margin-left: 3.5%;
-}
-
-.btn_adults:hover,
-.btn_children:hover {
+.client_inactive:hover {
   background-color: #78ddb1;
   color: #074343;
 }

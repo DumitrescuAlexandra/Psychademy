@@ -36,6 +36,8 @@ const MobileNavigation = () => {
     />
   );
 
+  const closeMobileMenu = () => setShowMenu(false);
+
   return (
     <nav className={classes.mobileNavigation}>
       <p className={classes.brand} onClick={logoHandler}>
@@ -43,7 +45,9 @@ const MobileNavigation = () => {
         PSYCHADEMY{" "}
       </p>
       {showMenu ? closeIcon : hamburgerIcon}
-      {showMenu && <NavLinks />}
+      {showMenu && (
+        <NavLinks isMobile={true} closeMobileMenu={closeMobileMenu} />
+      )}
     </nav>
   );
 };

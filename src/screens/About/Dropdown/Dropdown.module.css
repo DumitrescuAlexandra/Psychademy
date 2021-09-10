@@ -1,6 +1,11 @@
 .faqs {
-  margin-top: 10%;
-  margin-left: -1rem;
+  margin: 10% 7vw;
+}
+
+.faq {
+  margin: 1rem auto;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #377676;
 }
 
 .faq_question {
@@ -8,6 +13,7 @@
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5rem;
+  margin-right: 0.75rem;
 }
 
 .faq_answer {
@@ -15,13 +21,7 @@
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.25rem;
-  margin-top: 5%;
-}
-
-.faqs .faq,
-.faqs .faq_open {
-  margin: 8px;
-  padding: 12px;
+  margin-top: 0.75rem;
 }
 
 .faqs .faq .faq_question,
@@ -39,7 +39,6 @@
 
 .faqs .faq .faq_question .img {
   position: absolute;
-  margin-top: 50%;
   width: 30px;
   height: 30px;
 }

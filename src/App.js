@@ -16,6 +16,7 @@ import MainNavigation from "./components/MainNavigation/MainNavigation";
 function App() {
   return (
     <Fragment>
+      {/* <img src={"/Images/brain.svg"} alt={"brain"} className={".brain"}></img> */}
       <MainNavigation />
       <Switch>
         <Route path="/" exact>
@@ -26,6 +27,7 @@ function App() {
         </Route>
         <Route path="/about">
           <About />
+          <Redirect to="/about/aboutMe" />
           <Route path="/about/aboutMe">
             <AboutMe />
           </Route>
@@ -34,6 +36,7 @@ function App() {
           </Route>
         </Route>
         <Route path="/services">
+          <Redirect to="/services/adults" />
           <ServicesAndFees />
         </Route>
         <Route path="/contact">
