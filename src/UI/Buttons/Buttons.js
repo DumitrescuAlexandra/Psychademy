@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import React, { useState } from "react";
 import classes from "./Buttons.module.css";
-import BackArrow from "./BackArrow";
 
 function Buttons() {
   const [active, setActive] = useState({

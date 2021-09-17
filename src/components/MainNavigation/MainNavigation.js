@@ -5,7 +5,7 @@ import Navigation from "./Navigation";
 const MainNavigation = () => {
   return (
     <div className={classes.navBar}>
-      <Navigation />
+      {/* <Navigation /> */}
       <MobileNavigation />
     </div>
   );

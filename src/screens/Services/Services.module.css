@@ -53,13 +53,14 @@
 .client_active,
 .client_inactive {
   text-align: center;
-  padding: 2%;
+  padding: 1%;
   border-radius: 36px;
   width: 7.5rem;
   height: 2rem;
   background-color: #487676;
   color: #aae9e9;
   border: none;
+  line-height: 1.75rem;
   font-size: 0.85rem;
   font-weight: 600;
 }

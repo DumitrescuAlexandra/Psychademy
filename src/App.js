@@ -41,7 +41,7 @@ function App() {
         <Route path="/contact">
           <Contact />
         </Route>
-        <Route path="/patient-login">
+        <Route path="/patientLogin">
           <PatientLogin />
         </Route>
         <Route path="*">
