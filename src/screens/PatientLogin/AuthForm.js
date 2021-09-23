@@ -51,7 +51,11 @@ function AuthForm() {
         console.log(data);
       })
       .catch((err) => {
-        alert(err.message);
+        if (err.message.includes("EMAIL")) {
+          alert("Email address is invalid! Please check and try again!");
+        } else if (err.message.includes("PASSWORD")) {
+          alert("Incorrect password! Please try again");
+        } else alert(err.message);
       });
   };
 

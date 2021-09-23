@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Contact.module.css";
-import LocationMap from "../../Extras/LocationMap";
+import LocationMap from "./LocationMap";
 import BackArrow from "../../UI/Buttons/BackArrow";
 
 const Contact = () => {

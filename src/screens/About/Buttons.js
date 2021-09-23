@@ -9,14 +9,10 @@ function Buttons() {
       {
         name: "About Me",
         path: "/about/aboutMe",
-        title1: "Learn about your",
-        title2: "personal therapist",
       },
       {
         name: "About CBT",
         path: "/about/aboutCBT",
-        title1: "Learn about the",
-        title2: "benefits of CBT",
       },
     ],
   });

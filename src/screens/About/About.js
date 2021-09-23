@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./About.module.css";
 
-import AboutButtons from "../../UI/Buttons/Buttons";
+import AboutButtons from "./Buttons";
 import BackArrow from "../../UI/Buttons/BackArrow";
 
 const About = () => {
