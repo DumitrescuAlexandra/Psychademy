@@ -4,12 +4,12 @@ import classes from "./Services.module.css";
 import BackArrow from "../../UI/Buttons/BackArrow";
 import Services from "./Services";
 
-function ServicesAndFees(props) {
+const ServicesAndFees = () => {
   const [client, setClient] = useState({
     activeClient: null,
     clients: [
-      { name: "Adults", type: "adult", path: "/services/adults" },
-      { name: "Children", type: "child", path: "/services/children" },
+      { name: "Adults", type: "Adults", path: "/services/adults" },
+      { name: "Children", type: "Children", path: "/services/children" },
     ],
   });
 
@@ -50,6 +50,6 @@ function ServicesAndFees(props) {
       <Services />
     </div>
   );
-}
+};
 
 export default ServicesAndFees;

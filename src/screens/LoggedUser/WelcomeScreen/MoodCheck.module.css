@@ -1,0 +1,72 @@
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.75;
+  width: 100%;
+  height: 100%;
+}
+
+.moodModal {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15%;
+
+  bottom: 0;
+  height: 85%;
+  width: 85%;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: #1e5656;
+  z-index: 100;
+}
+
+.close {
+  cursor: pointer;
+  position: relative;
+  top: -2.5rem;
+  right: -7.5rem;
+}
+
+.moodTitle {
+  font-family: Merriweather;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: #fff8e1;
+}
+
+.moodText {
+  margin-top: 2rem;
+  font-family: Lato;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #fff8e1;
+}
+
+.moods {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+}
+
+.moods img {
+  cursor: pointer;
+}
+
+.submitBtn {
+  margin-top: 5rem;
+}
+
+.skipBtn {
+  margin-top: 2.5rem;
+}
+
+.modalControls {
+  display: flex;
+  flex-direction: column;
+}

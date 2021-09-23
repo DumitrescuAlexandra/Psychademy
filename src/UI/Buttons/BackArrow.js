@@ -6,7 +6,8 @@ const BackArrow = () => {
   const history = useHistory();
 
   const backHandler = () => {
-    history.push("/welcome");
+    // history.push("/welcome");
+    history.goBack();
   };
 
   return (

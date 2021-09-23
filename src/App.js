@@ -12,6 +12,7 @@ import Contact from "./screens/Contact/Contact";
 import PatientLogin from "./screens/PatientLogin/PatientLogin";
 import NotFound from "./screens/Not found/NotFound";
 import MainNavigation from "./components/MainNavigation/MainNavigation";
+import MoodCheck from "./screens/LoggedUser/WelcomeScreen/MoodCheck";
 
 function App() {
   return (
@@ -43,6 +44,9 @@ function App() {
         </Route>
         <Route path="/patientLogin">
           <PatientLogin />
+        </Route>
+        <Route path="/patientLogin/moodCheck">
+          <MoodCheck />
         </Route>
         <Route path="*">
           <NotFound />

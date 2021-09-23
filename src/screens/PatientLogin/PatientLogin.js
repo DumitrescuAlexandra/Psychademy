@@ -3,6 +3,8 @@ import BackArrow from "../../UI/Buttons/BackArrow";
 import AuthForm from "./AuthForm";
 import classes from "./PatientLogin.module.css";
 
+// USE STATE to check for auth - if so, render <MoodCheck>
+
 const PatientLogin = () => {
   return (
     <div className={classes.loginPage}>

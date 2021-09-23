@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import MoodCheck from "../LoggedUser/WelcomeScreen/MoodCheck";
 import classes from "./AuthForm.module.css";
 
 function AuthForm() {
@@ -6,6 +7,7 @@ function AuthForm() {
   const passwordInputRef = useRef();
 
   const [isLoading, setIsLoading] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -49,6 +51,7 @@ function AuthForm() {
       })
       .then((data) => {
         console.log(data);
+        setIsLoggedIn(true);
       })
       .catch((err) => {
         if (err.message.includes("EMAIL")) {
@@ -104,6 +107,7 @@ function AuthForm() {
           )}
         </div>
       </form>
+      {isLoggedIn && <MoodCheck />}
     </div>
   );
 }
