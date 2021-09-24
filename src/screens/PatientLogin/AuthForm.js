@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import MoodCheck from "../LoggedUser/WelcomeScreen/MoodCheck";
+import UserPage from "../LoggedUser/UserPage/UserPage";
 import classes from "./AuthForm.module.css";
 
 function AuthForm() {
@@ -107,7 +107,7 @@ function AuthForm() {
           )}
         </div>
       </form>
-      {isLoggedIn && <MoodCheck />}
+      {isLoggedIn && <UserPage />}
     </div>
   );
 }

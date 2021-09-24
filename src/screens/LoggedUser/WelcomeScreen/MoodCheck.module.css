@@ -1,3 +1,11 @@
+.modalOn {
+  opacity: 1;
+}
+
+.modalOff {
+  opacity: 0;
+}
+
 .background {
   position: absolute;
   top: 0;
@@ -10,7 +18,7 @@
 
 .moodModal {
   position: absolute;
-
+  left: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +26,7 @@
 
   bottom: 0;
   height: 85%;
-  width: 85%;
+  width: 90%;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   background-color: #1e5656;
@@ -30,6 +38,11 @@
   position: relative;
   top: -2.5rem;
   right: -7.5rem;
+}
+
+.close:hover {
+  padding: 1px;
+  border: 1px solid #fff8e1;
 }
 
 .moodTitle {
@@ -60,13 +73,67 @@
 
 .submitBtn {
   margin-top: 5rem;
+  height: 3rem;
+  background-color: #78ddb1;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.05rem;
+  font-family: Lato;
+  font-weight: bold;
+  color: #074343;
+  line-height: 1.75rem;
 }
 
 .skipBtn {
+  text-decoration: none;
   margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  align-self: start;
+  line-height: 1.5rem;
+  cursor: pointer;
+}
+
+.skipBtn p {
+  color: #6ea5a5;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.skipBtn:hover {
+  border-bottom: 1px solid #fff8e1;
+}
+
+.skipBtn p:hover {
+  color: #fff8e1;
+}
+
+.skipBtn img {
+  transform: rotate(180deg);
 }
 
 .modalControls {
   display: flex;
   flex-direction: column;
 }
+
+/*
+.backBtn {
+  display: flex;
+  align-items: center;
+  align-self: start;
+  line-height: 1.5rem;
+  cursor: pointer;
+}
+
+.backBtn p {
+  color: #6ea5a5;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+.backBtn p:hover {
+  font-weight: 600;
+  color: #fff8e1;
+}
+
+*/

@@ -1,29 +1,36 @@
-import React, { Fragment } from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import classes from "./MoodCheck.module.css";
 
 function MoodCheck() {
   const history = useHistory();
+  const [modal, setModal] = useState(true);
 
   const moodHandler = (event) => {
     event.preventDefault();
+    history.push("/PatientLogin/UserPage");
+    setModal(false);
   };
 
   const toggleMood = () => {
     return "";
   };
 
-  const closeModal = () => {
+  const closeModal = (event) => {
+    event.preventDefault();
+    history.push("/PatientLogin/UserPage");
+    setModal(false);
     return "";
   };
 
   const skipHandler = (event) => {
     event.preventDefault();
-    history.goBack();
+    history.push("/PatientLogin/UserPage");
+    setModal(false);
   };
 
   return (
-    <Fragment>
+    <div className={modal ? classes.modalOn : classes.modalOff}>
       <div className={classes.background}></div>
       <div className={classes.moodModal}>
         <img
@@ -46,13 +53,17 @@ function MoodCheck() {
             {" "}
             Submit{" "}
           </button>
-          <button className={classes.skipBtn} onClick={skipHandler}>
-            {" "}
-            Skip for now{" "}
-          </button>
+          <Link
+            className={classes.skipBtn}
+            onClick={skipHandler}
+            to="/PatientLogin/UserPage"
+          >
+            <p>Skip for now</p>
+            <img src={"/Images/back.svg"} alt={"back"}></img>
+          </Link>
         </div>
       </div>
-    </Fragment>
+    </div>
   );
 }
 
