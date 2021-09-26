@@ -69,7 +69,7 @@ function AuthForm() {
           <input
             type="email"
             id="email"
-            autoComplete="off"
+            // autoComplete="off"
             ref={emailInputRef}
             required
           ></input>

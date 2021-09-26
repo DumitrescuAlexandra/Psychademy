@@ -1,11 +1,3 @@
-.modalOn {
-  opacity: 1;
-}
-
-.modalOff {
-  opacity: 0;
-}
-
 .background {
   position: absolute;
   top: 0;
@@ -30,7 +22,7 @@
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   background-color: #1e5656;
-  z-index: 100;
+  z-index: 50;
 }
 
 .close {
@@ -41,8 +33,7 @@
 }
 
 .close:hover {
-  padding: 1px;
-  border: 1px solid #fff8e1;
+  transform: scale(1.5);
 }
 
 .moodTitle {
@@ -82,6 +73,7 @@
   font-weight: bold;
   color: #074343;
   line-height: 1.75rem;
+  cursor: pointer;
 }
 
 .skipBtn {

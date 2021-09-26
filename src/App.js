@@ -1,6 +1,6 @@
 import { Route, Switch, Redirect } from "react-router-dom";
 
-import "./App.css";
+import classes from "./App.module.css";
 import { Fragment } from "react";
 
 import Welcome from "./screens/Welcome/Welcome";
@@ -14,11 +14,13 @@ import NotFound from "./screens/Not found/NotFound";
 import MainNavigation from "./components/MainNavigation/MainNavigation";
 import MoodCheck from "./screens/LoggedUser/WelcomeScreen/MoodCheck";
 import UserPage from "./screens/LoggedUser/UserPage/UserPage";
+import AccountSettings from "./screens/LoggedUser/UserProfile/AccountSettings";
 
 function App() {
   return (
     <Fragment>
       <MainNavigation />
+      <img src="/Images/brain.svg" alt="" className={classes.brainImage} />
       <Switch>
         <Route path="/" exact>
           <Redirect to="/welcome" />
@@ -43,21 +45,19 @@ function App() {
         <Route path="/contact">
           <Contact />
         </Route>
-        <Route path="/patientLogin">
-          <PatientLogin>
-            <Route path="/PatientLogin/UserPage">
-              <UserPage>
-                <Route path="/patientLogin/moodCheck">
-                  <MoodCheck />
-                </Route>
-              </UserPage>
-            </Route>
-          </PatientLogin>
+        <Route path="/PatientLogin">
+          <PatientLogin />
+          <Route path="/UserPage">
+            <UserPage />
+          </Route>
         </Route>
-        <Route path="/patientLogin/moodCheck">
+        <Route path="/UserPage/moodCheck">
           <MoodCheck />
         </Route>
-        <Route path="/PatientLogin/UserPage"></Route>
+        <Route path="/UserPage/Account">
+          <AccountSettings />
+        </Route>
+
         <Route path="*">
           <NotFound />
         </Route>

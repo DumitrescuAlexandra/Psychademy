@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import classes from "./MoodCheck.module.css";
 
-function MoodCheck() {
+function MoodCheck(props) {
   const history = useHistory();
-  const [modal, setModal] = useState(true);
 
   const moodHandler = (event) => {
     event.preventDefault();
     history.push("/PatientLogin/UserPage");
-    setModal(false);
   };
 
   const toggleMood = () => {
@@ -19,18 +17,19 @@ function MoodCheck() {
   const closeModal = (event) => {
     event.preventDefault();
     history.push("/PatientLogin/UserPage");
-    setModal(false);
+    console.log("EXIT modal");
     return "";
   };
 
   const skipHandler = (event) => {
     event.preventDefault();
     history.push("/PatientLogin/UserPage");
-    setModal(false);
   };
 
+  // CLOSE the modal INLINE ex: onclick={() => setModal(false)}
+
   return (
-    <div className={modal ? classes.modalOn : classes.modalOff}>
+    <div>
       <div className={classes.background}></div>
       <div className={classes.moodModal}>
         <img
