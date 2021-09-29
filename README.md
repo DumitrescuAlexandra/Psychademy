@@ -21,15 +21,16 @@ As an authenticated user, one can have acces to:
 ---> "Assignments" (in Cognitive Behavior Therapy the treatment is administered during in-between sessions as well, in the form of "homework". The patient has to practice what they learn during therapy sessions. This is the section where they receive the weekly task and have to upload it before the next session)
 ---> "Evolution graph" - with first login, at least every 24h, there is a moodcheck that the patient can perform. There is also a "skip" option. In this section, the patient can have an overview of their moods during the week and month. In case there are certain patterns, they can be discussed in therapy
 ---> log out
-~~~ (to be added later) "My appointments" - possibility to schedule next meeting and have a look at the next scheduled one;
-~~~ (to be added later) "Messages" - possibility to exchange messages with the therapist;
+---> (to be added later) "My appointments" - possibility to schedule next meeting and have a look at the next scheduled one;
+---> (to be added later) "Messages" - possibility to exchange messages with the therapist;
 
 ![image](https://user-images.githubusercontent.com/89261015/135239336-885f1faf-8b18-4602-bfe6-317e64ca3880.png)
 ![image](https://user-images.githubusercontent.com/89261015/135239395-e98c17a6-e391-40c3-a637-82581cf7ac39.png)
 
 
 The therapist is the one that creates accounts for his clients, using the e-mail address from the Contract (or a different one, at patient's choice) and the phone number (also available in the said Contract) as password.
-The Therapist page offers acces to:
+
+The Therapist page (in development) offers acces to:
 
 ---> Create new user
 ---> Patients (a list of all patients and details about each one of them, such as: contact phone nr, e-mail address, second-contact - the person to be contacted in case of an emergency, their Evolution Graph, assignments, a therappy notes section visible only to the therapist so on)
