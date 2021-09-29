@@ -24,9 +24,8 @@ As an authenticated user, one can have acces to:
 ~~~ (to be added later) "My appointments" - possibility to schedule next meeting and have a look at the next scheduled one;
 ~~~ (to be added later) "Messages" - possibility to exchange messages with the therapist;
 
-![image](https://user-images.githubusercontent.com/89261015/135238893-13697c96-e2e7-4f50-bf06-7f84800c1a9b.png)
-![image](https://user-images.githubusercontent.com/89261015/135238927-f2d6d32f-e1d2-49f1-b061-8e2c0e211d71.png)
-
+![image](https://user-images.githubusercontent.com/89261015/135239336-885f1faf-8b18-4602-bfe6-317e64ca3880.png)
+![image](https://user-images.githubusercontent.com/89261015/135239395-e98c17a6-e391-40c3-a637-82581cf7ac39.png)
 
 
 The therapist is the one that creates accounts for his clients, using the e-mail address from the Contract (or a different one, at patient's choice) and the phone number (also available in the said Contract) as password.
