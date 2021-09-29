@@ -1,11 +1,13 @@
 import { createStore } from "redux";
 
-const theManagerReducer = (state = { counter: 0 }, action) => {
+// To be developed
+
+const theManagerReducer = (state, action) => {
   if (action.type === "adults") {
     return;
   }
-  if (action.type === "decrement") {
-    return { counter: state.counter + 1 };
+  if (action.type === "children") {
+    return;
   }
   return state;
 };

@@ -13,7 +13,7 @@ const NotFound = () => {
     <div className={classes.notFound}>
       <h3>404 - Page not found.</h3>
       <button className={classes.btn_back} onClick={backHandler}>
-        Back
+        Home
       </button>
     </div>
   );

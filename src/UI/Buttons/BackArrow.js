@@ -13,7 +13,7 @@ const BackArrow = () => {
   return (
     <div className={classes.backBtn} onClick={backHandler}>
       <img src={"/Images/back.svg"} alt={"back"}></img>
-      <p>Back to Home</p>
+      <p>Back</p>
     </div>
   );
 };
