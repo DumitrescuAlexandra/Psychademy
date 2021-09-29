@@ -6,9 +6,14 @@ For the time being, I try to make it nice and functional for mobile, and the opt
 
 For regular visitors, the web platform aims to deliver general Cognitive Behavior Therapy insights and the therapist's background (to be created in a future phase). Also, for  people undergoing psychotherapy with our therapist, there is a "patient zone" where they can customize and improve their experience;
 
-Specifically, the will be 2 interfaces, one for the therapist and one for patients.
+![image](https://user-images.githubusercontent.com/89261015/135237967-ac80b426-4272-45e1-b200-34406a4a86dd.png)
+![image](https://user-images.githubusercontent.com/89261015/135238088-e4d3afb2-1611-4637-87f3-55673b155429.png)
+![image](https://user-images.githubusercontent.com/89261015/135238637-ae7d8b97-aed1-41d7-9a3f-17f3af5e03b3.png)
+![image](https://user-images.githubusercontent.com/89261015/135238688-815b9e59-4939-4458-b664-4b865651dfec.png)
 
-The therapist is the one that creates accounts for his clients, using the e-mail address from the Contract (or a different one, at patient's choice) and the phone number (also available in the said Contract) as password.
+
+Specifically, the will be 2 interfaces, one for the therapist (to be developed...) and one for patients.
+
 
 As an authenticated user, one can have acces to: 
 ---> "Account settings" (where: 1) the password can be changed, 2: confidentiality policy can be reviwed and 3: the account can be deleted) 
@@ -19,7 +24,12 @@ As an authenticated user, one can have acces to:
 ~~~ (to be added later) "My appointments" - possibility to schedule next meeting and have a look at the next scheduled one;
 ~~~ (to be added later) "Messages" - possibility to exchange messages with the therapist;
 
+![image](https://user-images.githubusercontent.com/89261015/135238893-13697c96-e2e7-4f50-bf06-7f84800c1a9b.png)
+![image](https://user-images.githubusercontent.com/89261015/135238927-f2d6d32f-e1d2-49f1-b061-8e2c0e211d71.png)
 
+
+
+The therapist is the one that creates accounts for his clients, using the e-mail address from the Contract (or a different one, at patient's choice) and the phone number (also available in the said Contract) as password.
 The Therapist page offers acces to:
 
 ---> Create new user
