@@ -1,5 +1,7 @@
 This is my very first attempt to develop a React.js app.
 
+For the time being, I try to make it nice and functional for mobile, and the optimal resolution to be viewed at this istage would be: 360x640. After functionality will be fully implemented, I will make sure it will behave on all screen resolutions.
+
 "Psychademy" is meant to be used by a psychotherapist in his daily private therapy sessions and in between them.
 
 For regular visitors, the web platform aims to deliver general Cognitive Behavior Therapy insights and the therapist's background (to be created in a future phase). Also, for  people undergoing psychotherapy with our therapist, there is a "patient zone" where they can customize and improve their experience;
