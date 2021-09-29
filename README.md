@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+This is my very first attempt to develop a React.js app.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+"Psychademy" is meant to be used by a psychotherapist in his daily private therapy sessions and in between them.
 
-## Available Scripts
+For regular visitors, the web platform aims to deliver general Cognitive Behavior Therapy insights and the therapist's background (to be created in a future phase). Also, for  people undergoing psychotherapy with our therapist, there is a "patient zone" where they can customize and improve their experience;
 
-In the project directory, you can run:
+Specifically, the will be 2 interfaces, one for the therapist and one for patients.
 
-### `npm start`
+The therapist is the one that creates accounts for his clients, using the e-mail address from the Contract (or a different one, at patient's choice) and the phone number (also available in the said Contract) as password.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+As an authenticated user, one can have acces to: 
+---> "Account settings" (where: 1) the password can be changed, 2: confidentiality policy can be reviwed and 3: the account can be deleted) 
+---> "Journal" (where the patient can enter various kinds of thoughts, events, insights that can be discussed over during treatment sessions)
+---> "Assignments" (in Cognitive Behavior Therapy the treatment is administered during in-between sessions as well, in the form of "homework". The patient has to practice what they learn during therapy sessions. This is the section where they receive the weekly task and have to upload it before the next session)
+---> "Evolution graph" - with first login, at least every 24h, there is a moodcheck that the patient can perform. There is also a "skip" option. In this section, the patient can have an overview of their moods during the week and month. In case there are certain patterns, they can be discussed in therapy
+---> log out
+~~~ (to be added later) "My appointments" - possibility to schedule next meeting and have a look at the next scheduled one;
+~~~ (to be added later) "Messages" - possibility to exchange messages with the therapist;
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+The Therapist page offers acces to:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---> Create new user
+---> Patients (a list of all patients and details about each one of them, such as: contact phone nr, e-mail address, second-contact - the person to be contacted in case of an emergency, their Evolution Graph, assignments, a therappy notes section visible only to the therapist so on)
+---> Agenda (meetings scheduled and available hours)
+---> Message (possibility to message one or multiple patients - i.e: to wish them all a "happy new year"
+---> log out
 
-### `npm run build`
+A lot of features are not yet functional and/or responsive, but this is still in development :).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Cheers!
