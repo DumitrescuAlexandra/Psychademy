@@ -15,6 +15,7 @@ import MainNavigation from "./components/MainNavigation/MainNavigation";
 import MoodCheck from "./screens/LoggedUser/WelcomeScreen/MoodCheck";
 import UserPage from "./screens/LoggedUser/UserPage/UserPage";
 import AccountSettings from "./screens/LoggedUser/UserProfile/AccountSettings";
+import ConfidentialityPolicy from "./screens/LoggedUser/UserProfile/Confidentiality Policy/ConfidentialityPolicy";
 
 function App() {
   return (
@@ -56,6 +57,9 @@ function App() {
         </Route>
         <Route path="/UserPage/Account">
           <AccountSettings />
+        </Route>
+        <Route path="/UserPage/ConfidentialityPolicy">
+          <ConfidentialityPolicy />
         </Route>
 
         <Route path="*">

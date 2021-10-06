@@ -16,7 +16,7 @@ const AccountSettings = () => {
           <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
         </div>
         <div className={classes.setting}>
-          <Link to="/PatientLogin/UserPage/Account/PasswordChange">
+          <Link to="/UserPage/ConfidentialityPolicy">
             Confidentiality Policy
           </Link>
           <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
