@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6rem;
+  min-height: 100vh;
+  background-color: #074343;
+}
+
+.brainImage {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* @media only screen and (min-width: 768px) {
+  html {
+    font-size: 150%;
+  }
+} */
+
+/*Extra small devices (phones, 600px and down)*/
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 100%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  body {
+    font-size: 120%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 150%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    font-size: 150%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    font-size: 150%;
+  }
+}

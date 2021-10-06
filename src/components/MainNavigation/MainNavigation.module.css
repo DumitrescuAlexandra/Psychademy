@@ -1,80 +1,104 @@
-.NavBar {
- width: 100%;  
+.navBar {
+  display: flex;
+  justify-content: space-between;
 }
 
-.header {
-    height: 5rem;
-    display: flex;
-    padding: 0 10%;
-    justify-content: space-between;
-    align-items: center;
+.brand {
+  position: relative;
+  width: 8rem;
+  height: 1.5rem;
+  left: 7vw;
+  top: 1.25rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.hamburger {
+  display: flex;
+  position: absolute;
+  cursor: pointer;
+  top: 1.312rem;
+  right: 6.25%;
+  bottom: 18.75%;
+  z-index: 3;
+}
+
+.navBar .mobileNavigation {
+  display: flex;
+  align-items: center;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+
+  list-style: none;
+
+  height: 60vh;
+  width: 75%;
+  top: 7.5%;
+  line-height: 3.5rem;
+  left: 25%;
+  padding: 16%;
+
+  background: linear-gradient(150deg, #053737 0%, #074343 28.13%, #1e5656 100%);
+  box-shadow: -80px 120px 40px rgba(0, 0, 0, 0.45);
+
+  border: solid 2px rgba(0, 0, 0, 0.3);
+  border-radius: 3%;
+  overflow: visible;
+  z-index: 2;
+}
+
+.navLinks a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff8e1;
+}
+
+.navLinks p {
+  position: relative;
+  top: -12.5%;
+  line-height: 2rem;
+  border-bottom: solid 2px #fff8e1;
+  color: #fff8e1;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.navLinks a:hover {
+  text-shadow: 1.2px 1.2px 6px #141414;
+  padding-bottom: 5px;
+  background-image: linear-gradient(#fff8e1, #ffffff),
+    linear-gradient(transparent, transparent);
+  background-size: 2 3px, auto;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  transition: all 0.2s ease-out;
+  background-size: 100% 3px, auto;
+}
+
+.navLinks li:nth-child(4) a {
+  color: #ff9d46;
+}
+
+.navLinks li:last-child a {
+  color: #78ddb1;
+  letter-spacing: 0.015em;
+  background-color: #033c3c;
+  border: 10px solid #033c3c;
+  border-radius: 8px;
+}
+
+@media (max-width: 990px) {
+  .navBar .navigation {
+    display: none;
   }
-  
-  .brand {
-    width: 100%;
-    height: 1.18rem;
-    left: 2rem;
-    top: 1.312rem;
-    padding-top: 0.3rem;
-
-    font-style: normal;
-    font-weight: bold;
-    font-size: 2.3rem;
-    line-height: 2.18rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-
-
-    color: #FFFFFF;
-    }
-  
-    .NavBar .MobileNavigation  {
-      display: none;
-  }
-  
-   
-  @media (max-width: 990px) {
-      .Navigation {
-          display:none;
-      }
-  
-      .MobileNavigation {
-          display: flex;
-          align-items: center;
-          background-color: #2C7A7A ;
-      }
-  
-      .Hamburger {
-        color:#FFF8E1;
-        size: 32px;
-          position: absolute;
-          cursor: pointer;
-          top: 1.312rem;
-          right: 6.25%;
-          bottom: 18.75%;        }
-          
-  }
-
-
-  .NavBar nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    position: absolute; 
-    top: 10%; 
-    line-height: 6rem;
-    left: 10%;
-    padding: 10% 5%;
-    background-color: #2C7A7A;
-    border-radius: 3%;
-  }
-
-  .NavBar nav ul li a{
-    text-decoration: none;
-    font-size: 3rem;
-    font-weight: 700;
-    color: #FFF8E1;
-
-
-
-  }
+}

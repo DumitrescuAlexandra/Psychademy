@@ -1,0 +1,19 @@
+.backBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: start;
+  margin-top: 7.5%;
+  line-height: 1.5rem;
+  cursor: pointer;
+}
+
+.backBtn p {
+  color: #6ea5a5;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+.backBtn p:hover {
+  font-weight: 600;
+  color: #fff8e1;
+}

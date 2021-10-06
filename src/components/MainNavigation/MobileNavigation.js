@@ -1,31 +1,55 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import { useHistory } from "react-router";
 
 import NavLinks from "./NavLinks";
 import classes from "./MainNavigation.module.css";
 
-import {RiMenu3Line} from "react-icons/ri";
-import {RiCloseLine} from "react-icons/ri"
-
-
-
+import { RiMenu3Line } from "react-icons/ri";
+import { RiCloseLine } from "react-icons/ri";
 
 const MobileNavigation = () => {
-const [showMenu, setShowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const history = useHistory();
 
-const menuHandler = () => {
+  const menuHandler = () => {
     setShowMenu(!showMenu);
-}
+  };
 
-const hamburgerIcon = <RiMenu3Line className={classes.Hamburger}  onClick={menuHandler}/>
-const closeIcon = <RiCloseLine className={classes.Hamburger} onClick={menuHandler}/>
+  const logoHandler = () => {
+    history.push("/welcome");
+  };
 
+  const hamburgerIcon = (
+    <RiMenu3Line
+      className={classes.hamburger}
+      size="24px"
+      color="#FFF8E1"
+      onClick={menuHandler}
+    />
+  );
+  const closeIcon = (
+    <RiCloseLine
+      className={classes.hamburger}
+      size="24px"
+      color="#FFF8E1"
+      onClick={menuHandler}
+    />
+  );
 
+  const closeMobileMenu = () => setShowMenu(false);
 
-    return(
-    <nav className={classes.MobileNavigation}>
-        {showMenu ? closeIcon : hamburgerIcon}
-        {showMenu && <NavLinks /> }
-    </nav>);
-}
+  return (
+    <nav className={classes.mobileNavigation}>
+      <p className={classes.brand} onClick={logoHandler}>
+        {" "}
+        PSYCHADEMY{" "}
+      </p>
+      {showMenu ? closeIcon : hamburgerIcon}
+      {showMenu && (
+        <NavLinks isMobile={true} closeMobileMenu={closeMobileMenu} />
+      )}
+    </nav>
+  );
+};
 
 export default MobileNavigation;

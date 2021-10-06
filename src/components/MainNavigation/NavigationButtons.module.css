@@ -1,0 +1,76 @@
+.navigation_buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10%;
+}
+
+.nav_card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+  height: 48px;
+  margin-top: 3%;
+  border-radius: 8px;
+  cursor: pointer;
+
+  background: #054343;
+  border: 1px solid #387359;
+}
+.nav_card:last-child {
+  margin-top: 12%;
+  background: #78ddb1;
+}
+.nav_card a {
+  text-decoration: none;
+}
+.nav_card:hover {
+  text-shadow: 1.2px 1.2px 5px #141414;
+  background-color: #053737;
+  background-image: linear-gradient(#fff8e1, #ffffff),
+    linear-gradient(transparent, transparent);
+  background-size: 2 3px, auto;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  transition: all 0.3s ease-out;
+  background-size: 100% 3px, auto;
+}
+
+.nav_card:last-child:hover {
+  text-shadow: none;
+  background: #0cc072;
+  background-image: linear-gradient(#ff9d46, #ff9d46),
+    linear-gradient(transparent, transparent);
+  background-size: 2 3px, auto;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  transition: all 0.3s ease-out;
+  background-size: 100% 3px, auto;
+}
+
+.nav_btn {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff8e1;
+  line-height: 1.75rem;
+  padding-right: 15%;
+}
+.nav_btn_dark {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #074343;
+  line-height: 1.75rem;
+}
+
+.nav_icon {
+  height: 19px;
+  width: 21px;
+
+  padding-left: 8%;
+}
+
+.nav_next {
+  padding-right: 8%;
+}

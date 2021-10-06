@@ -1,0 +1,134 @@
+.therapistPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto 7vw;
+}
+
+.therapistCard {
+  display: flex;
+  align-items: center;
+  background-color: #053737;
+  height: 7.5rem;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.therapistCard img {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  margin: 5% auto;
+}
+
+.vl {
+  border-left: 1px solid #377676;
+  height: 5rem;
+  margin-left: 3%;
+}
+
+.therapistName {
+  font-size: 1.25rem;
+  color: #fff8e1;
+  font-weight: bold;
+  line-height: 1.75rem;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .therapistName {
+    font-size: 1.75rem;
+    color: #fff8e1;
+    font-weight: bold;
+    line-height: 2rem;
+  }
+}
+
+.profession {
+  font-size: 1.2rem;
+  color: #ff9d46;
+  margin-left: 12px;
+}
+@media only screen and (min-width: 768px) {
+  .profession {
+    font-size: 1.25rem;
+  }
+}
+
+.theStory {
+  line-height: 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #fff8e1;
+}
+.theStory p {
+  margin-bottom: 7.5%;
+}
+
+@media only screen and (min-width: 768px) {
+  .theStory {
+    margin: 0 12%;
+  }
+}
+
+.therapist {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.aboutMe {
+  display: flex;
+  align-items: flex-start;
+  margin: 5% 0;
+}
+@media only screen and (min-width: 768px) {
+  .aboutMe {
+    margin: 2.5% 12%;
+  }
+}
+
+.aboutMe p {
+  color: #ff9d46;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 900;
+}
+@media only screen and (min-width: 768px) {
+  .aboutMe p {
+    font-size: 1.75rem;
+  }
+}
+
+.aboutMe span {
+  color: #fff8e1;
+}
+
+.edField {
+  display: flex;
+  margin-top: 3%;
+}
+
+.edField p {
+  font-size: 1rem;
+  color: #6ea5a5;
+  margin-left: 7vw;
+  margin-bottom: 1rem;
+  letter-spacing: -0.75px;
+}
+@media only screen and (min-width: 768px) {
+  .edField p {
+    font-size: 1.25rem;
+    margin-left: 2rem;
+  }
+}
+
+.edField:last-child {
+  margin-bottom: 3rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .edField img {
+    margin-left: 12%;
+  }
+}
