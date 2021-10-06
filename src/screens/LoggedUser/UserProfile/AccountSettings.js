@@ -10,9 +10,7 @@ const AccountSettings = () => {
       <p className={classes.title}> Account Settings </p>
       <div className={classes.settings}>
         <div className={classes.setting}>
-          <Link to="/PatientLogin/UserPage/Account/PasswordChange">
-            Change my password
-          </Link>
+          <Link to="/UserPage/PasswordChange">Change my password</Link>
           <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
         </div>
         <div className={classes.setting}>
@@ -22,9 +20,7 @@ const AccountSettings = () => {
           <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
         </div>
         <div className={classes.setting}>
-          <Link to="/PatientLogin/UserPage/Account/PasswordChange">
-            Delete my account
-          </Link>
+          <Link to="/UserPage/DeleteAccount">Delete my account</Link>
           <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
         </div>
       </div>

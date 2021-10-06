@@ -16,6 +16,8 @@ import MoodCheck from "./screens/LoggedUser/WelcomeScreen/MoodCheck";
 import UserPage from "./screens/LoggedUser/UserPage/UserPage";
 import AccountSettings from "./screens/LoggedUser/UserProfile/AccountSettings";
 import ConfidentialityPolicy from "./screens/LoggedUser/UserProfile/Confidentiality Policy/ConfidentialityPolicy";
+import ChangePassword from "./screens/LoggedUser/UserProfile/Change Password/ChangePassword";
+import DeleteAccount from "./screens/LoggedUser/UserProfile/Delete Account/DeleteAccount";
 
 function App() {
   return (
@@ -60,6 +62,12 @@ function App() {
         </Route>
         <Route path="/UserPage/ConfidentialityPolicy">
           <ConfidentialityPolicy />
+        </Route>
+        <Route path="/UserPage/PasswordChange">
+          <ChangePassword />
+        </Route>
+        <Route path="/UserPage/DeleteAccount">
+          <DeleteAccount />
         </Route>
 
         <Route path="*">

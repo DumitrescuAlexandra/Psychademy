@@ -16,10 +16,10 @@
 }
 
 .confidentialityText {
-  margin: 2rem 2rem auto auto;
-  text-align: left;
+  margin: 2rem 1.5rem auto auto;
+  text-align: justify;
   font-family: Lato;
-  font-weight: 400;
+  font-weight: 350;
   font-size: 0.9rem;
   line-height: 1.15rem;
   color: #fff8e1;
