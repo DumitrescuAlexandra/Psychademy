@@ -1,9 +1,11 @@
-import React from "react";
-import DeleteModal from "./DeleteModal";
+import React, { useState } from "react";
+import Modal from "react-modal";
 import BackArrow from "../../../../UI/Buttons/BackArrow";
 import classes from "./DeleteAccount.module.css";
 
 function DeleteAccount() {
+  const [showModal, setShowModal] = useState(true);
+
   return (
     <div className={classes.deletePage}>
       <BackArrow />
@@ -36,7 +38,43 @@ function DeleteAccount() {
         </div>
       </form>
 
-      <DeleteModal />
+      {showModal && (
+        <Modal
+          isOpen={true}
+          className={classes.deleteModalBck}
+          style={{
+            overlay: {
+              position: "fixed",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: "rgba(28, 28, 28, 0.9)",
+            },
+          }}
+        >
+          <div className={classes.deleteModal}>
+            <img src="/Images/close.svg" alt=""></img>
+            <p className={classes.modalTitle}> Delete your account</p>
+            <p className={classes.modalText}>
+              {" "}
+              Please note that this action is permanent and all data associated
+              with your account will be erased as well.
+            </p>{" "}
+            <p className={classes.modalText}>
+              {" "}
+              A prior discussion with your therapist is advised.{" "}
+            </p>
+            <div
+              className={classes.modalBtn}
+              onClick={() => setShowModal(false)}
+            >
+              {" "}
+              I understand{" "}
+            </div>
+          </div>
+        </Modal>
+      )}
     </div>
   );
 }

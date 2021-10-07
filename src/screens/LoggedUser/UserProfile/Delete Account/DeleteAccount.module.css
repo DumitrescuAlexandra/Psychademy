@@ -123,3 +123,67 @@
 }
 
 /* MDOAL */
+
+.deleteModalBck {
+  display: flex;
+}
+
+.deleteModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 35% 5%;
+  background-color: #1e5656;
+  border-radius: 40px;
+}
+
+.deleteModal img {
+  align-self: flex-end;
+  margin: 7.5% 7.5%;
+  cursor: pointer;
+}
+
+.modalTitle {
+  margin-bottom: 10%;
+  font-family: Merriweather;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: #fff8e1;
+}
+
+.modalText {
+  margin: 2% 7.5%;
+  text-align: center;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9rem;
+  line-height: 1.25rem;
+  color: #fff8e1;
+}
+
+.modalBtn {
+  font-family: Lato;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.75rem;
+  color: #074343;
+  background-color: #78ddb1;
+  border-radius: 8px;
+  margin: 2.5rem auto;
+  padding: 2.5% 5%;
+  cursor: pointer;
+}
+
+.modalBtn:hover {
+  text-shadow: 0.85px 0.85px 3px #141414;
+  background-color: #ff9d46;
+  background-image: linear-gradient(#fff8e1, #ffffff),
+    linear-gradient(transparent, transparent);
+  background-size: 2 3px, auto;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  transition: all 0.3s ease-out;
+  background-size: 100% 3px, auto;
+}
