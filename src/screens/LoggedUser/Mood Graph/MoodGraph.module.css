@@ -1,0 +1,10 @@
+.graphPage {
+  display: flex;
+  margin-left: 7vw;
+}
+
+.chartZone {
+  display: flex;
+  margin-top: 50%;
+  background-color: #054343;
+}
