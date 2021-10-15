@@ -5,9 +5,8 @@ import classes from "./ConfidentialityPolicy.module.css";
 function ConfidentialityPolicy() {
   return (
     <Fragment>
+      <BackArrow />
       <div className={classes.confidentialityPolicyPage}>
-        <BackArrow />
-
         <p className={classes.confidentialityTitle}> Confidentiality Policy </p>
         <div className={classes.confidentialityText}>
           <p>
