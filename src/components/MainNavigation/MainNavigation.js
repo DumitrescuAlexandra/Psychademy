@@ -5,7 +5,8 @@ import Navigation from "./Navigation";
 const MainNavigation = () => {
   return (
     <div className={classes.navBar}>
-      {/* <Navigation /> */}
+      <img src="/Images/brain.svg" alt="" className={classes.brainImage} />
+      <Navigation />
       <MobileNavigation />
     </div>
   );

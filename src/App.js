@@ -24,7 +24,6 @@ function App() {
   return (
     <Fragment>
       <MainNavigation />
-      <img src="/Images/brain.svg" alt="" className={classes.brainImage} />
       <Switch>
         <Route path="/" exact>
           <Redirect to="/welcome" />

@@ -3,6 +3,12 @@
   justify-content: space-between;
 }
 
+@media (max-width: 767px) {
+  .navBar .navigation {
+    display: none;
+  }
+}
+
 .brand {
   position: relative;
   width: 8rem;
@@ -25,9 +31,21 @@
   z-index: 3;
 }
 
+@media (min-width: 767px) {
+  .navBar .hamburger {
+    display: none;
+  }
+}
+
 .navBar .mobileNavigation {
   display: flex;
   align-items: center;
+}
+
+@media (min-width: 767px) {
+  .navBar .mobileNavigation {
+    display: none;
+  }
 }
 
 .navLinks {
@@ -97,8 +115,15 @@
   border-radius: 8px;
 }
 
-@media (max-width: 990px) {
-  .navBar .navigation {
+.brainImage {
+  position: absolute;
+  display: inline;
+  top: 0;
+  right: 0;
+}
+
+@media (min-width: 767px) {
+  .navBar .brainImage {
     display: none;
   }
 }

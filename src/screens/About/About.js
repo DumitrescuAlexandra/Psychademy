@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import classes from "./About.module.css";
 
 import AboutButtons from "./Buttons";
@@ -6,10 +6,12 @@ import BackArrow from "../../UI/Buttons/BackArrow";
 
 const About = () => {
   return (
-    <div className={classes.aboutPage}>
+    <Fragment>
       <BackArrow />
-      <AboutButtons />
-    </div>
+      <div className={classes.aboutPage}>
+        <AboutButtons />
+      </div>
+    </Fragment>
   );
 };
 
