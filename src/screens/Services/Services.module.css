@@ -5,6 +5,13 @@
   margin-left: 7vw;
 }
 
+@media only screen and (min-width: 768px) {
+  .servicesAndFees {
+    align-items: center;
+    margin: 0;
+  }
+}
+
 .title {
   margin-top: 10%;
 
@@ -13,6 +20,14 @@
   font-size: 1.5rem;
   line-height: 1.5rem;
   color: #ff9d46;
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    font-size: 3rem;
+    line-height: 3rem;
+    text-align: center;
+  }
 }
 
 .title span {
@@ -30,6 +45,14 @@
   color: #fff8e1;
 }
 
+@media only screen and (min-width: 768px) {
+  .subTitle {
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+}
+
 .subTitle a {
   color: inherit;
 }
@@ -39,6 +62,12 @@
   align-items: center;
   position: relative;
   margin: 7.5% 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .clientType {
+    margin: 3.5% 0;
+  }
 }
 
 .clientType a {

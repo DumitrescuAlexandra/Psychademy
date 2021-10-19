@@ -32,7 +32,8 @@ const ServicesAndFees = () => {
           Services <span>and fees</span>
         </p>
         <p className={classes.subTitle}>
-          For appointments, please visit the <a href="/contact">contact </a>
+          For appointments, please visit the &nbsp;{" "}
+          <a href="/contact"> contact</a>
           &nbsp; section
         </p>
         <div className={classes.clientType}>
