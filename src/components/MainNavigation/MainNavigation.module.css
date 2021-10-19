@@ -133,8 +133,8 @@
 @media (min-width: 767px) {
   .navBar {
     justify-content: flex-end;
-    margin-right: min(17.5%);
     display: flex;
+    margin-right: min(10%);
   }
 
   .navigation {
@@ -146,20 +146,25 @@
   .pcNav a {
     text-decoration: none;
     margin-left: 2rem;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     letter-spacing: 0.015em;
-    line-height: 3rem;
+    line-height: 4.5rem;
     font-family: Lato;
     font-weight: bold;
     color: #fff8e1;
   }
-  .authNav {
+  .authNavi {
+    text-decoration: none;
+    font-size: 1.25rem;
+    letter-spacing: 0.015em;
+    line-height: 4.5rem;
+    font-family: Lato;
+    font-weight: bold;
     background-color: #033c3c;
     border: 1px solid #78ddb1;
-    border-radius: 8px;
-    padding: 5% 10%;
-  }
-  .authNav a {
     color: #78ddb1;
+    border-radius: 8px;
+    padding: 3.5% 7.5%;
+    margin-left: min(7.5rem);
   }
 }

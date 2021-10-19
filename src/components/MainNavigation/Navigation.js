@@ -56,7 +56,7 @@ const Navigation = () => {
         </NavLink>
       </div>
 
-      <div className={classes.pcNav}>
+      <div className={classes.autNav}>
         <NavLink
           to="/PatientLogin"
           activeStyle={{
@@ -64,7 +64,7 @@ const Navigation = () => {
             paddingBottom: "0.5rem",
             color: "#0CC072",
           }}
-          className={classes.authNav}
+          className={classes.authNavi}
         >
           Authentication
         </NavLink>
