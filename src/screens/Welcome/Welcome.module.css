@@ -3,9 +3,14 @@
   align-items: center;
 }
 
+.contents {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (min-width: 767px) {
   .contents {
-    margin-left: min(5%);
+    width: max(40vw);
   }
 }
 
@@ -47,13 +52,29 @@
   color: #fff8e1;
 }
 
+@media (min-width: 767px) {
+  .title {
+    padding-right: 50%;
+    font-size: 3.75rem;
+    line-height: 5rem;
+  }
+}
+
 .motto {
-  padding-right: 15%;
+  /* padding-right: 15%; */
 
   color: #ffffff;
   font-family: Lato;
-  font-style: normal;
+
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+@media (min-width: 767px) {
+  .motto {
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 300;
+  }
 }
