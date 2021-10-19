@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import classes from "./Services.module.css";
 import BackArrow from "../../UI/Buttons/BackArrow";
@@ -25,30 +25,36 @@ const ServicesAndFees = () => {
     }
   };
   return (
-    <div className={classes.servicesAndFees}>
+    <Fragment>
       <BackArrow />
-      <p className={classes.title}>
-        Services <span>and fees</span>
-      </p>
-      <p className={classes.subTitle}>
-        For appointments, please visit the <a href="/contact">contact </a>
-        &nbsp; section
-      </p>
-      <div className={classes.clientType}>
-        {client.clients.map((el, i) => (
-          <NavLink
-            key={i}
-            className={toggleClientClass(i)}
-            onClick={toggleClientHandler}
-            to={client.clients[i].path}
-            activeStyle={{ background: "#78ddb1", color: "#074343" }}
-          >
-            {client.clients[i].name}
-          </NavLink>
-        ))}
+      <div className={classes.servicesAndFees}>
+        <div className={classes.servicesTitle}>
+          <p className={classes.title}>
+            Services <span>and fees</span>
+          </p>
+
+          <p className={classes.subTitle}>
+            For appointments, please visit the &nbsp;{" "}
+            <a href="/contact"> contact</a>
+            &nbsp; section
+          </p>
+        </div>
+        <div className={classes.clientType}>
+          {client.clients.map((el, i) => (
+            <NavLink
+              key={i}
+              className={toggleClientClass(i)}
+              onClick={toggleClientHandler}
+              to={client.clients[i].path}
+              activeStyle={{ background: "#78ddb1", color: "#074343" }}
+            >
+              {client.clients[i].name}
+            </NavLink>
+          ))}
+        </div>
+        <Services />
       </div>
-      <Services />
-    </div>
+    </Fragment>
   );
 };
 

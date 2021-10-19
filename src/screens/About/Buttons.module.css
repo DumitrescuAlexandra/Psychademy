@@ -7,7 +7,12 @@
 .sectionTitle {
   display: flex;
   flex-direction: column;
-  margin-top: 4vh;
+}
+
+@media only screen and (min-width: 768px) {
+  .sectionTitle {
+    margin-top: 0;
+  }
 }
 
 .sectionTitle p {
@@ -18,22 +23,30 @@
   color: #fff8e1;
 }
 
-.sectionTitle p:last-child {
-  color: #ff9d46;
-}
-
 @media only screen and (min-width: 768px) {
   .sectionTitle p {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 3rem;
+    line-height: 3.5rem;
     text-align: center;
   }
+}
+
+.sectionTitle p:last-child {
+  color: #ff9d46;
 }
 
 .aboutBtn {
   width: 100%;
   display: flex;
   justify-content: flex-start;
+}
+
+@media only screen and (min-width: 768px) {
+  .aboutBtn {
+    line-height: 3.5rem;
+    justify-content: center;
+    position: relative;
+  }
 }
 
 .aboutBtn a {
@@ -55,8 +68,11 @@
 }
 @media only screen and (min-width: 768px) {
   .btn_inactive {
-    width: 8.5rem;
+    width: 9rem;
     margin-top: 3rem;
+    font-size: 1.15rem;
+    line-height: 2rem;
+    height: 3rem;
   }
 }
 .btn_inactive:last-child {

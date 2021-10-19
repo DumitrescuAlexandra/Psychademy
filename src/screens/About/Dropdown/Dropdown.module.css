@@ -2,10 +2,23 @@
   margin: 10% 7vw;
 }
 
+@media (min-width: 767px) {
+  .faqs {
+    width: 45vw;
+    margin: 5% auto;
+  }
+}
+
 .faq {
   margin: 1rem auto;
-  padding-bottom: 1rem;
   border-bottom: 1px solid #377676;
+}
+
+@media (min-width: 767px) {
+  .faq {
+    border-bottom: 2px solid #377676;
+    padding-bottom: 1rem;
+  }
 }
 
 .faq_question {
@@ -14,6 +27,15 @@
   font-weight: 700;
   line-height: 1.5rem;
   margin-right: 0.75rem;
+  cursor: pointer;
+}
+
+@media (min-width: 767px) {
+  .faq_question {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-top: 2.5%;
+  }
 }
 
 .faq_answer {
@@ -22,6 +44,18 @@
   font-weight: 500;
   line-height: 1.25rem;
   margin-top: 0.75rem;
+}
+
+@media (min-width: 767px) {
+  .faq_answer {
+    overflow: hidden;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.75rem;
+    border: solid 0.5px #377676;
+    padding: 1%;
+    cursor: not-allowed;
+  }
 }
 
 .faqs .faq .faq_question,

@@ -1,4 +1,5 @@
 .backBtn {
+  margin-left: 7vw;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -16,4 +17,20 @@
 .backBtn p:hover {
   font-weight: 600;
   color: #fff8e1;
+}
+
+@media only screen and (min-width: 768px) {
+  .backBtn {
+    margin: 5%;
+  }
+
+  .backBtn p {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .backBtn {
+    display: none;
+  }
 }

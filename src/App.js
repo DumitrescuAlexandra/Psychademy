@@ -15,12 +15,15 @@ import MainNavigation from "./components/MainNavigation/MainNavigation";
 import MoodCheck from "./screens/LoggedUser/WelcomeScreen/MoodCheck";
 import UserPage from "./screens/LoggedUser/UserPage/UserPage";
 import AccountSettings from "./screens/LoggedUser/UserProfile/AccountSettings";
+import ConfidentialityPolicy from "./screens/LoggedUser/UserProfile/Confidentiality Policy/ConfidentialityPolicy";
+import ChangePassword from "./screens/LoggedUser/UserProfile/Change Password/ChangePassword";
+import DeleteAccount from "./screens/LoggedUser/UserProfile/Delete Account/DeleteAccount";
+import MoodGraph from "./screens/LoggedUser/Mood Graph/MoodGraph";
 
 function App() {
   return (
     <Fragment>
       <MainNavigation />
-      <img src="/Images/brain.svg" alt="" className={classes.brainImage} />
       <Switch>
         <Route path="/" exact>
           <Redirect to="/welcome" />
@@ -56,6 +59,18 @@ function App() {
         </Route>
         <Route path="/UserPage/Account">
           <AccountSettings />
+        </Route>
+        <Route path="/UserPage/ConfidentialityPolicy">
+          <ConfidentialityPolicy />
+        </Route>
+        <Route path="/UserPage/PasswordChange">
+          <ChangePassword />
+        </Route>
+        <Route path="/UserPage/DeleteAccount">
+          <DeleteAccount />
+        </Route>
+        <Route path="/UserPage/Evolution">
+          <MoodGraph />
         </Route>
 
         <Route path="*">
