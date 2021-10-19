@@ -130,17 +130,21 @@
 
 /* THE NAVIGATION for DESKTOP and tablets */
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .navBar {
-    justify-content: flex-end;
+    justify-content: center;
     display: flex;
     margin-right: min(10%);
+    width: 100%;
   }
 
   .navigation {
     position: fixed;
     display: flex;
-    line-height: 5rem;
+    justify-content: center;
+    line-height: 3rem;
+    background-color: rgba(7, 67, 67, 0.65);
+    width: 100%;
   }
 
   .pcNav a {

@@ -27,7 +27,7 @@
   .contactTitle {
     font-size: 3rem;
     line-height: 3.5rem;
-    margin: min(5rem) auto;
+    margin: min(8rem) auto 4rem auto;
   }
 }
 
@@ -58,8 +58,8 @@
 
 @media (min-width: 767px) {
   .write {
-    font-size: 2.25rem;
-    line-height: 4rem;
+    font-size: 2rem;
+    line-height: 3rem;
   }
 }
 
@@ -101,8 +101,8 @@
   .contactMail,
   .contactSchedule,
   .contactLocation {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     font-weight: 500;
   }
 }

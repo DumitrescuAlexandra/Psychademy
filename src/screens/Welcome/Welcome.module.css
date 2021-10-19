@@ -16,8 +16,7 @@
 
 .welcomeImg {
   overflow: hidden;
-
-  max-width: 100%;
+  max-width: auto;
   height: 100vh;
 }
 
