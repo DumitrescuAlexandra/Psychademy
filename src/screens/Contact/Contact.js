@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import classes from "./Contact.module.css";
 import LocationMap from "./LocationMap";
 import BackArrow from "../../UI/Buttons/BackArrow";
+import LocationMapBigger from "./LocationMapBigger";
 
 const Contact = () => {
   return (
@@ -41,6 +42,9 @@ const Contact = () => {
         </div>
         <div className={classes.location}>
           <LocationMap />
+        </div>
+        <div className={classes.locationBigger}>
+          <LocationMapBigger />
         </div>
       </div>
     </Fragment>

@@ -15,13 +15,13 @@
 .servicesTitle {
   display: flex;
   flex-direction: column;
-  align-content: center;
-  margin: 2.5rem auto 0 auto;
+  margin: 2.5rem auto 0 0;
 }
 
 @media only screen and (min-width: 768px) {
   .servicesTitle {
     margin: 7.5rem auto 3rem auto;
+    align-content: center;
   }
 }
 
@@ -120,7 +120,7 @@
     flex-direction: column;
     align-items: center;
     line-height: 2.25rem;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     width: 9rem;
     height: 2.75rem;
   }
@@ -156,7 +156,7 @@
 @media only screen and (min-width: 768px) {
   .card {
     margin: 0.75rem auto;
-    width: 100%;
+    width: 90%;
     height: 8.5rem;
   }
 }
@@ -198,7 +198,7 @@
 @media only screen and (min-width: 768px) {
   .card_flipped {
     margin: 0.75rem auto;
-    width: 100%;
+    width: 90%;
     height: 8.5rem;
   }
 }
@@ -226,6 +226,13 @@
   border: 0.25rem solid #074343;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+  .miniCard_text {
+    font-size: 1rem;
+    font-weight: 600;
+  }
 }
 
 .miniIcon {
