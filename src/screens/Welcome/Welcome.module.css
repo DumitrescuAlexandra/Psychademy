@@ -3,9 +3,16 @@
   align-items: center;
 }
 
+@media (min-width: 767px) {
+  .contents {
+    margin-left: min(5%);
+  }
+}
+
 .welcomeImg {
   overflow: hidden;
-  max-width: 50vw;
+
+  max-width: 100%;
   height: 100vh;
 }
 
@@ -15,7 +22,7 @@
 }
 
 @media (max-width: 767px) {
-  .welcomeImg img {
+  .welcomeImg {
     display: none;
   }
 }
