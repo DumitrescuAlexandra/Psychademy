@@ -28,14 +28,17 @@ const ServicesAndFees = () => {
     <Fragment>
       <BackArrow />
       <div className={classes.servicesAndFees}>
-        <p className={classes.title}>
-          Services <span>and fees</span>
-        </p>
-        <p className={classes.subTitle}>
-          For appointments, please visit the &nbsp;{" "}
-          <a href="/contact"> contact</a>
-          &nbsp; section
-        </p>
+        <div className={classes.servicesTitle}>
+          <p className={classes.title}>
+            Services <span>and fees</span>
+          </p>
+
+          <p className={classes.subTitle}>
+            For appointments, please visit the &nbsp;{" "}
+            <a href="/contact"> contact</a>
+            &nbsp; section
+          </p>
+        </div>
         <div className={classes.clientType}>
           {client.clients.map((el, i) => (
             <NavLink
