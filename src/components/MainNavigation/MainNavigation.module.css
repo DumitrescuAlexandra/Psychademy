@@ -127,3 +127,39 @@
     display: none;
   }
 }
+
+/* THE NAVIGATION for DESKTOP and tablets */
+
+@media (min-width: 767px) {
+  .navBar {
+    justify-content: flex-end;
+    margin-right: min(17.5%);
+    display: flex;
+  }
+
+  .navigation {
+    position: fixed;
+    display: flex;
+    line-height: 5rem;
+  }
+
+  .pcNav a {
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.015em;
+    line-height: 3rem;
+    font-family: Lato;
+    font-weight: bold;
+    color: #fff8e1;
+  }
+  .authNav {
+    background-color: #033c3c;
+    border: 1px solid #78ddb1;
+    border-radius: 8px;
+    padding: 5% 10%;
+  }
+  .authNav a {
+    color: #78ddb1;
+  }
+}
