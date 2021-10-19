@@ -11,13 +11,13 @@
 
 .faq {
   margin: 1rem auto;
-  padding-bottom: 1rem;
   border-bottom: 1px solid #377676;
 }
 
 @media (min-width: 767px) {
   .faq {
     border-bottom: 2px solid #377676;
+    padding-bottom: 1rem;
   }
 }
 
