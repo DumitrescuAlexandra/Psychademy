@@ -2,9 +2,11 @@ import React, { useState, Fragment } from "react";
 import Modal from "react-modal";
 import BackArrow from "../../../../UI/Buttons/BackArrow";
 import classes from "./DeleteAccount.module.css";
+import { useHistory } from "react-router-dom";
 
 function DeleteAccount() {
   const [showModal, setShowModal] = useState(true);
+  const history = useHistory();
 
   return (
     <Fragment>
@@ -60,7 +62,11 @@ function DeleteAccount() {
             }}
           >
             <div className={classes.deleteModal}>
-              <img src="/Images/close.svg" alt=""></img>
+              <img
+                src="/Images/close.svg"
+                alt=""
+                onClick={() => history.push("/Account")}
+              ></img>
               <p className={classes.modalTitle}> Delete your account</p>
               <p className={classes.modalText}>
                 {" "}
