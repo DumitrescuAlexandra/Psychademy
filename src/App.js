@@ -50,9 +50,9 @@ function App() {
         </Route>
         <Route path="/PatientLogin">
           <PatientLogin />
-          <Route path="/UserPage">
-            <UserPage />
-          </Route>
+        </Route>
+        <Route path="/UserPage">
+          <UserPage />
         </Route>
         <Route path="/UserPage/moodCheck">
           <MoodCheck />

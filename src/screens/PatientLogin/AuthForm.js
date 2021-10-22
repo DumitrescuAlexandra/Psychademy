@@ -1,4 +1,6 @@
 import React, { useState, useRef } from "react";
+import { Link } from "react-router-dom";
+import { Redirect } from "react-router";
 import UserPage from "../LoggedUser/UserPage/UserPage";
 import classes from "./AuthForm.module.css";
 
@@ -103,11 +105,18 @@ function AuthForm() {
             </p>
           )}
           {!isLoading && (
-            <button className={classes.authButton}> Log In </button>
+            <Link
+              to="/UserPage"
+              className={classes.authButton}
+              onClick={() => setIsLoggedIn(true)}
+            >
+              {" "}
+              Log In{" "}
+            </Link>
           )}
         </div>
       </form>
-      {isLoggedIn && <UserPage />}
+      {isLoggedIn && <Redirect to={"/UserPage"} />}
     </div>
   );
 }
