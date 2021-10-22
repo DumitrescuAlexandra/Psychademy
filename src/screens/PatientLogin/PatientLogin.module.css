@@ -5,15 +5,27 @@
   align-items: center;
 }
 
+@media (min-width: 767px) {
+  .loginPage {
+    margin: min(7.5rem) 7vw;
+  }
+}
+
 .loginPage h4 {
-  margin-top: 2rem;
+  margin-top: 3rem;
   text-align: center;
 
   font-family: Merriweather;
   font-weight: bold;
-  font-size: 36px;
-  line-height: 45px;
+  font-size: 2.25rem;
+  line-height: 3rem;
   color: #fff8e1;
+}
+
+@media (min-width: 767px) {
+  .loginPage h4 {
+    font-size: 3rem;
+  }
 }
 
 .loginPage h5 {
@@ -23,8 +35,16 @@
   font-family: Lato;
   font-weight: 500;
   color: #fff8e1;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 767px) {
+  .loginPage h5 {
+    margin-top: 1rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+  }
 }
 
 .loginPage .loginHint {
@@ -33,4 +53,12 @@
   text-align: center;
   font-weight: 400;
   line-height: 1.5rem;
+}
+
+@media (min-width: 767px) {
+  .loginPage .loginHint {
+    margin-top: 3.5rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+  }
 }
