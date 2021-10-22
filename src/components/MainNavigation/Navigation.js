@@ -66,7 +66,7 @@ const Navigation = () => {
           }}
           className={classes.authNavi}
         >
-          Authentication
+          Patient&nbsp;&nbsp;Zone
         </NavLink>
       </div>
     </div>
