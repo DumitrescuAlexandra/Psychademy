@@ -96,7 +96,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  deleteControl input {
+  .deleteControl input {
     padding-top: 1rem;
     font-size: 1.5rem;
   }
@@ -185,6 +185,7 @@
 @media only screen and (min-width: 768px) {
   .deleteModal {
     margin: 15% auto 15% auto;
+    width: max(50vw);
   }
 }
 
@@ -196,7 +197,7 @@
 
 @media only screen and (min-width: 768px) {
   .deleteModal img {
-    margin: 3.5% 4.5%;
+    margin: 3.5% 5%;
   }
 }
 
@@ -230,9 +231,10 @@
 
 @media only screen and (min-width: 768px) {
   .modalText {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     line-height: 2rem;
     width: max(75%);
+    margin: 2% 3%;
   }
 }
 
