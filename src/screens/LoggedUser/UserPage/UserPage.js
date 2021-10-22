@@ -61,13 +61,11 @@ function UserPage() {
             </div>
           </div>
         </div>
-        <Link to="/welcome">
-          <img
-            src={"/Images/logout.svg"}
-            alt={"logout"}
-            className={classes.logout}
-          ></img>
-        </Link>
+        <img
+          src={"/Images/logout.svg"}
+          alt={"logout"}
+          className={classes.logout}
+        ></img>
 
         {modal && <MoodCheck />}
       </div>
