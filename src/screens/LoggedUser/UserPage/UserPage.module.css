@@ -46,7 +46,7 @@
   cursor: pointer;
 
   background: #054343;
-  border: 1px solid #387359;
+  border: 2px solid #387359;
 }
 
 @media (min-width: 767px) {

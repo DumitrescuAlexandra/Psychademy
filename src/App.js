@@ -57,16 +57,16 @@ function App() {
         <Route path="/UserPage/moodCheck">
           <MoodCheck />
         </Route>
-        <Route path="/UserPage/Account">
+        <Route path="/Account">
           <AccountSettings />
         </Route>
-        <Route path="/UserPage/ConfidentialityPolicy">
+        <Route path="/ConfidentialityPolicy">
           <ConfidentialityPolicy />
         </Route>
-        <Route path="/UserPage/PasswordChange">
+        <Route path="/PasswordChange">
           <ChangePassword />
         </Route>
-        <Route path="/UserPage/DeleteAccount">
+        <Route path="/DeleteAccount">
           <DeleteAccount />
         </Route>
         <Route path="/UserPage/Evolution">
