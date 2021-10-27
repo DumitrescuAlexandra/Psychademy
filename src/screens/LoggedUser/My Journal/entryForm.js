@@ -1,12 +1,11 @@
-import React from "react";
-import { Fragment, useRef, useState } from "react";
+import { React, useRef, useState } from "react";
 import { Prompt } from "react-router-dom";
 import Modal from "react-modal";
 import LoadingSpinner from "../../../UI/LoadingSpinner";
 
-import classes from "./entryForm.module.css";
+import classes from "./EntryForm.module.css";
 
-function entryForm(props) {
+const EntryForm = (props) => {
   const [isEntering, setIsEntering] = useState(false);
 
   const titleInputRef = useRef();
@@ -66,6 +65,6 @@ function entryForm(props) {
       </Modal>
     </div>
   );
-}
+};
 
-export default entryForm;
+export default EntryForm;
