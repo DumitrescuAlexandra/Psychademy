@@ -1,8 +1,8 @@
 const FIREBASE_DOMAIN =
   "https://psychademy-default-rtdb.europe-west1.firebasedatabase.app";
 
-export async function getAllQuotes() {
-  const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`);
+export async function getAllEntries() {
+  const response = await fetch(`${FIREBASE_DOMAIN}/entries.json`);
   const data = await response.json();
 
   if (!response.ok) {
@@ -54,47 +54,4 @@ export async function addEntry(entryData) {
   }
 
   return null;
-}
-
-export async function addComment(requestData) {
-  const response = await fetch(
-    `${FIREBASE_DOMAIN}/comments/${requestData.quoteId}.json`,
-    {
-      method: "POST",
-      body: JSON.stringify(requestData.commentData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  );
-  const data = await response.json();
-
-  if (!response.ok) {
-    throw new Error(data.message || "Could not add comment.");
-  }
-
-  return { commentId: data.name };
-}
-
-export async function getAllComments(entryId) {
-  const response = await fetch(`${FIREBASE_DOMAIN}/comments/${entryId}.json`);
-
-  const data = await response.json();
-
-  if (!response.ok) {
-    throw new Error(data.message || "Could not get comments.");
-  }
-
-  const transformedComments = [];
-
-  for (const key in data) {
-    const commentObj = {
-      id: key,
-      ...data[key],
-    };
-
-    transformedComments.push(commentObj);
-  }
-
-  return transformedComments;
 }
