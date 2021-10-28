@@ -19,6 +19,7 @@ import ConfidentialityPolicy from "./screens/LoggedUser/UserProfile/Confidential
 import ChangePassword from "./screens/LoggedUser/UserProfile/Change Password/ChangePassword";
 import DeleteAccount from "./screens/LoggedUser/UserProfile/Delete Account/DeleteAccount";
 import MoodGraph from "./screens/LoggedUser/Mood Graph/MoodGraph";
+import Journal from "./screens/LoggedUser/My Journal/Journal";
 
 function App() {
   return (
@@ -71,6 +72,9 @@ function App() {
         </Route>
         <Route path="/UserPage/Evolution">
           <MoodGraph />
+        </Route>
+        <Route path="/Journal">
+          <Journal />
         </Route>
 
         <Route path="*">

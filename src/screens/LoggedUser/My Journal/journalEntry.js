@@ -5,12 +5,12 @@ const JournalEntry = (props) => {
   return (
     <li className={classes.journalEntry}>
       <figure>
+        <figcaption>{props.title}</figcaption>
         <blockquote>
           <p>{props.text}</p>
         </blockquote>
-        <figcaption>{props.title}</figcaption>
       </figure>
-      <Link to={`/quotes/${props.id}`} className={classes.viewEntryBtn}>
+      <Link to={`/Journal/${props.id}`} className={classes.viewEntryBtn}>
         <img src="/Images/open.png" alt=""></img>
       </Link>
     </li>

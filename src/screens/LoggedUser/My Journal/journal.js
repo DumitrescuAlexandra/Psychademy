@@ -2,7 +2,7 @@ import React from "react";
 import { useHistory, useLocation } from "react-router-dom";
 
 import classes from "./Journal.module.css";
-import JournalEntry from "./journalEntry";
+import JournalEntry from "./JournalEntry";
 
 const sortEntries = (entries, ascending) => {
   return entries.sort((entryA, entryB) => {
@@ -30,13 +30,13 @@ function Journal(props) {
     );
   };
   return (
-    <div>
+    <div className={classes.journalPage}>
       <div className={classes.sorting}>
         <button onClick={changeSortingHandler}>
           Sort {isSortingAscending ? "Descending" : "Ascending"}
         </button>
       </div>
-      <ul className={classes.list}>
+      <ul className={classes.entriesList}>
         {sortedEntries.map((entry) => (
           <JournalEntry
             key={entry.id}
