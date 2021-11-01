@@ -42,7 +42,7 @@ function App() {
             <AboutCBT />
           </Route>
         </Route>
-        <Route path="/services">
+        <Route path="/services/:clientType">
           <Redirect to="/services/adults" />
           <ServicesAndFees />
         </Route>
