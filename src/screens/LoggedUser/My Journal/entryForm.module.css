@@ -1,0 +1,199 @@
+.entryFormPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 7vw;
+}
+
+@media only screen and (min-width: 768px) {
+  .entryFormPage {
+    margin: 0;
+  }
+}
+
+.entryModalBck {
+  display: flex;
+}
+
+.entryModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 35% 5%;
+  background-color: #1e5656;
+  border-radius: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .entryModal {
+    margin: 15% auto 15% auto;
+    width: max(50vw);
+  }
+}
+
+.entryModal img {
+  align-self: flex-end;
+  margin: 7.5% 7.5%;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .entryModal img {
+    margin: 3.5% 5%;
+  }
+}
+
+.addEntryForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.entryTitle {
+  margin-bottom: 10%;
+  font-family: Merriweather;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: #fff8e1;
+}
+
+@media only screen and (min-width: 768px) {
+  .entryTitle {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    margin-bottom: 5%;
+  }
+}
+
+.entryControl,
+.entryAction {
+  height: 3.5rem;
+  width: min(19rem);
+}
+
+@media only screen and (min-width: 768px) {
+  .entryControl,
+  .entryAction {
+    height: 5rem;
+    width: min(22rem);
+  }
+}
+
+.addEntryBtn {
+  font-family: Lato;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.75rem;
+  color: #074343;
+  background-color: #78ddb1;
+  border-radius: 8px;
+  margin: 2.5rem auto;
+  padding: 2.5% 5%;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .addEntryBtn {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.entryControl {
+  display: flex;
+  flex-direction: column;
+  background-color: #043232;
+  position: relative;
+
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.entryControl:hover {
+  border: 2px solid #78ddb1;
+}
+
+.entryControl input {
+  background-color: inherit;
+  border: none;
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+  padding-top: 1.75rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding-left: 1rem;
+  color: #c2f6f6;
+}
+
+@media only screen and (min-width: 768px) {
+  .entryControl input {
+    padding-top: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+.entryControl label {
+  position: absolute;
+  bottom: 0rem;
+  left: 0.25rem;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .entryControl label {
+    bottom: 1rem;
+    left: 0.5rem;
+  }
+}
+
+.entryControl label::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.entryAction {
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+  justify-content: space-around;
+  background: #78ddb1;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.entryAction .addEntryBtn {
+  background-color: inherit;
+  border: none;
+  font-family: Lato;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.75rem;
+  color: #074343;
+}
+
+.entryAction:hover {
+  border: solid 2px #074343;
+}
+
+.titleContent,
+.textContent {
+  position: absolute;
+  bottom: 0.25rem;
+  color: #6ea5a5;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.entryControl input:focus + .labelName .titleContent,
+.entryControl input:valid + .labelName .titleContent,
+.entryControl input:focus + .labelName .textContent,
+.entryControl input:valid + .labelName .textContent {
+  transform: translateY(-100%);
+  font-size: 1rem;
+  opacity: 0.5;
+}

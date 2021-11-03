@@ -1,7 +1,14 @@
 .accountSettingsPage {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-left: 7vw;
+}
+
+@media only screen and (min-width: 768px) {
+  .accountSettingsPage {
+    margin: 0;
+  }
 }
 
 .title {
@@ -13,13 +20,21 @@
   color: #fff8e1;
 }
 
+@media only screen and (min-width: 768px) {
+  .title {
+    margin-top: min(7.5rem);
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+
 .setting {
   display: flex;
   justify-content: space-between;
   margin: 1rem 2.5rem auto auto;
   padding: 5%;
   width: 100%;
-  border: 1px solid #387359;
+  border: 2px solid #387359;
   border-radius: 8px;
   font-size: 1.2rem;
   line-height: 1.75rem;
@@ -36,6 +51,16 @@
   background-position: bottom center;
   transition: all 0.3s ease-out;
   background-size: 100% 3px, auto;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .setting {
+    width: max(30vw);
+    margin-top: 1.5rem;
+    line-height: 7.5rem;
+    padding: 7.5%;
+  }
 }
 
 .setting a {
@@ -45,4 +70,12 @@
   font-size: 1.2rem;
   line-height: 1.75rem;
   color: #fff8e1;
+}
+
+@media only screen and (min-width: 768px) {
+  .setting a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+  }
 }

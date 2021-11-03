@@ -7,6 +7,12 @@
   margin-left: 7vw;
 }
 
+@media only screen and (min-width: 768px) {
+  .deletePage {
+    margin: 0;
+  }
+}
+
 .deleteModal {
   display: flex;
 }
@@ -21,6 +27,14 @@
   color: #fff8e1;
 }
 
+@media only screen and (min-width: 768px) {
+  .deleteTitle {
+    margin-top: min(7.5rem);
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
+
 .deleteSubTitle {
   margin-bottom: 2rem;
   font-family: Lato;
@@ -31,10 +45,27 @@
   padding: 1rem 2.25rem;
 }
 
+@media only screen and (min-width: 768px) {
+  .deleteSubTitle {
+    margin-top: 1rem;
+    font-size: 1.35rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+  }
+}
+
 .deleteControl,
 .deleteAction {
   height: 3.5rem;
   width: min(19rem);
+}
+
+@media only screen and (min-width: 768px) {
+  .deleteControl,
+  .deleteAction {
+    height: 5rem;
+    width: min(22rem);
+  }
 }
 
 .deleteControl {
@@ -64,6 +95,13 @@
   color: #c2f6f6;
 }
 
+@media only screen and (min-width: 768px) {
+  .deleteControl input {
+    padding-top: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
 .deleteControl label {
   position: absolute;
   bottom: 0rem;
@@ -71,6 +109,13 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .deleteControl label {
+    bottom: 1rem;
+    left: 0.5rem;
+  }
 }
 
 .deleteControl label::after {
@@ -137,10 +182,23 @@
   border-radius: 40px;
 }
 
+@media only screen and (min-width: 768px) {
+  .deleteModal {
+    margin: 15% auto 15% auto;
+    width: max(50vw);
+  }
+}
+
 .deleteModal img {
   align-self: flex-end;
   margin: 7.5% 7.5%;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .deleteModal img {
+    margin: 3.5% 5%;
+  }
 }
 
 .modalTitle {
@@ -150,6 +208,14 @@
   font-size: 1.5rem;
   line-height: 1.5rem;
   color: #fff8e1;
+}
+
+@media only screen and (min-width: 768px) {
+  .modalTitle {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    margin-bottom: 5%;
+  }
 }
 
 .modalText {
@@ -163,6 +229,15 @@
   color: #fff8e1;
 }
 
+@media only screen and (min-width: 768px) {
+  .modalText {
+    font-size: 1.15rem;
+    line-height: 2rem;
+    width: max(75%);
+    margin: 2% 3%;
+  }
+}
+
 .modalBtn {
   font-family: Lato;
   font-weight: bold;
@@ -174,6 +249,13 @@
   margin: 2.5rem auto;
   padding: 2.5% 5%;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .modalBtn {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 .modalBtn:hover {

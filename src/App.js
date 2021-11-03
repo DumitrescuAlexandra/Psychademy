@@ -1,6 +1,6 @@
 import { Route, Switch, Redirect } from "react-router-dom";
 
-import classes from "./App.module.css";
+import "./App.module.css";
 import { Fragment } from "react";
 
 import Welcome from "./screens/Welcome/Welcome";
@@ -19,6 +19,7 @@ import ConfidentialityPolicy from "./screens/LoggedUser/UserProfile/Confidential
 import ChangePassword from "./screens/LoggedUser/UserProfile/Change Password/ChangePassword";
 import DeleteAccount from "./screens/LoggedUser/UserProfile/Delete Account/DeleteAccount";
 import MoodGraph from "./screens/LoggedUser/Mood Graph/MoodGraph";
+import Journal from "./screens/LoggedUser/My Journal/Journal";
 
 function App() {
   return (
@@ -41,8 +42,11 @@ function App() {
             <AboutCBT />
           </Route>
         </Route>
-        <Route path="/services">
+        <Route path="/services" exact>
+          {" "}
           <Redirect to="/services/adults" />
+        </Route>
+        <Route path="/services/:clientType">
           <ServicesAndFees />
         </Route>
         <Route path="/contact">
@@ -50,27 +54,30 @@ function App() {
         </Route>
         <Route path="/PatientLogin">
           <PatientLogin />
-          <Route path="/UserPage">
-            <UserPage />
-          </Route>
+        </Route>
+        <Route path="/UserPage">
+          <UserPage />
         </Route>
         <Route path="/UserPage/moodCheck">
           <MoodCheck />
         </Route>
-        <Route path="/UserPage/Account">
+        <Route path="/Account">
           <AccountSettings />
         </Route>
-        <Route path="/UserPage/ConfidentialityPolicy">
+        <Route path="/ConfidentialityPolicy">
           <ConfidentialityPolicy />
         </Route>
-        <Route path="/UserPage/PasswordChange">
+        <Route path="/PasswordChange">
           <ChangePassword />
         </Route>
-        <Route path="/UserPage/DeleteAccount">
+        <Route path="/DeleteAccount">
           <DeleteAccount />
         </Route>
         <Route path="/UserPage/Evolution">
           <MoodGraph />
+        </Route>
+        <Route path="/Journal">
+          <Journal />
         </Route>
 
         <Route path="*">

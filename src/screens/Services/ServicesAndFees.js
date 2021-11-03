@@ -1,29 +1,15 @@
-import React, { useState, Fragment } from "react";
-import { NavLink } from "react-router-dom";
+import React, { Fragment } from "react";
+import { NavLink, useParams, Route } from "react-router-dom";
 import classes from "./Services.module.css";
 import BackArrow from "../../UI/Buttons/BackArrow";
 import Services from "./Services";
+import ServicesChildren from "./ServicesChildren";
 
-const ServicesAndFees = () => {
-  const [client, setClient] = useState({
-    activeClient: null,
-    clients: [
-      { name: "Adults", type: "Adults", path: "/services/adults" },
-      { name: "Children", type: "Children", path: "/services/children" },
-    ],
-  });
+const ServicesAndFees = (props) => {
+  const params = useParams();
 
-  const toggleClientHandler = (i) => {
-    setClient({ ...client, activeClient: client.clients[i] });
-  };
+  console.log(params.clientType);
 
-  const toggleClientClass = (i) => {
-    if (client.clients[i] === client.activeClient) {
-      return classes.client_active;
-    } else {
-      return classes.client_inactive;
-    }
-  };
   return (
     <Fragment>
       <BackArrow />
@@ -40,19 +26,29 @@ const ServicesAndFees = () => {
           </p>
         </div>
         <div className={classes.clientType}>
-          {client.clients.map((el, i) => (
-            <NavLink
-              key={i}
-              className={toggleClientClass(i)}
-              onClick={toggleClientHandler}
-              to={client.clients[i].path}
-              activeStyle={{ background: "#78ddb1", color: "#074343" }}
-            >
-              {client.clients[i].name}
-            </NavLink>
-          ))}
+          <NavLink
+            key={1}
+            className={classes.client_inactive}
+            to="/services/adults"
+            activeStyle={{ background: "#78ddb1", color: "#074343" }}
+          >
+            Adults
+          </NavLink>
+          <NavLink
+            key={2}
+            className={classes.client_inactive}
+            to="/services/children"
+            activeStyle={{ background: "#78ddb1", color: "#074343" }}
+          >
+            Children
+          </NavLink>
         </div>
-        <Services />
+        <Route path="/services/adults">
+          <Services />
+        </Route>
+        <Route path="/services/children">
+          <ServicesChildren />
+        </Route>
       </div>
     </Fragment>
   );
