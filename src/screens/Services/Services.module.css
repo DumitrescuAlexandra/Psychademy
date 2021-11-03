@@ -147,16 +147,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: min(85vw);
   padding: 2.5%;
   border-radius: 8px;
   margin: 0.5rem 0;
   background-color: #1e5656;
 }
 
+@media only screen and (min-width: 500px) {
+  .card {
+    margin: 0.75rem auto;
+    width: 65vw;
+    height: 8.5rem;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .card {
     margin: 0.75rem auto;
-    width: 90%;
+    width: 25vw;
     height: 8.5rem;
   }
 }
@@ -190,7 +199,6 @@
   align-items: center;
   padding: 2.5%;
   margin: 0.5rem 0;
-
   border-radius: 8px;
   background-color: #2c7a7a;
 }
@@ -198,7 +206,7 @@
 @media only screen and (min-width: 768px) {
   .card_flipped {
     margin: 0.75rem auto;
-    width: 90%;
+    width: 25vw;
     height: 8.5rem;
   }
 }

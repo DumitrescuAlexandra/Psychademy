@@ -1,8 +1,9 @@
 import React, { Fragment } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useParams, Route } from "react-router-dom";
 import classes from "./Services.module.css";
 import BackArrow from "../../UI/Buttons/BackArrow";
 import Services from "./Services";
+import ServicesChildren from "./ServicesChildren";
 
 const ServicesAndFees = (props) => {
   const params = useParams();
@@ -28,7 +29,7 @@ const ServicesAndFees = (props) => {
           <NavLink
             key={1}
             className={classes.client_inactive}
-            to={`/services/adults`}
+            to="/services/adults"
             activeStyle={{ background: "#78ddb1", color: "#074343" }}
           >
             Adults
@@ -36,14 +37,18 @@ const ServicesAndFees = (props) => {
           <NavLink
             key={2}
             className={classes.client_inactive}
-            to={`/services/children`}
+            to="/services/children"
             activeStyle={{ background: "#78ddb1", color: "#074343" }}
           >
             Children
           </NavLink>
         </div>
-
-        <Services />
+        <Route path="/services/adults">
+          <Services />
+        </Route>
+        <Route path="/services/children">
+          <ServicesChildren />
+        </Route>
       </div>
     </Fragment>
   );

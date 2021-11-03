@@ -1,48 +1,27 @@
 import React, { useState } from "react";
-
 import classes from "./Services.module.css";
 import ServicesCard from "./ServicesCard";
 
-function Services() {
+function ServicesChildren() {
   const [cards, setCards] = useState([
     {
       text: "Individual session",
       imgSrc: "/Images/service1.svg",
       altText: "individual",
-      client: "adults",
-      duration: "50 mins",
-      location: "online/office",
-      price: "€35/session",
-      flip: false,
-    },
-    {
-      text: "Group therapy session",
-      imgSrc: "/Images/service2.svg",
-      altText: "group",
-      client: "adults",
-      duration: "75 mins",
+      client: "children",
+      duration: "30-45 mins",
       location: "office",
-      price: "€25/person",
-      flip: false,
-    },
-    {
-      text: "Couple therapy session",
-      imgSrc: "/Images/service3.svg",
-      altText: "couple",
-      client: "adults",
-      duration: "90 mins",
-      location: "online/office",
-      price: "€30/person",
+      price: "€30/session",
       flip: false,
     },
     {
       text: "Clinical Evaluation",
       imgSrc: "/Images/service4.svg",
-      altText: "evaluation",
-      client: "adults",
-      duration: "120 mins",
+      altText: "individual",
+      client: "children",
+      duration: "30-90 mins",
       location: "office",
-      price: "€75/session",
+      price: "€35-75",
       flip: false,
     },
   ]);
@@ -72,4 +51,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default ServicesChildren;

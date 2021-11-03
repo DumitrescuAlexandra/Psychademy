@@ -1,6 +1,6 @@
 import { Route, Switch, Redirect } from "react-router-dom";
 
-import classes from "./App.module.css";
+import "./App.module.css";
 import { Fragment } from "react";
 
 import Welcome from "./screens/Welcome/Welcome";
@@ -42,8 +42,11 @@ function App() {
             <AboutCBT />
           </Route>
         </Route>
-        <Route path="/services/:clientType">
+        <Route path="/services" exact>
+          {" "}
           <Redirect to="/services/adults" />
+        </Route>
+        <Route path="/services/:clientType">
           <ServicesAndFees />
         </Route>
         <Route path="/contact">
