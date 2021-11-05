@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import QuoteList from "../components/quotes/QuoteList";
+import EntryList from "../components/quotes/QuoteList";
 import LoadingSpinner from "../components/UI/LoadingSpinner";
 import useHttp from "../hooks/use-http";
 import { getAllEntries } from "../lib/api";
@@ -9,7 +9,7 @@ const Entries = () => {
   const {
     sendRequest,
     status,
-    data: loadedQuote,
+    data: loadedEntry,
     error,
   } = useHttp(getAllEntries, true);
 
@@ -29,10 +29,10 @@ const Entries = () => {
     return <p className="centered focused">{error}</p>;
   }
 
-  if (status === "completed" && (!loadedQuote || loadedQuote.length === 0)) {
+  if (status === "completed" && (!loadedEntry || loadedEntry.length === 0)) {
     return <NotFound />;
   }
-  return <QuoteList entries={loadedQuote}></QuoteList>;
+  return <EntryList entries={loadedEntry}></EntryList>;
 };
 
 export default Entries;

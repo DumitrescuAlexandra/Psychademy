@@ -1,9 +1,7 @@
 import { useParams, Route, useRouteMatch } from "react-router-dom";
 import React from "react";
 import { useEffect } from "react";
-
-// import HighlightedQuote from "../components/quotes/HighlightedQuote";
-// import Comments from "../components/comments/Comments";
+import JournalEntry from "../JournalEntry";
 import useHttp from "../hooks/use-http";
 import { getSingleEntry } from "../lib/api";
 import LoadingSpinner from "../../../../UI/LoadingSpinner";
@@ -38,24 +36,17 @@ const EntryDetails = () => {
   }
 
   if (!loadedEntry.text) {
-    return <p> No Quote found! </p>;
+    return <p> No Entry found! </p>;
   }
 
   return (
     <div>
-      {/* <HighlightedQuote text={loadedQuote.text} author={loadedQuote.author} /> */}
       <Route path={`${match.path}`} exact>
         <div className="centered">
           {" "}
-          {/* <Link className="btn--flat" to={`${match.url}/comments`}>
-            Comments{" "}
-          </Link> */}
+          <JournalEntry></JournalEntry>
         </div>
       </Route>
-
-      {/* <Route path={`${match.path}/comments`}>
-        <Comments />
-      </Route> */}
     </div>
   );
 };
