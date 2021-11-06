@@ -1,52 +1,41 @@
-import { useParams, Route, useRouteMatch } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import React from "react";
-import { useEffect } from "react";
-import JournalEntry from "../JournalEntry";
-import useHttp from "../hooks/use-http";
-import { getSingleEntry } from "../lib/api";
-import LoadingSpinner from "../../../../UI/LoadingSpinner";
+
+import DetailedEntry from "../DetailedEntry";
+
+const DUMMY_ENTRIES = [
+  {
+    id: "e1",
+    date: "22-nov-2020",
+    title: "I hate my job",
+    message:
+      "Today my lazy co-worker has been promoted. It's so unfair! I hate my stupid manager and I can't stand this workplace anymore!",
+  },
+  {
+    id: "e2",
+    date: "02-dec-2020",
+    title: "I love my new manager",
+    message:
+      "The lazy coworker, my actual direct manager took me in for a meeting and offered me a raise and pep talk",
+  },
+];
 
 const EntryDetails = () => {
-  const match = useRouteMatch();
   const params = useParams();
 
-  const { entryId } = params;
+  const entry = DUMMY_ENTRIES.find((entry) => entry.id === params.entryId);
 
-  const {
-    sendRequest,
-    status,
-    data: loadedEntry,
-    error,
-  } = useHttp(getSingleEntry, true);
-
-  useEffect(() => {
-    sendRequest(entryId);
-  }, [sendRequest, entryId]);
-
-  if (status === "pending") {
-    return (
-      <div className="centered">
-        <LoadingSpinner />
-      </div>
-    );
-  }
-
-  if (error) {
-    return <p className="centered">{error}</p>;
-  }
-
-  if (!loadedEntry.text) {
-    return <p> No Entry found! </p>;
+  if (!entry) {
+    return <p> No entry found!</p>;
   }
 
   return (
     <div>
-      <Route path={`${match.path}`} exact>
-        <div className="centered">
-          {" "}
-          <JournalEntry></JournalEntry>
-        </div>
-      </Route>
+      <DetailedEntry
+        text={entry.message}
+        date={entry.date}
+        title={entry.title}
+      ></DetailedEntry>
     </div>
   );
 };
