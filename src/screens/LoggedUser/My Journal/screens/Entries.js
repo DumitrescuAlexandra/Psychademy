@@ -1,38 +1,25 @@
-import { useEffect } from "react";
+import React from "react";
+import EntryList from "../EntryList";
 
-import EntryList from "../components/quotes/QuoteList";
-import LoadingSpinner from "../components/UI/LoadingSpinner";
-import useHttp from "../hooks/use-http";
-import { getAllEntries } from "../lib/api";
-import NotFound from "../../../Not found/NotFound";
+const DUMMY_ENTRIES = [
+  {
+    id: "e1",
+    date: "22-nov-2020",
+    title: "I hate my job",
+    message:
+      "Today my lazy co-worker has been promoted. It's so unfair! I hate my stupid manager and I can't stand this workplace anymore!",
+  },
+  {
+    id: "e2",
+    date: "02-dec-2020",
+    title: "I love my new manager",
+    message:
+      "The lazy coworker, my actual direct manager took me in for a meeting and offered me a raise and pep talk",
+  },
+];
+
 const Entries = () => {
-  const {
-    sendRequest,
-    status,
-    data: loadedEntry,
-    error,
-  } = useHttp(getAllEntries, true);
-
-  useEffect(() => {
-    sendRequest();
-  }, [sendRequest]);
-
-  if (status === "pending") {
-    return (
-      <div className="centered">
-        <LoadingSpinner />
-      </div>
-    );
-  }
-
-  if (error) {
-    return <p className="centered focused">{error}</p>;
-  }
-
-  if (status === "completed" && (!loadedEntry || loadedEntry.length === 0)) {
-    return <NotFound />;
-  }
-  return <EntryList entries={loadedEntry}></EntryList>;
+  return <EntryList entries={DUMMY_ENTRIES}></EntryList>;
 };
 
 export default Entries;

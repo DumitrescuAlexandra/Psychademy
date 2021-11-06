@@ -14,7 +14,7 @@ const sortEntries = (entries, ascending) => {
   });
 };
 
-function Journal(props) {
+function EntryList(props) {
   const history = useHistory();
   const location = useLocation();
 
@@ -50,4 +50,4 @@ function Journal(props) {
   );
 }
 
-export default Journal;
+export default EntryList;
