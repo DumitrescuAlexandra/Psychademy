@@ -3,14 +3,6 @@ import { React, useRef } from "react";
 import LoadingSpinner from "../../../UI/LoadingSpinner";
 import classes from "./EntryForm.module.css";
 
-const options = {
-  weekday: "long",
-  year: "numeric",
-  month: "short",
-  day: "numeric",
-};
-const date = new Date().toLocaleDateString("en-US", options);
-
 const EntryForm = (props) => {
   const titleInputRef = useRef();
   const textInputRef = useRef();
@@ -29,7 +21,7 @@ const EntryForm = (props) => {
     const enteredTitle = titleInputRef.current.value;
     const enteredText = textInputRef.current.value;
 
-    props.onAddQuote({ title: enteredTitle, text: enteredText, date: date });
+    props.onAddEntry({ title: enteredTitle, text: enteredText, date: date });
   }
 
   return (
@@ -58,10 +50,9 @@ const EntryForm = (props) => {
           </label>
           <textarea id="text" rows="5" ref={textInputRef}></textarea>
         </div>
+        <div className={classes.entryDate}>{props.date}</div>
         <div className={classes.entryAction}>
-          <div onClick={finishEnteringHandler} className={classes.addEntryBtn}>
-            Add entry
-          </div>
+          <div className={classes.addEntryBtn}>Add entry</div>
         </div>
       </form>
     </div>
