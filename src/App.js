@@ -20,6 +20,8 @@ import ChangePassword from "./screens/LoggedUser/UserProfile/Change Password/Cha
 import DeleteAccount from "./screens/LoggedUser/UserProfile/Delete Account/DeleteAccount";
 import MoodGraph from "./screens/LoggedUser/Mood Graph/MoodGraph";
 import EntryList from "./screens/LoggedUser/My Journal/EntryList";
+import EntryDetails from "./screens/LoggedUser/My Journal/screens/EntryDetails";
+import NewEntry from "./screens/LoggedUser/My Journal/screens/NewEntry";
 
 function App() {
   return (
@@ -78,6 +80,12 @@ function App() {
         </Route>
         <Route path="/Journal">
           <EntryList />
+        </Route>
+        <Route path="/Journal/:entryId">
+          <EntryDetails />
+        </Route>
+        <Route path="/new-entry">
+          <NewEntry />
         </Route>
 
         <Route path="*">

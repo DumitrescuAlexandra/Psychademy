@@ -7,13 +7,12 @@ const EntryForm = (props) => {
   const titleInputRef = useRef();
   const textInputRef = useRef();
 
-  const options = {
+  const date = new Date().toLocaleDateString("en-US", {
     weekday: "long",
     year: "numeric",
     month: "short",
     day: "numeric",
-  };
-  const date = new Date().toLocaleDateString("en-US", options);
+  });
 
   function submitFormHandler(event) {
     event.preventDefault();
@@ -25,7 +24,7 @@ const EntryForm = (props) => {
   }
 
   return (
-    <div classname={classes.entryFormPage}>
+    <div className={classes.entryFormPage}>
       <form className={classes.addEntryForm} onSubmit={submitFormHandler}>
         {props.isLoading && (
           <div className={classes.loading}>
@@ -50,7 +49,7 @@ const EntryForm = (props) => {
           </label>
           <textarea id="text" rows="5" ref={textInputRef}></textarea>
         </div>
-        <div className={classes.entryDate}>{props.date}</div>
+        <div className={classes.entryDate}>{date}</div>
         <div className={classes.entryAction}>
           <div className={classes.addEntryBtn}>Add entry</div>
         </div>

@@ -3,7 +3,7 @@ import React from "react";
 import classes from "./EntryList.module.css";
 import JournalEntry from "./JournalEntry";
 
-function EntryList(props) {
+const EntryList = (props) => {
   return (
     <div className={classes.journalPage}>
       <ul className={classes.entriesList}>
@@ -19,6 +19,6 @@ function EntryList(props) {
       </ul>
     </div>
   );
-}
+};
 
 export default EntryList;
