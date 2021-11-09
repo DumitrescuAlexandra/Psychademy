@@ -7,7 +7,11 @@ const NewEntry = () => {
     console.log(entryData);
   };
 
-  return <EntryForm onAddEntry={addEntryHandler}></EntryForm>;
+  return (
+    <div>
+      <EntryForm onAddEntry={addEntryHandler}></EntryForm>
+    </div>
+  );
 };
 
 export default NewEntry;

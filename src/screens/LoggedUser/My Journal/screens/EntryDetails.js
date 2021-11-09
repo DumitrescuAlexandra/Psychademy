@@ -32,7 +32,7 @@ const EntryDetails = () => {
   return (
     <div>
       <DetailedEntry
-        text={entry.message}
+        message={entry.message}
         date={entry.date}
         title={entry.title}
       ></DetailedEntry>

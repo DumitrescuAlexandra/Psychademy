@@ -2,37 +2,19 @@
 
 .journalEntry {
   margin: 1rem 0;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  border-radius: 6px;
-  background-color: #c2e7f0;
+  align-items: center;
+  width: 80vw;
+  border: 1.25px solid #387359;
+  box-sizing: border-box;
+  border-radius: 50px;
 }
 
-.journalEntry:last-of-type {
-  border-bottom: none;
-}
-
-.journalEntry figure {
-  margin: 0;
-  padding: 0;
-  width: 70%;
-}
-
-.journalEntry blockquote {
-  margin: 0;
-  text-align: left;
-  font-size: 1.5rem;
-  color: #212929;
-}
-
-.journalEntry p {
-  margin: 0;
-  margin-bottom: 0.25rem;
-}
-
-.journalEntry figcaption {
-  font-style: italic;
-  color: #566d6d;
+.entryTitle p {
+  font-family: Lato;
+  font-size: 1.15rem;
+  line-height: 1.5rem;
+  color: #fff8e1;
 }

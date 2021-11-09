@@ -1,16 +1,28 @@
-.hournalPage {
+.journalPage {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 7vw;
+  margin-top: 15%;
+}
+
+.journalTitle {
+  padding: 2.5rem;
+  align-self: flex-start;
+}
+
+.journalTitle p {
+  font-family: Merriweather;
+  font-weight: bold;
+  font-size: 2.25rem;
+  line-height: 3rem;
+  color: #fff8e1;
 }
 
 .entriesList {
   list-style: none;
-  padding: 0;
 }
 
-.sorting {
+/* .sorting {
   padding-bottom: 1rem;
   border-bottom: 3px solid #b2d4d4;
   margin-bottom: 2rem;
@@ -28,4 +40,4 @@
 
 .sorting button:hover {
   background-color: #c2fafa;
-}
+} */

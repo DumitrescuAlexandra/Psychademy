@@ -7,12 +7,15 @@ const EntryForm = (props) => {
   const titleInputRef = useRef();
   const textInputRef = useRef();
 
-  const date = new Date().toLocaleDateString("en-US", {
-    weekday: "long",
+  const date = `${new Date().toLocaleDateString("en-US", {
+    weekday: "short",
     year: "numeric",
     month: "short",
     day: "numeric",
-  });
+  })}  -  ${new Date().toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  })}`;
 
   function submitFormHandler(event) {
     event.preventDefault();
