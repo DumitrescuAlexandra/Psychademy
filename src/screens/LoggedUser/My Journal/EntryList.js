@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Route } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import EntryDetails from "./screens/EntryDetails";
 
 import classes from "./EntryList.module.css";
@@ -40,6 +40,9 @@ const EntryList = () => {
           />
         ))}
       </ul>
+      <div className={classes.newEntry}>
+        <Link to="/new-entry"> Add entry </Link>
+      </div>
       <Route path="/Journal/:entryId">
         <EntryDetails />
       </Route>
