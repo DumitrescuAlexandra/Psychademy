@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "./DetailedEntry.module.css";
 
 function DetailedEntry(props) {
@@ -16,6 +17,7 @@ function DetailedEntry(props) {
           <p>{props.message}</p>
         </div>
       </div>
+      <Link to="/Journal"> Back </Link>
     </div>
   );
 }

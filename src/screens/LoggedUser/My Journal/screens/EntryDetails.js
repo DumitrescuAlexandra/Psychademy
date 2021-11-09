@@ -51,6 +51,8 @@ const EntryDetails = () => {
         <img
           src="/Images/close.svg"
           alt=""
+          height="28px"
+          width="28px"
           onClick={() => history.push("/Journal")}
         ></img>
         <DetailedEntry
