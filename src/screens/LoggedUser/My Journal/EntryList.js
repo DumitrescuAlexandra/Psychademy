@@ -10,14 +10,14 @@ const EntryList = () => {
   const DUMMY_ENTRIES = [
     {
       id: "e1",
-      date: "22-nov-2020 - 12.47PM",
+      date: "Thu, 22-nov-2020 - 12.47PM",
       title: "I hate my job",
       message:
         "Today my lazy co-worker has been promoted. It's so unfair! I hate my stupid manager and I can't stand this workplace anymore!",
     },
     {
       id: "e2",
-      date: "02-dec-2020 - 3.21PM",
+      date: "Wed, 02-dec-2020 - 3.21PM",
       title: "I love my new manager",
       message:
         "The lazy coworker, my actual direct manager took me in for a meeting and offered me a raise and pep talk",

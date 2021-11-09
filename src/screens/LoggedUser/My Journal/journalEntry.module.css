@@ -12,9 +12,9 @@
   border-radius: 50px;
 }
 
-.journalEntry p {
+.entryTitle p {
   font-family: Lato;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.5rem;
   color: #fff8e1;
 }
@@ -25,6 +25,11 @@
 
 .entryDate {
   opacity: 0.5;
+}
+.entryDate p {
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  color: #fff8e1;
 }
 
 .viewEntryBtn {
