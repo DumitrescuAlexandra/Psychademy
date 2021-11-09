@@ -2,7 +2,8 @@ import classes from "./JournalEntry.module.css";
 import { Link } from "react-router-dom";
 
 const JournalEntry = (props) => {
-  const displayedTitle = props.message.slice(0, 15) + "...";
+  const displayedTitle =
+    props.title.length > 15 ? props.title.slice(0, 15) + "..." : props.title;
 
   return (
     <li className={classes.journalEntry}>

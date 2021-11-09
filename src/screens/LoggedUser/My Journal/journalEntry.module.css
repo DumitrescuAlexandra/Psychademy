@@ -2,19 +2,31 @@
 
 .journalEntry {
   margin: 1rem 0;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80vw;
+  width: 85vw;
   border: 1.25px solid #387359;
   box-sizing: border-box;
   border-radius: 50px;
 }
 
-.entryTitle p {
+.journalEntry p {
   font-family: Lato;
-  font-size: 1.15rem;
+  font-size: 1rem;
   line-height: 1.5rem;
   color: #fff8e1;
+}
+
+.journalIcon {
+  margin-top: 2%;
+}
+
+.entryDate {
+  opacity: 0.5;
+}
+
+.viewEntryBtn {
+  margin-top: 2%;
 }

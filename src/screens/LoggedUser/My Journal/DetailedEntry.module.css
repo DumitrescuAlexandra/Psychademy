@@ -1,0 +1,14 @@
+.entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title {
+  margin: 1.5rem auto;
+  font-family: Merriweather;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: #fff8e1;
+}
