@@ -27,7 +27,7 @@ function UserPage() {
 
           <div className={classes.userLink}>
             <div className={classes.userIcon}>
-              <img src={"/Images/journal.svg"} alt={""}></img>
+              <img src={"/Images/journal-icon.svg"} alt={""}></img>
             </div>
             <Link to="/Journal" className={classes.userNav}>
               Journal{" "}

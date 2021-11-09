@@ -51,13 +51,15 @@ const EntryForm = (props) => {
           alt=""
           height="28px"
           width="28px"
-          onClick={() => history.push("/Journal")}
+          onClick={() => history.replace("/Journal")}
         ></img>
         <div className={classes.entryContainer}>
           <div className={classes.formTitle}>
             <p> Create new Entry</p>
           </div>
-          <div className={classes.entryDate}>{date}</div>
+          <div className={classes.entryDate}>
+            <p>{date}</p>
+          </div>
 
           <div className={classes.addEntryForm}>
             <form onSubmit={submitFormHandler}>
@@ -90,13 +92,24 @@ const EntryForm = (props) => {
                     ({ resize: "none" },
                     { overflow: "auto" },
                     { maxWidth: "100%" },
-                    { maxHeight: "100%" })
+                    { maxHeight: "100%" },
+                    { fontFamily: "Lato" })
                   }
                   ref={textInputRef}
                 />
               </div>
-              <div className={classes.entryAction}>
-                <div className={classes.addEntryBtn}>Add entry</div>
+              <div className={classes.btns}>
+                <div className={classes.entryAction}>
+                  <div
+                    className={classes.cancelEntryBtn}
+                    onClick={() => history.replace("/Journal")}
+                  >
+                    Cancel
+                  </div>
+                </div>
+                <div className={classes.entryAction}>
+                  <div className={classes.addEntryBtn}>Add entry</div>
+                </div>
               </div>
             </form>
           </div>
