@@ -1,5 +1,3 @@
-/* THESE have to be updated!!!!!! */
-
 .journalEntry {
   margin: 1rem 0;
   padding: 0 1rem;
@@ -12,15 +10,66 @@
   border-radius: 50px;
 }
 
+@media only screen and (min-width: 550px) {
+  .journalEntry {
+    width: max(50vw);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .journalEntry {
+    width: max(45vw);
+  }
+}
+@media only screen and (min-width: 1080px) {
+  .journalEntry {
+    width: 40vw;
+    margin: 1.5rem 1rem;
+    padding: 0.75rem 2.5rem;
+    border: 2px solid #387359;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .journalEntry {
+    width: max(40vw);
+  }
+}
 .entryTitle p {
   font-family: Lato;
   font-size: 1.25rem;
   line-height: 1.5rem;
   color: #fff8e1;
 }
+@media only screen and (min-width: 768px) {
+  .entryTitle p {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
 
 .journalIcon {
   margin-top: 2%;
+}
+
+@media only screen and (min-width: 768px) {
+  .journalIcon {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .journalIcon img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .journalIcon img {
+    width: 4rem;
+    height: 4rem;
+  }
 }
 
 .entryDate {
@@ -32,6 +81,26 @@
   color: #fff8e1;
 }
 
+@media only screen and (min-width: 768px) {
+  .entryDate p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}
+
 .viewEntryBtn {
   margin-top: 2%;
+}
+
+@media only screen and (min-width: 768px) {
+  .viewEntryBtn img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .viewEntryBtn img {
+    width: 3rem;
+    height: 3rem;
+  }
 }

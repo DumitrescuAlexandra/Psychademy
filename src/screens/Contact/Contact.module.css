@@ -31,6 +31,14 @@
   }
 }
 
+@media (min-width: 1280px) {
+  .contactTitle {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin: min(4rem) auto 2rem auto;
+  }
+}
+
 .contactWritten,
 .contactLive {
   width: 50vw;
@@ -101,7 +109,7 @@
   .contactMail,
   .contactSchedule,
   .contactLocation {
-    font-size: 1rem;
+    font-size: 1.05rem;
     line-height: 1.5rem;
     font-weight: 500;
   }
@@ -120,5 +128,6 @@
   }
   .locationBigger {
     display: block;
+    margin-bottom: min(2.5rem);
   }
 }
