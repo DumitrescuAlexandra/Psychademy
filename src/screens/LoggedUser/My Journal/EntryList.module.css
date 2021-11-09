@@ -6,6 +6,7 @@
 }
 
 .journalTitle {
+  display: flex;
   padding: 2.5rem;
   align-self: flex-start;
 }
@@ -16,6 +17,14 @@
   font-size: 2.25rem;
   line-height: 3rem;
   color: #fff8e1;
+}
+
+.journalTitle img {
+  margin-left: 1rem;
+
+  align-self: center;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .entriesList {

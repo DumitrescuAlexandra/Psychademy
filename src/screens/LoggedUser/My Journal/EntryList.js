@@ -27,6 +27,7 @@ const EntryList = () => {
     <div className={classes.journalPage}>
       <div className={classes.journalTitle}>
         <p>My journal</p>
+        <img src="/Images/sort.png" alt="" height="32px" width="32px" />
       </div>
       <ul className={classes.entriesList}>
         {DUMMY_ENTRIES.map((entry) => (
