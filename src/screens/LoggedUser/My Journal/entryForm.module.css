@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 7vw;
 }
 
 @media only screen and (min-width: 768px) {
@@ -11,116 +10,60 @@
   }
 }
 
-.entryModalBck {
-  display: flex;
-}
-
-.entryModal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 35% 5%;
-  background-color: #1e5656;
-  border-radius: 40px;
-}
-
-@media only screen and (min-width: 768px) {
-  .entryModal {
-    margin: 15% auto 15% auto;
-    width: max(50vw);
-  }
-}
-
-.entryModal img {
-  align-self: flex-end;
-  margin: 7.5% 7.5%;
-  cursor: pointer;
-}
-
-@media only screen and (min-width: 768px) {
-  .entryModal img {
-    margin: 3.5% 5%;
-  }
-}
-
 .addEntryForm {
-  display: flex;
-  flex-direction: column;
-}
-
-.entryTitle {
-  margin-bottom: 10%;
-  font-family: Merriweather;
-  font-weight: 900;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  color: #fff8e1;
+  margin: 1rem 0.5rem;
 }
 
 @media only screen and (min-width: 768px) {
-  .entryTitle {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-    margin-bottom: 5%;
+  .addEntryForm {
+    margin: 0 min(15vw);
   }
 }
 
 .entryControl,
 .entryAction {
-  height: 3.5rem;
-  width: min(19rem);
+  height: 3.25rem;
 }
 
-@media only screen and (min-width: 768px) {
-  .entryControl,
-  .entryAction {
-    height: 5rem;
-    width: min(22rem);
-  }
-}
-
-.addEntryBtn {
-  font-family: Lato;
-  font-weight: bold;
-  font-size: 1.1rem;
-  line-height: 1.75rem;
-  color: #074343;
-  background-color: #78ddb1;
-  border-radius: 8px;
-  margin: 2.5rem auto;
-  padding: 2.5% 5%;
-  cursor: pointer;
-}
-
-@media only screen and (min-width: 768px) {
-  .addEntryBtn {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-.entryControl {
+.entryControl,
+.entryControlM {
   display: flex;
   flex-direction: column;
   background-color: #043232;
   position: relative;
 
   border-radius: 8px;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  width: min(17.5rem);
 }
 
-.entryControl:hover {
+@media only screen and (min-width: 768px) {
+  .entryControl,
+  .entryAction {
+    height: 5rem;
+    width: min(25rem);
+  }
+
+  .entryControlM {
+    height: 15rem;
+    width: min(25rem);
+  }
+}
+
+.entryControl:hover,
+.entryControlM:hover {
   border: 2px solid #78ddb1;
 }
 
-.entryControl input {
+.entryControl input,
+.entryControlM textarea {
   background-color: inherit;
   border: none;
   border-radius: inherit;
   height: 100%;
   width: 100%;
   padding-top: 1.75rem;
-  font-size: 1.25rem;
+  font-size: 1.25em;
   font-weight: 500;
   padding-left: 1rem;
   color: #c2f6f6;
@@ -131,9 +74,14 @@
     padding-top: 1rem;
     font-size: 1.5rem;
   }
+  .entryControlM textarea {
+    padding-top: 1rem;
+    font-size: 1.5rem;
+  }
 }
 
-.entryControl label {
+.entryControl label,
+.entryControlM label {
   position: absolute;
   bottom: 0rem;
   left: 0.25rem;
@@ -143,13 +91,15 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .entryControl label {
+  .entryControl label,
+  .entryControlM label {
     bottom: 1rem;
     left: 0.5rem;
   }
 }
 
-.entryControl label::after {
+.entryControl label::after,
+.entryControlM label::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -159,14 +109,13 @@
 .entryAction {
   display: flex;
   align-items: center;
-  margin-top: 4rem;
+  margin-top: 3rem;
   justify-content: space-around;
   background: #78ddb1;
   border-radius: 8px;
-  cursor: pointer;
 }
 
-.entryAction .addEntryBtn {
+.entryAction .addEntryButton {
   background-color: inherit;
   border: none;
   font-family: Lato;
@@ -174,10 +123,19 @@
   font-size: 1.1rem;
   line-height: 1.75rem;
   color: #074343;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .entryAction .addEntryButton {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
 }
 
 .entryAction:hover {
   border: solid 2px #074343;
+  cursor: pointer;
 }
 
 .titleContent,
@@ -189,11 +147,62 @@
   font-size: 1.2rem;
 }
 
+@media only screen and (min-width: 768px) {
+  .titleContent,
+  .textContent {
+    font-size: 1.5rem;
+  }
+}
+
 .entryControl input:focus + .labelName .titleContent,
-.entryControl input:valid + .labelName .titleContent,
 .entryControl input:focus + .labelName .textContent,
-.entryControl input:valid + .labelName .textContent {
+.entryControlM input:focus + .labelName .textContent,
+.entryControl input:valid + .labelName .titleContent,
+.entryControl input:valid + .labelName .textContent,
+.entryControlM input:valid + .labelName .textContent {
   transform: translateY(-100%);
   font-size: 1rem;
   opacity: 0.5;
+}
+
+@media only screen and (min-width: 768px) {
+  .entryControl input:focus + .labelName .titleContent,
+  .entryControl input:focus + .labelName .textContent,
+  .entryControlM input:focus + .labelName .textContent,
+  .entryControl input:valid + .labelName .titleContent,
+  .entryControl input:valid + .labelName .textContent,
+  .entryControlM input:valid + .labelName .textContent {
+    font-size: 1.25rem;
+  }
+}
+
+.newEntryModalBck {
+  position: relative;
+  margin: 50% auto auto 8%;
+  height: 50vh;
+  width: 82.5vw;
+  display: flex;
+  background-color: #1e5656;
+  border-radius: 40px;
+}
+
+.newEntryModalBck img {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  cursor: pointer;
+}
+
+.entryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formTitle {
+  margin-top: 10%;
+}
+
+.entryDate {
+  margin-top: 0;
 }

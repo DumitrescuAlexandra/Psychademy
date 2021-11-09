@@ -49,7 +49,6 @@
 
 .newEntry a:hover {
   text-shadow: 0.5px 0.5px 2px #141414;
-  background-color: #ff9d46;
   background-image: linear-gradient(#fff8e1, #ffffff),
     linear-gradient(transparent, transparent);
   background-size: 2 3px, auto;

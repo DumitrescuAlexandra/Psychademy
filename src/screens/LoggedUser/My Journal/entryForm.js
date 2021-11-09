@@ -1,4 +1,6 @@
 import { React, useRef } from "react";
+import Modal from "react-modal";
+import { useHistory } from "react-router";
 
 import LoadingSpinner from "../../../UI/LoadingSpinner";
 import classes from "./EntryForm.module.css";
@@ -6,6 +8,8 @@ import classes from "./EntryForm.module.css";
 const EntryForm = (props) => {
   const titleInputRef = useRef();
   const textInputRef = useRef();
+
+  const history = useHistory();
 
   const date = `${new Date().toLocaleDateString("en-US", {
     weekday: "short",
@@ -28,35 +32,76 @@ const EntryForm = (props) => {
 
   return (
     <div className={classes.entryFormPage}>
-      <form className={classes.addEntryForm} onSubmit={submitFormHandler}>
-        {props.isLoading && (
-          <div className={classes.loading}>
-            <LoadingSpinner />
+      <Modal
+        isOpen={true}
+        className={classes.newEntryModalBck}
+        style={{
+          overlay: {
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: "rgba(28, 28, 28, 0.9)",
+          },
+        }}
+      >
+        <img
+          src="/Images/close.svg"
+          alt=""
+          height="28px"
+          width="28px"
+          onClick={() => history.push("/Journal")}
+        ></img>
+        <div className={classes.entryContainer}>
+          <div className={classes.formTitle}>
+            <p> Create new Entry</p>
           </div>
-        )}
+          <div className={classes.entryDate}>{date}</div>
 
-        <div className={classes.entryControl}>
-          <label htmlFor="title" className={classes.labelName}>
-            <span className={classes.titleContent}> Enter a title </span>{" "}
-          </label>
-          <input
-            type="text"
-            id="title"
-            ref={titleInputRef}
-            autoComplete="off"
-          />
+          <div className={classes.addEntryForm}>
+            <form onSubmit={submitFormHandler}>
+              {props.isLoading && (
+                <div className={classes.loading}>
+                  <LoadingSpinner />
+                </div>
+              )}
+              <div className={classes.entryControl}>
+                <label htmlFor="title" className={classes.labelName}>
+                  <span className={classes.titleContent}> Enter a title </span>{" "}
+                </label>
+                <input
+                  type="text"
+                  id="title"
+                  ref={titleInputRef}
+                  autoComplete="off"
+                />
+              </div>
+              <div className={classes.entryControlM}>
+                <label htmlFor="text" className={classes.labelName}>
+                  <span className={classes.textContent}> Your text </span>{" "}
+                </label>
+                <textarea
+                  id="text"
+                  type="text"
+                  rows="5"
+                  autoComplete="off"
+                  style={
+                    ({ resize: "none" },
+                    { overflow: "auto" },
+                    { maxWidth: "100%" },
+                    { maxHeight: "100%" })
+                  }
+                  ref={textInputRef}
+                />
+              </div>
+              <div className={classes.entryAction}>
+                <div className={classes.addEntryBtn}>Add entry</div>
+              </div>
+            </form>
+          </div>
         </div>
-        <div className={classes.entryControl}>
-          <label htmlFor="text" className={classes.labelName}>
-            <span className={classes.textContent}> Your text </span>{" "}
-          </label>
-          <textarea id="text" rows="5" ref={textInputRef}></textarea>
-        </div>
-        <div className={classes.entryDate}>{date}</div>
-        <div className={classes.entryAction}>
-          <div className={classes.addEntryBtn}>Add entry</div>
-        </div>
-      </form>
+      </Modal>
     </div>
   );
 };
