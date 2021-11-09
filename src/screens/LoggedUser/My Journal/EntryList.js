@@ -11,9 +11,9 @@ const EntryList = (props) => {
           <JournalEntry
             key={entry.id}
             id={entry.id}
-            title={entry.title}
-            text={entry.text}
             date={entry.date}
+            title={entry.title}
+            message={entry.message}
           />
         ))}
       </ul>

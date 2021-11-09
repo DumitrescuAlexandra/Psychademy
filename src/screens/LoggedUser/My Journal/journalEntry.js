@@ -7,7 +7,7 @@ const JournalEntry = (props) => {
       <figure>
         <figcaption>{props.title}</figcaption>
         <blockquote>
-          <p>{props.text}</p>
+          <p>{props.message}</p>
         </blockquote>
       </figure>
       <Link to={`/Journal/${props.id}`} className={classes.viewEntryBtn}>
