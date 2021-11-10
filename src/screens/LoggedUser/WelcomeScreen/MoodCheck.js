@@ -2,12 +2,12 @@ import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import classes from "./MoodCheck.module.css";
 
-function MoodCheck(props) {
+function MoodCheck() {
   const history = useHistory();
 
   const moodHandler = (event) => {
     event.preventDefault();
-    history.push("/PatientLogin/UserPage");
+    history.push("/UserPage");
   };
 
   const toggleMood = () => {
@@ -16,14 +16,14 @@ function MoodCheck(props) {
 
   const closeModal = (event) => {
     event.preventDefault();
-    history.push("/PatientLogin/UserPage");
+    history.push("/UserPage");
     console.log("EXIT modal");
     return "";
   };
 
   const skipHandler = (event) => {
     event.preventDefault();
-    history.push("/PatientLogin/UserPage");
+    history.push("/UserPage");
   };
 
   // CLOSE the modal INLINE ex: onclick={() => setModal(false)}
