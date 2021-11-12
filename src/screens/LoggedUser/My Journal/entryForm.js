@@ -62,7 +62,7 @@ const EntryForm = (props) => {
           </div>
 
           <div className={classes.addEntryForm}>
-            <form onSubmit={submitFormHandler}>
+            <form onSubmit={submitFormHandler} className={classes.addEntryForm}>
               {props.isLoading && (
                 <div className={classes.loading}>
                   <LoadingSpinner />

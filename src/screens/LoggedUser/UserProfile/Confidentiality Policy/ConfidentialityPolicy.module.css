@@ -41,9 +41,10 @@
 @media only screen and (min-width: 768px) {
   .confidentialityText {
     margin: 5rem auto;
-    width: max(50vw);
+    width: max(40vw);
     font-size: 1.25rem;
-    line-height: 1.5rem;
+    line-height: 1.35rem;
+    opacity: 0.75;
   }
 }
 

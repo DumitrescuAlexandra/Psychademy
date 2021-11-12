@@ -61,6 +61,34 @@ function ConfidentialityPolicy() {
             assistance possible. The persons with whom I discuss cases are
             legally bound to keep information confidential.
           </p>
+          <p>
+            Phasellus sed arcu eu mauris euismod feugiat. Etiam consectetur,
+            purus in cursus gravida, leo lectus euismod urna, in maximus ante
+            mauris eu massa. Nullam convallis scelerisque velit, nec rutrum
+            lorem ultricies blandit. Pellentesque eu nibh quis risus laoreet
+            tristique sed at ex. Praesent faucibus malesuada lorem nec
+            fringilla. Mauris feugiat scelerisque nibh vitae congue.
+          </p>
+          <p>
+            {" "}
+            Nullam egestas est a urna laoreet, ut iaculis purus luctus. Praesent
+            ornare ultrices diam nec tincidunt. Quisque erat erat, pharetra vel
+            ipsum vitae, porttitor tempor leo. Etiam molestie fringilla ex, eget
+            porttitor ligula feugiat eu. Quisque quis tempus quam. Nunc
+            facilisis efficitur mauris nec fringilla. Morbi vestibulum pulvinar
+            ligula, id vehicula ipsum efficitur sit amet.
+          </p>
+          <p>
+            Quisque a ex eget est eleifend auctor. Proin ex felis, convallis
+            eget ipsum sed, ornare accumsan libero. Vivamus gravida efficitur
+            eros, non viverra nisl bibendum at. Nullam eleifend tellus vitae
+            enim finibus lacinia. Fusce nec venenatis ante. Sed fermentum
+            dapibus dapibus. Sed lacus lorem, vulputate nec rhoncus in, egestas
+            vitae dolor. Maecenas egestas elit nec neque pellentesque, mattis
+            scelerisque metus consectetur. Nam euismod, risus et tempus
+            condimentum, diam ligula ultrices turpis, vel malesuada nulla sem a
+            lectus.
+          </p>
         </div>
       </div>
     </Fragment>

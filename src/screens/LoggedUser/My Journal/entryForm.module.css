@@ -18,6 +18,30 @@
   border-radius: 40px;
 }
 
+@media only screen and (min-width: 375px) {
+  .newEntryModalBck {
+    margin: 20% auto;
+    width: 90vw;
+    height: 75vh;
+  }
+}
+
+@media only screen and (min-width: 414px) {
+  .newEntryModalBck {
+    margin: 20% auto;
+    width: 85vw;
+    height: 70vh;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .newEntryModalBck {
+    margin: 10% auto;
+    width: 90vw;
+    height: 70vh;
+  }
+}
+
 .newEntryModalBck img {
   position: absolute;
   right: 1.5rem;
@@ -29,11 +53,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: center;
+  flex-grow: 1;
 }
 
 .formTitle {
   margin-top: 15%;
+}
+
+@media only screen and (min-width: 450px) {
+  .formTitle {
+    margin-top: 10%;
+  }
 }
 
 .formTitle p {
@@ -41,10 +71,25 @@
   line-height: 1.5rem;
   color: #fff8e1;
 }
+@media (min-width: 768px) {
+  .formTitle p {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    text-align: center;
+    letter-spacing: 0.75px;
+  }
+}
 
 .entryDate {
   margin-top: 0;
 }
+
+@media (min-width: 767px) {
+  .entryDate {
+    margin-top: 0.25rem;
+  }
+}
+
 .entryDate p {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -52,20 +97,39 @@
   opacity: 0.5;
 }
 
+@media (min-width: 767px) {
+  .entryDate p {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
 .addEntryForm {
-  margin-left: min(1.5rem);
+  margin: 0;
+  flex-grow: 1;
+}
+
+@media only screen and (min-width: 450px) {
+  .addEntryForm {
+    margin-top: 0;
+    flex-grow: 1;
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .addEntryForm {
-    margin: 0 min(15vw);
+    display: flex;
+    margin-top: 1rem;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
   }
 }
 
 .btns {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .entryControl,
@@ -75,6 +139,13 @@
 
 .entryAction {
   width: min(7.55rem);
+}
+
+@media only screen and (min-width: 768px) {
+  .entryAction {
+    height: 3.5rem;
+    width: max(10rem);
+  }
 }
 
 .entryControl,
@@ -90,17 +161,26 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .entryControl,
-  .entryAction {
+  .entryControl {
+    margin-top: 3.5rem;
     height: 5rem;
-    width: min(25rem);
+    width: max(70vw);
   }
 
   .entryControlM {
-    height: 15rem;
-    width: min(25rem);
+    width: max(70vw);
+  }
+  .entryAction {
+    width: max (50vw);
   }
 }
+/*
+  .entryControlM {
+    margin-top: 2.5rem;
+    height: 25rem;
+    width: max(50rem);
+  } */
+/* } */
 
 .entryControl:hover,
 .entryControlM:hover {
@@ -116,19 +196,22 @@
   width: 100%;
   padding-top: 1.75rem;
   font-size: 1.25em;
-  font-weight: 500;
+  font-weight: 400;
   padding-left: 1rem;
   color: #c2f6f6;
 }
 
 @media only screen and (min-width: 768px) {
   .entryControl input {
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     font-size: 1.5rem;
+    letter-spacing: 0.5px;
   }
   .entryControlM textarea {
-    padding-top: 1rem;
-    font-size: 1.5rem;
+    padding-top: 1.75rem;
+    font-size: 1.75rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
   }
 }
 
@@ -140,14 +223,6 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-}
-
-@media only screen and (min-width: 768px) {
-  .entryControl label,
-  .entryControlM label {
-    bottom: 1rem;
-    left: 0.5rem;
-  }
 }
 
 .entryControl label::after,
@@ -166,6 +241,15 @@
   background: #78ddb1;
   border-radius: 8px;
 }
+@media only screen and (min-width: 450px) {
+  .entryAction {
+    margin-top: 2rem;
+    width: max(8rem);
+  }
+  .entryAction:last-child {
+    margin-left: 2rem;
+  }
+}
 
 .entryAction .addEntryBtn,
 .entryAction .cancelEntryBtn {
@@ -180,10 +264,10 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .entryAction .addEntryButton,
+  .entryAction .addEntryBtn,
   .entryAction .cancelEntryBtn {
     font-size: 1.5rem;
-    line-height: 1.75rem;
+    line-height: 2rem;
   }
 }
 
@@ -205,6 +289,6 @@
 @media only screen and (min-width: 768px) {
   .titleContent,
   .textContent {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
