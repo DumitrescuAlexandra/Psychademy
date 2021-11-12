@@ -1,17 +1,18 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import classes from "./MoodCheck.module.css";
+import Mood from "./Mood";
 
-function MoodCheck() {
+function MoodCheck(props) {
   const history = useHistory();
+  let registeredMoods = [];
 
   const moodHandler = (event) => {
     event.preventDefault();
-    history.push("/UserPage");
-  };
 
-  const toggleMood = () => {
-    return "";
+    registeredMoods.push(props.moods.value);
+    console.log(registeredMoods);
+    history.push("/UserPage");
   };
 
   const closeModal = (event) => {
@@ -41,20 +42,21 @@ function MoodCheck() {
         <p className={classes.moodTitle}> Welcome! </p>
         <p className={classes.moodText}> How do you feel today? </p>
         <div className={classes.moods}>
-          <img src="/Images/horrible.svg" alt="" onClick={toggleMood}></img>
-          <img src="/Images/sad.svg" alt="" onClick={toggleMood}></img>
-          <img src="/Images/meh.svg" alt="" onClick={toggleMood}></img>
-          <img src="/Images/happy.svg" alt="" onClick={toggleMood}></img>
-          <img src="/Images/wonderful.svg" alt="" onClick={toggleMood}></img>
+          <Mood />
         </div>
         <div className={classes.modalControls}>
-          <button onClick={moodHandler} className={classes.submitBtn}>
+          <button
+            onClick={moodHandler}
+            className={classes.submitBtn}
+            moods={props.moods}
+          >
             {" "}
             Submit{" "}
           </button>
           <Link
             className={classes.skipBtn}
             onClick={skipHandler}
+            onQuit={props.onQuitHandler}
             to="/PatientLogin/UserPage"
           >
             <p>Skip for now</p>

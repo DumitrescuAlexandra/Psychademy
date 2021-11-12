@@ -1,11 +1,15 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import MoodCheck from "../WelcomeScreen/MoodCheck";
+// import MoodCheck from "../WelcomeScreen/MoodCheck";
 import classes from "./UserPage.module.css";
 
 function UserPage() {
-  const [firstLogToday, setFirstLogToday] = useState(true);
-  const [modal, setModal] = useState(false);
+  // const [firstLogToday, setFirstLogToday] = useState(true);
+  // const [modal, setModal] = useState(true);
+
+  // const onQuitHandler = () => {
+  //   setModal(false);
+  // };
 
   return (
     <Fragment>
@@ -67,7 +71,7 @@ function UserPage() {
           className={classes.logout}
         ></img>
 
-        {modal && <MoodCheck />}
+        {/* {modal && <MoodCheck onQuitHandler={onQuitHandler} />} */}
       </div>
     </Fragment>
   );
