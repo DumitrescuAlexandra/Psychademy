@@ -6,6 +6,9 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .journalPage {
+    margin-top: 10%;
+  }
 }
 
 .journalTitle {
@@ -45,6 +48,12 @@
   list-style: none;
 }
 
+@media only screen and (min-width: 1024px) {
+  .entriesList {
+    margin-top: 2.5%;
+  }
+}
+
 .newEntry {
   display: flex;
   justify-content: space-between;
@@ -66,6 +75,12 @@
 @media only screen and (min-width: 768px) {
   .newEntry {
     width: 40vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .newEntry {
+    justify-content: space-evenly;
   }
 }
 
@@ -93,6 +108,15 @@
     margin-top: 4rem;
     font-size: 1.15rem;
     line-height: 1.75rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .newEntry .addEntryBtn,
+  .newEntry .cancelBtn {
+    width: 35%;
+    padding: 2.5%;
+    height: max(3.5rem);
   }
 }
 
