@@ -22,7 +22,7 @@
   .newEntryModalBck {
     margin: 20% auto;
     width: 90vw;
-    height: 75vh;
+    height: 55vh;
   }
 }
 
@@ -30,7 +30,6 @@
   .newEntryModalBck {
     margin: 20% auto;
     width: 85vw;
-    height: 70vh;
   }
 }
 
@@ -39,6 +38,19 @@
     margin: 10% auto;
     width: 90vw;
     height: 70vh;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .newEntryModalBck {
+    width: 70vw;
+    height: 70vh;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .newEntryModalBck {
+    width: 50vw;
   }
 }
 
@@ -63,6 +75,12 @@
 @media only screen and (min-width: 450px) {
   .formTitle {
     margin-top: 10%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .formTitle {
+    margin-top: 7.5%;
   }
 }
 
@@ -126,6 +144,12 @@
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .addEntryForm {
+    margin-top: 0;
+  }
+}
+
 .btns {
   display: flex;
   align-items: center;
@@ -144,7 +168,7 @@
 @media only screen and (min-width: 768px) {
   .entryAction {
     height: 3.5rem;
-    width: max(10rem);
+    width: max(8rem);
   }
 }
 
@@ -174,13 +198,29 @@
     width: max (50vw);
   }
 }
-/*
+
+@media only screen and (min-width: 1024px) {
+  .entryControl {
+    margin-top: 3rem;
+    height: 5rem;
+    width: max(50vw);
+  }
+
   .entryControlM {
-    margin-top: 2.5rem;
-    height: 25rem;
-    width: max(50rem);
-  } */
-/* } */
+    height: 15rem;
+    width: max(50vw);
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .entryControl {
+    width: max(35vw);
+  }
+
+  .entryControlM {
+    width: max(35vw);
+  }
+}
 
 .entryControl:hover,
 .entryControlM:hover {

@@ -1,12 +1,13 @@
 import React from "react";
 
-import { Link, Route } from "react-router-dom";
+import { Route, useHistory } from "react-router-dom";
 import EntryDetails from "./screens/EntryDetails";
 
 import classes from "./EntryList.module.css";
 import JournalEntry from "./JournalEntry";
 
 const EntryList = () => {
+  const history = useHistory();
   const DUMMY_ENTRIES = [
     {
       id: "e1",
@@ -41,7 +42,20 @@ const EntryList = () => {
         ))}
       </ul>
       <div className={classes.newEntry}>
-        <Link to="/new-entry"> Add entry </Link>
+        <div
+          className={classes.cancelBtn}
+          onClick={() => history.replace("/UserPage")}
+        >
+          {" "}
+          Cancel{" "}
+        </div>
+        <div
+          className={classes.addEntryBtn}
+          onClick={() => history.push("/new-entry")}
+        >
+          {" "}
+          Add Entry
+        </div>
       </div>
       <Route path="/Journal/:entryId">
         <EntryDetails />

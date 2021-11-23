@@ -14,6 +14,12 @@
   align-self: flex-start;
 }
 
+@media only screen and (min-width: 450px) {
+  .journalTitle {
+    align-self: center;
+  }
+}
+
 .journalTitle p {
   font-family: Merriweather;
   font-weight: bold;
@@ -22,12 +28,17 @@
   color: #fff8e1;
 }
 
+@media only screen and (min-width: 768px) {
+  .journalTitle p {
+    font-size: 2.75rem;
+    line-height: 3.25rem;
+  }
+}
+
 .journalTitle img {
   margin-left: 1rem;
-
   align-self: center;
   cursor: pointer;
-  z-index: 1;
 }
 
 .entriesList {
@@ -35,48 +46,58 @@
 }
 
 .newEntry {
-  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
 }
 
-.newEntry a {
-  text-decoration: none;
+@media only screen and (min-width: 450px) {
+  .newEntry {
+    width: 75vw;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .newEntry {
+    width: 50vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .newEntry {
+    width: 40vw;
+  }
+}
+
+.newEntry .addEntryBtn,
+.newEntry .cancelBtn {
+  text-align: center;
+  width: 45%;
+  padding: 5%;
+  border-radius: 8px;
+  margin-top: 2rem;
+  background: #78ddb1;
+  border: none;
   font-family: Lato;
   font-weight: bold;
   font-size: 1.15rem;
-  line-height: 1.75rem;
+  line-height: 1.25rem;
   color: #074343;
-  background-color: #78ddb1;
-  border-radius: 8px;
-  padding: 0.75rem 2.25rem;
-}
-
-.newEntry a:hover {
-  text-shadow: 0.5px 0.5px 2px #141414;
-  background-image: linear-gradient(#fff8e1, #ffffff),
-    linear-gradient(transparent, transparent);
-  background-size: 2 3px, auto;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  transition: all 0.3s ease-out;
-  background-size: 100% 3px, auto;
-}
-
-/* .sorting {
-  padding-bottom: 1rem;
-  border-bottom: 3px solid #b2d4d4;
-  margin-bottom: 2rem;
-}
-
-.sorting button {
-  font: inherit;
-  color: teal;
-  border: 1px solid teal;
-  background-color: transparent;
-  border-radius: 4px;
-  padding: 0.5rem 1.5rem;
   cursor: pointer;
 }
 
-.sorting button:hover {
-  background-color: #c2fafa;
-} */
+@media only screen and (min-width: 768px) {
+  .newEntry .addEntryBtn,
+  .newEntry .cancelBtn {
+    width: 47.5%;
+    margin-top: 4rem;
+    font-size: 1.15rem;
+    line-height: 1.75rem;
+  }
+}
+
+.newEntry .addEntryBtn:hover,
+.newEntry .cancelBtn:hover {
+  border: solid 2px #fff8e1;
+  font-size: 1.25rem;
+}
