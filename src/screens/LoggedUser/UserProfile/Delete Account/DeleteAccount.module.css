@@ -128,25 +128,29 @@
 .deleteAction {
   display: flex;
   align-items: center;
-  margin-top: 4rem;
-  justify-content: space-around;
-  background: #78ddb1;
-  border-radius: 8px;
-  cursor: pointer;
+  justify-content: space-between;
 }
 
-.deleteAction .deleteBtn {
-  background-color: inherit;
+.deleteAction .deleteBtn,
+.deleteAction .cancelBtn {
+  text-align: center;
+  width: 47.5%;
+  padding: 5%;
+  border-radius: 8px;
+  margin-top: 4rem;
+  background: #78ddb1;
   border: none;
   font-family: Lato;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   line-height: 1.75rem;
   color: #074343;
+  cursor: pointer;
 }
 
-.deleteAction:hover {
-  border: solid 2px #074343;
+.deleteBtn:hover,
+.cancelBtn:hover {
+  border: solid 2px #fff8e1;
 }
 
 .passwordContent,

@@ -1,8 +1,10 @@
 import React, { Fragment } from "react";
+import { useHistory } from "react-router-dom";
 import BackArrow from "../../../../UI/Buttons/BackArrow";
 import classes from "./ConfidentialityPolicy.module.css";
 
 function ConfidentialityPolicy() {
+  const history = useHistory();
   return (
     <Fragment>
       <BackArrow />
@@ -89,6 +91,12 @@ function ConfidentialityPolicy() {
             condimentum, diam ligula ultrices turpis, vel malesuada nulla sem a
             lectus.
           </p>
+        </div>
+        <div
+          className={classes.backBtn}
+          onClick={() => history.replace("/Account")}
+        >
+          Back{" "}
         </div>
       </div>
     </Fragment>
