@@ -50,18 +50,15 @@ function ChangePassword() {
             </label>
           </div>
         </form>
-        <div className={classes.btns}>
-          <div className={classes.passwordFormAct}>
-            <div
-              className={classes.cancelBtn}
-              onClick={() => history.replace("/Account")}
-            >
-              Cancel
-            </div>
+        <div className={classes.passwordFormAct}>
+          <div
+            className={classes.cancelBtn}
+            onClick={() => history.replace("/Account")}
+          >
+            Cancel
           </div>
-          <div className={classes.passwordFormAct}>
-            <div className={classes.resetBtn}> Change </div>
-          </div>
+
+          <div className={classes.resetBtn}> Change </div>
         </div>
       </div>
     </Fragment>

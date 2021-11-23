@@ -151,6 +151,7 @@
 .deleteBtn:hover,
 .cancelBtn:hover {
   border: solid 2px #fff8e1;
+  font-size: 1.25rem;
 }
 
 .passwordContent,

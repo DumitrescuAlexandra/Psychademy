@@ -94,7 +94,7 @@ function ConfidentialityPolicy() {
         </div>
         <div
           className={classes.backBtn}
-          onClick={() => history.replace("/Account")}
+          onClick={() => history.push("/Account")}
         >
           Back{" "}
         </div>

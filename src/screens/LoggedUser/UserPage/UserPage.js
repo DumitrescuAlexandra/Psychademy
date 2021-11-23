@@ -1,9 +1,10 @@
 import React, { Fragment, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import MoodCheck from "../WelcomeScreen/MoodCheck";
 import classes from "./UserPage.module.css";
 
 function UserPage() {
+  const history = useHistory();
   const [firstLogToday, setFirstLogToday] = useState(true);
   const [modal, setModal] = useState(false);
 
@@ -65,6 +66,7 @@ function UserPage() {
           src={"/Images/logout.svg"}
           alt={"logout"}
           className={classes.logout}
+          onClick={() => history.replace("/Welcome")}
         ></img>
 
         {modal && <MoodCheck />}
