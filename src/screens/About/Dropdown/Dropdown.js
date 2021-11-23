@@ -11,7 +11,7 @@ function Dropdown() {
       open: false,
     },
     {
-      question: "What are the key concept of CBT?",
+      question: "What are the key concepts of CBT?",
       answer:
         "Cognitive behavioral therapy (CBT) is a type of psychotherapeutic treatment that helps people learn how to identify and change destructive or disturbing thought patterns that have a negative influence on behavior and emotions. The benefits of CBT have been championed by psychologists for decades. But now, new research suggests that CBT can not only change our thought patterns, it can literally rewire our brains!",
       open: false,
