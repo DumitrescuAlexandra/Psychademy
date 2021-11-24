@@ -1,7 +1,7 @@
 import React from "react";
 
-function Homework() {
+function MyUploads() {
   return <div></div>;
 }
 
-export default Homework;
+export default MyUploads;
