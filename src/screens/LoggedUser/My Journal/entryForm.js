@@ -7,7 +7,7 @@ import classes from "./EntryForm.module.css";
 
 const EntryForm = (props) => {
   const titleInputRef = useRef();
-  const textInputRef = useRef();
+  const messageInputRef = useRef();
 
   const history = useHistory();
 
@@ -25,9 +25,13 @@ const EntryForm = (props) => {
     event.preventDefault();
 
     const enteredTitle = titleInputRef.current.value;
-    const enteredText = textInputRef.current.value;
+    const enteredMessage = messageInputRef.current.value;
 
-    props.onAddEntry({ title: enteredTitle, text: enteredText, date: date });
+    props.onAddEntry({
+      title: enteredTitle,
+      message: enteredMessage,
+      date: date,
+    });
   }
 
   return (
@@ -84,7 +88,7 @@ const EntryForm = (props) => {
                   <span className={classes.textContent}> Your text </span>{" "}
                 </label>
                 <textarea
-                  id="text"
+                  id="message"
                   type="text"
                   rows="5"
                   autoComplete="off"
@@ -95,7 +99,7 @@ const EntryForm = (props) => {
                     { maxHeight: "100%" },
                     { fontFamily: "Lato" })
                   }
-                  ref={textInputRef}
+                  ref={messageInputRef}
                 />
               </div>
               <div className={classes.btns}>

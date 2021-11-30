@@ -1,35 +1,42 @@
 import { useParams, useHistory } from "react-router-dom";
-import React from "react";
+import React, { useEffect } from "react";
 import Modal from "react-modal";
-
+import LoadingSpinner from "../../../../UI/LoadingSpinner";
+import NotFound from "../../../Not found/NotFound";
 import classes from "./EntryDetails.module.css";
 import DetailedEntry from "../DetailedEntry";
-
-const DUMMY_ENTRIES = [
-  {
-    id: "e1",
-    date: "Thu, 22-nov-2020 - 12.47PM",
-    title: "I hate my job",
-    message:
-      "Today my lazy co-worker has been promoted. It's so unfair! I hate my stupid manager and I can't stand this workplace anymore!",
-  },
-  {
-    id: "e2",
-    date: "Wed, 02-dec-2020 - 3.21PM",
-    title: "I love my new manager",
-    message:
-      "The lazy coworker, my actual direct manager took me in for a meeting and offered me a raise and pep talk",
-  },
-];
+import useHttp from "../../../../hooks/use-http";
+import { getSingleEntry } from "../../../../lib/api";
 
 const EntryDetails = () => {
   const params = useParams();
   const history = useHistory();
 
-  const entry = DUMMY_ENTRIES.find((entry) => entry.id === params.entryId);
+  const { entryId } = params;
 
-  if (!entry) {
-    return <p> No entry found!</p>;
+  const {
+    sendRequest,
+    status,
+    data: loadedEntry,
+    error,
+  } = useHttp(getSingleEntry, true);
+
+  useEffect(() => {
+    sendRequest(entryId);
+  }, [sendRequest, entryId]);
+
+  if (status === "pending") {
+    <div className="centered">
+      <LoadingSpinner />
+    </div>;
+  }
+
+  if (error) {
+    return <p className="centered focused">{error}</p>;
+  }
+
+  if (!loadedEntry.message) {
+    return <NotFound />;
   }
 
   return (
@@ -56,9 +63,9 @@ const EntryDetails = () => {
           onClick={() => history.push("/Journal")}
         ></img>
         <DetailedEntry
-          message={entry.message}
-          date={entry.date}
-          title={entry.title}
+          message={loadedEntry.message}
+          date={loadedEntry.date}
+          title={loadedEntry.title}
         ></DetailedEntry>
       </Modal>
     </div>

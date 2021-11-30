@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import EntryForm from "../EntryForm";
-import useHttp from "../../../../hooks/useHttp";
+import useHttp from "../../../../hooks/use-http";
 import { addEntry } from "../../../../lib/api";
 
 const NewEntry = () => {
