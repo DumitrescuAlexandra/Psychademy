@@ -62,7 +62,7 @@ const EntryForm = (props) => {
           </div>
 
           <div className={classes.addEntryForm}>
-            <form onSubmit={submitFormHandler} className={classes.addEntryForm}>
+            <form className={classes.addEntryForm}>
               {props.isLoading && (
                 <div className={classes.loading}>
                   <LoadingSpinner />
@@ -108,7 +108,12 @@ const EntryForm = (props) => {
                   </div>
                 </div>
                 <div className={classes.entryAction}>
-                  <div className={classes.addEntryBtn}>Add entry</div>
+                  <div
+                    className={classes.addEntryBtn}
+                    onClick={submitFormHandler}
+                  >
+                    Add entry
+                  </div>
                 </div>
               </div>
             </form>
