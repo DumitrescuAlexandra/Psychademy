@@ -21,6 +21,7 @@ import DeleteAccount from "./screens/LoggedUser/UserProfile/Delete Account/Delet
 import MoodGraph from "./screens/LoggedUser/Mood Graph/MoodGraph";
 import EntryList from "./screens/LoggedUser/My Journal/EntryList";
 import NewEntry from "./screens/LoggedUser/My Journal/screens/NewEntry";
+import MyAssignments from "./screens/LoggedUser/Assignments/MyAssignments";
 
 function App() {
   return (
@@ -83,6 +84,10 @@ function App() {
 
         <Route path="/new-entry">
           <NewEntry />
+        </Route>
+
+        <Route path="/Assignments">
+          <MyAssignments />
         </Route>
 
         <Route path="*">

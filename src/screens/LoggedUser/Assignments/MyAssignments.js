@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Route } from "react-router-dom";
-import classes from "/MyAssignments.module.css";
+import classes from "./MyAssignments.module.css";
 import HomeworkItem from "./HomeworkItem";
 import Homework from "./Homework";
 import MyUploads from "./MyUploads";
