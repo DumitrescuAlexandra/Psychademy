@@ -120,6 +120,17 @@
   }
 }
 
+@media only screen and (min-width: 1600px) {
+  .newEntry .addEntryBtn,
+  .newEntry .cancelBtn {
+    width: 27.5%;
+    padding: 2%;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    height: max(3.75rem);
+  }
+}
+
 .newEntry .addEntryBtn:hover,
 .newEntry .cancelBtn:hover {
   border: solid 2px #fff8e1;

@@ -4,6 +4,27 @@
   align-items: center;
 }
 
+@media only screen and (min-width: 650px) {
+  .entry {
+    position: absolute;
+    bottom: 15%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .entry {
+    position: absolute;
+    top: 20%;
+    bottom: 10%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .entry {
+    top: 15%;
+  }
+}
+
 .entry a {
   text-decoration: none;
   font-family: Lato;
@@ -14,6 +35,14 @@
   background-color: #78ddb1;
   border-radius: 8px;
   padding: 0.5rem 2.75rem;
+}
+
+@media only screen and (min-width: 400px) {
+  .entry a {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 0.5rem 2.75rem;
+  }
 }
 
 .entry a:hover {
@@ -35,6 +64,22 @@
   color: #fff8e1;
 }
 
+@media only screen and (min-width: 400px) {
+  .title {
+    margin-top: 15%;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    margin-top: 0;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
+}
+
 .title p {
   text-align: center;
 }
@@ -45,6 +90,14 @@
   line-height: 1.5rem;
   opacity: 0.5;
   color: #fff8e1;
+}
+
+@media only screen and (min-width: 400px) {
+  .date {
+    margin-top: 0;
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
 }
 
 .date p {
@@ -58,4 +111,27 @@
   line-height: 1.5rem;
   color: #fff8e1;
   text-align: center;
+}
+@media only screen and (min-width: 400px) {
+  .message {
+    margin: 12.5%;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.75rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .message {
+    margin: 7.5% 12.5%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .message {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2rem;
+    letter-spacing: 0.5px;
+  }
 }
