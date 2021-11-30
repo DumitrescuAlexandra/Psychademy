@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import EntryList from "../EntryList";
 import LoadingSpinner from "../../../UI/LoadingSpinner";
 import NotFound from "../../Not found/NotFound";
@@ -6,8 +6,6 @@ import useHttp from "../../../hooks/use-http";
 import { getAllEntries } from "../../../lib/api";
 
 const Entries = () => {
-  const [entries, setEntries] = useState([]);
-
   const {
     sendRequest,
     status,
@@ -33,7 +31,6 @@ const Entries = () => {
     return <NotFound />;
   }
 
-  setEntries(loadedEntries);
   return <EntryList entries={loadedEntries} />;
 };
 
