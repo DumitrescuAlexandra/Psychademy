@@ -1,16 +1,16 @@
-import { useParams, Route, useRouteMatch } from "react-router-dom";
-import React from "react";
-import { useEffect } from "react";
-
-// import HighlightedQuote from "../components/quotes/HighlightedQuote";
-// import Comments from "../components/comments/Comments";
-import useHttp from "../hooks/use-http";
-import { getSingleEntry } from "../lib/api";
+import { useParams, useHistory } from "react-router-dom";
+import React, { useEffect } from "react";
+import Modal from "react-modal";
 import LoadingSpinner from "../../../../UI/LoadingSpinner";
+import NotFound from "../../../Not found/NotFound";
+import classes from "./EntryDetails.module.css";
+import DetailedEntry from "../DetailedEntry";
+import useHttp from "../../../../hooks/use-http";
+import { getSingleEntry } from "../../../../lib/api";
 
 const EntryDetails = () => {
-  const match = useRouteMatch();
   const params = useParams();
+  const history = useHistory();
 
   const { entryId } = params;
 
@@ -26,36 +26,48 @@ const EntryDetails = () => {
   }, [sendRequest, entryId]);
 
   if (status === "pending") {
-    return (
-      <div className="centered">
-        <LoadingSpinner />
-      </div>
-    );
+    <div className="centered">
+      <LoadingSpinner />
+    </div>;
   }
 
   if (error) {
-    return <p className="centered">{error}</p>;
+    return <p className="centered focused">{error}</p>;
   }
 
-  if (!loadedEntry.text) {
-    return <p> No Quote found! </p>;
+  if (!loadedEntry.message) {
+    return <NotFound />;
   }
 
   return (
-    <div>
-      {/* <HighlightedQuote text={loadedQuote.text} author={loadedQuote.author} /> */}
-      <Route path={`${match.path}`} exact>
-        <div className="centered">
-          {" "}
-          {/* <Link className="btn--flat" to={`${match.url}/comments`}>
-            Comments{" "}
-          </Link> */}
-        </div>
-      </Route>
-
-      {/* <Route path={`${match.path}/comments`}>
-        <Comments />
-      </Route> */}
+    <div className={classes.detailsPage}>
+      <Modal
+        isOpen={true}
+        className={classes.entryModalBck}
+        style={{
+          overlay: {
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: "rgba(28, 28, 28, 0.9)",
+          },
+        }}
+      >
+        <img
+          src="/Images/close.svg"
+          alt=""
+          height="28px"
+          width="28px"
+          onClick={() => history.push("/Journal")}
+        ></img>
+        <DetailedEntry
+          message={loadedEntry.message}
+          date={loadedEntry.date}
+          title={loadedEntry.title}
+        ></DetailedEntry>
+      </Modal>
     </div>
   );
 };

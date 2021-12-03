@@ -41,12 +41,31 @@
 @media only screen and (min-width: 768px) {
   .confidentialityText {
     margin: 5rem auto;
-    width: max(50vw);
+    width: max(40vw);
     font-size: 1.25rem;
-    line-height: 1.5rem;
+    line-height: 1.35rem;
+    opacity: 0.75;
   }
 }
 
 .confidentialityText p {
   margin-bottom: 0.75rem;
+}
+
+.backBtn {
+  background: #78ddb1;
+  border-radius: 8px;
+  padding: 0.75rem 2.25rem;
+  border: none;
+  font-family: Lato;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.75rem;
+  color: #074343;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.backBtn:hover {
+  border: solid 2px #fff8e1;
 }

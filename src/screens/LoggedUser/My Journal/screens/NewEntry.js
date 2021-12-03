@@ -1,29 +1,30 @@
-import { React, useEffect } from "react";
-import { useHistory } from "react-router";
-
+import React, { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import EntryForm from "../EntryForm";
-import useHttp from "../hooks/use-http";
-import { addEntry } from "../lib/api";
+import useHttp from "../../../../hooks/use-http";
+import { addEntry } from "../../../../lib/api";
 
 const NewEntry = () => {
-  const { sendRequest, status } = useHttp(addEntry);
   const history = useHistory();
+  const { sendRequest, status } = useHttp(addEntry);
 
   useEffect(() => {
     if (status === "completed") {
-      history.push("/Entries");
+      history.push("/Journal");
     }
-  }, [history, status]);
+  }, [status, history]);
 
   const addEntryHandler = (entryData) => {
     sendRequest(entryData);
   };
 
   return (
-    <EntryForm
-      isLoading={status === "pending"}
-      onAddEntry={addEntryHandler}
-    ></EntryForm>
+    <div>
+      <EntryForm
+        isLoading={status === "pending"}
+        onAddEntry={addEntryHandler}
+      ></EntryForm>
+    </div>
   );
 };
 

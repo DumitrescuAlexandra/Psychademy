@@ -1,8 +1,10 @@
 import React, { Fragment } from "react";
 import classes from "./ChangePassword.module.css";
 import BackArrow from "../../../../UI/Buttons/BackArrow";
+import { useHistory } from "react-router-dom";
 
 function ChangePassword() {
+  const history = useHistory();
   return (
     <Fragment>
       <BackArrow />
@@ -49,7 +51,14 @@ function ChangePassword() {
           </div>
         </form>
         <div className={classes.passwordFormAct}>
-          <div className={classes.resetBtn}> Reset my password </div>
+          <div
+            className={classes.cancelBtn}
+            onClick={() => history.replace("/Account")}
+          >
+            Cancel
+          </div>
+
+          <div className={classes.resetBtn}> Change </div>
         </div>
       </div>
     </Fragment>

@@ -1,38 +1,108 @@
-/* THESE have to be updated!!!!!! */
-
 .journalEntry {
   margin: 1rem 0;
-  padding: 1rem;
+  padding: 0 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  border-radius: 6px;
-  background-color: #c2e7f0;
+  align-items: center;
+  width: 85vw;
+  border: 1.25px solid #387359;
+  box-sizing: border-box;
+  border-radius: 50px;
 }
 
-.journalEntry:last-of-type {
-  border-bottom: none;
+@media only screen and (min-width: 550px) {
+  .journalEntry {
+    width: max(55vw);
+  }
 }
 
-.journalEntry figure {
-  margin: 0;
-  padding: 0;
-  width: 70%;
+@media only screen and (min-width: 768px) {
+  .journalEntry {
+    width: max(45vw);
+  }
+}
+@media only screen and (min-width: 1080px) {
+  .journalEntry {
+    width: max(40vw);
+    margin: 1.5rem 1rem;
+    padding: 0.75rem 2.5rem;
+    border: 2px solid #387359;
+  }
 }
 
-.journalEntry blockquote {
-  margin: 0;
-  text-align: left;
-  font-size: 1.5rem;
-  color: #212929;
+@media only screen and (min-width: 1440px) {
+  .journalEntry {
+    width: max(27.5vw);
+    height: max(5rem);
+  }
 }
 
-.journalEntry p {
-  margin: 0;
-  margin-bottom: 0.25rem;
+.entryTitle p {
+  font-family: Lato;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #fff8e1;
+}
+@media only screen and (min-width: 768px) {
+  .entryTitle p {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
 }
 
-.journalEntry figcaption {
-  font-style: italic;
-  color: #566d6d;
+.journalIcon {
+  margin-top: 2%;
+}
+
+@media only screen and (min-width: 768px) {
+  .journalIcon {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .journalIcon img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .journalIcon img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+.entryDate {
+  opacity: 0.5;
+}
+.entryDate p {
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  color: #fff8e1;
+}
+
+@media only screen and (min-width: 768px) {
+  .entryDate p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}
+
+.viewEntryBtn {
+  margin-top: 2%;
+}
+
+@media only screen and (min-width: 768px) {
+  .viewEntryBtn img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .viewEntryBtn img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }

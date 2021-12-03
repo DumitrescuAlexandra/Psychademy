@@ -17,7 +17,15 @@
 
 @media (min-width: 767px) {
   .therapistCard {
-    width: 37.5vw;
+
+    width: 60vw;
+    height: 8rem;
+  }
+}
+
+@media (min-width: 1023px) {
+  .therapistCard {
+    width: 40vw;
     height: 10rem;
   }
 }
@@ -31,12 +39,21 @@
 
 @media (min-width: 767px) {
   .therapistCard img {
+
+    height: 96px;
+    width: 96px;
+
+    margin-left: 2.5%;
+  }
+}
+
+@media (min-width: 1023px) {
+  .therapistCard img {
     height: 128px;
     width: 128px;
     margin-left: 2.5%;
   }
 }
-
 .vl {
   border-left: 1px solid #377676;
   height: 5rem;
@@ -44,6 +61,13 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .vl {
+    border-left: 2px solid #377676;
+    margin-right: 5%;
+    height: 6rem;
+  }
+}
+@media (min-width: 1023px) {
   .vl {
     border-left: 2px solid #377676;
     margin-right: 5%;
@@ -60,10 +84,15 @@
 }
 @media only screen and (min-width: 768px) {
   .therapistName {
-    font-size: 2.75rem;
+    font-size: 2rem;
     color: #fff8e1;
     font-weight: bold;
     line-height: 3rem;
+  }
+}
+@media (min-width: 1023px) {
+  .therapistName {
+    font-size: 2.75rem;
   }
 }
 
@@ -75,6 +104,12 @@
 @media only screen and (min-width: 768px) {
   .profession {
     line-height: 3.25rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1023px) {
+  .profession {
     font-size: 1.75rem;
   }
 }
@@ -88,14 +123,31 @@
   color: #fff8e1;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 450px) {
   .theStory {
-    width: 37.5vw;
+
+    width: 65vw;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 350;
+
     align-self: center;
     text-align: justify;
+    letter-spacing: 0.1px;
+  }
+}
+
+@media (min-width: 767px) {
+  .theStory {
+    width: 60vw;
     font-size: 1.25rem;
-    font-weight: 350;
     line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1023px) {
+  .theStory {
+    width: 40vw;
   }
 }
 

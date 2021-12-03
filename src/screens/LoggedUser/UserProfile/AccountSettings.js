@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
 import classes from "./AccountSettings.module.css";
 import BackArrow from "../../../UI/Buttons/BackArrow";
-import { Link, useParams } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const AccountSettings = () => {
-  const params = useParams();
+  const history = useHistory();
   return (
     <Fragment>
       <BackArrow />
@@ -23,6 +23,12 @@ const AccountSettings = () => {
             <Link to="/DeleteAccount">Delete my account</Link>
             <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
           </div>
+        </div>
+        <div
+          className={classes.backBtn}
+          onClick={() => history.push("/UserPage")}
+        >
+          Back{" "}
         </div>
       </div>
     </Fragment>

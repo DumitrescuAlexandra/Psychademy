@@ -1,15 +1,15 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import EntryList from "../EntryList";
+import LoadingSpinner from "../../../UI/LoadingSpinner";
+import NotFound from "../../Not found/NotFound";
+import useHttp from "../../../hooks/use-http";
+import { getAllEntries } from "../../../lib/api";
 
-import QuoteList from "../components/quotes/QuoteList";
-import LoadingSpinner from "../components/UI/LoadingSpinner";
-import useHttp from "../hooks/use-http";
-import { getAllEntries } from "../lib/api";
-import NotFound from "../../../Not found/NotFound";
 const Entries = () => {
   const {
     sendRequest,
     status,
-    data: loadedQuote,
+    data: loadedEntries,
     error,
   } = useHttp(getAllEntries, true);
 
@@ -18,21 +18,20 @@ const Entries = () => {
   }, [sendRequest]);
 
   if (status === "pending") {
-    return (
-      <div className="centered">
-        <LoadingSpinner />
-      </div>
-    );
+    <div className="centered">
+      <LoadingSpinner />
+    </div>;
   }
 
   if (error) {
     return <p className="centered focused">{error}</p>;
   }
 
-  if (status === "completed" && (!loadedQuote || loadedQuote.length === 0)) {
+  if (status === "completed" && (!loadedEntries || loadedEntries === 0)) {
     return <NotFound />;
   }
-  return <QuoteList entries={loadedQuote}></QuoteList>;
+
+  return <EntryList entries={loadedEntries} />;
 };
 
 export default Entries;

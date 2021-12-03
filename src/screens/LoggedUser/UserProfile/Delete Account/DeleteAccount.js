@@ -42,7 +42,14 @@ function DeleteAccount() {
             </label>
           </div>
           <div className={classes.deleteAction}>
-            <div className={classes.deleteBtn}> Delete my account </div>
+            <div
+              className={classes.cancelBtn}
+              onClick={() => history.replace("/Account")}
+            >
+              {" "}
+              Cancel{" "}
+            </div>
+            <div className={classes.deleteBtn}> Delete account </div>
           </div>
         </form>
 

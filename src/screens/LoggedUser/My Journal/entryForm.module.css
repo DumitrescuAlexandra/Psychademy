@@ -1,8 +1,5 @@
 .entryFormPage {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 7vw;
 }
 
 @media only screen and (min-width: 768px) {
@@ -11,129 +8,255 @@
   }
 }
 
-.entryModalBck {
+.newEntryModalBck {
+  position: relative;
+  margin: 50% auto auto 5%;
+  height: 50vh;
+  width: 90vw;
   display: flex;
-}
-
-.entryModal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 35% 5%;
   background-color: #1e5656;
   border-radius: 40px;
 }
 
-@media only screen and (min-width: 768px) {
-  .entryModal {
-    margin: 15% auto 15% auto;
-    width: max(50vw);
+@media only screen and (min-width: 375px) {
+  .newEntryModalBck {
+    margin: 20% auto;
+    width: 90vw;
+    height: 55vh;
   }
 }
 
-.entryModal img {
-  align-self: flex-end;
-  margin: 7.5% 7.5%;
+@media only screen and (min-width: 414px) {
+  .newEntryModalBck {
+    margin: 20% auto;
+    width: 85vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .newEntryModalBck {
+    margin: 10% auto;
+    width: 90vw;
+    height: 70vh;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .newEntryModalBck {
+    width: 70vw;
+    height: 70vh;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .newEntryModalBck {
+    width: 50vw;
+  }
+}
+
+.newEntryModalBck img {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
   cursor: pointer;
 }
 
-@media only screen and (min-width: 768px) {
-  .entryModal img {
-    margin: 3.5% 5%;
+.entryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.formTitle {
+  margin-top: 15%;
+}
+
+@media only screen and (min-width: 450px) {
+  .formTitle {
+    margin-top: 10%;
   }
 }
 
-.addEntryForm {
-  display: flex;
-  flex-direction: column;
+@media only screen and (min-width: 768px) {
+  .formTitle {
+    margin-top: 7.5%;
+  }
 }
 
-.entryTitle {
-  margin-bottom: 10%;
-  font-family: Merriweather;
-  font-weight: 900;
+.formTitle p {
   font-size: 1.5rem;
   line-height: 1.5rem;
   color: #fff8e1;
 }
+@media (min-width: 768px) {
+  .formTitle p {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    text-align: center;
+    letter-spacing: 0.75px;
+  }
+}
+
+.entryDate {
+  margin-top: 0;
+}
+
+@media (min-width: 767px) {
+  .entryDate {
+    margin-top: 0.25rem;
+  }
+}
+
+.entryDate p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #fff8e1;
+  opacity: 0.5;
+}
+
+@media (min-width: 767px) {
+  .entryDate p {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.addEntryForm {
+  margin: 0;
+  flex-grow: 1;
+}
+
+@media only screen and (min-width: 450px) {
+  .addEntryForm {
+    margin-top: 0;
+    flex-grow: 1;
+  }
+}
 
 @media only screen and (min-width: 768px) {
-  .entryTitle {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-    margin-bottom: 5%;
+  .addEntryForm {
+    display: flex;
+    margin-top: 1rem;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
   }
+}
+
+@media only screen and (min-width: 1024px) {
+  .addEntryForm {
+    margin-top: 0;
+  }
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .entryControl,
 .entryAction {
-  height: 3.5rem;
-  width: min(19rem);
+  height: 3.25rem;
+}
+
+.entryAction {
+  width: min(7.55rem);
 }
 
 @media only screen and (min-width: 768px) {
-  .entryControl,
   .entryAction {
-    height: 5rem;
-    width: min(22rem);
+    height: 3.5rem;
+    width: max(8rem);
   }
 }
 
-.addEntryBtn {
-  font-family: Lato;
-  font-weight: bold;
-  font-size: 1.1rem;
-  line-height: 1.75rem;
-  color: #074343;
-  background-color: #78ddb1;
-  border-radius: 8px;
-  margin: 2.5rem auto;
-  padding: 2.5% 5%;
-  cursor: pointer;
-}
-
-@media only screen and (min-width: 768px) {
-  .addEntryBtn {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-.entryControl {
+.entryControl,
+.entryControlM {
   display: flex;
   flex-direction: column;
   background-color: #043232;
   position: relative;
 
   border-radius: 8px;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  width: min(17.5rem);
 }
 
-.entryControl:hover {
+@media only screen and (min-width: 768px) {
+  .entryControl {
+    margin-top: 3.5rem;
+    height: 5rem;
+    width: max(70vw);
+  }
+
+  .entryControlM {
+    width: max(70vw);
+  }
+  .entryAction {
+    width: max (50vw);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .entryControl {
+    margin-top: 3rem;
+    height: 5rem;
+    width: max(50vw);
+  }
+
+  .entryControlM {
+    height: 15rem;
+    width: max(50vw);
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .entryControl {
+    width: max(35vw);
+  }
+
+  .entryControlM {
+    width: max(35vw);
+  }
+}
+
+.entryControl:hover,
+.entryControlM:hover {
   border: 2px solid #78ddb1;
 }
 
-.entryControl input {
+.entryControl input,
+.entryControlM textarea {
   background-color: inherit;
   border: none;
   border-radius: inherit;
   height: 100%;
   width: 100%;
   padding-top: 1.75rem;
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-size: 1.25em;
+  font-weight: 400;
   padding-left: 1rem;
   color: #c2f6f6;
 }
 
 @media only screen and (min-width: 768px) {
   .entryControl input {
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     font-size: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+  .entryControlM textarea {
+    padding-top: 1.75rem;
+    font-size: 1.75rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
   }
 }
 
-.entryControl label {
+.entryControl label,
+.entryControlM label {
   position: absolute;
   bottom: 0rem;
   left: 0.25rem;
@@ -142,14 +265,8 @@
   pointer-events: none;
 }
 
-@media only screen and (min-width: 768px) {
-  .entryControl label {
-    bottom: 1rem;
-    left: 0.5rem;
-  }
-}
-
-.entryControl label::after {
+.entryControl label::after,
+.entryControlM label::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -159,14 +276,23 @@
 .entryAction {
   display: flex;
   align-items: center;
-  margin-top: 4rem;
+  margin-top: 3rem;
   justify-content: space-around;
   background: #78ddb1;
   border-radius: 8px;
-  cursor: pointer;
+}
+@media only screen and (min-width: 450px) {
+  .entryAction {
+    margin-top: 2rem;
+    width: max(8rem);
+  }
+  .entryAction:last-child {
+    margin-left: 2rem;
+  }
 }
 
-.entryAction .addEntryBtn {
+.entryAction .addEntryBtn,
+.entryAction .cancelEntryBtn {
   background-color: inherit;
   border: none;
   font-family: Lato;
@@ -174,26 +300,35 @@
   font-size: 1.1rem;
   line-height: 1.75rem;
   color: #074343;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .entryAction .addEntryBtn,
+  .entryAction .cancelEntryBtn {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 .entryAction:hover {
   border: solid 2px #074343;
+  cursor: pointer;
 }
 
 .titleContent,
 .textContent {
   position: absolute;
-  bottom: 0.25rem;
+  top: 0.1rem;
+  left: 0.25rem;
   color: #6ea5a5;
-  transition: all 0.3s ease;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  opacity: 0.75;
 }
 
-.entryControl input:focus + .labelName .titleContent,
-.entryControl input:valid + .labelName .titleContent,
-.entryControl input:focus + .labelName .textContent,
-.entryControl input:valid + .labelName .textContent {
-  transform: translateY(-100%);
-  font-size: 1rem;
-  opacity: 0.5;
+@media only screen and (min-width: 768px) {
+  .titleContent,
+  .textContent {
+    font-size: 1.25rem;
+  }
 }
