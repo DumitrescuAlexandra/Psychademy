@@ -17,6 +17,7 @@
 
 @media (min-width: 767px) {
   .therapistCard {
+
     width: 60vw;
     height: 8rem;
   }
@@ -38,8 +39,10 @@
 
 @media (min-width: 767px) {
   .therapistCard img {
+
     height: 96px;
     width: 96px;
+
     margin-left: 2.5%;
   }
 }
@@ -122,10 +125,12 @@
 
 @media (min-width: 450px) {
   .theStory {
+
     width: 65vw;
     font-size: 1rem;
     line-height: 1.5rem;
     font-weight: 350;
+
     align-self: center;
     text-align: justify;
     letter-spacing: 0.1px;
