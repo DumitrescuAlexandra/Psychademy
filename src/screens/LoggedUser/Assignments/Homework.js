@@ -15,7 +15,25 @@ function Homework(props) {
     }
   };
 
-  const handleUpload = () => {};
+  const handleUpload = () => {
+    const uploadTask = storage.ref(`files/${file.name}`).put(file);
+    uploadTask.on(
+      "state_changed",
+      (snapshot) => {},
+      (error) => {
+        console.log(error);
+      },
+      () => {
+        storage
+          .ref("files")
+          .child(file.name)
+          .getDownloadURL()
+          .then((url) => {
+            console.log(url);
+          });
+      }
+    );
+  };
 
   console.log("file:", file);
   return (
