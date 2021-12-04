@@ -84,7 +84,15 @@ function App() {
         <Route path="/new-entry">
           <NewEntry />
         </Route>
+
         <Route path="/Assignments">
+          <Homework />
+        </Route>
+        <Route path="/Assignments" exact>
+          {" "}
+          <Redirect to="/Assignments/homework" />
+        </Route>
+        <Route path="/Assignments/:homework">
           <Homework />
         </Route>
 
