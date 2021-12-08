@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import HomeworkItem from "../HomeworkItem";
+import HomeworkItem from "../Items/HomeworkItem";
 
 function MyHomework() {
   return <Fragment>{/* <HomeworkItem /> */}</Fragment>;

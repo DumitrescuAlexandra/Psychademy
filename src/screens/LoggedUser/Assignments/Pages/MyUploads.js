@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 function MyUploads() {
-  return <div></div>;
+  return <Fragment>{/* <UploadItem /> */}</Fragment>;
 }
 
 export default MyUploads;

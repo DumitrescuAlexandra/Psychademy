@@ -35,6 +35,7 @@ function Homework(props) {
           });
       }
     );
+    setFileName("Choose...");
   };
 
   const chooseBtnName =
