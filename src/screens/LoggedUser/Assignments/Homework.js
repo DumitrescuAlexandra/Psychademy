@@ -37,6 +37,9 @@ function Homework(props) {
     );
   };
 
+  const chooseBtnName =
+    fileName.length > 12 ? fileName.slice(0, 12) + "..." : fileName;
+
   console.log("file:", file);
   return (
     <div className={classes.homeworkPage}>
@@ -72,7 +75,7 @@ function Homework(props) {
       </div>
       <div className={classes.actionBtns}>
         <label htmlFor="files" className={classes.chooseBtn}>
-          {fileName}
+          {chooseBtnName}
         </label>
         <div className={classes.uploadBtn} onClick={handleUpload}>
           Upload
