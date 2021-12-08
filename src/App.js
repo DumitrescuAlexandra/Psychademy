@@ -88,13 +88,6 @@ function App() {
         <Route path="/Assignments">
           <Homework />
         </Route>
-        <Route path="/Assignments" exact>
-          {" "}
-          <Redirect to="/Assignments/homework" />
-        </Route>
-        <Route path="/Assignments/:homework">
-          <Homework />
-        </Route>
 
         <Route path="*">
           <NotFound />

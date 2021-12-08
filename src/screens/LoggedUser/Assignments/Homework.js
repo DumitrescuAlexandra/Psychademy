@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, Route } from "react-router-dom";
 import classes from "./Homework.module.css";
 import { storage } from "../../../Firebase";
 
-import MyHomework from "./MyHomework";
-import MyUploads from "./MyUploads";
+import MyHomework from "./Pages/MyHomework";
+import MyUploads from "./Pages/MyUploads";
 
 function Homework(props) {
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState("");
+  const [selectedFile, setSelectedFile] = useState("Choose...");
 
   const handleChange = (e) => {
     if (e.target.files[0]) {
@@ -35,7 +36,7 @@ function Homework(props) {
     );
   };
 
-  console.log("file:", file);
+  console.log("file:", file.name);
   return (
     <div className={classes.homeworkPage}>
       <div className={classes.homeworkTitle}>
@@ -59,7 +60,7 @@ function Homework(props) {
           My uploads
         </NavLink>
       </div>
-      <div className={classes.homeworkFiles}>{props.children}</div>
+      {/* <div className={classes.homeworkFiles}>{props.children}</div> */}
       <div>
         <input
           type="file"
@@ -70,7 +71,7 @@ function Homework(props) {
       </div>
       <div className={classes.actionBtns}>
         <label htmlFor="files" className={classes.chooseBtn}>
-          Choose...
+          {selectedFile}
         </label>
         <div className={classes.uploadBtn} onClick={handleUpload}>
           Upload
