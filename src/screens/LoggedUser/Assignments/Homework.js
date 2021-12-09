@@ -54,7 +54,7 @@ function Homework(props) {
           to="/Assignments/homework"
           activeStyle={{ background: "#78ddb1", color: "#074343" }}
         >
-          Homework
+          My homework
         </NavLink>
         <NavLink
           key={2}
@@ -83,7 +83,7 @@ function Homework(props) {
         </div>
       </div>
       <Route path="/Assignments/homework">
-        <MyHomework />
+        <MyHomework files={props.files} />
       </Route>
       <Route path="/Assignments/my-uploads">
         <MyUploads />

@@ -15,7 +15,7 @@ function DeleteAccount() {
         <p className={classes.deleteTitle}> Delete Account </p>
         <p className={classes.deleteSubTitle}>
           {" "}
-          Please complete the following steps in order to change you password{" "}
+          Please complete the following steps in order to delete your account{" "}
         </p>
         <form>
           <div className={classes.deleteControl}>
@@ -49,7 +49,7 @@ function DeleteAccount() {
               {" "}
               Cancel{" "}
             </div>
-            <div className={classes.deleteBtn}> Delete account </div>
+            <div className={classes.deleteBtn}> Delete </div>
           </div>
         </form>
 
