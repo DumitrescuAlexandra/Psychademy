@@ -83,7 +83,7 @@ function Homework(props) {
         </div>
       </div>
       <Route path="/Assignments/homework">
-        <MyHomework files={props.files} />
+        <MyHomework />
       </Route>
       <Route path="/Assignments/my-uploads">
         <MyUploads />
