@@ -1,4 +1,4 @@
-import classes from "./JournalEntry.module.css";
+import classes from "./JournalEntryC.module.css";
 import { Link } from "react-router-dom";
 
 const JournalEntry = (props) => {

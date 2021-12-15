@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import { useHistory } from "react-router";
 
 import LoadingSpinner from "../../../UI/LoadingSpinner";
-import classes from "./EntryForm.module.css";
+import classes from "./EntryFormC.module.css";
 
 const EntryForm = (props) => {
   const titleInputRef = useRef();

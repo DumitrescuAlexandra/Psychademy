@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import EntryList from "../EntryList";
+import EntryList from "../EntryListC";
 import LoadingSpinner from "../../../UI/LoadingSpinner";
 import NotFound from "../../Not found/NotFound";
 import useHttp from "../../../hooks/use-http";

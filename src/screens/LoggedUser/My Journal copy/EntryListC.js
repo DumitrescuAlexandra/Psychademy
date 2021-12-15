@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 import { Route, useHistory } from "react-router-dom";
-import EntryDetails from "./screens/EntryDetails";
-import classes from "./EntryList.module.css";
-import JournalEntry from "./JournalEntry";
+import EntryDetails from "./screens/EntryDetailsC";
+import classes from "./EntryListC.module.css";
+import JournalEntry from "./JournalEntryC";
 
 const EntryList = (props) => {
   const history = useHistory();

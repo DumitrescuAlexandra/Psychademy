@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import classes from "./DetailedEntry.module.css";
+import classes from "./DetailedEntryC.module.css";
 
 function DetailedEntry(props) {
   return (

@@ -3,8 +3,8 @@ import React, { useEffect } from "react";
 import Modal from "react-modal";
 import LoadingSpinner from "../../../../UI/LoadingSpinner";
 import NotFound from "../../../Not found/NotFound";
-import classes from "./EntryDetails.module.css";
-import DetailedEntry from "../DetailedEntry";
+import classes from "./EntryDetailsC.module.css";
+import DetailedEntry from "../DetailedEntryC";
 import useHttp from "../../../../hooks/use-http";
 import { getSingleEntry } from "../../../../lib/api";
 
