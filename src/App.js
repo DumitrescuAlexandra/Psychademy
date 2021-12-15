@@ -21,8 +21,8 @@ import DeleteAccount from "./screens/LoggedUser/UserProfile/Delete Account/Delet
 import MoodGraph from "./screens/LoggedUser/Mood Graph/MoodGraph";
 // import EntryList from "./screens/LoggedUser/My Journal/EntryList";
 // import NewEntry from "./screens/LoggedUser/My Journal/screens/NewEntry";
-import EntryList from "./screens/LoggedUser/My Journal copy/EntryList";
-import NewEntry from "./screens/LoggedUser/My Journal copy/screens/NewEntry";
+import EntryList from "./screens/LoggedUser/My Journal copy/EntryListC";
+import NewEntry from "./screens/LoggedUser/My Journal copy/screens/NewEntryC";
 import Homework from "./screens/LoggedUser/Assignments/Homework";
 
 function App() {
