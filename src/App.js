@@ -19,8 +19,10 @@ import ConfidentialityPolicy from "./screens/LoggedUser/UserProfile/Confidential
 import ChangePassword from "./screens/LoggedUser/UserProfile/Change Password/ChangePassword";
 import DeleteAccount from "./screens/LoggedUser/UserProfile/Delete Account/DeleteAccount";
 import MoodGraph from "./screens/LoggedUser/Mood Graph/MoodGraph";
-import EntryList from "./screens/LoggedUser/My Journal/EntryList";
-import NewEntry from "./screens/LoggedUser/My Journal/screens/NewEntry";
+// import EntryList from "./screens/LoggedUser/My Journal/EntryList";
+// import NewEntry from "./screens/LoggedUser/My Journal/screens/NewEntry";
+import EntryList from "./screens/LoggedUser/My Journal copy/EntryList";
+import NewEntry from "./screens/LoggedUser/My Journal copy/screens/NewEntry";
 import Homework from "./screens/LoggedUser/Assignments/Homework";
 
 function App() {
