@@ -1,6 +1,8 @@
 import { React, useRef } from "react";
 import Modal from "react-modal";
 import { useHistory } from "react-router";
+import { db } from "../../../Firebase/index";
+import { collection, addDoc } from "firebase/firestore";
 
 import LoadingSpinner from "../../../UI/LoadingSpinner";
 import classes from "./EntryFormC.module.css";
@@ -21,18 +23,20 @@ const EntryForm = (props) => {
     minute: "2-digit",
   })}`;
 
-  function submitFormHandler(event) {
+  const submitFormHandler = (event) => {
     event.preventDefault();
 
     const enteredTitle = titleInputRef.current.value;
     const enteredMessage = messageInputRef.current.value;
 
-    props.onAddEntry({
-      title: enteredTitle,
-      message: enteredMessage,
-      date: date,
-    });
-  }
+    props.onAddEntry(
+      addDoc(collection(db, "journal"), {
+        title: enteredTitle,
+        message: enteredMessage,
+        date: date,
+      })
+    );
+  };
 
   return (
     <div className={classes.entryFormPage}>

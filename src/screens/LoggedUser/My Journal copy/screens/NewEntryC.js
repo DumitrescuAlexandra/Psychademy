@@ -14,7 +14,7 @@ const NewEntry = () => {
     }
   }, [status, history]);
 
-  const addEntryHandler = (entryData) => {
+  const addEntryHandler = async (entryData) => {
     sendRequest(entryData);
   };
 

@@ -4,14 +4,22 @@ import { Route, useHistory } from "react-router-dom";
 import EntryDetails from "./screens/EntryDetailsC";
 import classes from "./EntryListC.module.css";
 import JournalEntry from "./JournalEntryC";
+import { db } from "../../../Firebase/index";
+import { collection, getDocs } from "firebase/firestore";
 
 const EntryList = (props) => {
   const history = useHistory();
+  const journalCollectionRef = collection(db, "journal");
+
   const [entries, setEntries] = useState([]);
 
   useEffect(() => {
-    setEntries(props.entries);
-  }, [props.entries]);
+    const getEntries = async () => {
+      const data = await getDocs(journalCollectionRef);
+      setEntries(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+    getEntries();
+  }, [journalCollectionRef]);
 
   return (
     <div className={classes.journalPage}>
@@ -20,16 +28,15 @@ const EntryList = (props) => {
         <img src="/Images/sort.png" alt="" height="32px" width="32px" />
       </div>
       <ul className={classes.entriesList}>
-        {entries &&
-          entries.map((entry) => (
-            <JournalEntry
-              key={entry.id}
-              id={entry.id}
-              date={entry.date}
-              title={entry.title}
-              message={entry.message}
-            />
-          ))}
+        {entries.map((entry) => (
+          <JournalEntry
+            key={entry.id}
+            id={entry.id}
+            date={entry.date}
+            title={entry.title}
+            message={entry.message}
+          />
+        ))}
       </ul>
       <div className={classes.newEntry}>
         <div
