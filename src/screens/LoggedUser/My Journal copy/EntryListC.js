@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { Route, useHistory } from "react-router-dom";
+import { useParams, Route, useHistory } from "react-router-dom";
 import EntryDetails from "./screens/EntryDetailsC";
 import classes from "./EntryListC.module.css";
 import JournalEntry from "./JournalEntryC";
@@ -9,17 +9,39 @@ import { collection, getDocs } from "firebase/firestore";
 
 const EntryList = (props) => {
   const history = useHistory();
+  const params = useParams();
+  const { entryId } = params;
+
   const journalCollectionRef = collection(db, "journal");
 
   const [entries, setEntries] = useState([]);
+  const [singleEntry, setSingleEntry] = useState({});
 
   useEffect(() => {
     const getEntries = async () => {
       const data = await getDocs(journalCollectionRef);
       setEntries(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
+
     getEntries();
-  }, [journalCollectionRef]);
+  }, [journalCollectionRef, entries, params, singleEntry.id]);
+
+  //
+  //
+  // HOW TO find, not to MAP ?!?!
+
+  useEffect(() => {
+    const getSingleEntry = async () => {
+      const detailedEntry = await entries.map(
+        (singleEntry) => singleEntry.id === params.entryId
+      );
+      setSingleEntry(detailedEntry);
+    };
+    getSingleEntry();
+  }, [entries, params.entryId]);
+  //
+  //
+  //
 
   return (
     <div className={classes.journalPage}>
@@ -54,8 +76,12 @@ const EntryList = (props) => {
           Add Entry
         </div>
       </div>
-      <Route path="/Journal/:entryId">
-        <EntryDetails />
+      <Route path={`/Journal/${params.entryId}`}>
+        <EntryDetails
+          title={singleEntry.title}
+          date={singleEntry.date}
+          message={singleEntry.message}
+        />
       </Route>
     </div>
   );

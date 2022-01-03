@@ -27,11 +27,15 @@ const EntryForm = (props) => {
     event.preventDefault();
 
     const enteredTitle = titleInputRef.current.value;
+    const trimmedTitle =
+      enteredTitle.length > 15
+        ? enteredTitle.slice(0, 15) + "..."
+        : enteredTitle;
     const enteredMessage = messageInputRef.current.value;
 
     props.onAddEntry(
       addDoc(collection(db, "journal"), {
-        title: enteredTitle,
+        title: trimmedTitle,
         message: enteredMessage,
         date: date,
       })

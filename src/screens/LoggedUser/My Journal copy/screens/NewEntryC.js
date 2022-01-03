@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import EntryForm from "../EntryFormC";
 import useHttp from "../../../../hooks/use-http";
-import { addEntry } from "../../../../lib/api";
+// import { addEntry } from "../../../../lib/api";
 
 const NewEntry = () => {
   const history = useHistory();
-  const { sendRequest, status } = useHttp(addEntry);
+  const { sendRequest, status } = useHttp(() => {}, false);
 
   useEffect(() => {
     if (status === "completed") {

@@ -21,6 +21,7 @@ import DeleteAccount from "./screens/LoggedUser/UserProfile/Delete Account/Delet
 import MoodGraph from "./screens/LoggedUser/Mood Graph/MoodGraph";
 // import EntryList from "./screens/LoggedUser/My Journal/EntryList";
 // import NewEntry from "./screens/LoggedUser/My Journal/screens/NewEntry";
+// import EntryDetails from "./screens/LoggedUser/My Journal copy/DetailedEntryC";
 import EntryList from "./screens/LoggedUser/My Journal copy/EntryListC";
 import NewEntry from "./screens/LoggedUser/My Journal copy/screens/NewEntryC";
 import Homework from "./screens/LoggedUser/Assignments/Homework";
@@ -82,6 +83,9 @@ function App() {
         </Route>
         <Route path="/Journal">
           <EntryList />
+          {/* <Route path="/Journal/:entryId">
+            <EntryDetails />
+          </Route> */}
         </Route>
         <Route path="/new-entry">
           <NewEntry />
