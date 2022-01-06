@@ -6,16 +6,18 @@ import classes from "./EntryListC.module.css";
 import JournalEntry from "./JournalEntryC";
 import { db } from "../../../Firebase/index";
 import { collection, getDocs } from "firebase/firestore";
+import { useRouteMatch } from "react-router-dom";
 
-const EntryList = (props) => {
+const EntryList = () => {
   const history = useHistory();
   const params = useParams();
-  const { entryId } = params;
+  const match = useRouteMatch();
+  // const { entryId } = params;
 
   const journalCollectionRef = collection(db, "journal");
 
   const [entries, setEntries] = useState([]);
-  const [singleEntry, setSingleEntry] = useState({});
+  // const [singleEntry, setSingleEntry] = useState({});
 
   useEffect(() => {
     const getEntries = async () => {
@@ -24,24 +26,36 @@ const EntryList = (props) => {
     };
 
     getEntries();
-  }, [journalCollectionRef, entries, params, singleEntry.id]);
+  }, [journalCollectionRef, entries, params]);
 
   //
   //
   // HOW TO find, not to MAP ?!?!
 
-  useEffect(() => {
-    const getSingleEntry = async () => {
-      const detailedEntry = await entries.map(
-        (singleEntry) => singleEntry.id === params.entryId
-      );
-      setSingleEntry(detailedEntry);
-    };
-    getSingleEntry();
-  }, [entries, params.entryId]);
-  //
-  //
-  //
+  // useEffect(() => {
+  //   const getSingleEntry = async () => {
+  //     const detailedEntry = await entries.map(
+  //       (singleEntry) => singleEntry.id === params.entryId
+  //     );
+  //     setSingleEntry(detailedEntry);
+  //   };
+  //   getSingleEntry();
+  // }, [entries, params.entryId]);
+
+  // useEffect(() => {
+  //   const getSingleEntry = async () => {
+  //     const data = await getDoc(journalCollectionRef, `${params.entryId}`);
+  //     setSingleEntry(
+  //       data.doc.find(
+  //         (doc) =>
+  //           (doc.id = params.entryId
+  //             ? { ...doc.data(), id: doc.id }
+  //             : console.log("Not found"))
+  //       )
+  //     );
+  //   };
+  //   getSingleEntry();
+  // }, [journalCollectionRef, params.entryId, entryId]);
 
   return (
     <div className={classes.journalPage}>
@@ -76,12 +90,18 @@ const EntryList = (props) => {
           Add Entry
         </div>
       </div>
-      <Route path={`/Journal/${params.entryId}`}>
-        <EntryDetails
-          title={singleEntry.title}
-          date={singleEntry.date}
-          message={singleEntry.message}
-        />
+      <Route path="/Journal/:entryId">
+        {entries.forEach(
+          (singleEntry) =>
+            match.path === singleEntry.id && (
+              <EntryDetails
+                key={singleEntry.id}
+                title={singleEntry.title}
+                date={singleEntry.date}
+                message={singleEntry.message}
+              />
+            )
+        )}
       </Route>
     </div>
   );

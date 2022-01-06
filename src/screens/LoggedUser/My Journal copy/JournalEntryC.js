@@ -20,7 +20,7 @@ const JournalEntry = (props) => {
       </div>
 
       <Link to={`/Journal/${props.id}`} className={classes.viewEntryBtn}>
-        <img src="/Images/open.png" alt="" height="24px"></img>
+        <img src="/Images/open.svg" alt="" height="24px"></img>
       </Link>
     </li>
   );
