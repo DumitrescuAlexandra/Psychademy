@@ -1,7 +1,7 @@
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import Modal from "react-modal";
 import classes from "./EntryDetailsC.module.css";
-import DetailedEntry from "../DetailedEntryC";
+// import DetailedEntry from "../DetailedEntryC";
 
 const EntryDetails = (props) => {
   const history = useHistory();
@@ -28,12 +28,23 @@ const EntryDetails = (props) => {
           width="28px"
           onClick={() => history.push("/Journal")}
         ></img>
-        <DetailedEntry
-          key={props.id}
-          title={props.title}
-          date={props.date}
-          message={props.message}
-        />
+        <div className={classes.entryPage}>
+          <div className={classes.entry}>
+            <div className={classes.banner}>
+              <div className={classes.title}>
+                <p>{props.title}</p>
+              </div>
+              <div className={classes.date}>
+                {" "}
+                <p>{props.date}</p>
+              </div>
+              <div className={classes.message}>
+                <p>{props.message}</p>
+              </div>
+            </div>
+            <Link to="/Journal"> Back </Link>
+          </div>
+        </div>
       </Modal>
     </div>
   );
