@@ -20,12 +20,18 @@ const EntryList = () => {
   // const [singleEntry, setSingleEntry] = useState({});
 
   useEffect(() => {
+    let mounted = true;
     const getEntries = async () => {
       const data = await getDocs(journalCollectionRef);
-      setEntries(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      if (mounted) {
+        setEntries(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      }
     };
 
     getEntries();
+    return function cleanup() {
+      mounted = false;
+    };
   }, [journalCollectionRef, entries, params]);
 
   //

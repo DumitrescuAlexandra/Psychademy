@@ -28,7 +28,12 @@ const EntryDetails = (props) => {
           width="28px"
           onClick={() => history.push("/Journal")}
         ></img>
-        <DetailedEntry />
+        <DetailedEntry
+          key={props.id}
+          title={props.title}
+          date={props.date}
+          message={props.message}
+        />
       </Modal>
     </div>
   );
