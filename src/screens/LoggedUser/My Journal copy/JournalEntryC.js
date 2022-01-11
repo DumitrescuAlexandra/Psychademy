@@ -2,8 +2,8 @@ import classes from "./JournalEntryC.module.css";
 import { Link } from "react-router-dom";
 
 const JournalEntry = (props) => {
-  // const displayedTitle =
-  //   props.title.length > 15 ? props.title.slice(0, 15) + "..." : props.title;
+  const displayedTitle =
+    props.title.length > 15 ? props.title.slice(0, 15) + "..." : props.title;
 
   return (
     <li className={classes.journalEntry}>
@@ -12,7 +12,7 @@ const JournalEntry = (props) => {
       </div>
       <div className={classes.entryText}>
         <div className={classes.entryTitle}>
-          <p>{props.title}</p>
+          <p>{displayedTitle}</p>
         </div>
         <div className={classes.entryDate}>
           <p>{props.date}</p>

@@ -5,6 +5,7 @@ import classes from "./EntryDetailsC.module.css";
 
 const EntryDetails = (props) => {
   const history = useHistory();
+
   return (
     <div className={classes.detailsPage}>
       <Modal

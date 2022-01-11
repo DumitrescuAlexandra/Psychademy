@@ -4,64 +4,54 @@ import { useParams, Route, useHistory } from "react-router-dom";
 import EntryDetails from "./screens/EntryDetailsC";
 import classes from "./EntryListC.module.css";
 import JournalEntry from "./JournalEntryC";
-import { db } from "../../../Firebase/index";
-import { collection, getDocs } from "firebase/firestore";
-import { useRouteMatch } from "react-router-dom";
+// import { db } from "../../../Firebase/index";
+// import { collection } from "firebase/firestore";
+// import { useRouteMatch } from "react-router-dom";
+
+const DUMMY_ENTRIES = [
+  { id: 111111, title: "aaaaaaaaa", message: "blablabla" },
+  { id: 222222, title: "bbbbbbbbb", message: "blublublub" },
+  { id: 333333, title: "ccccccccccccccccccccc", message: "bloblobloblob" },
+  { id: 444444, title: "ddddddddddddddddddddd", message: "blublublublub" },
+];
 
 const EntryList = () => {
   const history = useHistory();
   const params = useParams();
-  const match = useRouteMatch();
+  // const match = useRouteMatch();
   // const { entryId } = params;
 
-  const journalCollectionRef = collection(db, "journal");
+  // const journalCollectionRef = collection(db, "journal");
+  // const docRef = doc(db, "journal", `${doc.id}`);
 
   const [entries, setEntries] = useState([]);
   // const [singleEntry, setSingleEntry] = useState({});
 
   useEffect(() => {
-    let mounted = true;
-    const getEntries = async () => {
-      const data = await getDocs(journalCollectionRef);
-      if (mounted) {
-        setEntries(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-      }
+    const getEntries = () => {
+      setEntries(DUMMY_ENTRIES);
     };
-
     getEntries();
-    return function cleanup() {
-      mounted = false;
-    };
-  }, [journalCollectionRef, entries, params]);
+  }, []);
+
+  // useEffect(() => {
+  //   let mounted = true;
+  //   const getEntries = async () => {
+  //     const data = await getDocs(journalCollectionRef);
+  //     if (mounted) {
+  //       setEntries(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+  //     }
+  //   };
+
+  //   getEntries();
+
+  //   return function cleanup() {
+  //     mounted = false;
+  //   };
+  // }, [journalCollectionRef, entries, params]);
 
   //
   //
-  // HOW TO find, not to MAP ?!?!
-
-  // useEffect(() => {
-  //   const getSingleEntry = async () => {
-  //     const detailedEntry = await entries.map(
-  //       (singleEntry) => singleEntry.id === params.entryId
-  //     );
-  //     setSingleEntry(detailedEntry);
-  //   };
-  //   getSingleEntry();
-  // }, [entries, params.entryId]);
-
-  // useEffect(() => {
-  //   const getSingleEntry = async () => {
-  //     const data = await getDoc(journalCollectionRef, `${params.entryId}`);
-  //     setSingleEntry(
-  //       data.doc.find(
-  //         (doc) =>
-  //           (doc.id = params.entryId
-  //             ? { ...doc.data(), id: doc.id }
-  //             : console.log("Not found"))
-  //       )
-  //     );
-  //   };
-  //   getSingleEntry();
-  // }, [journalCollectionRef, params.entryId, entryId]);
 
   return (
     <div className={classes.journalPage}>
@@ -69,6 +59,17 @@ const EntryList = () => {
         <p>My journal</p>
         <img src="/Images/sort.png" alt="" height="32px" width="32px" />
       </div>
+      {/* <ul className={classes.entriesList}>
+        {entries.map((entry) => (
+          <JournalEntry
+            key={entry.id}
+            id={entry.id}
+            date={entry.date}
+            title={entry.title}
+            message={entry.message}
+          />
+        ))}
+      </ul> */}
       <ul className={classes.entriesList}>
         {entries.map((entry) => (
           <JournalEntry
@@ -96,11 +97,13 @@ const EntryList = () => {
           Add Entry
         </div>
       </div>
-      <Route path="/Journal/:entryId">
-        {entries.forEach(
+      {/* <Route path="/Journal/:entryId"> */}
+      <Route path={`/Journal/${params.entryId}`}>
+        {DUMMY_ENTRIES.map(
           (singleEntry) =>
-            match.path === singleEntry.id && (
+            params.entryId === singleEntry.id && (
               <EntryDetails
+                id={singleEntry.id}
                 key={singleEntry.id}
                 title={singleEntry.title}
                 date={singleEntry.date}
