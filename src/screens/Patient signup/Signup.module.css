@@ -1,3 +1,52 @@
+.signupPage {
+  margin: auto 7vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 767px) {
+  .signupPage {
+    margin: min(7.5rem) 7vw;
+  }
+}
+
+.signupPage h2 {
+  margin-top: 3rem;
+  text-align: center;
+
+  font-family: Merriweather;
+  font-weight: bold;
+  font-size: 2.25rem;
+  line-height: 3rem;
+  color: #fff8e1;
+}
+
+@media (min-width: 767px) {
+  .signupPage h2 {
+    font-size: 3rem;
+  }
+}
+
+.signupPage h4 {
+  margin-top: 1rem;
+
+  text-align: center;
+  font-family: Lato;
+  font-weight: 500;
+  color: #fff8e1;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 767px) {
+  .signupPage h4 {
+    margin-top: 1rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+  }
+}
+
 .signup {
   display: flex;
   flex-direction: column;
@@ -6,8 +55,23 @@
   width: 100%;
 }
 
-.signupControl,
 .signupAction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading {
+  align-self: start;
+  height: 1.75rem;
+}
+
+.loading p {
+  size: 1.25rem;
+}
+
+.signupControl,
+.signupAct {
   height: 3.25rem;
 }
 
@@ -24,9 +88,12 @@
 
 @media only screen and (min-width: 768px) {
   .signupControl,
-  .signupAction {
+  .signupAct {
     height: 5rem;
     width: min(25rem);
+  }
+  .loading {
+    height: 2.5rem;
   }
 }
 
@@ -76,16 +143,20 @@
   height: 100%;
 }
 
-.signupAction {
+.signupAct {
   display: flex;
   align-items: center;
-  margin-top: 4rem;
+  margin-top: 2rem;
   justify-content: space-around;
   background: #78ddb1;
   border-radius: 8px;
 }
 
-.signupAction .signupButton {
+.loading p {
+  size: 1.2rem;
+}
+
+.signupAct .signupButton {
   background-color: inherit;
   border: none;
   font-family: Lato;
@@ -97,13 +168,13 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .signupAction .signupButton {
+  .signupAct .signupButton {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
-.signupAction:hover {
+.signupAct:hover {
   border: solid 2px #074343;
 }
 

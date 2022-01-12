@@ -59,7 +59,7 @@ function App() {
           <Contact />
         </Route>
         <AuthProvider>
-          <Route path="/signup">
+          <Route path="/PatientSignup">
             <Signup />
           </Route>
           <Route path="/PatientLogin">
