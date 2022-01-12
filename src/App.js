@@ -19,11 +19,13 @@ import ConfidentialityPolicy from "./screens/LoggedUser/UserProfile/Confidential
 import ChangePassword from "./screens/LoggedUser/UserProfile/Change Password/ChangePassword";
 import DeleteAccount from "./screens/LoggedUser/UserProfile/Delete Account/DeleteAccount";
 import MoodGraph from "./screens/LoggedUser/Mood Graph/MoodGraph";
+import Signup from "./screens/Patient signup/Signup";
 // import EntryList from "./screens/LoggedUser/My Journal/EntryList";
 // import NewEntry from "./screens/LoggedUser/My Journal/screens/NewEntry";
 import EntryList from "./screens/LoggedUser/My Journal copy/EntryListC";
 import NewEntry from "./screens/LoggedUser/My Journal copy/screens/NewEntryC";
 import Homework from "./screens/LoggedUser/Assignments/Homework";
+import { AuthProvider } from "./contexts/AuthContext";
 
 function App() {
   return (
@@ -56,40 +58,45 @@ function App() {
         <Route path="/contact">
           <Contact />
         </Route>
-        <Route path="/PatientLogin">
-          <PatientLogin />
-        </Route>
-        <Route path="/UserPage">
-          <UserPage />
-        </Route>
-        <Route path="/UserPage/moodCheck">
-          <MoodCheck />
-        </Route>
-        <Route path="/Account">
-          <AccountSettings />
-        </Route>
-        <Route path="/ConfidentialityPolicy">
-          <ConfidentialityPolicy />
-        </Route>
-        <Route path="/PasswordChange">
-          <ChangePassword />
-        </Route>
-        <Route path="/DeleteAccount">
-          <DeleteAccount />
-        </Route>
-        <Route path="/UserPage/Evolution">
-          <MoodGraph />
-        </Route>
-        <Route path="/Journal">
-          <EntryList />
-        </Route>
-        <Route path="/new-entry">
-          <NewEntry />
-        </Route>
+        <AuthProvider>
+          <Route path="/signup">
+            <Signup />
+          </Route>
+          <Route path="/PatientLogin">
+            <PatientLogin />
+          </Route>
+          <Route path="/UserPage">
+            <UserPage />
+          </Route>
+          <Route path="/UserPage/moodCheck">
+            <MoodCheck />
+          </Route>
+          <Route path="/Account">
+            <AccountSettings />
+          </Route>
+          <Route path="/ConfidentialityPolicy">
+            <ConfidentialityPolicy />
+          </Route>
+          <Route path="/PasswordChange">
+            <ChangePassword />
+          </Route>
+          <Route path="/DeleteAccount">
+            <DeleteAccount />
+          </Route>
+          <Route path="/UserPage/Evolution">
+            <MoodGraph />
+          </Route>
+          <Route path="/Journal">
+            <EntryList />
+          </Route>
+          <Route path="/new-entry">
+            <NewEntry />
+          </Route>
 
-        <Route path="/Assignments">
-          <Homework />
-        </Route>
+          <Route path="/Assignments">
+            <Homework />
+          </Route>
+        </AuthProvider>
 
         <Route path="*">
           <NotFound />

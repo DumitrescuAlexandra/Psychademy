@@ -1,10 +1,15 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useRef } from "react";
 import classes from "./ChangePassword.module.css";
 import BackArrow from "../../../../UI/Buttons/BackArrow";
 import { useHistory } from "react-router-dom";
 
 function ChangePassword() {
   const history = useHistory();
+
+  const currPasswordRef = useRef();
+  const newPasswordRef = useRef();
+  const newPasswordConfirmRef = useRef();
+
   return (
     <Fragment>
       <BackArrow />
@@ -22,6 +27,7 @@ function ChangePassword() {
               id="currPw"
               required
               className={classes.inputField}
+              ref={currPasswordRef}
             ></input>
             <label htmlFor="currPw" className={classes.labelName}>
               <span className={classes.pwContent}> Enter current password</span>{" "}
@@ -33,6 +39,7 @@ function ChangePassword() {
               id="enterNew"
               required
               className={classes.inputField}
+              ref={newPasswordRef}
             ></input>
             <label htmlFor="enterNew" className={classes.labelName}>
               <span className={classes.pwContent}> Enter new password</span>{" "}
@@ -44,6 +51,7 @@ function ChangePassword() {
               id="reEnterNew"
               required
               className={classes.inputField}
+              ref={newPasswordConfirmRef}
             ></input>
             <label htmlFor="reEnterNew" className={classes.labelName}>
               <span className={classes.pwContent}> Re-enter new password</span>{" "}
