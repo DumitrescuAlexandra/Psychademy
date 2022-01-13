@@ -1,12 +1,16 @@
 import React, { Fragment, useRef, useState } from "react";
 import classes from "./Signup.module.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import BackArrow from "../../UI/Buttons/BackArrow";
+import { Route } from "react-router-dom";
+import Success from "../Success screen/Success";
+import LoadingSpinner from "../../UI/LoadingSpinner";
 
 function Signup() {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const history = useHistory();
 
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
@@ -25,6 +29,7 @@ function Signup() {
       setError("");
       setIsLoading(true);
       await signup(emailInputRef.current.value, passwordInputRef.current.value);
+      history.push("/Success");
     } catch {
       setError("Failed to create an account");
     }
@@ -39,8 +44,10 @@ function Signup() {
           <h2>Create an account</h2>
           <h4>Please enter an e-mail address and password</h4>
         </header>
+
         <div className={classes.signup}>
           {error && <div>{alert(error)}</div>}
+
           <form>
             <div className={classes.signupControl}>
               <input
@@ -83,19 +90,7 @@ function Signup() {
             </div>
             <div className={classes.signupAction}>
               <div className={classes.loading}>
-                {!isLoading && (
-                  <p
-                    className={classes.loading}
-                    style={{
-                      color: "#074343",
-                      fontSize: "1.25rem",
-                      fontWeight: "600",
-                    }}
-                  >
-                    {" "}
-                    Loading ...
-                  </p>
-                )}
+                {isLoading && <LoadingSpinner />}
               </div>
               <div className={classes.signupAct} onClick={submitHandler}>
                 <Link to="/UserPage" className={classes.signupButton}>

@@ -26,6 +26,7 @@ import EntryList from "./screens/LoggedUser/My Journal copy/EntryListC";
 import NewEntry from "./screens/LoggedUser/My Journal copy/screens/NewEntryC";
 import Homework from "./screens/LoggedUser/Assignments/Homework";
 import { AuthProvider } from "./contexts/AuthContext";
+import Success from "./screens/Success screen/Success";
 
 function App() {
   return (
@@ -61,6 +62,11 @@ function App() {
         <AuthProvider>
           <Route path="/PatientSignup">
             <Signup />
+          </Route>
+          <Route path="/Success">
+            <Success
+              successMessage={"You have successfully created an account!"}
+            />
           </Route>
           <Route path="/PatientLogin">
             <PatientLogin />
