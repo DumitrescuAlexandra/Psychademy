@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import BackArrow from "../../UI/Buttons/BackArrow";
 import AuthForm from "./AuthForm";
 import classes from "./PatientLogin.module.css";
+import { Link } from "react-router-dom";
 
 // USE STATE to check for auth - if so, render <MoodCheck>
 
@@ -18,8 +19,10 @@ const PatientLogin = () => {
         <AuthForm />
         <div className={classes.loginHint}>
           <p>
-            If you don’t remember your log in credentials, please contact your
-            psychotherapist.
+            Don't have an account?{" "}
+            <Link to="/PatientSignup" className={classes.signupLogin}>
+              Sign up for free!
+            </Link>
           </p>
         </div>
       </div>

@@ -103,6 +103,14 @@ function Signup() {
                   Create account{" "}
                 </Link>
               </div>
+              <div className={classes.loginInvitation}>
+                <p>
+                  Already have an account?{" "}
+                  <Link to="/PatientLogin" className={classes.signupLogin}>
+                    Log In
+                  </Link>
+                </p>
+              </div>
             </div>
           </form>
         </div>
