@@ -12,42 +12,6 @@
   border-radius: 40px;
 }
 
-@media only screen and (min-width: 375px) {
-  .successModalBck {
-    margin: 20% auto;
-    width: 90vw;
-    height: 55vh;
-  }
-}
-
-@media only screen and (min-width: 414px) {
-  .successModalBck {
-    margin: 20% auto;
-    width: 85vw;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .successModalBck {
-    margin: 10% auto;
-    width: 90vw;
-    height: 70vh;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .successModalBck {
-    width: 70vw;
-    height: 70vh;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .successModalBck {
-    width: 50vw;
-  }
-}
-
 .closeImg {
   position: absolute;
   right: 1.5rem;
@@ -92,7 +56,7 @@
 }
 
 .successMessage {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .successMessage p {
@@ -110,7 +74,7 @@
 }
 
 .okayBtn {
-  margin-top: 15%;
+  margin-top: 20%;
   padding: 2.5% 7.5%;
   display: flex;
   align-items: center;
@@ -131,4 +95,86 @@
   font-size: 1.1rem;
   line-height: 1.75rem;
   color: #074343;
+}
+
+@media only screen and (min-width: 375px) {
+  .successModalBck {
+    margin: 20% auto;
+    width: 90vw;
+    height: 55vh;
+  }
+  .title p {
+    font-size: 3rem;
+  }
+
+  .okayBtn {
+    margin-top: 22.5%;
+  }
+
+  .successMessage {
+    margin-top: 12.5%;
+    padding: 0 5%;
+  }
+  .successMessage p {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+
+@media only screen and (min-width: 414px) {
+  .successModalBck {
+    margin: 20% auto;
+    width: 85vw;
+  }
+  .okayBtn {
+    margin-top: 17.5%;
+  }
+}
+
+@media only screen and (min-width: 475px) {
+  .successMessage {
+    margin-top: 7.5%;
+  }
+  .okayBtn {
+    margin-top: 12.5%;
+  }
+}
+
+@media only screen and (min-width: 635px) {
+  .header {
+    margin-top: 5%;
+  }
+  .successMessage {
+    margin-top: 5%;
+  }
+  .okayBtn {
+    margin-top: 10%;
+  }
+  .okayBtn a {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .successModalBck {
+    margin: 10% auto;
+    width: 90vw;
+    height: 70vh;
+  }
+  .checkImg {
+    width: 12.5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .successModalBck {
+    width: 70vw;
+    height: 70vh;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .successModalBck {
+    width: 50vw;
+  }
 }

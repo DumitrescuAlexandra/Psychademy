@@ -3,8 +3,6 @@ import classes from "./Signup.module.css";
 import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import BackArrow from "../../UI/Buttons/BackArrow";
-import { Route } from "react-router-dom";
-import Success from "../Success screen/Success";
 import LoadingSpinner from "../../UI/LoadingSpinner";
 
 function Signup() {
