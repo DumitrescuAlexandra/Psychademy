@@ -5,10 +5,30 @@ import classes from "./EntryDetailsC.module.css";
 // import DetailedEntry from "../DetailedEntryC";
 
 const DUMMY_ENTRIES = [
-  { id: "111111", title: "aaaaaaaaa", message: "blablabla" },
-  { id: "222222", title: "bbbbbbbbb", message: "blublublub" },
-  { id: "333333", title: "ccccccccccccccccccccc", message: "bloblobloblob" },
-  { id: "444444", title: "ddddddddddddddddddddd", message: "blublublublub" },
+  {
+    id: "111111",
+    date: "21/04/2020 22:05:36",
+    title: "aaaaaaaaa",
+    message: "blablabla",
+  },
+  {
+    id: "222222",
+    date: "21/04/2020 22:05:36",
+    title: "bbbbbbbbb",
+    message: "blublublub",
+  },
+  {
+    id: "333333",
+    date: "21/04/2020 22:05:36",
+    title: "ccccccccccccccccccccc",
+    message: "bloblobloblob",
+  },
+  {
+    id: "444444",
+    date: "21/04/2020 22:05:36",
+    title: "ddddddddddddddddddddd",
+    message: "blublublublub",
+  },
 ];
 
 const EntryDetails = () => {
