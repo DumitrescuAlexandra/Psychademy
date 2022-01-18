@@ -27,6 +27,7 @@ import NewEntry from "./screens/LoggedUser/My Journal copy/screens/NewEntryC";
 import Homework from "./screens/LoggedUser/Assignments/Homework";
 import { AuthProvider } from "./contexts/AuthContext";
 import Success from "./screens/Success screen/Success";
+import EntryDetails from "./screens/LoggedUser/My Journal copy/screens/EntryDetailsC";
 
 function App() {
   return (
@@ -92,9 +93,13 @@ function App() {
           <Route path="/UserPage/Evolution">
             <MoodGraph />
           </Route>
-          <Route path="/Journal">
+          <Route path="/Journal" exact>
             <EntryList />
           </Route>
+          <Route path="/Journal/:entryId">
+            <EntryDetails />
+          </Route>
+
           <Route path="/new-entry">
             <NewEntry />
           </Route>

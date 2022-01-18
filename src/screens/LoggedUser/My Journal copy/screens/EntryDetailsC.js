@@ -1,10 +1,24 @@
-import { useHistory, Link } from "react-router-dom";
+import { useState } from "react";
+import { useHistory, Link, useParams } from "react-router-dom";
 import Modal from "react-modal";
 import classes from "./EntryDetailsC.module.css";
 // import DetailedEntry from "../DetailedEntryC";
 
-const EntryDetails = (props) => {
+const DUMMY_ENTRIES = [
+  { id: "111111", title: "aaaaaaaaa", message: "blablabla" },
+  { id: "222222", title: "bbbbbbbbb", message: "blublublub" },
+  { id: "333333", title: "ccccccccccccccccccccc", message: "bloblobloblob" },
+  { id: "444444", title: "ddddddddddddddddddddd", message: "blublublublub" },
+];
+
+const EntryDetails = () => {
   const history = useHistory();
+
+  const params = useParams();
+
+  const singleEntry = DUMMY_ENTRIES.find(
+    (entry) => entry.id === params.entryId
+  );
 
   return (
     <div className={classes.detailsPage}>
@@ -29,18 +43,22 @@ const EntryDetails = (props) => {
           width="28px"
           onClick={() => history.push("/Journal")}
         ></img>
+
         <div className={classes.entryPage}>
           <div className={classes.entry}>
             <div className={classes.banner}>
               <div className={classes.title}>
-                <p>{props.title}</p>
+                <p>{singleEntry.title}</p>
+                {/* <p>{"aaaaaaaaaaaaaadddd"}</p> */}
               </div>
               <div className={classes.date}>
                 {" "}
-                <p>{props.date}</p>
+                <p>{singleEntry.date}</p>
+                {/* <p>"220..0dd022da"</p> */}
               </div>
               <div className={classes.message}>
-                <p>{props.message}</p>
+                <p>{singleEntry.message}</p>
+                {/* <p>"Hhdhsuaujdhsajk"</p> */}
               </div>
             </div>
             <Link to="/Journal"> Back </Link>

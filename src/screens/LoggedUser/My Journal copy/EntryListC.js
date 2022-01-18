@@ -1,21 +1,24 @@
 import React, { useState, useEffect } from "react";
 
 import { useParams, Route, useHistory } from "react-router-dom";
-import EntryDetails from "./screens/EntryDetailsC";
+// import EntryDetails from "./screens/EntryDetailsC";
 import classes from "./EntryListC.module.css";
 import JournalEntry from "./JournalEntryC";
+// import DetailedEntry from "../My Journal copy/DetailedEntryC";
+// import Modal from "react-modal/lib/components/Modal";
 // import { db } from "../../../Firebase/index";
 // import { collection } from "firebase/firestore";
-// import { useRouteMatch } from "react-router-dom";
+import { useRouteMatch } from "react-router-dom";
+import EntryDetails from "./screens/EntryDetailsC";
 
 const DUMMY_ENTRIES = [
-  { id: 111111, title: "aaaaaaaaa", message: "blablabla" },
-  { id: 222222, title: "bbbbbbbbb", message: "blublublub" },
-  { id: 333333, title: "ccccccccccccccccccccc", message: "bloblobloblob" },
-  { id: 444444, title: "ddddddddddddddddddddd", message: "blublublublub" },
+  { id: "111111", title: "aaaaaaaaa", message: "blablabla" },
+  { id: "222222", title: "bbbbbbbbb", message: "blublublub" },
+  { id: "333333", title: "ccccccccccccccccccccc", message: "bloblobloblob" },
+  { id: "444444", title: "ddddddddddddddddddddd", message: "blublublublub" },
 ];
 
-const EntryList = () => {
+const EntryList = (props) => {
   const history = useHistory();
   const params = useParams();
   // const match = useRouteMatch();
@@ -25,14 +28,24 @@ const EntryList = () => {
   // const docRef = doc(db, "journal", `${doc.id}`);
 
   const [entries, setEntries] = useState([]);
-  // const [singleEntry, setSingleEntry] = useState({});
+  // const [singleEntry, setSingleEntry] = useState();
 
   useEffect(() => {
     const getEntries = () => {
       setEntries(DUMMY_ENTRIES);
     };
+
     getEntries();
   }, []);
+
+  // useEffect(() => {
+  //   const getSingleEntry = () => {
+  //     setSingleEntry(
+  //       DUMMY_ENTRIES.find((entry) => entry.id === params.entryId)
+  //     );
+  //   };
+  //   getSingleEntry();
+  // }, [params.entryId]);
 
   // useEffect(() => {
   //   let mounted = true;
@@ -97,21 +110,6 @@ const EntryList = () => {
           Add Entry
         </div>
       </div>
-      {/* <Route path="/Journal/:entryId"> */}
-      <Route path={`/Journal/${params.entryId}`}>
-        {DUMMY_ENTRIES.map(
-          (singleEntry) =>
-            params.entryId === singleEntry.id && (
-              <EntryDetails
-                id={singleEntry.id}
-                key={singleEntry.id}
-                title={singleEntry.title}
-                date={singleEntry.date}
-                message={singleEntry.message}
-              />
-            )
-        )}
-      </Route>
     </div>
   );
 };
