@@ -81,7 +81,9 @@ const EntryDetails = () => {
                 {/* <p>"Hhdhsuaujdhsajk"</p> */}
               </div>
             </div>
-            <Link to="/Journal"> Back </Link>
+            <div className={classes.backBtn}>
+              <Link to="/Journal"> Back </Link>
+            </div>
           </div>
         </div>
       </Modal>
