@@ -1,6 +1,6 @@
 import React, { Fragment, useRef, useState } from "react";
 import classes from "./ForgotPassword.module.css";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useAuth } from "../../../contexts/AuthContext";
 import BackArrow from "../../../UI/Buttons/BackArrow";
 import LoadingSpinner from "../../../UI/LoadingSpinner";
@@ -8,22 +8,23 @@ import LoadingSpinner from "../../../UI/LoadingSpinner";
 function ForgotPassword() {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const history = useHistory();
+  const [message, setMessage] = useState("");
 
   const emailInputRef = useRef();
 
-  const { signup } = useAuth();
+  const { resetPassword } = useAuth();
 
   async function submitHandler(e) {
     e.preventDefault();
 
     try {
+      setMessage("");
       setError("");
       setIsLoading(true);
-      await signup(emailInputRef.current.value);
-      history.push("/Success");
+      await resetPassword(emailInputRef.current.value);
+      setMessage("Check your e-mail inbox for further instructions!");
     } catch {
-      setError("Failed to create an account");
+      setError("Failed to reset password");
     }
     setIsLoading(false);
   }
@@ -38,6 +39,7 @@ function ForgotPassword() {
 
         <div className={classes.forgot}>
           {error && <div>{alert(error)}</div>}
+          {message && <div>{alert(message)}</div>}
 
           <form>
             <div className={classes.forgotControl}>
@@ -58,10 +60,7 @@ function ForgotPassword() {
                 {isLoading && <LoadingSpinner />}
               </div>
               <div className={classes.forgotAct} onClick={submitHandler}>
-                <Link to="/UserPage" className={classes.forgotButton}>
-                  {" "}
-                  Reset Password{" "}
-                </Link>
+                <div className={classes.forgotButton}> Reset Password </div>
               </div>
             </div>
 
