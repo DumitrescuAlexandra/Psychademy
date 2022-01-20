@@ -94,6 +94,11 @@ const PatientLogin = () => {
             </Link>
           </p>
         </div>
+        <div className={classes.loginHint}>
+          <Link to="/ForgotPassword" className={classes.signupLogin}>
+            Forgot your password?
+          </Link>
+        </div>
       </div>
     </Fragment>
   );

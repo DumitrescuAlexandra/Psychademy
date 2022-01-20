@@ -10,6 +10,7 @@ import AboutCBT from "./screens/About/AboutCBT";
 import ServicesAndFees from "./screens/Services/ServicesAndFees";
 import Contact from "./screens/Contact/Contact";
 import PatientLogin from "./screens/PatientLogin/PatientLogin";
+import ForgotPassword from "./screens/PatientLogin/Forgot Password/ForgotPassword";
 import NotFound from "./screens/Not found/NotFound";
 import MainNavigation from "./components/MainNavigation/MainNavigation";
 import MoodCheck from "./screens/LoggedUser/WelcomeScreen/MoodCheck";
@@ -69,10 +70,12 @@ function App() {
               successMessage={"You have successfully created an account!"}
             />
           </Route>
-          <Route path="/PatientLogin">
-            <PatientLogin />
-          </Route>
+          <Route path="/PatientLogin" component={PatientLogin} />
+
+          <Route path="/ForgotPassword" component={ForgotPassword} />
+
           <PrivateRoute path="/UserPage" exact component={UserPage} />
+
           <PrivateRoute path="/UserPage/moodCheck" component={MoodCheck} />
 
           <PrivateRoute path="/Account" component={AccountSettings} />
