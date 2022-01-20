@@ -28,7 +28,8 @@ const EntryList = () => {
     return function cleanup() {
       mounted = false;
     };
-  }, [journalCollectionRef]);
+    // }, [journalCollectionRef]);
+  }, []);
 
   return (
     <div className={classes.journalPage}>

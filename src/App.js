@@ -28,6 +28,7 @@ import Homework from "./screens/LoggedUser/Assignments/Homework";
 import { AuthProvider } from "./contexts/AuthContext";
 import Success from "./screens/Success screen/Success";
 import EntryDetails from "./screens/LoggedUser/My Journal copy/screens/EntryDetailsC";
+import PrivateRoute from "./screens/LoggedUser/Private Route/PrivateRoute";
 
 function App() {
   return (
@@ -72,9 +73,7 @@ function App() {
           <Route path="/PatientLogin">
             <PatientLogin />
           </Route>
-          <Route path="/UserPage">
-            <UserPage />
-          </Route>
+          <PrivateRoute path="/UserPage" exact component={UserPage} />
           <Route path="/UserPage/moodCheck">
             <MoodCheck />
           </Route>
