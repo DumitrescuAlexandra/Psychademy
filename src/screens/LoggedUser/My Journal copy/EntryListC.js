@@ -1,70 +1,34 @@
 import React, { useState, useEffect } from "react";
 
-import { useParams, Route, useHistory } from "react-router-dom";
-// import EntryDetails from "./screens/EntryDetailsC";
+import { useHistory } from "react-router-dom";
 import classes from "./EntryListC.module.css";
 import JournalEntry from "./JournalEntryC";
-// import DetailedEntry from "../My Journal copy/DetailedEntryC";
-// import Modal from "react-modal/lib/components/Modal";
-// import { db } from "../../../Firebase/index";
-// import { collection } from "firebase/firestore";
-import { useRouteMatch } from "react-router-dom";
-import EntryDetails from "./screens/EntryDetailsC";
 
-const DUMMY_ENTRIES = [
-  { id: "111111", title: "aaaaaaaaa", message: "blablabla" },
-  { id: "222222", title: "bbbbbbbbb", message: "blublublub" },
-  { id: "333333", title: "ccccccccccccccccccccc", message: "bloblobloblob" },
-  { id: "444444", title: "ddddddddddddddddddddd", message: "blublublublub" },
-];
+import { db } from "../../../Firebase/index";
+import { collection, getDocs } from "firebase/firestore";
 
-const EntryList = (props) => {
+const EntryList = () => {
   const history = useHistory();
-  const params = useParams();
-  // const match = useRouteMatch();
-  // const { entryId } = params;
 
-  // const journalCollectionRef = collection(db, "journal");
-  // const docRef = doc(db, "journal", `${doc.id}`);
+  const journalCollectionRef = collection(db, "journal");
 
   const [entries, setEntries] = useState([]);
-  // const [singleEntry, setSingleEntry] = useState();
 
   useEffect(() => {
-    const getEntries = () => {
-      setEntries(DUMMY_ENTRIES);
+    let mounted = true;
+    const getEntries = async () => {
+      const data = await getDocs(journalCollectionRef);
+      if (mounted) {
+        setEntries(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      }
     };
 
     getEntries();
-  }, []);
 
-  // useEffect(() => {
-  //   const getSingleEntry = () => {
-  //     setSingleEntry(
-  //       DUMMY_ENTRIES.find((entry) => entry.id === params.entryId)
-  //     );
-  //   };
-  //   getSingleEntry();
-  // }, [params.entryId]);
-
-  // useEffect(() => {
-  //   let mounted = true;
-  //   const getEntries = async () => {
-  //     const data = await getDocs(journalCollectionRef);
-  //     if (mounted) {
-  //       setEntries(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-  //     }
-  //   };
-
-  //   getEntries();
-
-  //   return function cleanup() {
-  //     mounted = false;
-  //   };
-  // }, [journalCollectionRef, entries, params]);
-
-  //
-  //
+    return function cleanup() {
+      mounted = false;
+    };
+  }, [journalCollectionRef]);
 
   return (
     <div className={classes.journalPage}>
@@ -72,17 +36,6 @@ const EntryList = (props) => {
         <p>My journal</p>
         <img src="/Images/sort.png" alt="" height="32px" width="32px" />
       </div>
-      {/* <ul className={classes.entriesList}>
-        {entries.map((entry) => (
-          <JournalEntry
-            key={entry.id}
-            id={entry.id}
-            date={entry.date}
-            title={entry.title}
-            message={entry.message}
-          />
-        ))}
-      </ul> */}
       <ul className={classes.entriesList}>
         {entries.map((entry) => (
           <JournalEntry
@@ -94,6 +47,7 @@ const EntryList = (props) => {
           />
         ))}
       </ul>
+
       <div className={classes.newEntry}>
         <div
           className={classes.cancelBtn}

@@ -1,44 +1,45 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useHistory, Link, useParams } from "react-router-dom";
 import Modal from "react-modal";
 import classes from "./EntryDetailsC.module.css";
-// import DetailedEntry from "../DetailedEntryC";
 
-const DUMMY_ENTRIES = [
-  {
-    id: "111111",
-    date: "21/04/2020 22:05:36",
-    title: "aaaaaaaaa",
-    message: "blablabla",
-  },
-  {
-    id: "222222",
-    date: "21/04/2020 22:05:36",
-    title: "bbbbbbbbb",
-    message: "blublublub",
-  },
-  {
-    id: "333333",
-    date: "21/04/2020 22:05:36",
-    title: "ccccccccccccccccccccc",
-    message: "bloblobloblob",
-  },
-  {
-    id: "444444",
-    date: "21/04/2020 22:05:36",
-    title: "ddddddddddddddddddddd",
-    message: "blublublublub",
-  },
-];
+import { db } from "../../../../Firebase/index";
+import { getDoc, doc } from "firebase/firestore";
 
 const EntryDetails = () => {
   const history = useHistory();
 
   const params = useParams();
 
-  const singleEntry = DUMMY_ENTRIES.find(
-    (entry) => entry.id === params.entryId
-  );
+  const [singleEntryTitle, setSingleEntryTitle] = useState();
+  const [singleEntryDate, setSingleEntryDate] = useState();
+  const [singleEntryMessage, setSingleEntryMessage] = useState();
+
+  useEffect(() => {
+    let mounted = true;
+
+    if (mounted) {
+      const getSingleEntry = async (id) => {
+        const docRef = doc(db, "journal", id);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+          console.log("Document data:", docSnap.data());
+          setSingleEntryTitle(docSnap.data().title);
+          setSingleEntryDate(docSnap.data().date);
+          setSingleEntryMessage(docSnap.data().message);
+        } else {
+          console.log("No such document!");
+        }
+      };
+
+      getSingleEntry(params.entryId);
+    }
+
+    return function cleanup() {
+      mounted = false;
+    };
+  }, [params.entryId]);
 
   return (
     <div className={classes.detailsPage}>
@@ -68,17 +69,14 @@ const EntryDetails = () => {
           <div className={classes.entry}>
             <div className={classes.banner}>
               <div className={classes.title}>
-                <p>{singleEntry.title}</p>
-                {/* <p>{"aaaaaaaaaaaaaadddd"}</p> */}
+                <p>{singleEntryTitle}</p>
               </div>
               <div className={classes.date}>
                 {" "}
-                <p>{singleEntry.date}</p>
-                {/* <p>"220..0dd022da"</p> */}
+                <p>{singleEntryDate}</p>
               </div>
               <div className={classes.message}>
-                <p>{singleEntry.message}</p>
-                {/* <p>"Hhdhsuaujdhsajk"</p> */}
+                <p>{singleEntryMessage}</p>
               </div>
             </div>
             <div className={classes.backBtn}>
