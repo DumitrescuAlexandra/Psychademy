@@ -20,8 +20,6 @@ import ChangePassword from "./screens/LoggedUser/UserProfile/Change Password/Cha
 import DeleteAccount from "./screens/LoggedUser/UserProfile/Delete Account/DeleteAccount";
 import MoodGraph from "./screens/LoggedUser/Mood Graph/MoodGraph";
 import Signup from "./screens/Patient signup/Signup";
-// import EntryList from "./screens/LoggedUser/My Journal/EntryList";
-// import NewEntry from "./screens/LoggedUser/My Journal/screens/NewEntry";
 import EntryList from "./screens/LoggedUser/My Journal copy/EntryListC";
 import NewEntry from "./screens/LoggedUser/My Journal copy/screens/NewEntryC";
 import Homework from "./screens/LoggedUser/Assignments/Homework";
@@ -61,6 +59,7 @@ function App() {
         <Route path="/contact">
           <Contact />
         </Route>
+
         <AuthProvider>
           <Route path="/PatientSignup">
             <Signup />
@@ -74,38 +73,28 @@ function App() {
             <PatientLogin />
           </Route>
           <PrivateRoute path="/UserPage" exact component={UserPage} />
-          <Route path="/UserPage/moodCheck">
-            <MoodCheck />
-          </Route>
-          <Route path="/Account">
-            <AccountSettings />
-          </Route>
-          <Route path="/ConfidentialityPolicy">
-            <ConfidentialityPolicy />
-          </Route>
-          <Route path="/PasswordChange">
-            <ChangePassword />
-          </Route>
-          <Route path="/DeleteAccount">
-            <DeleteAccount />
-          </Route>
-          <Route path="/UserPage/Evolution">
-            <MoodGraph />
-          </Route>
-          <Route path="/Journal" exact>
-            <EntryList />
-          </Route>
-          <Route path="/Journal/:entryId">
-            <EntryDetails />
-          </Route>
+          <PrivateRoute path="/UserPage/moodCheck" component={MoodCheck} />
 
-          <Route path="/new-entry">
-            <NewEntry />
-          </Route>
+          <PrivateRoute path="/Account" component={AccountSettings} />
 
-          <Route path="/Assignments">
-            <Homework />
-          </Route>
+          <PrivateRoute
+            path="/ConfidentialityPolicy"
+            component={ConfidentialityPolicy}
+          />
+
+          <PrivateRoute path="/PasswordChange" component={ChangePassword} />
+
+          <PrivateRoute path="/DeleteAccount" component={DeleteAccount} />
+
+          <PrivateRoute path="/UserPage/Evolution" component={MoodGraph} />
+
+          <PrivateRoute path="/Journal" exact component={EntryList} />
+
+          <PrivateRoute path="/Journal/:entryId" component={EntryDetails} />
+
+          <PrivateRoute path="/new-entry" component={NewEntry} />
+
+          <PrivateRoute path="/Assignments" component={Homework} />
         </AuthProvider>
 
         <Route path="*">

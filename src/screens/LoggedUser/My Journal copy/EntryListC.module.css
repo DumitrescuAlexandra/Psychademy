@@ -2,13 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 15%;
-}
-
-@media only screen and (min-width: 768px) {
-  .journalPage {
-    margin-top: 10%;
-  }
 }
 
 .journalTitle {
