@@ -28,6 +28,7 @@ function ForgotPassword() {
     }
     setIsLoading(false);
   }
+
   return (
     <Fragment>
       <BackArrow />
@@ -36,6 +37,7 @@ function ForgotPassword() {
           <h4>Password reset</h4>
           <h5>Please enter your e-mail address</h5>
         </header>
+        <div className={classes.loading}>{isLoading && <LoadingSpinner />}</div>
 
         <div className={classes.forgot}>
           {error && <div>{alert(error)}</div>}
@@ -56,11 +58,12 @@ function ForgotPassword() {
             </div>
 
             <div className={classes.forgotAction}>
-              <div className={classes.loading}>
-                {isLoading && <LoadingSpinner />}
-              </div>
               <div className={classes.forgotAct} onClick={submitHandler}>
-                <div className={classes.forgotButton}> Reset Password </div>
+                {!isLoading ? (
+                  <div className={classes.forgotButton}> Reset Password </div>
+                ) : (
+                  <div className={classes.forgotButton}> Please wait... </div>
+                )}
               </div>
             </div>
 
@@ -74,6 +77,7 @@ function ForgotPassword() {
             </div>
           </form>
         </div>
+        {/* <div className={classes.loading}>{isLoading && <LoadingSpinner />}</div> */}
       </div>
     </Fragment>
   );

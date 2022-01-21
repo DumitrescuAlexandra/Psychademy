@@ -41,7 +41,7 @@ function Success(props) {
             ></img>
           </div>
           <div className={classes.title}>
-            <p>Success!</p>
+            <p>Done!</p>
           </div>
           <div className={classes.successMessage}>
             <p>{props.successMessage}</p>

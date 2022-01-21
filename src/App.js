@@ -87,6 +87,8 @@ function App() {
 
           <PrivateRoute path="/PasswordChange" component={ChangePassword} />
 
+          <PrivateRoute path="/SuccessfullyChanged" component={Success} />
+
           <PrivateRoute path="/DeleteAccount" component={DeleteAccount} />
 
           <PrivateRoute path="/UserPage/Evolution" component={MoodGraph} />
