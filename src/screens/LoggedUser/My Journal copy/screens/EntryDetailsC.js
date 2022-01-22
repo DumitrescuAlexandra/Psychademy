@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useHistory, Link, useParams } from "react-router-dom";
+import EntryEditForm from "../EntryEditForm";
 import Modal from "react-modal";
 import classes from "./EntryDetailsC.module.css";
 
@@ -14,6 +15,8 @@ const EntryDetails = () => {
   const [singleEntryTitle, setSingleEntryTitle] = useState();
   const [singleEntryDate, setSingleEntryDate] = useState();
   const [singleEntryMessage, setSingleEntryMessage] = useState();
+
+  const [isEditing, setIsEditing] = useState(false);
 
   useEffect(() => {
     let mounted = true;
@@ -84,9 +87,15 @@ const EntryDetails = () => {
             <div className={classes.backBtn}>
               <Link to="/Journal"> Back </Link>
             </div>
-            <div className={classes.editBtn} onClick={() => {}}>
+            <div
+              className={classes.editBtn}
+              onClick={() => {
+                setIsEditing(true);
+              }}
+            >
               <p>Edit</p>
             </div>
+            {isEditing && <EntryEditForm />}
           </div>
         </div>
       </Modal>
