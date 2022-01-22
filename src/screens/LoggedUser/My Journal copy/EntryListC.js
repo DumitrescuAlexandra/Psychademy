@@ -5,7 +5,7 @@ import classes from "./EntryListC.module.css";
 import JournalEntry from "./JournalEntryC";
 
 import { db } from "../../../Firebase/index";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
 import BackArrow from "../../../UI/Buttons/BackArrow";
 
 const EntryList = () => {
@@ -29,8 +29,7 @@ const EntryList = () => {
     return function cleanup() {
       mounted = false;
     };
-    // }, [journalCollectionRef]);
-  }, []);
+  }, [journalCollectionRef]);
 
   return (
     <Fragment>
@@ -48,6 +47,10 @@ const EntryList = () => {
               date={entry.date}
               title={entry.title}
               message={entry.message}
+              deleteEntryHandler={() => {
+                deleteDoc(doc(db, "journal", entry.id));
+                alert("Done! Entry deleted!");
+              }}
             />
           ))}
         </ul>

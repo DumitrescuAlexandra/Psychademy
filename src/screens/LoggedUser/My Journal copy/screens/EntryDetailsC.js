@@ -79,8 +79,13 @@ const EntryDetails = () => {
                 <p>{singleEntryMessage}</p>
               </div>
             </div>
+          </div>
+          <div className={classes.buttons}>
             <div className={classes.backBtn}>
               <Link to="/Journal"> Back </Link>
+            </div>
+            <div className={classes.editBtn} onClick={() => {}}>
+              <p>Edit</p>
             </div>
           </div>
         </div>

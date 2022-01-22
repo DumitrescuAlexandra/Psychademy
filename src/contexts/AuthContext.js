@@ -35,8 +35,8 @@ export function AuthProvider({ children }) {
     return currentUser.updatePassword(password);
   }
 
-  function deleteAccount(email, password) {
-    return currentUser.deleteAccount();
+  function deleteAccount(email) {
+    return currentUser.deleteAccount(email);
   }
 
   useEffect(() => {

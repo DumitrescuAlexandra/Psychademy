@@ -90,18 +90,22 @@
   }
 }
 
-.viewEntryBtn {
+.viewEntryBtn,
+.deleteEntryBtn {
   margin-top: 2%;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
-  .viewEntryBtn img {
+  .viewEntryBtn img,
+  .deleteEntryBtn img {
     width: 2rem;
     height: 2rem;
   }
 }
 @media only screen and (min-width: 1280px) {
-  .viewEntryBtn img {
+  .viewEntryBtn img,
+  .deleteEntryBtn img {
     width: 2.5rem;
     height: 2.5rem;
   }
