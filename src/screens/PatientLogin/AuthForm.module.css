@@ -1,4 +1,4 @@
-.auth {
+/* .auth {
   display: flex;
   flex-direction: column;
   margin-top: 1.5rem;
@@ -139,4 +139,4 @@
   .authControl input:valid + .labelName .passwordContent {
     font-size: 1.25rem;
   }
-}
+} */

@@ -136,3 +136,209 @@
   border: solid 2px #fff8e1;
   font-size: 1.25rem;
 }
+
+/* -----------------------------------------------------*/
+/*             FROM EntryDetails.module.css             */
+.detailsPage {
+  display: flex;
+}
+
+.entryModalBck {
+  position: relative;
+  margin: 50% auto auto 8%;
+  height: 50vh;
+  width: 90vw;
+  display: flex;
+  background-color: #1e5656;
+  border-radius: 40px;
+}
+
+@media only screen and (min-width: 400px) {
+  .entryModalBck {
+    height: 50vh;
+    width: 90vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .entryModalBck {
+    margin: 30% auto auto 10%;
+    height: 50vh;
+    width: 80vw;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .entryModalBck {
+    margin: 25% auto auto 20%;
+    height: 45vh;
+    width: 60vw;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .entryModalBck {
+    margin: 20% auto auto 25%;
+    height: 45vh;
+    width: 50vw;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .entryModalBck {
+    margin: 12.5% auto auto 32.5%;
+    height: 45vh;
+    width: 35vw;
+  }
+}
+
+.entryModalBck img {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  cursor: pointer;
+}
+
+/*  ---------------------------  */
+/* ---------------------------- */
+/* from DETAILED ENTRY module */
+
+.entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (min-width: 650px) {
+  .entry {
+    position: absolute;
+    bottom: 15%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .entry {
+    position: absolute;
+    top: 20%;
+    bottom: 10%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .entry {
+    top: 15%;
+  }
+}
+
+.entry a {
+  text-decoration: none;
+  font-family: Lato;
+  font-weight: bold;
+  font-size: 1.15rem;
+  line-height: 1.75rem;
+  color: #074343;
+  background-color: #78ddb1;
+  border-radius: 8px;
+  padding: 0.5rem 2.75rem;
+}
+
+@media only screen and (min-width: 400px) {
+  .entry a {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 0.5rem 2.75rem;
+  }
+}
+
+.entry a:hover {
+  text-shadow: 0.5px 0.5px 2px #141414;
+  background-image: linear-gradient(#fff8e1, #ffffff),
+    linear-gradient(transparent, transparent);
+  background-size: 2 3px, auto;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  transition: all 0.3s ease-out;
+  background-size: 100% 3px, auto;
+}
+
+.title {
+  margin-top: 30%;
+  font-family: Merriweather;
+  font-size: 1.75rem;
+  line-height: 1.75rem;
+  color: #fff8e1;
+}
+
+@media only screen and (min-width: 400px) {
+  .title {
+    margin-top: 15%;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    margin-top: 0;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
+}
+
+.title p {
+  text-align: center;
+}
+
+.date {
+  margin-top: 5%;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  opacity: 0.5;
+  color: #fff8e1;
+}
+
+@media only screen and (min-width: 400px) {
+  .date {
+    margin-top: 0;
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+}
+
+.date p {
+  text-align: center;
+}
+
+.message {
+  margin: 20% 5%;
+  font-family: Lato;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #fff8e1;
+  text-align: center;
+}
+@media only screen and (min-width: 400px) {
+  .message {
+    margin: 12.5%;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.75rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .message {
+    margin: 7.5% 12.5%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .message {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* */

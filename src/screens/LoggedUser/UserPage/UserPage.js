@@ -1,17 +1,33 @@
 import React, { Fragment, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import MoodCheck from "../WelcomeScreen/MoodCheck";
+// import MoodCheck from "../WelcomeScreen/MoodCheck";
 import classes from "./UserPage.module.css";
+import { useAuth } from "../../../contexts/AuthContext";
 
 function UserPage() {
   const history = useHistory();
-  const [firstLogToday, setFirstLogToday] = useState(true);
-  const [modal, setModal] = useState(false);
+  // const [firstLogToday, setFirstLogToday] = useState(true);
+  // const [modal, setModal] = useState(false);
+
+  const [error, setError] = useState("");
+  const { currentUser, logout } = useAuth();
+
+  const logoutHandler = async () => {
+    setError("");
+
+    try {
+      await logout();
+      history.replace("/welcome");
+    } catch {
+      setError("Failed to logout");
+    }
+  };
 
   return (
     <Fragment>
+      {error && <div>{alert(error)}</div>}
       <div className={classes.userPage}>
-        <p> Welcome</p>
+        <p> Welcome, {currentUser.email}</p>
 
         <div className={classes.userLinks}>
           <div className={classes.userLink}>
@@ -42,7 +58,7 @@ function UserPage() {
             <div className={classes.userIcon}>
               <img src={"/Images/assignments.svg"} alt={""}></img>
             </div>
-            <Link to="/UserPage/Assignments" className={classes.userNav}>
+            <Link to="/Assignments" className={classes.userNav}>
               Assignments{" "}
             </Link>
             <div className={classes.userArrow}>
@@ -66,10 +82,10 @@ function UserPage() {
           src={"/Images/logout.svg"}
           alt={"logout"}
           className={classes.logout}
-          onClick={() => history.replace("/Welcome")}
+          onClick={logoutHandler}
         ></img>
-
-        {modal && <MoodCheck />}
+        {/* 
+        <MoodCheck /> */}
       </div>
     </Fragment>
   );

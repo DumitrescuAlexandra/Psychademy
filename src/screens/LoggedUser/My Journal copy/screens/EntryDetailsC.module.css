@@ -1,0 +1,209 @@
+.detailsPage {
+  display: flex;
+}
+
+.entryModalBck {
+  position: relative;
+  margin: 50% auto auto 5%;
+  height: 50vh;
+  width: 90vw;
+  display: flex;
+  background-color: #1e5656;
+  border-radius: 40px;
+}
+
+.entryPage {
+  display: flex;
+  margin: 25% 30%;
+}
+
+.entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.backBtn {
+  position: relative;
+  margin-top: 25%;
+}
+
+.entry a {
+  text-decoration: none;
+  font-family: Lato;
+  font-weight: bold;
+  font-size: 1.15rem;
+  line-height: 1.75rem;
+  color: #074343;
+  background-color: #78ddb1;
+  border-radius: 8px;
+  padding: 0.5rem 2.75rem;
+}
+
+.entry a:hover {
+  text-shadow: 0.5px 0.5px 2px #141414;
+  background-image: linear-gradient(#fff8e1, #ffffff),
+    linear-gradient(transparent, transparent);
+  background-size: 2 3px, auto;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  transition: all 0.3s ease-out;
+  background-size: 100% 3px, auto;
+}
+
+.title {
+  margin-top: 20%;
+  font-family: Merriweather;
+  font-size: 1.75rem;
+  line-height: 1.75rem;
+  color: #fff8e1;
+}
+
+.title p {
+  text-align: center;
+}
+
+.date {
+  margin-top: 5%;
+  font-size: 1rem;
+  line-height: 1.15rem;
+  opacity: 0.5;
+  color: #fff8e1;
+}
+
+.date p {
+  text-align: center;
+}
+
+.message {
+  margin: 40% 5%;
+  font-family: Lato;
+  font-size: 1.15rem;
+  line-height: 1.5rem;
+  color: #fff8e1;
+  text-align: center;
+}
+
+@media only screen and (min-width: 400px) {
+  .entryModalBck {
+    margin: 35% auto auto 5%;
+    height: 50vh;
+    width: 90vw;
+  }
+  .entryPage {
+    margin: 20% 30%;
+  }
+  .entry a {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 0.5rem 2.75rem;
+  }
+  .title {
+    margin-top: 10%;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .date {
+    margin-top: 0;
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+  }
+  .message {
+    margin: 35% 10%;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.75rem;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .entryModalBck {
+    margin: 30% 5%;
+  }
+  .entryPage {
+    margin: 15% 35%;
+  }
+  .title {
+    margin-top: 0;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.75px;
+  }
+  .date {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+  .message {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .entryModalBck {
+    margin: 30% auto auto 12.5%;
+    height: 50vh;
+    width: 80vw;
+  }
+  .entryPage {
+    margin: 12.5% 37.5%;
+  }
+  .title {
+    margin-top: 0;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
+  .date {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+  .message {
+    margin: 40% 10%;
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .entryModalBck {
+    margin: 20% auto auto 20%;
+    height: 45vh;
+    width: 60vw;
+  }
+  .entryPage {
+    margin: 10% 37.5%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .entryModalBck {
+    margin: 20% auto auto 25%;
+    height: 45vh;
+    width: 45vw;
+  }
+  .entryPage {
+    margin: 7.5% 37.5%;
+  }
+  .message {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .entryModalBck {
+    margin: 12.5% auto auto 32.5%;
+    height: 45vh;
+    width: 35vw;
+  }
+}
+
+.entryModalBck img {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  cursor: pointer;
+}

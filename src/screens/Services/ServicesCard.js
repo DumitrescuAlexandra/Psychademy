@@ -1,9 +1,9 @@
-import React, { Fragment } from "react";
+import React from "react";
 import classes from "./Services.module.css";
 
 function ServicesCard({ card, index, toggleCard }) {
   return (
-    <Fragment>
+    <div className={classes.cardContainer}>
       {!card.flip && (
         <div
           className={classes.card}
@@ -57,7 +57,7 @@ function ServicesCard({ card, index, toggleCard }) {
           </div>
         </div>
       )}
-    </Fragment>
+    </div>
   );
 }
 

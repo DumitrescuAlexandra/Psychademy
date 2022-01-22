@@ -1,4 +1,4 @@
-.loginPage {
+.signupPage {
   margin: auto 7vw;
   display: flex;
   flex-direction: column;
@@ -6,12 +6,12 @@
 }
 
 @media (min-width: 767px) {
-  .loginPage {
+  .signupPage {
     margin: min(7.5rem) 7vw;
   }
 }
 
-.loginPage h4 {
+.signupPage h2 {
   margin-top: 3rem;
   text-align: center;
 
@@ -23,12 +23,12 @@
 }
 
 @media (min-width: 767px) {
-  .loginPage h4 {
+  .signupPage h2 {
     font-size: 3rem;
   }
 }
 
-.loginPage h5 {
+.signupPage h4 {
   margin-top: 1rem;
 
   text-align: center;
@@ -40,43 +40,14 @@
 }
 
 @media (min-width: 767px) {
-  .loginPage h5 {
+  .signupPage h4 {
     margin-top: 1rem;
     line-height: 3rem;
     font-size: 1.5rem;
   }
 }
 
-.loginHint a {
-  text-decoration: none;
-  color: #0cc072;
-}
-
-.loginHint a:hover {
-  color: #ff9d46;
-  border-bottom: 1px solid #ff9d46;
-}
-
-.loginPage .loginHint {
-  margin-top: 2rem;
-  color: #fff8e1;
-  text-align: center;
-  font-weight: 400;
-  line-height: 1.5rem;
-}
-
-@media (min-width: 767px) {
-  .loginPage .loginHint {
-    margin-top: 1.5rem;
-    line-height: 2.5rem;
-    font-weight: 400;
-  }
-}
-
-/* -------------------------------------------*/
-/*                 AUTH FORM css              */
-
-.auth {
+.signup {
   display: flex;
   flex-direction: column;
   margin-top: 1.5rem;
@@ -84,12 +55,27 @@
   width: 100%;
 }
 
-.authControl,
-.authAction {
+.signupAction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading {
+  align-self: start;
+  height: 1.75rem;
+}
+
+.loading p {
+  size: 1.25rem;
+}
+
+.signupControl,
+.signupAct {
   height: 3.25rem;
 }
 
-.authControl {
+.signupControl {
   display: flex;
   flex-direction: column;
   background-color: #043232;
@@ -101,18 +87,21 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .authControl,
-  .authAction {
+  .signupControl,
+  .signupAct {
     height: 5rem;
     width: min(25rem);
   }
+  .loading {
+    height: 2.5rem;
+  }
 }
 
-.authControl:hover {
+.signupControl:hover {
   border: 2px solid #78ddb1;
 }
 
-.authControl input {
+.signupControl input {
   background-color: inherit;
   border: none;
   border-radius: inherit;
@@ -126,13 +115,13 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .authControl input {
+  .signupControl input {
     padding-top: 1rem;
     font-size: 1.5rem;
   }
 }
 
-.authControl label {
+.signupControl label {
   position: absolute;
   bottom: 0rem;
   left: 0.25rem;
@@ -141,31 +130,36 @@
   pointer-events: none;
 }
 @media only screen and (min-width: 768px) {
-  .authControl label {
+  .signupControl label {
     bottom: 1rem;
     left: 0.5rem;
   }
 }
 
-.authControl label::after {
+.signupControl label::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-.authAction {
+.signupAct {
   display: flex;
   align-items: center;
-  margin-top: 4rem;
+  margin-top: 2rem;
   justify-content: space-around;
   background: #78ddb1;
   border-radius: 8px;
 }
 
-.authAction .authButton {
+.loading p {
+  size: 1.2rem;
+}
+
+.signupAct .signupButton {
   background-color: inherit;
   border: none;
+  margin: 0 0.75rem;
   font-family: Lato;
   font-weight: bold;
   font-size: 1.1rem;
@@ -175,13 +169,13 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .authAction .authButton {
+  .signupAct .signupButton {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
-.authAction:hover {
+.signupAct:hover {
   border: solid 2px #074343;
 }
 
@@ -201,20 +195,46 @@
   }
 }
 
-.authControl input:focus + .labelName .emailContent,
-.authControl input:focus + .labelName .passwordContent,
-.authControl input:valid + .labelName .emailContent,
-.authControl input:valid + .labelName .passwordContent {
+.signupControl input:focus + .labelName .emailContent,
+.signupControl input:focus + .labelName .passwordContent,
+.signupControl input:valid + .labelName .emailContent,
+.signupControl input:valid + .labelName .passwordContent {
   transform: translateY(-100%);
   font-size: 1rem;
   opacity: 0.5;
 }
 
 @media only screen and (min-width: 768px) {
-  .authControl input:focus + .labelName .emailContent,
-  .authControl input:focus + .labelName .passwordContent,
-  .authControl input:valid + .labelName .emailContent,
-  .authControl input:valid + .labelName .passwordContent {
+  .signupControl input:focus + .labelName .emailContent,
+  .signupControl input:focus + .labelName .passwordContent,
+  .signupControl input:valid + .labelName .emailContent,
+  .signupControl input:valid + .labelName .passwordContent {
     font-size: 1.25rem;
+  }
+}
+
+.loginInvitation a {
+  text-decoration: none;
+  color: #0cc072;
+}
+
+.loginInvitation a:hover {
+  color: #ff9d46;
+  border-bottom: 1px solid #ff9d46;
+}
+
+.loginInvitation {
+  margin-top: 2rem;
+  color: #fff8e1;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 767px) {
+  .loginInvitation {
+    margin-top: 1.5rem;
+    line-height: 2.5rem;
+    font-weight: 400;
   }
 }
