@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import { NavLink, Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import classes from "./Homework.module.css";
 import { storage } from "../../../Firebase";
-
-import MyHomework from "./Pages/MyHomework";
-import MyUploads from "./Pages/MyUploads";
 
 function Homework(props) {
   const [file, setFile] = useState(null);
@@ -18,7 +15,7 @@ function Homework(props) {
   };
 
   const handleUpload = () => {
-    const uploadTask = storage.ref(`files/${file.name}`).put(file);
+    const uploadTask = storage.ref(`files/uploads/${file.name}`).put(file);
     uploadTask.on(
       "state_changed",
       (snapshot) => {},
@@ -27,7 +24,7 @@ function Homework(props) {
       },
       () => {
         storage
-          .ref("files")
+          .ref("files/uploads")
           .child(file.name)
           .getDownloadURL()
           .then((url) => {
@@ -82,12 +79,6 @@ function Homework(props) {
           Upload
         </div>
       </div>
-      <Route path="/Assignments/homework">
-        <MyHomework />
-      </Route>
-      <Route path="/Assignments/my-uploads">
-        <MyUploads />
-      </Route>
     </div>
   );
 }

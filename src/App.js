@@ -24,6 +24,7 @@ import Signup from "./screens/Patient signup/Signup";
 import EntryList from "./screens/LoggedUser/My Journal copy/EntryListC";
 import NewEntry from "./screens/LoggedUser/My Journal copy/screens/NewEntryC";
 import Homework from "./screens/LoggedUser/Assignments/Homework";
+import MyUploads from "./screens/LoggedUser/Assignments/MyUploads";
 import { AuthProvider } from "./contexts/AuthContext";
 import Success from "./screens/Success screen/Success";
 import EntryDetails from "./screens/LoggedUser/My Journal copy/screens/EntryDetailsC";
@@ -99,7 +100,12 @@ function App() {
 
           <PrivateRoute path="/new-entry" component={NewEntry} />
 
-          <PrivateRoute path="/Assignments" component={Homework} />
+          <PrivateRoute path="/Assignments" exact>
+            <Redirect to="//Assignments/homework"></Redirect>
+          </PrivateRoute>
+          <PrivateRoute path="/Assignments/homework" component={Homework} />
+
+          <PrivateRoute path="/Assignments/my-uploads" component={MyUploads} />
         </AuthProvider>
 
         <Route path="*">
