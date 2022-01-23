@@ -101,7 +101,7 @@ function App() {
           <PrivateRoute path="/new-entry" component={NewEntry} />
 
           <PrivateRoute path="/Assignments" exact>
-            <Redirect to="//Assignments/homework"></Redirect>
+            <Redirect to="/Assignments/homework"></Redirect>
           </PrivateRoute>
           <PrivateRoute path="/Assignments/homework" component={Homework} />
 

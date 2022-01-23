@@ -1,0 +1,60 @@
+.homeworkType {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 10% 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .homeworkType {
+    margin: 2rem 0;
+  }
+}
+
+.homeworkType a {
+  padding: 1%;
+  text-decoration: none;
+}
+
+.homeworkType a:last-child {
+  margin-left: 0.75rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .homeworkType a:last-child {
+    margin-left: 1.5rem;
+  }
+}
+
+.homework_active,
+.homework_inactive {
+  text-align: center;
+  padding: 1%;
+  border-radius: 36px;
+  width: 7.5rem;
+  height: 2rem;
+  background-color: #487676;
+  color: #aae9e9;
+  border: none;
+  line-height: 1.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 768px) {
+  .homework_active,
+  .homework_inactive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2.25rem;
+    font-size: 1.15rem;
+    width: 9rem;
+    height: 2.75rem;
+  }
+}
+
+.homework_inactive:hover {
+  background-color: #78ddb1;
+  color: #074343;
+}

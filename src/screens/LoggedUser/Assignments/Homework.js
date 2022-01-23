@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import classes from "./Homework.module.css";
 import { storage } from "../../../Firebase";
+import AssignmentsPage from "./AssignmentsPage";
 
 function Homework(props) {
   const [file, setFile] = useState(null);
@@ -42,27 +42,9 @@ function Homework(props) {
   return (
     <div className={classes.homeworkPage}>
       <div className={classes.homeworkTitle}>
-        <p>My Assignments</p>
+        <p>My Homework</p>
       </div>
-      <div className={classes.homeworkType}>
-        <NavLink
-          key={1}
-          className={classes.homework_inactive}
-          to="/Assignments/homework"
-          activeStyle={{ background: "#78ddb1", color: "#074343" }}
-        >
-          My homework
-        </NavLink>
-        <NavLink
-          key={2}
-          className={classes.homework_inactive}
-          to="/Assignments/my-uploads"
-          activeStyle={{ background: "#78ddb1", color: "#074343" }}
-        >
-          My uploads
-        </NavLink>
-      </div>
-      <div className={classes.homeworkFiles}>{props.children}</div>
+      <AssignmentsPage />
       <div>
         <input
           type="file"

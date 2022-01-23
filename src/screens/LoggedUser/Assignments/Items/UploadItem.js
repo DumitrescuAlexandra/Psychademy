@@ -18,7 +18,7 @@ function UploadItem(props) {
           </div>
         </div>
 
-        <Link to={`/props.url`} className={classes.downloadBtn}>
+        <Link to={`/${props.url}`} className={classes.downloadBtn}>
           <img src="/Images/download.svg" alt=""></img>
         </Link>
       </li>
