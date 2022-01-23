@@ -4,11 +4,14 @@ import Modal from "react-modal";
 import LoadingSpinner from "../../../UI/LoadingSpinner";
 import { useHistory } from "react-router";
 import { db } from "../../../Firebase/index";
-import { collection, addDoc } from "firebase/firestore";
+import { updateDoc, doc } from "firebase/firestore";
 
 function EntryEditForm(props) {
   const titleInputRef = useRef();
   const messageInputRef = useRef();
+
+  const preloadedTitle = props.title;
+  const preloadedMessage = props.message;
 
   const history = useHistory();
 
@@ -22,7 +25,7 @@ function EntryEditForm(props) {
     minute: "2-digit",
   })}`;
 
-  const submitFormHandler = (event) => {
+  const submitEditHandler = (event) => {
     event.preventDefault();
 
     const enteredTitle = titleInputRef.current.value;
@@ -32,13 +35,25 @@ function EntryEditForm(props) {
         : enteredTitle;
     const enteredMessage = messageInputRef.current.value;
 
-    props.onAddEntry(
-      addDoc(collection(db, "journal"), {
+    const updateEntry = async (id) => {
+      const newlyEditedEntry = {
         title: trimmedTitle,
         message: enteredMessage,
         date: date,
-      })
-    );
+      };
+      const docRef = doc(db, "journal", props.id);
+
+      await updateDoc(docRef, newlyEditedEntry);
+    };
+    updateEntry();
+    history.push("/Journal");
+
+    // updateDoc(collection(db, "journal", id), {
+    //   id: props.id,
+    //   title: trimmedTitle,
+    //   message: enteredMessage,
+    //   date: date,
+    // });
   };
 
   return (
@@ -88,6 +103,7 @@ function EntryEditForm(props) {
                   id="title"
                   ref={titleInputRef}
                   autoComplete="off"
+                  defaultValue={preloadedTitle}
                 />
               </div>
               <div className={classes.entryControlM}>
@@ -107,6 +123,7 @@ function EntryEditForm(props) {
                     { fontFamily: "Lato" })
                   }
                   ref={messageInputRef}
+                  defaultValue={preloadedMessage}
                 />
               </div>
               <div className={classes.btns}>
@@ -121,7 +138,7 @@ function EntryEditForm(props) {
                 <div className={classes.entryAction}>
                   <div
                     className={classes.addEntryBtn}
-                    onClick={submitFormHandler}
+                    onClick={submitEditHandler}
                   >
                     Done!
                   </div>

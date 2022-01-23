@@ -27,7 +27,6 @@ const EntryDetails = () => {
         const docSnap = await getDoc(docRef);
 
         if (docSnap.exists()) {
-          // console.log("Document data:", docSnap.data());
           setSingleEntryTitle(docSnap.data().title);
           setSingleEntryDate(docSnap.data().date);
           setSingleEntryMessage(docSnap.data().message);
@@ -95,7 +94,13 @@ const EntryDetails = () => {
             >
               <p>Edit</p>
             </div>
-            {isEditing && <EntryEditForm />}
+            {isEditing && (
+              <EntryEditForm
+                id={params.entryId}
+                title={singleEntryTitle}
+                message={singleEntryMessage}
+              />
+            )}
           </div>
         </div>
       </Modal>

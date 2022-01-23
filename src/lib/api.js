@@ -1,7 +1,5 @@
 // import { db } from "../Firebase/index";
 // import { collection, query, where, getDocs } from "firebase/firestore";
-const FIREBASE_DOMAIN =
-  "https://psychademy-default-rtdb.europe-west1.firebasedatabase.app";
 
 // export async function getAllEntries() {
 //   const response = await fetch(`${FIREBASE_DOMAIN}/entries.json`);
@@ -25,21 +23,21 @@ const FIREBASE_DOMAIN =
 //   return transformedEntries;
 // }
 
-export async function getSingleEntry(entryId) {
-  const response = await fetch(`${FIREBASE_DOMAIN}/entries/${entryId}.json`);
-  const data = await response.json();
+// export async function getSingleEntry(entryId) {
+//   const response = await fetch(`${FIREBASE_DOMAIN}/entries/${entryId}.json`);
+//   const data = await response.json();
 
-  if (!response.ok) {
-    throw new Error(data.message || "Could not fetch entry.");
-  }
+//   if (!response.ok) {
+//     throw new Error(data.message || "Could not fetch entry.");
+//   }
 
-  const loadedEntry = {
-    id: entryId,
-    ...data,
-  };
+//   const loadedEntry = {
+//     id: entryId,
+//     ...data,
+//   };
 
-  return loadedEntry;
-}
+//   return loadedEntry;
+// }
 
 // export async function addEntry(entryData) {
 //   const response = await fetch(`${FIREBASE_DOMAIN}/entries.json`, {
