@@ -41,3 +41,60 @@
 .uploadsList {
   list-style: none;
 }
+
+.inputField {
+  display: none;
+}
+
+.actionBtns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+}
+
+@media only screen and (min-width: 450px) {
+  .actionBtns {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 550px) {
+  .actionBtns {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .actionBtns {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 1040) {
+  .actionBtns {
+    width: 20%;
+  }
+}
+
+.actionBtns .chooseBtn,
+.actionBtns .uploadBtn {
+  text-align: center;
+  width: 47.5%;
+  padding: 5%;
+  border-radius: 8px;
+  margin-top: 4rem;
+  background: #78ddb1;
+  border: none;
+  font-family: Lato;
+  font-weight: bold;
+  font-size: 1.15rem;
+  line-height: 1.75rem;
+  color: #074343;
+  cursor: pointer;
+}
+
+.actionBtns .chooseBtn:hover,
+.actionBtns .uploadBtn:hover {
+  border: solid 2px #fff8e1;
+  font-size: 1.25rem;
+}

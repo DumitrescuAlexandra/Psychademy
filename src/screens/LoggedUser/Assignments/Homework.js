@@ -1,66 +1,79 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./Homework.module.css";
 import { storage } from "../../../Firebase";
 import AssignmentsPage from "./AssignmentsPage";
+import HomeworkItem from "./Items/HomeworkItem";
+import BackArrow from "../../../UI/Buttons/BackArrow";
 
 function Homework(props) {
-  const [file, setFile] = useState(null);
-  const [fileName, setFileName] = useState("Choose");
+  const listRef = storage.ref("files/homework");
 
-  const handleChange = (e) => {
-    if (e.target.files[0]) {
-      setFile(e.target.files[0]);
-      setFileName(e.target.files[0].name);
-    }
+  const [homework, setHomework] = useState([]);
+
+  const downloadHandler = (name) => {
+    storage
+      .ref(`files/homework/${name}`)
+      .getDownloadURL()
+      .then((url) => {
+        const xhr = new XMLHttpRequest();
+        xhr.responseType = "blob";
+        xhr.onload = (event) => {
+          const blob = xhr.response;
+        };
+        xhr.open("GET", url);
+        xhr.send();
+      });
   };
 
-  const handleUpload = () => {
-    const uploadTask = storage.ref(`files/uploads/${file.name}`).put(file);
-    uploadTask.on(
-      "state_changed",
-      (snapshot) => {},
-      (error) => {
-        console.log(error);
-      },
-      () => {
-        storage
-          .ref("files/uploads")
-          .child(file.name)
-          .getDownloadURL()
-          .then((url) => {
-            console.log(url);
+  useEffect(() => {
+    let mounted = true;
+
+    const getHomework = () => {
+      let assignments = [];
+
+      if (mounted) {
+        listRef
+          .listAll()
+          .then((res) => {
+            res.items.forEach((itemRef) => {
+              assignments.push({
+                name: itemRef.name,
+                url: itemRef.fullPath,
+              });
+            });
+            console.log(assignments);
+            setHomework(assignments);
+          })
+          .catch((error) => {
+            console.log("Whoooops!");
           });
       }
-    );
-    setFileName("Choose...");
-  };
+    };
 
-  const chooseBtnName =
-    fileName.length > 12 ? fileName.slice(0, 12) + "..." : fileName;
+    getHomework();
 
-  console.log("file:", file);
+    return function cleanup() {
+      mounted = false;
+    };
+  }, []);
+
   return (
     <div className={classes.homeworkPage}>
+      <BackArrow />
       <div className={classes.homeworkTitle}>
         <p>My Homework</p>
       </div>
       <AssignmentsPage />
-      <div>
-        <input
-          type="file"
-          id="files"
-          onChange={handleChange}
-          className={classes.inputField}
+      {homework.map((homework) => (
+        <HomeworkItem
+          key={homework.name}
+          name={homework.name}
+          url={homework.url}
+          onDownload={() => {
+            downloadHandler(homework.name);
+          }}
         />
-      </div>
-      <div className={classes.actionBtns}>
-        <label htmlFor="files" className={classes.chooseBtn}>
-          {chooseBtnName}
-        </label>
-        <div className={classes.uploadBtn} onClick={handleUpload}>
-          Upload
-        </div>
-      </div>
+      ))}{" "}
     </div>
   );
 }
