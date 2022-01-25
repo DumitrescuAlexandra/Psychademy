@@ -1,75 +1,32 @@
-// import React, { useState } from "react";
-// import Modal from "react-modal";
-// import { useHistory } from "react-router-dom";
+import React, { Fragment } from "react";
+import classes from "./UploadItem.module.css";
+import { Link } from "react-router-dom";
 
-// import classes from "./UploadItem.module.css";
+function UploadItem(props) {
+  const trimmedFileName =
+    props.name.length > 12 ? props.name.slice(0, 17) + "..." : props.name;
 
-// function UploadItem() {
-//   const [showModal, setShowModal] = useState(true);
-//   const history = useHistory();
+  return (
+    <Fragment>
+      <li className={classes.uploadedItem}>
+        <div className={classes.uploadedIcon}>
+          <img src="/Images/journal.svg" alt=""></img>
+        </div>
 
-//   return (
-//     <div classname={classes.homeworkItem}>
-//       <div classname={classes.fileImg}>
-//         <img src="./Images/fileImg.svg" alt=""></img>
-//       </div>
-//       <div className={classes.identifier}>
-//         <div className={classes.name}>{file.name}</div>
-//         <div className={classes.date}>{file.date}</div>
-//       </div>
-//       <Link to={`files/${url}`}>
-//         <img
-//           src="/Images/delete.svg/"
-//           alt=""
-//           onclick={() => {
-//             setShowModal(true);
-//           }}
-//         ></img>
-//       </Link>
+        <div className={classes.uploadedName}>
+          <p>{trimmedFileName}</p>
+        </div>
 
-//       {showModal && (
-//         <Modal
-//           isOpen={true}
-//           className={classes.deleteModalBck}
-//           style={{
-//             overlay: {
-//               position: "fixed",
-//               top: 0,
-//               left: 0,
-//               right: 0,
-//               bottom: 0,
-//               backgroundColor: "rgba(28, 28, 28, 0.9)",
-//             },
-//           }}
-//         >
-//           <div className={classes.deleteModal}>
-//             <img
-//               src="/Images/close.svg"
-//               alt=""
-//               onClick={() => history.push("/Account")}
-//             ></img>
-//             <p className={classes.modalTitle}> Delete your account</p>
-//             <p className={classes.modalText}>
-//               {" "}
-//               Please note that this action is permanent and all data associated
-//               with your account will be erased as well.
-//             </p>{" "}
-//             <p className={classes.modalText}>
-//               {" "}
-//               A prior discussion with your therapist is advised.{" "}
-//             </p>
-//             <div
-//               className={classes.modalBtn}
-//               onClick={() => setShowModal(false)}
-//             >
-//               {" "}
-//               I understand{" "}
-//             </div>
-//           </div>
-//         </Modal>
-//       )}
-//     </div>
-//   );
-// }
+        <Link
+          to={`/${props.url}`}
+          className={classes.downloadBtn}
+          onClick={props.onDownload}
+        >
+          <img src="/Images/download.svg" alt=""></img>
+        </Link>
+      </li>
+    </Fragment>
+  );
+}
 
-// export default UploadItem;
+export default UploadItem;

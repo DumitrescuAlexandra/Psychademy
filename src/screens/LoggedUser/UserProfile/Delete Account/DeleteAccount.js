@@ -1,16 +1,46 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useRef } from "react";
 import Modal from "react-modal";
 import BackArrow from "../../../../UI/Buttons/BackArrow";
 import classes from "./DeleteAccount.module.css";
 import { useHistory } from "react-router-dom";
+import { useAuth } from "../../../../contexts/AuthContext";
 
 function DeleteAccount() {
   const [showModal, setShowModal] = useState(true);
+  const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
+
+  const emailInputRef = useRef();
+  const passwordInputRef = useRef();
+
+  const { deleteAccount, currentUser } = useAuth();
+
+  async function deleteHandler(e) {
+    e.preventDefault();
+
+    if (emailInputRef.current.value !== currentUser.email) {
+      return setError("Incorrect credentials! Account deletion failed!");
+    }
+
+    try {
+      setError("");
+      setIsLoading(true);
+      await deleteAccount(
+        emailInputRef.current.value,
+        passwordInputRef.current.value
+      );
+      history.push("/SuccessfullyChanged");
+    } catch {
+      setError("Failed to delete account!");
+    }
+    setIsLoading(false);
+  }
 
   return (
     <Fragment>
       <BackArrow />
+      {error && alert(error)}
       <div className={classes.deletePage}>
         <p className={classes.deleteTitle}> Delete Account </p>
         <p className={classes.deleteSubTitle}>
@@ -19,7 +49,13 @@ function DeleteAccount() {
         </p>
         <form>
           <div className={classes.deleteControl}>
-            <input type="email" id="email" autoComplete="off" required></input>
+            <input
+              type="email"
+              id="email"
+              autoComplete="off"
+              ref={emailInputRef}
+              required
+            ></input>
             <label htmlFor="email" className={classes.labelName}>
               <span className={classes.emailContent}>
                 {" "}
@@ -32,6 +68,7 @@ function DeleteAccount() {
               name="password"
               type="password"
               id="password"
+              ref={passwordInputRef}
               required
             ></input>
             <label htmlFor="password" className={classes.labelName}>
@@ -49,7 +86,14 @@ function DeleteAccount() {
               {" "}
               Cancel{" "}
             </div>
-            <div className={classes.deleteBtn}> Delete </div>
+            {!isLoading ? (
+              <div className={classes.deleteBtn} onClick={deleteHandler}>
+                {" "}
+                Delete{" "}
+              </div>
+            ) : (
+              <div className={classes.deleteBtn}> Please wait... </div>
+            )}{" "}
           </div>
         </form>
 

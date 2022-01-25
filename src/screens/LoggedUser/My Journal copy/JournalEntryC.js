@@ -20,8 +20,14 @@ const JournalEntry = (props) => {
       </div>
 
       <Link to={`/Journal/${props.id}`} className={classes.viewEntryBtn}>
-        <img src="/Images/open.svg" alt="" height="24px"></img>
+        <img src="/Images/open.svg" alt=""></img>
       </Link>
+      <div
+        className={classes.deleteEntryBtn}
+        onClick={props.deleteEntryHandler}
+      >
+        <img src="/Images/trash.svg" alt=""></img>
+      </div>
     </li>
   );
 };

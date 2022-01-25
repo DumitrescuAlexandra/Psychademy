@@ -1,0 +1,28 @@
+.homeworkItem {
+  margin: 1rem 0;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85vw;
+  border: 1.25px solid #387359;
+  box-sizing: border-box;
+  border-radius: 50px;
+}
+
+@media only screen and (min-width: 550px) {
+  .homeworkItem {
+    width: max(55vw);
+  }
+}
+
+.fileImg {
+  margin-top: 2%;
+}
+
+.homeworkName p {
+  font-family: Lato;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #fff8e1;
+}
