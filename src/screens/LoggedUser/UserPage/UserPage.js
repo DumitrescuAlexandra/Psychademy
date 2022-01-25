@@ -70,7 +70,7 @@ function UserPage() {
             <div className={classes.userIcon}>
               <img src={"/Images/evolution.svg"} alt={""}></img>
             </div>
-            <Link to="/UserPage/Evolution" className={classes.userNav}>
+            <Link to="/Evolution" className={classes.userNav}>
               EvolutionGraph{" "}
             </Link>
             <div className={classes.userArrow}>

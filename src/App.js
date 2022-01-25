@@ -92,7 +92,9 @@ function App() {
 
           <PrivateRoute path="/DeleteAccount" component={DeleteAccount} />
 
-          <PrivateRoute path="/UserPage/Evolution" component={MoodGraph} />
+          <PrivateRoute path="/Evolution" component={MoodGraph} />
+
+          <PrivateRoute path="/MoodCheck" component={MoodCheck} />
 
           <PrivateRoute path="/Journal" exact component={EntryList} />
 

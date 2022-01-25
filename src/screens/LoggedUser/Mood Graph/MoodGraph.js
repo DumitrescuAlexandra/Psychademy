@@ -30,9 +30,9 @@ function MoodGraph() {
             />
           </div>
         </div>
-        <Link to="/MoodGraph">
-          <MoodCheck />
-        </Link>
+        <div className={classes.registerBtn}>
+          <Link to="/MoodCheck">Register your mood</Link>
+        </div>
       </div>
     </Fragment>
   );

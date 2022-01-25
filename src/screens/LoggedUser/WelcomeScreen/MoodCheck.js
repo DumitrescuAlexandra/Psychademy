@@ -8,11 +8,6 @@ function MoodCheck() {
 
   const moodHandler = (event) => {
     event.preventDefault();
-    history.push("/UserPage");
-  };
-
-  const toggleMood = () => {
-    return "";
   };
 
   return (
@@ -36,25 +31,25 @@ function MoodCheck() {
           alt=""
           height="28px"
           width="28px"
-          onClick={() => history.replace("/UserPage")}
+          onClick={() => history.push("/Evolution")}
           className={classes.closeImg}
         ></img>
         <div className={classes.moodContainer}>
           <p className={classes.moodTitle}> Welcome! </p>
           <p className={classes.moodText}> How do you feel today? </p>
           <div className={classes.moods}>
-            <img src="/Images/horrible.svg" alt="" onClick={toggleMood}></img>
-            <img src="/Images/sad.svg" alt="" onClick={toggleMood}></img>
-            <img src="/Images/meh.svg" alt="" onClick={toggleMood}></img>
-            <img src="/Images/happy.svg" alt="" onClick={toggleMood}></img>
-            <img src="/Images/wonderful.svg" alt="" onClick={toggleMood}></img>
+            <img src="/Images/horrible.svg" alt=""></img>
+            <img src="/Images/sad.svg" alt=""></img>
+            <img src="/Images/meh.svg" alt=""></img>
+            <img src="/Images/happy.svg" alt=""></img>
+            <img src="/Images/wonderful.svg" alt=""></img>
           </div>
           <div className={classes.modalControls}>
             <button onClick={moodHandler} className={classes.submitBtn}>
               {" "}
               Submit{" "}
             </button>
-            <Link className={classes.skipBtn} to="/PatientLogin/UserPage">
+            <Link className={classes.skipBtn} to="/Evolution">
               <p>Skip for now</p>
               <img src={"/Images/back.svg"} alt={"back"}></img>
             </Link>
