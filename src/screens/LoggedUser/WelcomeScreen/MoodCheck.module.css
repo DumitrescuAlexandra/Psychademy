@@ -1,42 +1,64 @@
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: black;
-  opacity: 0.75;
-  width: 100%;
-  height: 100%;
+.moodModalBck {
+  position: relative;
+  margin: 50% auto auto 5%;
+  height: 50vh;
+  width: 90vw;
+  background-color: #1e5656;
+  border-radius: 40px;
 }
 
-.moodModal {
+@media only screen and (min-width: 375px) {
+  .moodModalBck {
+    margin: 20% auto;
+    width: 90vw;
+    height: 55vh;
+  }
+}
+
+@media only screen and (min-width: 414px) {
+  .moodModalBck {
+    margin: 20% auto;
+    width: 85vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .moodModalBck {
+    margin: 10% auto;
+    width: 90vw;
+    height: 70vh;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .moodModalBck {
+    width: 70vw;
+    height: 70vh;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .moodModalBck {
+    width: 50vw;
+  }
+}
+
+.closeImg {
   position: absolute;
-  left: 5%;
+  right: 1.5rem;
+  top: 1.5rem;
+  cursor: pointer;
+}
+
+.moodContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 15%;
-
-  bottom: 0;
-  height: 85%;
-  width: 90%;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  background-color: #1e5656;
-  z-index: 50;
-}
-
-.close {
-  cursor: pointer;
-  position: relative;
-  top: -2.5rem;
-  right: -7.5rem;
-}
-
-.close:hover {
-  transform: scale(1.5);
+  flex-grow: 1;
 }
 
 .moodTitle {
+  margin-top: 15%;
   font-family: Merriweather;
   font-weight: 900;
   font-size: 1.5rem;
@@ -44,8 +66,24 @@
   color: #fff8e1;
 }
 
+@media only screen and (min-width: 450px) {
+  .moodTitle {
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .moodTitle {
+    margin-top: 7.5%;
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    text-align: center;
+    letter-spacing: 0.75px;
+  }
+}
+
 .moodText {
-  margin-top: 2rem;
+  margin-top: 5rem;
   font-family: Lato;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -55,7 +93,6 @@
 .moods {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 5rem;
 }
 
 .moods img {
