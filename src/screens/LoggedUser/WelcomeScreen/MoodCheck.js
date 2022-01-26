@@ -14,6 +14,7 @@ function MoodCheck() {
     <div className={classes.moodCheckPage}>
       <Modal
         isOpen={true}
+        ariaHideApp={false}
         className={classes.moodModalBck}
         style={{
           overlay: {

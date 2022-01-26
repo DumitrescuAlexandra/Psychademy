@@ -29,6 +29,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 import Success from "./screens/Success screen/Success";
 import EntryDetails from "./screens/LoggedUser/My Journal copy/screens/EntryDetailsC";
 import PrivateRoute from "./screens/LoggedUser/Private Route/PrivateRoute";
+import AccountInfo from "./screens/LoggedUser/UserProfile/Account Info/AccountInfo";
 
 function App() {
   return (
@@ -80,6 +81,8 @@ function App() {
           <PrivateRoute path="/UserPage/moodCheck" component={MoodCheck} />
 
           <PrivateRoute path="/Account" component={AccountSettings} />
+
+          <PrivateRoute path="/AccountInfo" component={AccountInfo} />
 
           <PrivateRoute
             path="/ConfidentialityPolicy"

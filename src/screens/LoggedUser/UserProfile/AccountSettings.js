@@ -12,6 +12,10 @@ const AccountSettings = () => {
         <p className={classes.title}> Account Settings </p>
         <div className={classes.settings}>
           <div className={classes.setting}>
+            <Link to="/AccountInfo">My Account</Link>
+            <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
+          </div>
+          <div className={classes.setting}>
             <Link to="/PasswordChange">Change my password</Link>
             <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
           </div>

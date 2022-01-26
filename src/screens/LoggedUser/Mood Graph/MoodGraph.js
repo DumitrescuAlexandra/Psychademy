@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Plot from "react-plotly.js";
 import BackArrow from "../../../UI/Buttons/BackArrow";
 import classes from "./MoodGraph.module.css";
-import MoodCheck from "../../../screens/LoggedUser/WelcomeScreen/MoodCheck";
 
 function MoodGraph() {
   return (

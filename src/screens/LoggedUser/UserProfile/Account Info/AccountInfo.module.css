@@ -1,0 +1,96 @@
+.infoPage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.patientInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2.5rem;
+}
+
+.infoTitle {
+  display: flex;
+  padding: 2.5rem;
+  align-self: flex-start;
+}
+.infoTitle p {
+  font-family: Merriweather;
+  font-weight: bold;
+  font-size: 2.25rem;
+  line-height: 3rem;
+  color: #fff8e1;
+}
+
+.infoFullName,
+.infoBirthdate,
+.infoPhone,
+.infoPersonName,
+.infoPersRelationship,
+.infoPersPhone {
+  display: flex;
+}
+
+.infoFullName p,
+.infoBirthdate p,
+.infoPhone p,
+.infoPersonName p,
+.infoPersRelationship p,
+.infoPersPhone p {
+  font-family: Merriweather;
+  color: #fff8e1;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.personOfContact {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2.5rem;
+}
+.aboutPerson {
+  font-family: Merriweather;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  color: #ff9d46;
+  margin: 1rem auto;
+}
+
+.infoFullName span,
+.infoBirthdate span,
+.infoPhone span,
+.infoPersonName span,
+.infoPersRelationship span,
+.infoPersPhone span {
+  margin-left: 0.5rem;
+  font-family: Merriweather;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: #78ddb1;
+}
+
+.editBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 5em;
+  margin-top: 5rem;
+  width: max(12rem);
+  height: 3rem;
+  background-color: #78ddb1;
+  border: none;
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+}
+.editBtn p {
+  font-size: 1.05rem;
+  font-family: Lato;
+  font-weight: bold;
+  color: #074343;
+  line-height: 1.75rem;
+}
+
+.editBtn:hover {
+  border: solid 2px #fff8e1;
+}

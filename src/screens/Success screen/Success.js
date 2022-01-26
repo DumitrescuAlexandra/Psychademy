@@ -12,6 +12,7 @@ function Success(props) {
     <div className={classes.successPage}>
       <Modal
         isOpen={true}
+        ariaHideApp={false}
         className={classes.successModalBck}
         style={{
           overlay: {

@@ -46,6 +46,7 @@ const EntryForm = (props) => {
     <div className={classes.entryFormPage}>
       <Modal
         isOpen={true}
+        ariaHideApp={false}
         className={classes.newEntryModalBck}
         style={{
           overlay: {

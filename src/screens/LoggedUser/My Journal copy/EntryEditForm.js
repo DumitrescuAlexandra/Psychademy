@@ -47,19 +47,13 @@ function EntryEditForm(props) {
     };
     updateEntry();
     history.push("/Journal");
-
-    // updateDoc(collection(db, "journal", id), {
-    //   id: props.id,
-    //   title: trimmedTitle,
-    //   message: enteredMessage,
-    //   date: date,
-    // });
   };
 
   return (
     <div>
       <Modal
         isOpen={true}
+        ariaHideApp={false}
         className={classes.newEntryModalBck}
         style={{
           overlay: {
