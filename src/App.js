@@ -30,6 +30,7 @@ import Success from "./screens/Success screen/Success";
 import EntryDetails from "./screens/LoggedUser/My Journal copy/screens/EntryDetailsC";
 import PrivateRoute from "./screens/LoggedUser/Private Route/PrivateRoute";
 import AccountInfo from "./screens/LoggedUser/UserProfile/Account Info/AccountInfo";
+import EditForm from "./screens/LoggedUser/UserProfile/Account Info/EditForm";
 
 function App() {
   return (

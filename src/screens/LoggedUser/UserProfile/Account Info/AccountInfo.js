@@ -5,6 +5,17 @@ import EditForm from "./EditForm";
 
 function AccountInfo(props) {
   const [modal, setModal] = useState(false);
+
+  const editHandler = (e) => {
+    e.preventDefault();
+    console.log("yaataaa!");
+    setModal(true);
+  };
+
+  const closeEditing = () => {
+    setModal(false);
+  };
+
   return (
     <Fragment>
       <BackArrow />
@@ -44,15 +55,10 @@ function AccountInfo(props) {
             <p> Phone Number: </p> <span>+40 749 315 226</span>
           </div>
         </div>
-        <div
-          className={classes.editBtn}
-          onClick={() => {
-            setModal(true);
-          }}
-        >
+        <div className={classes.editBtn} onClick={editHandler}>
           <p>Edit my info</p>
         </div>
-        {modal && <EditForm />}
+        {modal && <EditForm onClose={closeEditing} />}
       </div>
     </Fragment>
   );
