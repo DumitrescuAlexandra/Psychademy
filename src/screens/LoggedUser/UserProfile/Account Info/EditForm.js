@@ -146,7 +146,7 @@ function EditForm(props) {
                   </div>
                   <div className={classes.entryAction}>
                     <div className={classes.editBtn} onClick={editHandler}>
-                      Add entry
+                      Update info
                     </div>
                   </div>
                 </div>

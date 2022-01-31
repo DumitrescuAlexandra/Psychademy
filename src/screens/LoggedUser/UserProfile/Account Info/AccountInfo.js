@@ -8,7 +8,6 @@ function AccountInfo(props) {
 
   const editHandler = (e) => {
     e.preventDefault();
-    console.log("yaataaa!");
     setModal(true);
   };
 
