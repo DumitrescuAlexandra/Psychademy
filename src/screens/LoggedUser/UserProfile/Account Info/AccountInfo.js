@@ -50,7 +50,7 @@ function AccountInfo(props) {
             <p> Your relationship: </p> <span>Partner</span>
           </div>
           <div className={classes.infoPersPhone}>
-            {/* <p> Person's phone Number: </p> <span>{props.phone}</span> */}
+            {/* <p> Person's phone Number: </p> <span>{props.personPhone}</span> */}
             <p> Phone Number: </p> <span>+40 749 315 226</span>
           </div>
         </div>

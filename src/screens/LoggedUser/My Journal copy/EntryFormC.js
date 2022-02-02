@@ -25,7 +25,6 @@ const EntryForm = (props) => {
 
   const submitFormHandler = (event) => {
     event.preventDefault();
-
     const enteredTitle = titleInputRef.current.value;
     const trimmedTitle =
       enteredTitle.length > 15

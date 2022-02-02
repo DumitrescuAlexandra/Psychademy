@@ -26,11 +26,8 @@ function DeleteAccount() {
     try {
       setError("");
       setIsLoading(true);
-      await deleteAccount(
-        emailInputRef.current.value,
-        passwordInputRef.current.value
-      );
-      history.push("/SuccessfullyChanged");
+      history.push("/SuccessfullyDeleted");
+      await deleteAccount();
     } catch {
       setError("Failed to delete account!");
     }
@@ -101,6 +98,7 @@ function DeleteAccount() {
           <Modal
             isOpen={true}
             className={classes.deleteModalBck}
+            ariaHideApp={false}
             style={{
               overlay: {
                 position: "fixed",

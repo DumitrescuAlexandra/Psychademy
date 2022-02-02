@@ -30,7 +30,7 @@ import Success from "./screens/Success screen/Success";
 import EntryDetails from "./screens/LoggedUser/My Journal copy/screens/EntryDetailsC";
 import PrivateRoute from "./screens/LoggedUser/Private Route/PrivateRoute";
 import AccountInfo from "./screens/LoggedUser/UserProfile/Account Info/AccountInfo";
-import EditForm from "./screens/LoggedUser/UserProfile/Account Info/EditForm";
+// import EditForm from "./screens/LoggedUser/UserProfile/Account Info/EditForm";
 
 function App() {
   return (
@@ -95,6 +95,11 @@ function App() {
           <PrivateRoute path="/SuccessfullyChanged" component={Success} />
 
           <PrivateRoute path="/DeleteAccount" component={DeleteAccount} />
+          <Route path="/SuccessfullyDeleted">
+            <Success
+              successMessage={"You have successfully deleted your account!"}
+            />
+          </Route>
 
           <PrivateRoute path="/Evolution" component={MoodGraph} />
 

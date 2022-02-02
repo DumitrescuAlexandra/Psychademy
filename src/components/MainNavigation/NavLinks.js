@@ -10,41 +10,52 @@ const NavLinks = (props) => {
   const closeMobileNav = () => props.isMobile && props.closeMobileMenu();
 
   return (
-    <ul className={classes.navLinks}>
-      <p> Menu </p>
-      <motion.li
-        onClick={closeMobileNav}
-        initial={animateFrom}
-        animate={animateTo}
-        transition={{ delay: 0.05 }}
-      >
-        <Link to="/About">About </Link>
-      </motion.li>
-      <motion.li
-        onClick={closeMobileNav}
-        initial={animateFrom}
-        animate={animateTo}
-        transition={{ delay: 0.15 }}
-      >
-        <Link to="/Services">Services</Link>
-      </motion.li>
-      <motion.li
-        onClick={closeMobileNav}
-        initial={animateFrom}
-        animate={animateTo}
-        transition={{ delay: 0.25 }}
-      >
-        <Link to="/Contact">Contact</Link>
-      </motion.li>
-      <motion.li
-        onClick={closeMobileNav}
-        initial={animateFrom}
-        animate={animateTo}
-        transition={{ delay: 0.35 }}
-      >
-        <Link to="/PatientLogin">Patient Login</Link>
-      </motion.li>
-    </ul>
+    <div className={classes.navigationPage}>
+      <div className={classes.navigationTitle}>
+        <p> Menu </p>
+      </div>
+      <div className={classes.navLinks}>
+        <ul>
+          <motion.li
+            className={classes.navLink}
+            onClick={closeMobileNav}
+            initial={animateFrom}
+            animate={animateTo}
+            transition={{ delay: 0.05 }}
+          >
+            <Link to="/About">About </Link>
+          </motion.li>
+          <motion.li
+            className={classes.navLink}
+            onClick={closeMobileNav}
+            initial={animateFrom}
+            animate={animateTo}
+            transition={{ delay: 0.15 }}
+          >
+            <Link to="/Services">Services</Link>
+          </motion.li>
+          <motion.li
+            className={classes.navLink}
+            onClick={closeMobileNav}
+            initial={animateFrom}
+            animate={animateTo}
+            transition={{ delay: 0.25 }}
+          >
+            <Link to="/Contact">Contact</Link>
+          </motion.li>
+          <div className={classes.ol}></div>
+          <motion.li
+            className={classes.navLink}
+            onClick={closeMobileNav}
+            initial={animateFrom}
+            animate={animateTo}
+            transition={{ delay: 0.35 }}
+          >
+            <Link to="/PatientLogin">Patient Login</Link>
+          </motion.li>
+        </ul>
+      </div>
+    </div>
   );
 };
 

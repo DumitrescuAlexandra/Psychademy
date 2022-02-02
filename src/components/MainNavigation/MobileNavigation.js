@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Modal from "react-modal";
 import { useHistory } from "react-router";
 
 import NavLinks from "./NavLinks";
@@ -22,7 +23,7 @@ const MobileNavigation = () => {
   const hamburgerIcon = (
     <RiMenu3Line
       className={classes.hamburger}
-      size="24px"
+      size="36px"
       color="#FFF8E1"
       onClick={menuHandler}
     />
@@ -30,7 +31,7 @@ const MobileNavigation = () => {
   const closeIcon = (
     <RiCloseLine
       className={classes.hamburger}
-      size="24px"
+      size="36px"
       color="#FFF8E1"
       onClick={menuHandler}
     />
@@ -46,7 +47,23 @@ const MobileNavigation = () => {
       </p>
       {showMenu ? closeIcon : hamburgerIcon}
       {showMenu && (
-        <NavLinks isMobile={true} closeMobileMenu={closeMobileMenu} />
+        <Modal
+          isOpen={true}
+          ariaHideApp={false}
+          className={classes.navigationModalBck}
+          style={{
+            overlay: {
+              position: "fixed",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: "rgba(28, 28, 28, 0.9)",
+            },
+          }}
+        >
+          <NavLinks isMobile={true} closeMobileMenu={closeMobileMenu} />
+        </Modal>
       )}
     </nav>
   );

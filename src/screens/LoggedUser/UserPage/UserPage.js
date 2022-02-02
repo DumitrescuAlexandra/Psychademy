@@ -6,8 +6,6 @@ import { useAuth } from "../../../contexts/AuthContext";
 
 function UserPage() {
   const history = useHistory();
-  // const [firstLogToday, setFirstLogToday] = useState(true);
-  // const [modal, setModal] = useState(false);
 
   const [error, setError] = useState("");
   const { currentUser, logout } = useAuth();
