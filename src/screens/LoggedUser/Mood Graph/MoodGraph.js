@@ -1,13 +1,19 @@
 import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Plot from "react-plotly.js";
 import BackArrow from "../../../UI/Buttons/BackArrow";
 import classes from "./MoodGraph.module.css";
 
 function MoodGraph() {
+  const history = useHistory();
+
+  const backHandler = () => {
+    history.push("/UserPage");
+  };
+
   return (
     <Fragment>
-      <BackArrow />
+      <BackArrow backHandler={backHandler} />
       <div className={classes.graphPage}>
         <div className={classes.graphTitle}>
           {" "}

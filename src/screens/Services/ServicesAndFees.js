@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { NavLink, useParams, Route } from "react-router-dom";
+import { NavLink, useParams, Route, useHistory } from "react-router-dom";
 import classes from "./Services.module.css";
 import BackArrow from "../../UI/Buttons/BackArrow";
 import Services from "./Services";
@@ -7,12 +7,14 @@ import ServicesChildren from "./ServicesChildren";
 
 const ServicesAndFees = (props) => {
   const params = useParams();
-
-  console.log(params.clientType);
+  const history = useHistory();
+  const backHandler = () => {
+    history.push("/welcome");
+  };
 
   return (
     <Fragment>
-      <BackArrow />
+      <BackArrow backHandler={backHandler} />
       <div className={classes.servicesAndFees}>
         <div className={classes.servicesTitle}>
           <p className={classes.title}>

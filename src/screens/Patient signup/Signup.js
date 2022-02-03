@@ -14,7 +14,7 @@ function Signup() {
   const passwordInputRef = useRef();
   const passwordConfirmRef = useRef();
 
-  const { signup, getCurrentUserId } = useAuth();
+  const { signup } = useAuth();
 
   async function submitHandler(e) {
     e.preventDefault();
@@ -26,7 +26,6 @@ function Signup() {
     try {
       setError("");
       setIsLoading(true);
-      console.log(getCurrentUserId());
 
       await signup(emailInputRef.current.value, passwordInputRef.current.value);
       history.push("/Success");

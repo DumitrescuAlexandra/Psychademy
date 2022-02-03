@@ -34,9 +34,13 @@ function DeleteAccount() {
     setIsLoading(false);
   }
 
+  const backHandler = () => {
+    history.goBack();
+  };
+
   return (
     <Fragment>
-      <BackArrow />
+      <BackArrow backHandler={backHandler} />
       {error && alert(error)}
       <div className={classes.deletePage}>
         <p className={classes.deleteTitle}> Delete Account </p>

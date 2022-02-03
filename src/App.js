@@ -95,11 +95,6 @@ function App() {
           <PrivateRoute path="/SuccessfullyChanged" component={Success} />
 
           <PrivateRoute path="/DeleteAccount" component={DeleteAccount} />
-          <Route path="/SuccessfullyDeleted">
-            <Success
-              successMessage={"You have successfully deleted your account!"}
-            />
-          </Route>
 
           <PrivateRoute path="/Evolution" component={MoodGraph} />
 

@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-// import MoodCheck from "../WelcomeScreen/MoodCheck";
 import classes from "./UserPage.module.css";
 import { useAuth } from "../../../contexts/AuthContext";
 
@@ -15,6 +14,7 @@ function UserPage() {
 
     try {
       await logout();
+      localStorage.clear();
       history.replace("/welcome");
     } catch {
       setError("Failed to logout");
@@ -82,8 +82,6 @@ function UserPage() {
           className={classes.logout}
           onClick={logoutHandler}
         ></img>
-        {/* 
-        <MoodCheck /> */}
       </div>
     </Fragment>
   );

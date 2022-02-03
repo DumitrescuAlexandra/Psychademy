@@ -1,17 +1,9 @@
 import React from "react";
 import classes from "./BackArrow.module.css";
-import { useHistory } from "react-router";
 
-const BackArrow = () => {
-  const history = useHistory();
-
-  const backHandler = () => {
-    // history.push("/welcome");
-    history.goBack();
-  };
-
+const BackArrow = (props) => {
   return (
-    <div className={classes.backBtn} onClick={backHandler}>
+    <div className={classes.backBtn} onClick={props.backHandler}>
       <img src={"/Images/back.svg"} alt={"back"}></img>
       <p>Back</p>
     </div>
