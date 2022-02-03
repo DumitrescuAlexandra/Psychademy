@@ -32,13 +32,13 @@ const EntryForm = (props) => {
         : enteredTitle;
     const enteredMessage = messageInputRef.current.value;
 
-    props.onAddEntry(
-      addDoc(collection(db, "journal"), {
-        title: trimmedTitle,
-        message: enteredMessage,
-        date: date,
-      })
-    );
+    addDoc(collection(db, "journal"), {
+      title: trimmedTitle,
+      message: enteredMessage,
+      date: date,
+    });
+
+    history.push("/Journal");
   };
 
   return (

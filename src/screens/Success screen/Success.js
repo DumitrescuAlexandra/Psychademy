@@ -31,7 +31,7 @@ function Success(props) {
           alt=""
           height="28px"
           width="28px"
-          onClick={() => history.push("/UserPage")}
+          onClick={() => history.push(`${props.path}`)}
         ></img>
         <div className={classes.container}>
           <div className={classes.header}>

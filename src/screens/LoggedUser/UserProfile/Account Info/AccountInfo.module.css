@@ -69,6 +69,10 @@
   color: #78ddb1;
 }
 
+.buttons {
+  display: flex;
+}
+
 .editBtn {
   display: flex;
   align-items: center;

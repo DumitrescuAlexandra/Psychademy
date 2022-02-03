@@ -15,6 +15,7 @@ function AccountInfo(props) {
   const closeEditing = () => {
     setModal(false);
   };
+
   const history = useHistory();
   const backHandler = () => {
     history.push("/Account");
@@ -58,8 +59,18 @@ function AccountInfo(props) {
             <p> Phone Number: </p> <span>+40 749 315 226</span>
           </div>
         </div>
-        <div className={classes.editBtn} onClick={editHandler}>
-          <p>Edit my info</p>
+        <div className={classes.buttons}>
+          <div
+            className={classes.editBtn}
+            onClick={() => {
+              history.push("/Account");
+            }}
+          >
+            <p>Back</p>
+          </div>
+          <div className={classes.editBtn} onClick={editHandler}>
+            <p>Edit my info</p>
+          </div>
         </div>
         {modal && <EditForm onClose={closeEditing} />}
       </div>

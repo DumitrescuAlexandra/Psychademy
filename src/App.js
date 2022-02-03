@@ -22,7 +22,7 @@ import DeleteAccount from "./screens/LoggedUser/UserProfile/Delete Account/Delet
 import MoodGraph from "./screens/LoggedUser/Mood Graph/MoodGraph";
 import Signup from "./screens/Patient signup/Signup";
 import EntryList from "./screens/LoggedUser/My Journal copy/EntryListC";
-import NewEntry from "./screens/LoggedUser/My Journal copy/screens/NewEntryC";
+import EntryForm from "./screens/LoggedUser/My Journal copy/EntryFormC";
 import Homework from "./screens/LoggedUser/Assignments/Homework";
 import MyUploads from "./screens/LoggedUser/Assignments/MyUploads";
 import { AuthProvider } from "./contexts/AuthContext";
@@ -30,7 +30,6 @@ import Success from "./screens/Success screen/Success";
 import EntryDetails from "./screens/LoggedUser/My Journal copy/screens/EntryDetailsC";
 import PrivateRoute from "./screens/LoggedUser/Private Route/PrivateRoute";
 import AccountInfo from "./screens/LoggedUser/UserProfile/Account Info/AccountInfo";
-// import EditForm from "./screens/LoggedUser/UserProfile/Account Info/EditForm";
 
 function App() {
   return (
@@ -86,6 +85,13 @@ function App() {
 
           <PrivateRoute path="/AccountInfo" component={AccountInfo} />
 
+          <Route path="/SuccessfullyUpdated">
+            <Success
+              successMessage={"Your profile has successfully been updated!"}
+              path={"/AccountInfo"}
+            />
+          </Route>
+
           <PrivateRoute
             path="/ConfidentialityPolicy"
             component={ConfidentialityPolicy}
@@ -111,7 +117,7 @@ function App() {
 
           <PrivateRoute path="/Journal/:entryId" component={EntryDetails} />
 
-          <PrivateRoute path="/new-entry" component={NewEntry} />
+          <PrivateRoute path="/new-entry" component={EntryForm} />
 
           <PrivateRoute path="/Assignments" exact>
             <Redirect to="/Assignments/homework"></Redirect>
