@@ -68,7 +68,7 @@ function App() {
           <Route path="/PatientSignup">
             <Signup />
           </Route>
-          <Route path="/Success">
+          <Route path="/AccountCreated">
             <Success
               successMessage={"You have successfully created an account!"}
               path={"/UserPage"}

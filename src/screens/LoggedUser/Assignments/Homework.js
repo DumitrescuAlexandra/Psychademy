@@ -78,6 +78,12 @@ function Homework(props) {
           }}
         />
       ))}{" "}
+      <div
+        className={classes.backBtn}
+        onClick={() => history.push("/UserPage")}
+      >
+        Back{" "}
+      </div>
     </div>
   );
 }

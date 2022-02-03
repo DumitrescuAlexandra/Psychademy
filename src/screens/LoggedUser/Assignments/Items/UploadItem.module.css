@@ -10,12 +10,6 @@
   border-radius: 50px;
 }
 
-@media only screen and (min-width: 550px) {
-  .uploadedItem {
-    width: max(55vw);
-  }
-}
-
 .uploadedIcon {
   margin-top: 2%;
 }
@@ -25,4 +19,19 @@
   font-size: 1.25rem;
   line-height: 1.5rem;
   color: #fff8e1;
+}
+@media only screen and (min-width: 550px) {
+  .uploadedItem {
+    width: max(55vw);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .uploadedItem {
+    width: max(40vw);
+    height: 5rem;
+  }
+  .uploadedName p {
+    font-size: 1.65rem;
+    line-height: 1.85rem;
+  }
 }

@@ -122,6 +122,12 @@ function MyUploads() {
         />
       </div>
       <div className={classes.actionBtns}>
+        <div
+          className={classes.backBtn}
+          onClick={() => history.push("/UserPage")}
+        >
+          Back{" "}
+        </div>
         <label htmlFor="files" className={classes.chooseBtn}>
           {trimmedFileName}
         </label>
