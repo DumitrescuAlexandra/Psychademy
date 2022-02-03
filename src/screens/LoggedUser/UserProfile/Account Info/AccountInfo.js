@@ -1,11 +1,33 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import classes from "./AccountInfo.module.css";
 import BackArrow from "../../../../UI/Buttons/BackArrow";
 import EditForm from "./EditForm";
+import { db } from "../../../../Firebase/index";
+import { collection, getDocs } from "firebase/firestore";
+import PatientInfo from "./PatientInfo";
 
 function AccountInfo(props) {
   const [modal, setModal] = useState(false);
+  const [details, setDetails] = useState([]);
+
+  const accountDetailsCollectionRef = collection(db, "accountDetails");
+
+  useEffect(() => {
+    let mounted = true;
+    const getDetails = async () => {
+      const data = await getDocs(accountDetailsCollectionRef);
+      if (mounted) {
+        setDetails(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      }
+    };
+
+    getDetails();
+
+    return function cleanup() {
+      mounted = false;
+    };
+  }, [accountDetailsCollectionRef]);
 
   const editHandler = (e) => {
     e.preventDefault();
@@ -20,6 +42,7 @@ function AccountInfo(props) {
   const backHandler = () => {
     history.push("/Account");
   };
+
   return (
     <Fragment>
       <BackArrow backHandler={backHandler} />
@@ -27,38 +50,16 @@ function AccountInfo(props) {
         <div className={classes.infoTitle}>
           <p> Personal information</p>
         </div>
-        <div className={classes.patientInfo}>
-          <div className={classes.infoFullName}>
-            {/* <p> Full name:</p> <span>{props.fullName}</span> */}
-            <p> Full name:</p> <span>John Doe</span>
-          </div>
-          <div className={classes.infoBirthdate}>
-            {/* <p> Birthdate:</p> <span>{props.birthdate}</span> */}
-            <p> Birthdate:</p> <span>20.06.1991</span>
-          </div>
-          <div className={classes.infoPhone}>
-            {/* <p> Phone Number:</p> <span>{props.phone}</span> */}
-            <p> Phone Number:</p>
-            <span> +40 749 315 227</span>
-          </div>
-        </div>
-        <div className={classes.personOfContact}>
-          <div className={classes.aboutPerson}>
-            <p>Emergency contact</p>
-          </div>
-          <div className={classes.infoPersonName}>
-            {/* <p> Person's full name: </p> <span>{props.personName}</span> */}
-            <p> Person's full name: </p> <span>Johanna Doe</span>
-          </div>
-          <div className={classes.infoPersRelationship}>
-            {/* <p> Your relationship: </p> <span>{props.personRelationship}</span> */}
-            <p> Your relationship: </p> <span>Partner</span>
-          </div>
-          <div className={classes.infoPersPhone}>
-            {/* <p> Person's phone Number: </p> <span>{props.personPhone}</span> */}
-            <p> Phone Number: </p> <span>+40 749 315 226</span>
-          </div>
-        </div>
+        {details.map((det) => (
+          <PatientInfo
+            fullName={det.fullName}
+            birthDate={det.birthDate}
+            phone={det.phone}
+            contactName={det.contactName}
+            contactRelationship={det.contactRelationship}
+            contactPhone={det.contactPhone}
+          />
+        ))}
         <div className={classes.buttons}>
           <div
             className={classes.editBtn}

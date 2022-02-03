@@ -3,11 +3,6 @@
   flex-direction: column;
   align-items: flex-start;
 }
-.patientInfo {
-  display: flex;
-  flex-direction: column;
-  margin-left: 2.5rem;
-}
 
 .infoTitle {
   display: flex;
@@ -22,53 +17,6 @@
   color: #fff8e1;
 }
 
-.infoFullName,
-.infoBirthdate,
-.infoPhone,
-.infoPersonName,
-.infoPersRelationship,
-.infoPersPhone {
-  display: flex;
-}
-
-.infoFullName p,
-.infoBirthdate p,
-.infoPhone p,
-.infoPersonName p,
-.infoPersRelationship p,
-.infoPersPhone p {
-  font-family: Merriweather;
-  color: #fff8e1;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.personOfContact {
-  display: flex;
-  flex-direction: column;
-  margin-left: 2.5rem;
-}
-.aboutPerson {
-  font-family: Merriweather;
-  font-size: 1.75rem;
-  line-height: 2.25rem;
-  color: #ff9d46;
-  margin: 1rem auto;
-}
-
-.infoFullName span,
-.infoBirthdate span,
-.infoPhone span,
-.infoPersonName span,
-.infoPersRelationship span,
-.infoPersPhone span {
-  margin-left: 0.5rem;
-  font-family: Merriweather;
-  font-size: 1.5rem;
-  line-height: 1.75rem;
-  color: #78ddb1;
-}
-
 .buttons {
   display: flex;
 }
@@ -77,9 +25,9 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-left: 5em;
+  margin-left: 2rem;
   margin-top: 5rem;
-  width: max(12rem);
+  width: max(8rem);
   height: 3rem;
   background-color: #78ddb1;
   border: none;
@@ -109,67 +57,27 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .infoPage {
-    margin-top: 5rem;
-  }
-
-  .infoTitle p {
-    font-size: 2.5rem;
-    line-height: 3.25rem;
-  }
-
-  .infoFullName p,
-  .infoBirthdate p,
-  .infoPhone p,
-  .infoPersonName p,
-  .infoPersRelationship p,
-  .infoPersPhone p,
-  .infoFullName span,
-  .infoBirthdate span,
-  .infoPhone span,
-  .infoPersonName span,
-  .infoPersRelationship span,
-  .infoPersPhone span {
-    margin-top: 0.5rem;
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-  .aboutPerson {
-    margin-top: 3.5rem;
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
   .editBtn p {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
   .editBtn {
-    width: max(14rem);
+    width: max(12rem);
     height: 3.5rem;
+  }
+  .infoTitle {
+    margin-top: 5rem;
+  }
+  .infoTitle p {
+    font-family: Merriweather;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    color: #fff8e1;
   }
 }
 
 @media only screen and (min-width: 1280px) {
-  .infoFullName p,
-  .infoBirthdate p,
-  .infoPhone p,
-  .infoPersonName p,
-  .infoPersRelationship p,
-  .infoPersPhone p,
-  .infoFullName span,
-  .infoBirthdate span,
-  .infoPhone span,
-  .infoPersonName span,
-  .infoPersRelationship span,
-  .infoPersPhone span {
-    margin-top: 0.75rem;
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-  .aboutPerson {
-    font-size: 2.5rem;
-    line-height: 3rem;
-  }
   .editBtn p {
     font-size: 1.5rem;
     line-height: 2rem;
