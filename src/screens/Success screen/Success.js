@@ -48,7 +48,7 @@ function Success(props) {
             <p>{props.successMessage}</p>
           </div>
           <div className={classes.okayBtn}>
-            <Link to="/UserPage">Okay</Link>
+            <Link to={props.path}>Okay</Link>
           </div>
         </div>
       </Modal>

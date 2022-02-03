@@ -71,6 +71,7 @@ function App() {
           <Route path="/Success">
             <Success
               successMessage={"You have successfully created an account!"}
+              path={"/UserPage"}
             />
           </Route>
           <Route path="/PatientLogin" component={PatientLogin} />
@@ -95,6 +96,12 @@ function App() {
           <PrivateRoute path="/SuccessfullyChanged" component={Success} />
 
           <PrivateRoute path="/DeleteAccount" component={DeleteAccount} />
+          <Route path="/SuccessfullyDeleted">
+            <Success
+              successMessage={"You have successfully deleted your account!"}
+              path={"/welcome"}
+            />
+          </Route>
 
           <PrivateRoute path="/Evolution" component={MoodGraph} />
 
