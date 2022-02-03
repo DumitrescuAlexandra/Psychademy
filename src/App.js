@@ -39,26 +39,33 @@ function App() {
         <Route path="/" exact>
           <Redirect to="/welcome" />
         </Route>
+
         <Route path="/welcome">
           <Welcome />
         </Route>
+
         <Route path="/about">
           <About />
           <Redirect to="/about/aboutMe" />
+
           <Route path="/about/aboutMe">
             <AboutMe />
           </Route>
+
           <Route path="/about/aboutCBT">
             <AboutCBT />
           </Route>
         </Route>
+
         <Route path="/services" exact>
           {" "}
           <Redirect to="/services/adults" />
         </Route>
+
         <Route path="/services/:clientType">
           <ServicesAndFees />
         </Route>
+
         <Route path="/contact">
           <Contact />
         </Route>
@@ -67,12 +74,14 @@ function App() {
           <Route path="/PatientSignup">
             <Signup />
           </Route>
+
           <Route path="/AccountCreated">
             <Success
               successMessage={"You have successfully created an account!"}
               path={"/UserPage"}
             />
           </Route>
+
           <Route path="/PatientLogin" component={PatientLogin} />
 
           <Route path="/ForgotPassword" component={ForgotPassword} />
@@ -102,6 +111,7 @@ function App() {
           <PrivateRoute path="/SuccessfullyChanged" component={Success} />
 
           <PrivateRoute path="/DeleteAccount" component={DeleteAccount} />
+
           <Route path="/SuccessfullyDeleted">
             <Success
               successMessage={"You have successfully deleted your account!"}

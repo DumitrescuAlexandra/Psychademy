@@ -51,9 +51,7 @@ function MyUploads() {
       .then((url) => {
         const xhr = new XMLHttpRequest();
         xhr.responseType = "blob";
-        xhr.onload = (event) => {
-          const blob = xhr.response;
-        };
+        xhr.onload = (event) => {};
         xhr.open("GET", url);
         xhr.send();
       });
@@ -75,7 +73,6 @@ function MyUploads() {
                 url: itemRef.fullPath,
               });
             });
-            console.log(uploaded);
             setUploads(uploaded);
           })
           .catch((error) => {

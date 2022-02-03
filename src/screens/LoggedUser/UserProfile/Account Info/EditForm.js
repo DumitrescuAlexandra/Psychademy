@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import LoadingSpinner from "../../../../UI/LoadingSpinner";
 import classes from "./EditForm.module.css";
 import { db } from "../../../../Firebase/index";
-import { collection, addDoc } from "firebase/firestore";
+import { updateDoc, doc } from "firebase/firestore";
 
 function EditForm(props) {
   const history = useHistory();
@@ -23,17 +23,34 @@ function EditForm(props) {
     e.preventDefault();
     setLoading(true);
 
-    addDoc(collection(db, "accountDetails"), {
-      fullName: fullNameInputRef.current.value,
-      birthDate: birthDateInputRef.current.value,
-      phone: phoneInputRef.current.value,
-      contactName: contactNameInputRef.current.value,
-      contactRelationship: contactRelationshipInputRef.current.value,
-      contactPhone: contactPhoneInputRef.current.value,
-    });
+    const updateInfo = async (id) => {
+      const editedInfo = {
+        fullName: fullNameInputRef.current.value,
+        birthDate: birthDateInputRef.current.value,
+        phone: phoneInputRef.current.value,
+        contactName: contactNameInputRef.current.value,
+        contactRelationship: contactRelationshipInputRef.current.value,
+        contactPhone: contactPhoneInputRef.current.value,
+      };
+      const docRef = doc(db, "accountDetails", props.id);
+      await updateDoc(docRef, editedInfo);
+    };
+    updateInfo();
     history.push("/SuccessfullyUpdated");
     setLoading(false);
     setIsEditing(false);
+
+    // addDoc(collection(db, "accountDetails"), {
+    //   fullName: fullNameInputRef.current.value,
+    //   birthDate: birthDateInputRef.current.value,
+    //   phone: phoneInputRef.current.value,
+    //   contactName: contactNameInputRef.current.value,
+    //   contactRelationship: contactRelationshipInputRef.current.value,
+    //   contactPhone: contactPhoneInputRef.current.value,
+    // });
+    // history.push("/SuccessfullyUpdated");
+    // setLoading(false);
+    // setIsEditing(false);
   };
 
   return (

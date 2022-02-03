@@ -52,6 +52,8 @@ function AccountInfo(props) {
         </div>
         {details.map((det) => (
           <PatientInfo
+            id={det.id}
+            key={det.id}
             fullName={det.fullName}
             birthDate={det.birthDate}
             phone={det.phone}

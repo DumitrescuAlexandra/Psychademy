@@ -18,9 +18,7 @@ function Homework(props) {
       .then((url) => {
         const xhr = new XMLHttpRequest();
         xhr.responseType = "blob";
-        xhr.onload = (event) => {
-          const blob = xhr.response;
-        };
+        xhr.onload = (event) => {};
         xhr.open("GET", url);
         xhr.send();
       });
@@ -42,7 +40,6 @@ function Homework(props) {
                 url: itemRef.fullPath,
               });
             });
-            console.log(assignments);
             setHomework(assignments);
           })
           .catch((error) => {
