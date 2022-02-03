@@ -5,9 +5,13 @@ import { Link, useHistory } from "react-router-dom";
 
 const AccountSettings = () => {
   const history = useHistory();
+  const backHandler = () => {
+    history.push("/UserPage");
+  };
+
   return (
     <Fragment>
-      <BackArrow />
+      <BackArrow backHandler={backHandler} />
       <div className={classes.accountSettingsPage}>
         <p className={classes.title}> Account Settings </p>
         <div className={classes.settings}>

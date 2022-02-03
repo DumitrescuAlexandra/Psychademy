@@ -6,7 +6,6 @@ import Services from "./Services";
 import ServicesChildren from "./ServicesChildren";
 
 const ServicesAndFees = (props) => {
-  const params = useParams();
   const history = useHistory();
   const backHandler = () => {
     history.push("/welcome");

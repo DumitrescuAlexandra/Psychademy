@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import { useHistory } from "react-router-dom";
 import classes from "./AccountInfo.module.css";
 import BackArrow from "../../../../UI/Buttons/BackArrow";
 import EditForm from "./EditForm";
@@ -14,10 +15,13 @@ function AccountInfo(props) {
   const closeEditing = () => {
     setModal(false);
   };
-
+  const history = useHistory();
+  const backHandler = () => {
+    history.push("/Account");
+  };
   return (
     <Fragment>
-      <BackArrow />
+      <BackArrow backHandler={backHandler} />
       <div className={classes.infoPage}>
         <div className={classes.infoTitle}>
           <p> Personal information</p>

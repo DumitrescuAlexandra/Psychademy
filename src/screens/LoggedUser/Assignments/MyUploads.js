@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import classes from "./MyUploads.module.css";
 import UploadItem from "./Items/UploadItem";
 import { storage } from "../../../Firebase";
@@ -89,10 +90,13 @@ function MyUploads() {
       mounted = false;
     };
   }, []);
-
+  const history = useHistory();
+  const backHandler = () => {
+    history.push("/UserPage");
+  };
   return (
     <div className={classes.uploadsPage}>
-      <BackArrow />
+      <BackArrow backHandler={backHandler} />
       <div className={classes.title}>
         <p>My uploads</p>
       </div>

@@ -31,9 +31,13 @@ const EntryList = () => {
     };
   }, [journalCollectionRef]);
 
+  const backHandler = () => {
+    history.push("/UserPage");
+  };
+
   return (
     <Fragment>
-      <BackArrow />
+      <BackArrow backHandler={backHandler} />
       <div className={classes.journalPage}>
         <div className={classes.journalTitle}>
           <p>My journal</p>

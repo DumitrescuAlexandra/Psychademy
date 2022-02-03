@@ -5,9 +5,12 @@ import classes from "./ConfidentialityPolicy.module.css";
 
 function ConfidentialityPolicy() {
   const history = useHistory();
+  const backHandler = () => {
+    history.push("/Account");
+  };
   return (
     <Fragment>
-      <BackArrow />
+      <BackArrow backHandler={backHandler} />
       <div className={classes.confidentialityPolicyPage}>
         <p className={classes.confidentialityTitle}> Confidentiality Policy </p>
         <div className={classes.confidentialityText}>
