@@ -9,6 +9,27 @@
   }
 }
 
+.navigationModalBck {
+  position: relative;
+  margin: 0 0 auto auto;
+  height: 100vh;
+  width: 70vw;
+  display: flex;
+  background-color: #1e5656;
+}
+
+@media (min-width: 575px) {
+  .navigationModalBck {
+    width: max(50vw);
+  }
+}
+
+@media (min-width: 768px) {
+  .navigationModalBck {
+    display: none;
+  }
+}
+
 .brand {
   position: relative;
   width: 8rem;
@@ -27,7 +48,6 @@
   cursor: pointer;
   top: 1.312rem;
   right: 6.25%;
-  bottom: 18.75%;
   z-index: 3;
 }
 
@@ -48,65 +68,50 @@
   }
 }
 
-.navLinks {
+/* -------------------- Navigation links - mobile -------------------------- */
+
+.navigationPage {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  position: absolute;
-  text-align: center;
-
-  list-style: none;
-
-  height: 60vh;
-  width: 75%;
-  top: 7.5%;
-  line-height: 3.5rem;
-  left: 25%;
-  padding: 16%;
-
-  background: linear-gradient(150deg, #053737 0%, #074343 28.13%, #1e5656 100%);
-  box-shadow: -80px 120px 40px rgba(0, 0, 0, 0.45);
-
-  border: solid 2px rgba(0, 0, 0, 0.3);
-  border-radius: 3%;
-  overflow: visible;
-  z-index: 2;
 }
 
-@media only screen and (max-width: 356px) {
-  .navLinks {
-    height: 80vh;
-    width: 75%;
-    top: 1.5%;
-    line-height: 3.5rem;
-    left: 25%;
-    padding: 16%;
-  }
+.navigationTitle {
+  margin-top: 4rem;
+  margin-left: 3rem;
+  align-self: center;
 }
 
-.navLinks a {
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #fff8e1;
-}
-
-@media only screen and (max-width: 356px) {
-  .navLinks a {
-    font-size: 1.15rem;
-    font-weight: 700;
-  }
-}
-
-.navLinks p {
-  position: relative;
-  top: -12.5%;
+.navigationTitle p {
   line-height: 2rem;
+  width: fit-content;
   border-bottom: solid 2px #fff8e1;
   color: #fff8e1;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 1px;
+}
+
+.navLinks {
+  margin-top: 15%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.navLink {
+  margin-left: 3.5rem;
+  margin-top: 2.25rem;
+  list-style: none;
+}
+
+.navLinks li a {
+  margin-top: 2rem;
+  text-decoration: none;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #fff8e1;
 }
 
 .navLinks a:hover {
@@ -121,7 +126,7 @@
   background-size: 100% 3px, auto;
 }
 
-.navLinks li:nth-child(4) a {
+.navLinks li:nth-child(3) a {
   color: #ff9d46;
 }
 
@@ -131,6 +136,13 @@
   background-color: #033c3c;
   border: 10px solid #033c3c;
   border-radius: 8px;
+}
+
+.ol {
+  border-bottom: 2px solid #377676;
+  width: 80%;
+  height: 3rem;
+  margin: 0 auto 3rem 2rem;
 }
 
 .brainImage {

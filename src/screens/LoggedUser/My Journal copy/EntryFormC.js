@@ -25,7 +25,6 @@ const EntryForm = (props) => {
 
   const submitFormHandler = (event) => {
     event.preventDefault();
-
     const enteredTitle = titleInputRef.current.value;
     const trimmedTitle =
       enteredTitle.length > 15
@@ -33,19 +32,20 @@ const EntryForm = (props) => {
         : enteredTitle;
     const enteredMessage = messageInputRef.current.value;
 
-    props.onAddEntry(
-      addDoc(collection(db, "journal"), {
-        title: trimmedTitle,
-        message: enteredMessage,
-        date: date,
-      })
-    );
+    addDoc(collection(db, "journal"), {
+      title: trimmedTitle,
+      message: enteredMessage,
+      date: date,
+    });
+
+    history.push("/Journal");
   };
 
   return (
     <div className={classes.entryFormPage}>
       <Modal
         isOpen={true}
+        ariaHideApp={false}
         className={classes.newEntryModalBck}
         style={{
           overlay: {

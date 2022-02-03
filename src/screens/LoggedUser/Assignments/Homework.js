@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import classes from "./Homework.module.css";
+import { useHistory } from "react-router-dom";
 import { storage } from "../../../Firebase";
 import AssignmentsPage from "./AssignmentsPage";
 import HomeworkItem from "./Items/HomeworkItem";
@@ -17,9 +18,7 @@ function Homework(props) {
       .then((url) => {
         const xhr = new XMLHttpRequest();
         xhr.responseType = "blob";
-        xhr.onload = (event) => {
-          const blob = xhr.response;
-        };
+        xhr.onload = (event) => {};
         xhr.open("GET", url);
         xhr.send();
       });
@@ -41,7 +40,6 @@ function Homework(props) {
                 url: itemRef.fullPath,
               });
             });
-            console.log(assignments);
             setHomework(assignments);
           })
           .catch((error) => {
@@ -56,10 +54,13 @@ function Homework(props) {
       mounted = false;
     };
   }, []);
-
+  const history = useHistory();
+  const backHandler = () => {
+    history.push("/userPage");
+  };
   return (
     <div className={classes.homeworkPage}>
-      <BackArrow />
+      <BackArrow backHandler={backHandler} />
       <div className={classes.homeworkTitle}>
         <p>My Homework</p>
       </div>
@@ -74,6 +75,12 @@ function Homework(props) {
           }}
         />
       ))}{" "}
+      <div
+        className={classes.backBtn}
+        onClick={() => history.push("/UserPage")}
+      >
+        Back{" "}
+      </div>
     </div>
   );
 }

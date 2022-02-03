@@ -49,8 +49,8 @@
 .actionBtns {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 75%;
+  justify-content: space-evenly;
+  width: 90%;
 }
 
 @media only screen and (min-width: 450px) {
@@ -76,11 +76,17 @@
   }
 }
 
-.actionBtns .chooseBtn,
-.actionBtns .uploadBtn {
+.chooseBtn,
+.backBtn {
+  margin-right: 0.5rem;
+}
+
+.chooseBtn,
+.uploadBtn,
+.backBtn {
   text-align: center;
   width: 47.5%;
-  padding: 5%;
+  padding: 1rem;
   border-radius: 8px;
   margin-top: 4rem;
   background: #78ddb1;
@@ -93,8 +99,10 @@
   cursor: pointer;
 }
 
-.actionBtns .chooseBtn:hover,
-.actionBtns .uploadBtn:hover {
+.chooseBtn:hover,
+.uploadBtn:hover,
+.backBtn:hover {
   border: solid 2px #fff8e1;
   font-size: 1.25rem;
+  padding: 0.8rem;
 }

@@ -47,6 +47,7 @@ const EntryDetails = () => {
     <div className={classes.detailsPage}>
       <Modal
         isOpen={true}
+        ariaHideApp={false}
         className={classes.entryModalBck}
         style={{
           overlay: {

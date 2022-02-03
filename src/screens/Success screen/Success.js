@@ -12,6 +12,7 @@ function Success(props) {
     <div className={classes.successPage}>
       <Modal
         isOpen={true}
+        ariaHideApp={false}
         className={classes.successModalBck}
         style={{
           overlay: {
@@ -30,7 +31,7 @@ function Success(props) {
           alt=""
           height="28px"
           width="28px"
-          onClick={() => history.push("/UserPage")}
+          onClick={() => history.push(`${props.path}`)}
         ></img>
         <div className={classes.container}>
           <div className={classes.header}>
@@ -47,7 +48,7 @@ function Success(props) {
             <p>{props.successMessage}</p>
           </div>
           <div className={classes.okayBtn}>
-            <Link to="/UserPage">Okay</Link>
+            <Link to={props.path}>Okay</Link>
           </div>
         </div>
       </Modal>

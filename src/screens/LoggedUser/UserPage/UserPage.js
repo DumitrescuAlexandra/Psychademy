@@ -1,13 +1,10 @@
 import React, { Fragment, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-// import MoodCheck from "../WelcomeScreen/MoodCheck";
 import classes from "./UserPage.module.css";
 import { useAuth } from "../../../contexts/AuthContext";
 
 function UserPage() {
   const history = useHistory();
-  // const [firstLogToday, setFirstLogToday] = useState(true);
-  // const [modal, setModal] = useState(false);
 
   const [error, setError] = useState("");
   const { currentUser, logout } = useAuth();
@@ -17,6 +14,7 @@ function UserPage() {
 
     try {
       await logout();
+      localStorage.clear();
       history.replace("/welcome");
     } catch {
       setError("Failed to logout");
@@ -70,7 +68,7 @@ function UserPage() {
             <div className={classes.userIcon}>
               <img src={"/Images/evolution.svg"} alt={""}></img>
             </div>
-            <Link to="/UserPage/Evolution" className={classes.userNav}>
+            <Link to="/Evolution" className={classes.userNav}>
               EvolutionGraph{" "}
             </Link>
             <div className={classes.userArrow}>
@@ -84,8 +82,6 @@ function UserPage() {
           className={classes.logout}
           onClick={logoutHandler}
         ></img>
-        {/* 
-        <MoodCheck /> */}
       </div>
     </Fragment>
   );

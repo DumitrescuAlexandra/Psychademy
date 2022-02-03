@@ -2,15 +2,11 @@ import classes from "./NavigationButtons.module.css";
 import { Link } from "react-router-dom";
 import { Fragment } from "react";
 
-const NavigationButtons = (props) => {
-  const navHandler = () => {
-    console.log("Click happened!");
-  };
-
+const NavigationButtons = () => {
   return (
     <Fragment>
       <div className={classes.navigation_buttons}>
-        <div className={classes.nav_card} onClick={navHandler}>
+        <div className={classes.nav_card}>
           <div className={classes.nav_icon}>
             <img src={"/Images/about.svg"} alt={"about"}></img>
           </div>
@@ -22,7 +18,7 @@ const NavigationButtons = (props) => {
           </div>
         </div>
 
-        <div className={classes.nav_card} onClick={navHandler}>
+        <div className={classes.nav_card}>
           <div className={classes.nav_icon}>
             <img src={"/Images/services.svg"} alt={"services"}></img>
           </div>
@@ -34,7 +30,7 @@ const NavigationButtons = (props) => {
           </div>
         </div>
 
-        <div className={classes.nav_card} onClick={navHandler}>
+        <div className={classes.nav_card}>
           <div className={classes.nav_icon}>
             <img src={"/Images/contact.svg"} alt={"contact"}></img>
           </div>
@@ -46,7 +42,7 @@ const NavigationButtons = (props) => {
           </div>
         </div>
 
-        <div className={classes.nav_card} onClick={navHandler}>
+        <div className={classes.nav_card}>
           <div className={classes.nav_icon}>
             <img src={"/Images/patient-dark.svg"} alt={"patient"}></img>
           </div>

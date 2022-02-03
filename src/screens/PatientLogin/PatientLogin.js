@@ -1,10 +1,10 @@
 import React, { Fragment, useRef, useState } from "react";
 import BackArrow from "../../UI/Buttons/BackArrow";
-// import AuthForm from "./AuthForm";
 import classes from "./PatientLogin.module.css";
 import { useAuth } from "../../contexts/AuthContext";
 
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const PatientLogin = () => {
   const [error, setError] = useState("");
@@ -13,23 +13,32 @@ const PatientLogin = () => {
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
 
-  const { login } = useAuth();
+  const { login, getCurrentUserId } = useAuth();
+  const userUID = getCurrentUserId();
 
   async function submitHandler(e) {
     e.preventDefault();
+    setIsLoading(true);
 
     try {
-      setError("");
-      setIsLoading(true);
       await login(emailInputRef.current.value, passwordInputRef.current.value);
+      setError("");
     } catch {
       setError("Failed to sign in");
+    } finally {
+      localStorage.setItem("isAuth", userUID);
+      console.log(userUID);
+      setIsLoading(false);
     }
-    setIsLoading(false);
   }
+
+  const history = useHistory();
+  const backHandler = () => {
+    history.push("/welcome");
+  };
   return (
     <Fragment>
-      <BackArrow />
+      <BackArrow backHandler={backHandler} />
       <div className={classes.loginPage}>
         <header>
           <h4>Authentication</h4>

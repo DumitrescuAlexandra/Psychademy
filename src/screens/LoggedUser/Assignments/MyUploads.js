@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import classes from "./MyUploads.module.css";
 import UploadItem from "./Items/UploadItem";
 import { storage } from "../../../Firebase";
@@ -50,9 +51,7 @@ function MyUploads() {
       .then((url) => {
         const xhr = new XMLHttpRequest();
         xhr.responseType = "blob";
-        xhr.onload = (event) => {
-          const blob = xhr.response;
-        };
+        xhr.onload = (event) => {};
         xhr.open("GET", url);
         xhr.send();
       });
@@ -74,7 +73,6 @@ function MyUploads() {
                 url: itemRef.fullPath,
               });
             });
-            console.log(uploaded);
             setUploads(uploaded);
           })
           .catch((error) => {
@@ -89,10 +87,13 @@ function MyUploads() {
       mounted = false;
     };
   }, []);
-
+  const history = useHistory();
+  const backHandler = () => {
+    history.push("/UserPage");
+  };
   return (
     <div className={classes.uploadsPage}>
-      <BackArrow />
+      <BackArrow backHandler={backHandler} />
       <div className={classes.title}>
         <p>My uploads</p>
       </div>
@@ -118,6 +119,12 @@ function MyUploads() {
         />
       </div>
       <div className={classes.actionBtns}>
+        <div
+          className={classes.backBtn}
+          onClick={() => history.push("/UserPage")}
+        >
+          Back{" "}
+        </div>
         <label htmlFor="files" className={classes.chooseBtn}>
           {trimmedFileName}
         </label>

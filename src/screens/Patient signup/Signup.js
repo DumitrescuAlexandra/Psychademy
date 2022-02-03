@@ -26,8 +26,9 @@ function Signup() {
     try {
       setError("");
       setIsLoading(true);
+
       await signup(emailInputRef.current.value, passwordInputRef.current.value);
-      history.push("/Success");
+      history.push("/AccountCreated");
     } catch {
       setError("Failed to create an account");
     }

@@ -47,10 +47,12 @@ function ChangePassword() {
         setError("");
       });
   }
-
+  const backHandler = () => {
+    history.push("/Account");
+  };
   return (
     <Fragment>
-      <BackArrow />
+      <BackArrow backHandler={backHandler} />
       <div className={classes.changePasswordPage}>
         {error && alert(error)}
         <p className={classes.passwordTitle}> New Password / E-mail </p>
