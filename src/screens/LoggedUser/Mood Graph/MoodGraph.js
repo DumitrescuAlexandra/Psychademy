@@ -25,9 +25,9 @@ function MoodGraph() {
               data={[
                 {
                   x: ["Mon", "Tue", "Wed", " Thu", "Fri", "Sat", "Sun"],
-                  y: [1, 3, 2, 4, 5, 5, 4, 4],
+                  y: [1, 3, 2, 4, 5, 5, 4, 4, 3, 4, 3],
                   type: "scatter",
-                  mode: "lines+markers",
+                  mode: "markers",
                   marker: { color: "#6EA5A5" },
                 },
               ]}
