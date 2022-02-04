@@ -36,13 +36,18 @@ function MoodGraph() {
                   marker: { color: "#6EA5A5" },
                 },
               ]}
-              layout={{ width: 300, height: 300, title: "My graph" }}
+              layout={{ width: 345, height: 300, title: "My graph" }}
               className={classes.chart}
             />
           </div>
         </div>
-        <div className={classes.registerBtn}>
-          <Link to="/MoodCheck">Register your mood</Link>
+        <div className={classes.buttons}>
+          <div className={classes.registerBtn}>
+            <Link to="/UserPage">Back</Link>
+          </div>
+          <div className={classes.registerBtn}>
+            <Link to="/MoodCheck">Register your mood</Link>
+          </div>
         </div>
       </div>
     </Fragment>

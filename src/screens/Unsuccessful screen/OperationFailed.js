@@ -42,7 +42,7 @@ function OperationFailed(props) {
             ></img>
           </div>
           <div className={classes.title}>
-            <p>Operation failed</p>
+            <p>Oooops!</p>
           </div>
           <div className={classes.failMessage}>
             <p>{props.failMessage}</p>

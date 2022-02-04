@@ -22,6 +22,11 @@
   background-color: #054343;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .registerBtn {
   display: flex;
   align-items: center;
@@ -35,6 +40,10 @@
   margin-left: 20%;
   cursor: pointer;
 }
+.registerBtn:first-child {
+  margin-top: 2rem;
+}
+
 .registerBtn a {
   text-decoration: none;
   font-size: 1.05rem;
@@ -51,7 +60,9 @@
 @media only screen and (min-width: 768px) {
   .graphPage {
     align-items: center;
+    margin-left: 0;
   }
+
   .graphTitle {
     align-self: center;
   }
@@ -64,13 +75,22 @@
 
     background-color: #054343;
   }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
   .registerBtn {
-    margin-left: 0;
-    width: max(15rem);
+    margin-left: 2rem;
+    width: max(12rem);
     height: 4rem;
   }
+  .registerBtn:first-child {
+    margin-top: 5rem;
+  }
   .registerBtn a {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 2.25rem;
   }
 }
