@@ -4,7 +4,7 @@ import classes from "./AccountInfo.module.css";
 import BackArrow from "../../../../UI/Buttons/BackArrow";
 import EditForm from "./EditForm";
 import { db } from "../../../../Firebase/index";
-import { getDoc, doc, setDoc, collection } from "firebase/firestore";
+import { getDoc, doc, setDoc } from "firebase/firestore";
 import PatientInfo from "./PatientInfo";
 import { useAuth } from "../../../../contexts/AuthContext";
 
