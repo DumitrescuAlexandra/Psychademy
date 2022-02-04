@@ -25,7 +25,7 @@ function UserPage() {
     <Fragment>
       {error && <div>{alert(error)}</div>}
       <div className={classes.userPage}>
-        <p> Welcome, {currentUser.email}</p>
+        <p> Welcome</p>
 
         <div className={classes.userLinks}>
           <div className={classes.userLink}>
@@ -82,6 +82,11 @@ function UserPage() {
           className={classes.logout}
           onClick={logoutHandler}
         ></img>
+        <div className={classes.accountName}>
+          <p>
+            Logged in as: <span> {currentUser.email}</span>
+          </p>
+        </div>
       </div>
     </Fragment>
   );
