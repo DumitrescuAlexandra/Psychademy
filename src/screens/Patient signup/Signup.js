@@ -1,7 +1,9 @@
 import React, { Fragment, useRef, useState } from "react";
 import classes from "./Signup.module.css";
 import { Link, useHistory } from "react-router-dom";
+
 import { useAuth } from "../../contexts/AuthContext";
+
 import BackArrow from "../../UI/Buttons/BackArrow";
 import LoadingSpinner from "../../UI/LoadingSpinner";
 
@@ -26,7 +28,6 @@ function Signup() {
     try {
       setError("");
       setIsLoading(true);
-
       await signup(emailInputRef.current.value, passwordInputRef.current.value);
       history.push("/AccountCreated");
     } catch {

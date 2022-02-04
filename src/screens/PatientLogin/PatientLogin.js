@@ -1,6 +1,7 @@
 import React, { Fragment, useRef, useState } from "react";
 import BackArrow from "../../UI/Buttons/BackArrow";
 import classes from "./PatientLogin.module.css";
+
 import { useAuth } from "../../contexts/AuthContext";
 
 import { Link } from "react-router-dom";
@@ -23,12 +24,14 @@ const PatientLogin = () => {
     try {
       await login(emailInputRef.current.value, passwordInputRef.current.value);
       setError("");
+      localStorage.setItem("isAuth", userUID);
+      userUID === undefined
+        ? console.log("Please log in again using same credentials...")
+        : console.log(userUID);
+
+      setIsLoading(false);
     } catch {
       setError("Failed to sign in");
-    } finally {
-      localStorage.setItem("isAuth", userUID);
-      console.log(userUID);
-      setIsLoading(false);
     }
   }
 

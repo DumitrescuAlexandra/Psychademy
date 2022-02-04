@@ -5,9 +5,12 @@ import LoadingSpinner from "../../../../UI/LoadingSpinner";
 import classes from "./EditForm.module.css";
 import { db } from "../../../../Firebase/index";
 import { updateDoc, doc } from "firebase/firestore";
+import { useAuth } from "../../../../contexts/AuthContext";
 
 function EditForm(props) {
   const history = useHistory();
+  const { getCurrentUserId } = useAuth();
+  const userUID = getCurrentUserId();
 
   const [loading, setLoading] = useState(false);
   const [isEditing, setIsEditing] = useState(true);
@@ -32,25 +35,13 @@ function EditForm(props) {
         contactRelationship: contactRelationshipInputRef.current.value,
         contactPhone: contactPhoneInputRef.current.value,
       };
-      const docRef = doc(db, "accountDetails", props.id);
+      const docRef = doc(db, "accountDetails", id);
       await updateDoc(docRef, editedInfo);
     };
-    updateInfo();
+    updateInfo(userUID);
     history.push("/SuccessfullyUpdated");
     setLoading(false);
     setIsEditing(false);
-
-    // addDoc(collection(db, "accountDetails"), {
-    //   fullName: fullNameInputRef.current.value,
-    //   birthDate: birthDateInputRef.current.value,
-    //   phone: phoneInputRef.current.value,
-    //   contactName: contactNameInputRef.current.value,
-    //   contactRelationship: contactRelationshipInputRef.current.value,
-    //   contactPhone: contactPhoneInputRef.current.value,
-    // });
-    // history.push("/SuccessfullyUpdated");
-    // setLoading(false);
-    // setIsEditing(false);
   };
 
   return (
