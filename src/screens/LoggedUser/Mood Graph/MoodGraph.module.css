@@ -16,13 +16,6 @@
   color: #fff8e1;
 }
 
-@media only screen and (min-width: 768px) {
-  .graphTitle p {
-    font-size: 2.75rem;
-    line-height: 3.25rem;
-  }
-}
-
 .chartZone {
   display: flex;
   margin-top: 20%;
@@ -33,14 +26,13 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-left: 5em;
   margin-top: 5rem;
   width: max(12rem);
   height: 3rem;
   background-color: #78ddb1;
   border: none;
   border-radius: 0.5rem;
-
+  margin-left: 20%;
   cursor: pointer;
 }
 .registerBtn a {
@@ -54,4 +46,31 @@
 
 .registerBtn:hover {
   border: solid 2px #fff8e1;
+}
+
+@media only screen and (min-width: 768px) {
+  .graphPage {
+    align-items: center;
+  }
+  .graphTitle {
+    align-self: center;
+  }
+  .graphTitle p {
+    font-size: 2.75rem;
+    line-height: 3.25rem;
+  }
+  .chart {
+    position: absolute;
+
+    background-color: #054343;
+  }
+  .registerBtn {
+    margin-left: 0;
+    width: max(15rem);
+    height: 4rem;
+  }
+  .registerBtn a {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
 }

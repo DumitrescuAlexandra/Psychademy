@@ -13,6 +13,11 @@ function MoodGraph() {
 
   return (
     <Fragment>
+      <div>
+        {alert(
+          "This section is still under construction, thank you for understanding!"
+        )}
+      </div>
       <BackArrow backHandler={backHandler} />
       <div className={classes.graphPage}>
         <div className={classes.graphTitle}>
@@ -31,7 +36,8 @@ function MoodGraph() {
                   marker: { color: "#6EA5A5" },
                 },
               ]}
-              layout={{ width: 350, height: 300, title: "My graph" }}
+              layout={{ width: 300, height: 300, title: "My graph" }}
+              className={classes.chart}
             />
           </div>
         </div>
