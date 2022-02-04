@@ -10,7 +10,6 @@ import { useAuth } from "../../../../contexts/AuthContext";
 
 function AccountInfo() {
   const [modal, setModal] = useState(false);
-  // const [details, setDetails] = useState([]);
   const { getCurrentUserId } = useAuth();
   const userUID = getCurrentUserId();
 
@@ -21,24 +20,6 @@ function AccountInfo() {
   const [detailsContactRelationship, setDetailsContactRelationship] =
     useState();
   const [detailsContactPhone, setDetailsContactPhone] = useState();
-
-  // const accountDetailsCollectionRef = collection(db, "accountDetails");
-
-  // useEffect(() => {
-  //   let mounted = true;
-  //   const getDetails = async () => {
-  //     const data = await getDocs(accountDetailsCollectionRef);
-  //     if (mounted) {
-  //       setDetails(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-  //     }
-  //   };
-
-  //   getDetails();
-
-  //   return function cleanup() {
-  //     mounted = false;
-  //   };
-  // }, [accountDetailsCollectionRef]);
 
   useEffect(() => {
     let mounted = true;
@@ -92,7 +73,6 @@ function AccountInfo() {
 
         <PatientInfo
           id={userUID}
-          // key={det.id}
           fullName={detailsFullName}
           birthDate={detailsBirthDate}
           phone={detailsPhone}
