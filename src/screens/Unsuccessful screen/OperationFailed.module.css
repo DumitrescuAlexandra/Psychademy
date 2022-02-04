@@ -1,0 +1,186 @@
+.failPage {
+  display: flex;
+}
+
+.failModalBck {
+  position: relative;
+  margin: 50% auto auto 5%;
+  height: 55vh;
+  width: 90vw;
+  display: flex;
+  background-color: #1e5656;
+  border-radius: 40px;
+}
+
+.closeImg {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.checkImg {
+  width: 10rem;
+}
+
+.title {
+  margin: 5%;
+}
+
+.title p {
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+  color: #fff8e1;
+}
+
+.failMessage {
+  margin-top: 5%;
+}
+
+.failMessage p {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 300;
+  color: #fff8e1;
+  text-align: center;
+}
+
+.okayBtn {
+  margin-top: 20%;
+  padding: 2.5% 7.5%;
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  justify-content: space-around;
+  background: #78ddb1;
+  border-radius: 8px;
+}
+
+.okayBtn:hover {
+  border: solid 2px #074343;
+}
+
+.okayBtn a {
+  text-decoration: none;
+  font-family: Lato;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.75rem;
+  color: #074343;
+}
+
+@media only screen and (min-width: 375px) {
+  .failModalBck {
+    margin: 20% auto;
+    width: 90vw;
+    height: 65vh;
+  }
+  .title p {
+    font-size: 2rem;
+  }
+
+  .okayBtn {
+    margin-top: 22.5%;
+  }
+
+  .failMessage {
+    margin-top: 12.5%;
+    padding: 0 5%;
+  }
+  .failMessage p {
+    font-size: 1.15rem;
+    font-weight: 400;
+  }
+}
+
+@media only screen and (min-width: 414px) {
+  .failModalBck {
+    margin: 20% auto;
+    width: 85vw;
+  }
+  .okayBtn {
+    margin-top: 17.5%;
+  }
+}
+
+@media only screen and (min-width: 475px) {
+  .failMessage {
+    margin-top: 7.5%;
+  }
+  .okayBtn {
+    margin-top: 12.5%;
+  }
+}
+
+@media only screen and (min-width: 635px) {
+  .failModalBck {
+    margin: 20% auto;
+    width: 70vw;
+    height: 55vh;
+  }
+  .header {
+    margin-top: 5%;
+  }
+  .failMessage {
+    margin-top: 5%;
+  }
+  .okayBtn {
+    margin-top: 10%;
+  }
+  .okayBtn a {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .failModalBck {
+    margin: 15% auto;
+    width: 65vw;
+    height: 65vh;
+  }
+  .checkImg {
+    width: 12.5rem;
+  }
+  .title {
+    margin-top: 2rem;
+  }
+  .title p {
+    font-size: 2rem;
+    line-height: 2.15rem;
+    text-align: center;
+    letter-spacing: 0.75px;
+  }
+  .failMessage p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .failModalBck {
+    width: 70vw;
+    height: 70vh;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .failModalBck {
+    margin: 8% auto;
+    width: 30vw;
+    height: 60vh;
+  }
+}

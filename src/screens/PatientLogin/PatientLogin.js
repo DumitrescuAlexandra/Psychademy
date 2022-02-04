@@ -6,6 +6,7 @@ import { useAuth } from "../../contexts/AuthContext";
 
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import OperationFailed from "../Unsuccessful screen/OperationFailed";
 
 const PatientLogin = () => {
   const [error, setError] = useState("");
@@ -31,7 +32,9 @@ const PatientLogin = () => {
 
       setIsLoading(false);
     } catch {
-      setError("Failed to sign in");
+      setError(
+        "Failed to sign in! Please check your e-mail address and password, or create an account!"
+      );
     }
   }
 
@@ -49,7 +52,7 @@ const PatientLogin = () => {
         </header>
 
         <div className={classes.auth}>
-          {error && <div>{alert(error)}</div>}
+          {error && <OperationFailed failMessage={error} path="/welcome" />}
 
           <form>
             <div className={classes.authControl}>

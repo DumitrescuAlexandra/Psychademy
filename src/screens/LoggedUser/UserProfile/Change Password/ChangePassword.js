@@ -40,7 +40,7 @@ function ChangePassword() {
         history.push("/SuccessfullyChanged");
       })
       .catch(() => {
-        setError("Failed to update data!");
+        setError("Failed attempt! Please try again");
       })
       .finally(() => {
         setIsLoading(false);
