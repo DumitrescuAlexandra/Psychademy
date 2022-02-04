@@ -108,7 +108,12 @@ function App() {
 
           <PrivateRoute path="/PasswordChange" component={ChangePassword} />
 
-          <PrivateRoute path="/SuccessfullyChanged" component={Success} />
+          <Route path="/SuccessfullyChanged">
+            <Success
+              successMessage={"You have successfully updated your login info!"}
+              path={"/Account"}
+            />
+          </Route>
 
           <PrivateRoute path="/DeleteAccount" component={DeleteAccount} />
 

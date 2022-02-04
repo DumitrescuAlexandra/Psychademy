@@ -1,10 +1,12 @@
 import React, { Fragment, useRef, useState } from "react";
 import BackArrow from "../../UI/Buttons/BackArrow";
 import classes from "./PatientLogin.module.css";
+
 import { useAuth } from "../../contexts/AuthContext";
 
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import OperationFailed from "../Unsuccessful screen/OperationFailed";
 
 const PatientLogin = () => {
   const [error, setError] = useState("");
@@ -23,12 +25,16 @@ const PatientLogin = () => {
     try {
       await login(emailInputRef.current.value, passwordInputRef.current.value);
       setError("");
-    } catch {
-      setError("Failed to sign in");
-    } finally {
       localStorage.setItem("isAuth", userUID);
-      console.log(userUID);
+      userUID === undefined
+        ? console.log("Please log in again using same credentials...")
+        : console.log(userUID);
+
       setIsLoading(false);
+    } catch {
+      setError(
+        "Failed to sign in! Please check your e-mail address and password, or create an account!"
+      );
     }
   }
 
@@ -46,7 +52,7 @@ const PatientLogin = () => {
         </header>
 
         <div className={classes.auth}>
-          {error && <div>{alert(error)}</div>}
+          {error && <OperationFailed failMessage={error} path="/welcome" />}
 
           <form>
             <div className={classes.authControl}>

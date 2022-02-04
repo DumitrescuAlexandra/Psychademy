@@ -3,6 +3,7 @@ import classes from "./ChangePassword.module.css";
 import BackArrow from "../../../../UI/Buttons/BackArrow";
 import { useHistory } from "react-router-dom";
 import { useAuth } from "../../../../contexts/AuthContext";
+import OperationFailed from "../../../Unsuccessful screen/OperationFailed";
 
 function ChangePassword() {
   const history = useHistory();
@@ -40,7 +41,7 @@ function ChangePassword() {
         history.push("/SuccessfullyChanged");
       })
       .catch(() => {
-        setError("Failed to update data!");
+        setError("Failed attempt! Please try again");
       })
       .finally(() => {
         setIsLoading(false);
@@ -54,7 +55,12 @@ function ChangePassword() {
     <Fragment>
       <BackArrow backHandler={backHandler} />
       <div className={classes.changePasswordPage}>
-        {error && alert(error)}
+        {error && (
+          <OperationFailed
+            failMessage={"Failed attempt! Please try again"}
+            path={"/Account"}
+          />
+        )}
         <p className={classes.passwordTitle}> New Password / E-mail </p>
         <p className={classes.passwordSubTitle}>
           {" "}

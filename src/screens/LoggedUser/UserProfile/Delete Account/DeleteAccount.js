@@ -4,6 +4,7 @@ import BackArrow from "../../../../UI/Buttons/BackArrow";
 import classes from "./DeleteAccount.module.css";
 import { useHistory } from "react-router-dom";
 import { useAuth } from "../../../../contexts/AuthContext";
+import OperationFailed from "../../../Unsuccessful screen/OperationFailed";
 
 function DeleteAccount() {
   const [showModal, setShowModal] = useState(true);
@@ -19,7 +20,10 @@ function DeleteAccount() {
   async function deleteHandler(e) {
     e.preventDefault();
 
-    if (emailInputRef.current.value !== currentUser.email) {
+    if (
+      emailInputRef.current.value !== currentUser.email ||
+      passwordInputRef.current.value !== currentUser.password
+    ) {
       return setError("Incorrect credentials! Account deletion failed!");
     }
 
@@ -41,7 +45,7 @@ function DeleteAccount() {
   return (
     <Fragment>
       <BackArrow backHandler={backHandler} />
-      {error && alert(error)}
+      {error && <OperationFailed failMessage={error} path="/Account" />}
       <div className={classes.deletePage}>
         <p className={classes.deleteTitle}> Delete Account </p>
         <p className={classes.deleteSubTitle}>

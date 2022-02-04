@@ -13,6 +13,11 @@ function MoodGraph() {
 
   return (
     <Fragment>
+      <div>
+        {alert(
+          "This section is still under construction, thank you for understanding!"
+        )}
+      </div>
       <BackArrow backHandler={backHandler} />
       <div className={classes.graphPage}>
         <div className={classes.graphTitle}>
@@ -25,18 +30,24 @@ function MoodGraph() {
               data={[
                 {
                   x: ["Mon", "Tue", "Wed", " Thu", "Fri", "Sat", "Sun"],
-                  y: [1, 3, 2, 4, 5, 5, 4, 4],
+                  y: [1, 3, 2, 4, 5, 5, 4, 4, 3, 4, 3],
                   type: "scatter",
-                  mode: "lines+markers",
+                  mode: "markers",
                   marker: { color: "#6EA5A5" },
                 },
               ]}
-              layout={{ width: 350, height: 300, title: "My graph" }}
+              layout={{ width: 345, height: 300, title: "My graph" }}
+              className={classes.chart}
             />
           </div>
         </div>
-        <div className={classes.registerBtn}>
-          <Link to="/MoodCheck">Register your mood</Link>
+        <div className={classes.buttons}>
+          <div className={classes.registerBtn}>
+            <Link to="/UserPage">Back</Link>
+          </div>
+          <div className={classes.registerBtn}>
+            <Link to="/MoodCheck">Register your mood</Link>
+          </div>
         </div>
       </div>
     </Fragment>

@@ -10,7 +10,7 @@
 }
 
 .userPage p {
-  margin-top: 25%;
+  margin-top: 15%;
   text-align: center;
 
   font-family: Merriweather;
@@ -121,4 +121,15 @@
   background-position: bottom center;
   transition: all 0.3s ease-out;
   background-size: 100% 2px, auto;
+}
+
+.accountName p {
+  line-height: 2.25rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #fff8e1;
+}
+
+.accountName span {
+  color: #78ddb1;
 }
