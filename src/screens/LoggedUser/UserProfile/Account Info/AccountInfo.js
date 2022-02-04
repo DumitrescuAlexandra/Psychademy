@@ -4,7 +4,7 @@ import classes from "./AccountInfo.module.css";
 import BackArrow from "../../../../UI/Buttons/BackArrow";
 import EditForm from "./EditForm";
 import { db } from "../../../../Firebase/index";
-import { getDoc, doc } from "firebase/firestore";
+import { getDoc, doc, setDoc, collection } from "firebase/firestore";
 import PatientInfo from "./PatientInfo";
 import { useAuth } from "../../../../contexts/AuthContext";
 
@@ -38,9 +38,16 @@ function AccountInfo() {
           setDetailsContactPhone(docSnap.data().contactPhone);
         } else {
           console.log("No such account!");
+          setDoc(doc(db, "accountDetails", id), {
+            fullName: "Please update your info",
+            birthDate: "Please update your info",
+            phone: "Please update your info",
+            contactName: "Please update your info",
+            contactRelationship: "Please update your info",
+            contactPhone: "Please update your info",
+          });
         }
       };
-
       getDetails(userUID);
     }
 
