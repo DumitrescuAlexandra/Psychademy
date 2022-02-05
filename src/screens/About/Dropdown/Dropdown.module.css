@@ -1,57 +1,86 @@
 .faqs {
-  margin: 10% 7vw;
-}
-
-@media (min-width: 767px) {
-  .faqs {
-    width: 37.5vw;
-    margin: 5% auto;
-  }
+  margin-top: 2rem;
+  margin-left: 7vw;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 
 .faq {
-  margin: 1rem auto;
-  border-bottom: 1px solid #377676;
-}
-
-@media (min-width: 767px) {
-  .faq {
-    border-bottom: 2px solid #377676;
-    padding-bottom: 1rem;
-  }
-  .faq:hover .faq_question {
-    color: #ff9d46;
-  }
+  margin: 1rem;
+  position: absolute;
 }
 
 .faq_question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  border-top: 1.5px groove #66a8a8;
+  padding: 1rem 0;
+}
+
+.faq_question:first-child {
+  border-top: none;
+}
+
+.faq_question p:hover {
+  color: #ff9d46;
+}
+
+.faq_question p {
   color: #fff8e1;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5rem;
-  margin-right: 0.75rem;
-  margin-bottom: 0.75rem;
-  cursor: pointer;
+}
+.faq_question span {
+  margin-right: 10%;
+  margin-left: 5%;
 }
 
-@media (min-width: 767px) {
+.faq_answer {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+}
+
+.faq_answer p {
+  color: #fff8e1;
+  text-align: justify;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 450px) {
+  .faqs {
+    width: 90vw;
+    margin-left: 10%;
+  }
+}
+
+@media (min-width: 768px) {
+  .faqs {
+    width: 37.5vw;
+    margin: 5% auto;
+  }
+  .faq {
+    border-bottom: 2px solid #377676;
+    padding-bottom: 1rem;
+  }
+
   .faq_question {
     font-size: 1.5rem;
     font-weight: 500;
     padding-top: 2.5%;
   }
-}
-
-.faq_answer {
-  color: #fff8e1;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.25rem;
-  /* margin-top: 0.75rem; */
-  transition: 1s ease;
-}
-
-@media (min-width: 767px) {
   .faq_answer {
     overflow: hidden;
     font-size: 1.25rem;
@@ -59,11 +88,10 @@
     line-height: 1.75rem;
     border: solid 0.5px #377676;
     padding: 1%;
-    cursor: not-allowed;
   }
 }
 
-.faqs .faq .faq_question,
+/* .faqs .faq .faq_question,
 .faqs .faq_open .faq_question {
   display: flex;
   align-items: center;
@@ -80,4 +108,4 @@
   position: absolute;
   width: 30px;
   height: 30px;
-}
+} */
