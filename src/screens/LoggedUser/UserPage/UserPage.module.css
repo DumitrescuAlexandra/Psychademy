@@ -20,12 +20,6 @@
   color: #fff8e1;
 }
 
-@media (min-width: 767px) {
-  .userPage p {
-    margin-top: 10%;
-  }
-}
-
 .userLinks {
   display: flex;
   flex-direction: column;
@@ -45,14 +39,6 @@
 
   background: #054343;
   border: 2px solid #387359;
-}
-
-@media (min-width: 767px) {
-  .userLink {
-    height: min(5rem);
-    width: max(25vw);
-    margin-top: 7.5%;
-  }
 }
 
 .userLink a {
@@ -81,14 +67,6 @@
   padding-left: 15%;
 }
 
-@media (min-width: 767px) {
-  .userNav {
-    line-height: 2.25rem;
-    font-size: 1.5rem;
-    font-weight: normal;
-  }
-}
-
 .userIcon {
   flex-grow: 0;
   height: 19px;
@@ -103,14 +81,6 @@
 
 .logout {
   cursor: pointer;
-}
-
-@media (min-width: 767px) {
-  .logout {
-    margin-top: 2%;
-    width: 12rem;
-    padding-bottom: 1rem;
-  }
 }
 
 .logout:hover {
@@ -132,4 +102,33 @@
 
 .accountName span {
   color: #78ddb1;
+}
+
+@media (min-width: 768px) {
+  .userPage p {
+    margin-top: 15%;
+  }
+  .userLink {
+    height: min(5rem);
+    width: 37.5vw;
+    margin-top: 7.5%;
+  }
+  .userNav {
+    line-height: 2.25rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+  .logout {
+    margin-top: 2%;
+    width: 12rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .userLink {
+    height: min(5rem);
+    width: 20vw;
+    margin-top: 7.5%;
+  }
 }

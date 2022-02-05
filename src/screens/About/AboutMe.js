@@ -2,6 +2,8 @@ import React from "react";
 import classes from "./AboutMe.module.css";
 
 import therapist from "../../Images/therapist.jpg";
+import master from "../../Images/Masters.svg";
+import bachelors from "../../Images/bachelors.svg";
 
 const AboutMe = () => {
   return (
@@ -55,7 +57,7 @@ const AboutMe = () => {
 
         <div className={classes.backgroundEd}>
           <div className={classes.edField}>
-            <img src={"/Images/masters.svg"} alt={"master"}></img>
+            <img src={master} alt={"master"}></img>
             <p>
               {" "}
               Master's degree in Clinical Psychology, Psychological Counseling
@@ -63,7 +65,7 @@ const AboutMe = () => {
             </p>
           </div>
           <div className={classes.edField}>
-            <img src={"/Images/bachelors.svg"} alt={"bachelors"}></img>
+            <img src={bachelors} alt={"bachelors"}></img>
             <p>
               {" "}
               Bachelor's degree in Psychology, Transilvania University of Brașov
