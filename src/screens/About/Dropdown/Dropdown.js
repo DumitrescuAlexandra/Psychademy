@@ -13,22 +13,22 @@ const DROPDOWN_DATA = [
   {
     question: "What are the key concepts of CBT?",
     answer:
-      "Cognitive behavioral therapy (CBT) is a type of psychotherapeutic treatment that helps people learn how to identify and change destructive or disturbing thought patterns that have a negative influence on behavior and emotions. The benefits of CBT have been championed by psychologists for decades. But now, new research suggests that CBT can not only change our thought patterns, it can literally rewire our brains!",
+      "CBT is a treatment approach that provides us with a way of understanding our experience of the world, enabling us to make changes if we need to. It does this by dividing our experience into four central components: thoughts (cognitions), feelings (emotions), behaviors and physiology (your biology).",
   },
   {
-    question: "How long does it take to complete CBT treatment",
+    question: "How long does it take to complete CBT treatment?",
     answer:
-      "Cognitive behavioral therapy (CBT) is a type of psychotherapeutic treatment that helps people learn how to identify and change destructive or disturbing thought patterns that have a negative influence on behavior and emotions. The benefits of CBT have been championed by psychologists for decades. But now, new research suggests that CBT can not only change our thought patterns, it can literally rewire our brains!",
+      "Research shows that CBT is the most effective form of treatment for those coping with depression and anxiety. CBT alone is 50-75% effective for overcoming depression and anxiety after 5 – 15 modules",
   },
   {
     question: "Which patients benefit the most from CBT?",
     answer:
-      "Cognitive behavioral therapy (CBT) is a type of psychotherapeutic treatment that helps people learn how to identify and change destructive or disturbing thought patterns that have a negative influence on behavior and emotions. The benefits of CBT have been championed by psychologists for decades. But now, new research suggests that CBT can not only change our thought patterns, it can literally rewire our brains!",
+      "A typical course of CBT ranges between six and twelve sessions. Because it is a relatively short therapeutic intervention, CBT has been proven highly efficient for anxiety disorders, depression, phobias, insomnia, eating disorders, and other mental health challenges.",
   },
   {
     question: "What is the goal of psychological evaluation?",
     answer:
-      "Cognitive behavioral therapy (CBT) is a type of psychotherapeutic treatment that helps people learn how to identify and change destructive or disturbing thought patterns that have a negative influence on behavior and emotions. The benefits of CBT have been championed by psychologists for decades. But now, new research suggests that CBT can not only change our thought patterns, it can literally rewire our brains!",
+      "The goals of psychological assessment are to better understand a person's strengths and weaknesses, identify potential problems with cognitions, emotional reactivity, and make recommendations for treatment/remediation.",
   },
 ];
 

@@ -1,12 +1,14 @@
 import React from "react";
 import classes from "./AboutMe.module.css";
 
+import therapist from "../../Images/therapist.jpg";
+
 const AboutMe = () => {
   return (
     <div className={classes.therapistPage}>
       <div className={classes.therapist}>
         <div className={classes.therapistCard}>
-          <img src={"/Images/therapist.jpg"} alt={"profile"}></img>
+          <img src={therapist} alt={"profile"}></img>
           <div className={classes.vl}></div>
           <p className={classes.therapistName}>
             {" "}
