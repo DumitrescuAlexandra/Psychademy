@@ -1,6 +1,10 @@
 import React from "react";
 import classes from "./Services.module.css";
 
+import duration from "../../Images/duration.svg";
+import location from "../../Images/location.svg";
+import price from "../../Images/price.svg";
+
 function ServicesCard({ card, index, toggleCard }) {
   return (
     <div className={classes.cardContainer}>
@@ -30,7 +34,7 @@ function ServicesCard({ card, index, toggleCard }) {
             <div className={classes.miniCard_text}> Duration </div>
             <img
               className={classes.miniIcon}
-              src="/Images/duration.svg"
+              src={duration}
               alt="duration"
             ></img>
             <div className={classes.miniCard_specifics}>{card.duration}</div>
@@ -40,7 +44,7 @@ function ServicesCard({ card, index, toggleCard }) {
             <div className={classes.miniCard_text}> Location </div>
             <img
               className={classes.miniIcon}
-              src="/Images/location.svg"
+              src={location}
               alt="location"
             ></img>
             <div className={classes.miniCard_specifics}>{card.location}</div>
@@ -48,11 +52,7 @@ function ServicesCard({ card, index, toggleCard }) {
 
           <div className={classes.miniCard}>
             <div className={classes.miniCard_text}> Price </div>
-            <img
-              className={classes.miniIcon}
-              src="/Images/price.svg"
-              alt="price"
-            ></img>
+            <img className={classes.miniIcon} src={price} alt="price"></img>
             <div className={classes.miniCard_specifics}>{card.price}</div>
           </div>
         </div>

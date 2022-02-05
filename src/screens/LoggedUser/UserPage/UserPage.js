@@ -3,6 +3,13 @@ import { Link, useHistory } from "react-router-dom";
 import classes from "./UserPage.module.css";
 import { useAuth } from "../../../contexts/AuthContext";
 
+import user from "../../../Images/user.svg";
+import arrow from "../../../Images/arrow.svg";
+import assignments from "../../../Images/assignments.svg";
+import journal from "../../../Images/journal-icon.svg";
+import evolution from "../../../Images/evolution.svg";
+import logoutIcon from "../../../Images/logout.svg";
+
 function UserPage() {
   const history = useHistory();
 
@@ -30,54 +37,54 @@ function UserPage() {
         <div className={classes.userLinks}>
           <div className={classes.userLink}>
             <div className={classes.userIcon}>
-              <img src={"/Images/user.svg"} alt={""}></img>
+              <img src={user} alt={""}></img>
             </div>
             <Link to="/Account" className={classes.userNav}>
               Account{" "}
             </Link>
             <div className={classes.userArrow}>
-              <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
+              <img src={arrow} alt={"arrow"}></img>
             </div>
           </div>
 
           <div className={classes.userLink}>
             <div className={classes.userIcon}>
-              <img src={"/Images/journal-icon.svg"} alt={""}></img>
+              <img src={journal} alt={""}></img>
             </div>
             <Link to="/Journal" className={classes.userNav}>
               Journal{" "}
             </Link>
             <div className={classes.userArrow}>
-              <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
+              <img src={arrow} alt={"arrow"}></img>
             </div>
           </div>
 
           <div className={classes.userLink}>
             <div className={classes.userIcon}>
-              <img src={"/Images/assignments.svg"} alt={""}></img>
+              <img src={assignments} alt={""}></img>
             </div>
             <Link to="/Assignments" className={classes.userNav}>
               Assignments{" "}
             </Link>
             <div className={classes.userArrow}>
-              <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
+              <img src={arrow} alt={"arrow"}></img>
             </div>
           </div>
 
           <div className={classes.userLink}>
             <div className={classes.userIcon}>
-              <img src={"/Images/evolution.svg"} alt={""}></img>
+              <img src={evolution} alt={""}></img>
             </div>
             <Link to="/Evolution" className={classes.userNav}>
               Evolution Graph{" "}
             </Link>
             <div className={classes.userArrow}>
-              <img src={"/Images/arrow.svg"} alt={"arrow"}></img>
+              <img src={arrow} alt={"arrow"}></img>
             </div>
           </div>
         </div>
         <img
-          src={"/Images/logout.svg"}
+          src={logoutIcon}
           alt={"logout"}
           className={classes.logout}
           onClick={logoutHandler}

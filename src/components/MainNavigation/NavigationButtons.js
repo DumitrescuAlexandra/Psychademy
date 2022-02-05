@@ -1,5 +1,5 @@
 import classes from "./NavigationButtons.module.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Fragment } from "react";
 
 import about from "../../Images/about.svg";
@@ -10,10 +10,16 @@ import patientDark from "../../Images/patient-dark.svg";
 import arrowDark from "../../Images/arrow-dark.svg";
 
 const NavigationButtons = () => {
+  const history = useHistory();
   return (
     <Fragment>
       <div className={classes.navigation_buttons}>
-        <div className={classes.nav_card}>
+        <div
+          className={classes.nav_card}
+          onClick={() => {
+            history.push("/about");
+          }}
+        >
           <div className={classes.nav_icon}>
             <img src={about} alt={"about"}></img>
           </div>
@@ -25,7 +31,12 @@ const NavigationButtons = () => {
           </div>
         </div>
 
-        <div className={classes.nav_card}>
+        <div
+          className={classes.nav_card}
+          onClick={() => {
+            history.push("/Services");
+          }}
+        >
           <div className={classes.nav_icon}>
             <img src={services} alt={"services"}></img>
           </div>
@@ -37,7 +48,12 @@ const NavigationButtons = () => {
           </div>
         </div>
 
-        <div className={classes.nav_card}>
+        <div
+          className={classes.nav_card}
+          onClick={() => {
+            history.push("/Contact");
+          }}
+        >
           <div className={classes.nav_icon}>
             <img src={contact} alt={"contact"}></img>
           </div>
@@ -49,7 +65,12 @@ const NavigationButtons = () => {
           </div>
         </div>
 
-        <div className={classes.nav_card}>
+        <div
+          className={classes.nav_card}
+          onClick={() => {
+            history.push("/PatientLogin");
+          }}
+        >
           <div className={classes.nav_icon}>
             <img src={patientDark} alt={"patient"}></img>
           </div>

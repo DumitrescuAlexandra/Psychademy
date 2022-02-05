@@ -1,6 +1,10 @@
 import classes from "./JournalEntryC.module.css";
 import { Link } from "react-router-dom";
 
+import journal from "../../../Images/journal.svg";
+import open from "../../../Images/open.svg";
+import trash from "../../../Images/trash.svg";
+
 const JournalEntry = (props) => {
   const displayedTitle =
     props.title.length > 15 ? props.title.slice(0, 15) + "..." : props.title;
@@ -8,7 +12,7 @@ const JournalEntry = (props) => {
   return (
     <li className={classes.journalEntry}>
       <div className={classes.journalIcon}>
-        <img src="/Images/journal.svg" alt=""></img>
+        <img src={journal} alt=""></img>
       </div>
       <div className={classes.entryText}>
         <div className={classes.entryTitle}>
@@ -20,13 +24,13 @@ const JournalEntry = (props) => {
       </div>
 
       <Link to={`/Journal/${props.id}`} className={classes.viewEntryBtn}>
-        <img src="/Images/open.svg" alt=""></img>
+        <img src={open} alt=""></img>
       </Link>
       <div
         className={classes.deleteEntryBtn}
         onClick={props.deleteEntryHandler}
       >
-        <img src="/Images/trash.svg" alt=""></img>
+        <img src={trash} alt=""></img>
       </div>
     </li>
   );
