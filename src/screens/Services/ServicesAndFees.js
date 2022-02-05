@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { NavLink, useParams, Route, useHistory } from "react-router-dom";
+import { NavLink, Route, useHistory } from "react-router-dom";
 import classes from "./Services.module.css";
 import BackArrow from "../../UI/Buttons/BackArrow";
 import Services from "./Services";
