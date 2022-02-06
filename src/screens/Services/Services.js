@@ -3,11 +3,16 @@ import React, { useState } from "react";
 import classes from "./Services.module.css";
 import ServicesCard from "./ServicesCard";
 
+import service1 from "../../Images/service1.svg";
+import service2 from "../../Images/service2.svg";
+import service3 from "../../Images/service3.svg";
+import service4 from "../../Images/service4.svg";
+
 function Services() {
   const [cards, setCards] = useState([
     {
       text: "Individual session",
-      imgSrc: "/Images/service1.svg",
+      imgSrc: `${service1}`,
       altText: "individual",
       client: "adults",
       duration: "50 mins",
@@ -17,7 +22,7 @@ function Services() {
     },
     {
       text: "Group therapy session",
-      imgSrc: "/Images/service2.svg",
+      imgSrc: `${service2}`,
       altText: "group",
       client: "adults",
       duration: "75 mins",
@@ -27,7 +32,7 @@ function Services() {
     },
     {
       text: "Couple therapy session",
-      imgSrc: "/Images/service3.svg",
+      imgSrc: `${service3}`,
       altText: "couple",
       client: "adults",
       duration: "90 mins",
@@ -37,7 +42,7 @@ function Services() {
     },
     {
       text: "Clinical Evaluation",
-      imgSrc: "/Images/service4.svg",
+      imgSrc: `${service4}`,
       altText: "evaluation",
       client: "adults",
       duration: "120 mins",

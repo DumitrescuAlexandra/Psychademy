@@ -8,6 +8,8 @@ import { db } from "../../../Firebase/index";
 import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
 import BackArrow from "../../../UI/Buttons/BackArrow";
 
+import sort from "../../../Images/sort.png";
+
 const EntryList = () => {
   const history = useHistory();
 
@@ -41,7 +43,7 @@ const EntryList = () => {
       <div className={classes.journalPage}>
         <div className={classes.journalTitle}>
           <p>My journal</p>
-          <img src="/Images/sort.png" alt="" height="32px" width="32px" />
+          <img src={sort} alt="" height="32px" width="32px" />
         </div>
         <ul className={classes.entriesList}>
           {entries.map((entry) => (

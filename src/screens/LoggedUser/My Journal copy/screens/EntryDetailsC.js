@@ -7,6 +7,8 @@ import classes from "./EntryDetailsC.module.css";
 import { db } from "../../../../Firebase/index";
 import { getDoc, doc } from "firebase/firestore";
 
+import close from "../../../../Images/close.svg";
+
 const EntryDetails = () => {
   const history = useHistory();
 
@@ -61,7 +63,7 @@ const EntryDetails = () => {
         }}
       >
         <img
-          src="/Images/close.svg"
+          src={close}
           alt=""
           height="28px"
           width="28px"

@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 
 import classes from "./OperationFailed.module.css";
 
+import fail from "../../Images/fail.svg";
+import close from "../../Images/close.svg";
+
 function OperationFailed(props) {
   const history = useHistory();
 
@@ -27,7 +30,7 @@ function OperationFailed(props) {
       >
         <img
           className={classes.closeImg}
-          src="/Images/close.svg"
+          src={close}
           alt=""
           height="28px"
           width="28px"
@@ -35,11 +38,7 @@ function OperationFailed(props) {
         ></img>
         <div className={classes.container}>
           <div className={classes.header}>
-            <img
-              className={classes.checkImg}
-              src="/Images/fail.svg"
-              alt=""
-            ></img>
+            <img className={classes.checkImg} src={fail} alt=""></img>
           </div>
           <div className={classes.title}>
             <p>Oooops!</p>

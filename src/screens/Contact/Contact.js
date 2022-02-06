@@ -5,6 +5,11 @@ import LocationMap from "./LocationMap";
 import BackArrow from "../../UI/Buttons/BackArrow";
 import LocationMapBigger from "./LocationMapBigger";
 
+import whapp from "../../Images/whapp.svg";
+import mail from "../../Images/mail.svg";
+import schedule from "../../Images/schedule.svg";
+import gps from "../../Images/gps.svg";
+
 const Contact = () => {
   const history = useHistory();
   const backHandler = () => {
@@ -19,11 +24,11 @@ const Contact = () => {
         <div className={classes.contactWritten}>
           <p className={classes.write}> Write me anytime </p>
           <div className={classes.whapp}>
-            <img src="/Images/whapp.svg" alt="whapp"></img>
+            <img src={whapp} alt="whapp"></img>
             <p className={classes.contactWhatsapp}> 0723. 231. 231 </p>
           </div>
           <div className={classes.mail}>
-            <img src="/Images/mail.svg" alt="mail"></img>
+            <img src={mail} alt="mail"></img>
             <p className={classes.contactMail}> the.rapist@psychademy.com </p>
           </div>
         </div>
@@ -31,14 +36,14 @@ const Contact = () => {
         <div className={classes.contactLive}>
           <p className={classes.write}> Let's meet </p>
           <div className={classes.schedule}>
-            <img src="/Images/schedule.svg" alt="schedule"></img>
+            <img src={schedule} alt="schedule"></img>
             <p className={classes.contactSchedule}>
               {" "}
               Mon - Fri: &nbsp;12:00-20:00{" "}
             </p>
           </div>
           <div className={classes.gps}>
-            <img src="/Images/gps.svg" alt="gps"></img>
+            <img src={gps} alt="gps"></img>
             <p className={classes.contactLocation}>
               {" "}
               Blvd. Eroilor, Nr. 17, Cluj-Napoca{" "}

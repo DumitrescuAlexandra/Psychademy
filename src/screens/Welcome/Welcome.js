@@ -1,14 +1,15 @@
 import React from "react";
 import classes from "./Welcome.module.css";
 
-// import MainNavigation from "../../components/MainNavigation/MainNavigation";
 import NavigationButtons from "../../components/MainNavigation/NavigationButtons";
+
+import welcome from "../../Images/welcomePage.jpg";
 
 const Welcome = () => {
   return (
     <div className={classes.welcomePage}>
       <div className={classes.welcomeImg}>
-        <img src={"/Images/welcomePage.jpg"} alt=""></img>
+        <img src={welcome} alt=""></img>
       </div>
       <div className={classes.contents}>
         <div className={classes.hero}>

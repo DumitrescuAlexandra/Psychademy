@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import classes from "./Services.module.css";
 import ServicesCard from "./ServicesCard";
 
+import service1 from "../../Images/service1.svg";
+import service4 from "../../Images/service4.svg";
+
 function ServicesChildren() {
   const [cards, setCards] = useState([
     {
       text: "Individual session",
-      imgSrc: "/Images/service1.svg",
+      imgSrc: `${service1}`,
       altText: "individual",
       client: "children",
       duration: "30-45 mins",
@@ -16,7 +19,7 @@ function ServicesChildren() {
     },
     {
       text: "Clinical Evaluation",
-      imgSrc: "/Images/service4.svg",
+      imgSrc: `${service4}`,
       altText: "individual",
       client: "children",
       duration: "30-90 mins",

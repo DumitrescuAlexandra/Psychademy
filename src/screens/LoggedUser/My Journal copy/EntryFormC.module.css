@@ -11,7 +11,7 @@
 .newEntryModalBck {
   position: relative;
   margin: 50% auto auto 5%;
-  height: 50vh;
+  height: 80vh;
   width: 90vw;
   display: flex;
   background-color: #1e5656;
@@ -22,7 +22,7 @@
   .newEntryModalBck {
     margin: 20% auto;
     width: 90vw;
-    height: 55vh;
+    height: 70vh;
   }
 }
 

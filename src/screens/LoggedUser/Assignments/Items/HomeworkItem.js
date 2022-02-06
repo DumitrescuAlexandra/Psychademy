@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 import classes from "./HomeworkItem.module.css";
 
+import file from "../../../../Images/fileImg.svg";
+import download from "../../../../Images/download.svg";
+
 function HomeworkItem(props) {
   const displayedName =
     props.name.length > 15 ? props.name.slice(0, 15) + "..." : props.name;
@@ -11,7 +14,7 @@ function HomeworkItem(props) {
     <Fragment>
       <li className={classes.homeworkItem}>
         <div className={classes.fileImg}>
-          <img src="/Images/fileImg.svg" alt=""></img>
+          <img src={file} alt=""></img>
         </div>
 
         <div className={classes.homeworkName}>
@@ -23,7 +26,7 @@ function HomeworkItem(props) {
           className={classes.downloadHomeworkBtn}
           onClick={props.onDownload}
         >
-          <img src="/Images/download.svg" alt="" height="24px"></img>
+          <img src={download} alt="" height="24px"></img>
         </Link>
       </li>
     </Fragment>

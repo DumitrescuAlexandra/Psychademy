@@ -4,11 +4,6 @@
   align-items: center;
   margin-left: 7vw;
 }
-@media only screen and (min-width: 768px) {
-  .confidentialityPolicyPage {
-    margin: 0;
-  }
-}
 
 .confidentialityTitle {
   margin-top: 2rem;
@@ -20,14 +15,6 @@
   color: #fff8e1;
 }
 
-@media only screen and (min-width: 768px) {
-  .confidentialityTitle {
-    margin-top: min(7.5rem);
-    font-size: 3rem;
-    line-height: 3.5rem;
-  }
-}
-
 .confidentialityText {
   margin: 2rem 1.5rem auto auto;
   text-align: justify;
@@ -36,16 +23,6 @@
   font-size: 0.9rem;
   line-height: 1.15rem;
   color: #fff8e1;
-}
-
-@media only screen and (min-width: 768px) {
-  .confidentialityText {
-    margin: 5rem auto;
-    width: max(40vw);
-    font-size: 1.25rem;
-    line-height: 1.35rem;
-    opacity: 0.75;
-  }
 }
 
 .confidentialityText p {
@@ -68,4 +45,28 @@
 
 .backBtn:hover {
   border: solid 2px #fff8e1;
+}
+
+@media only screen and (min-width: 768px) {
+  .confidentialityPolicyPage {
+    margin: 0;
+  }
+  .confidentialityTitle {
+    margin-top: min(7.5rem);
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .confidentialityText {
+    margin: 5rem auto;
+    width: 60vw;
+    font-size: 1.25rem;
+    line-height: 1.35rem;
+    opacity: 0.75;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .confidentialityText {
+    width: 50vw;
+  }
 }

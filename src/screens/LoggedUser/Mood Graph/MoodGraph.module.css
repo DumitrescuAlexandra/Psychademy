@@ -1,6 +1,6 @@
 .graphPage {
   display: flex;
-  margin-left: 7vw;
+  margin-left: 4vw;
   flex-direction: column;
 }
 
@@ -18,7 +18,7 @@
 
 .chartZone {
   display: flex;
-  margin-top: 20%;
+  margin-top: 10%;
   background-color: #054343;
 }
 
@@ -31,9 +31,9 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 5rem;
-  width: max(12rem);
-  height: 3rem;
+  margin-top: 2rem;
+  width: max(11rem);
+  height: 2.5rem;
   background-color: #78ddb1;
   border: none;
   border-radius: 0.5rem;
@@ -41,7 +41,7 @@
   cursor: pointer;
 }
 .registerBtn:first-child {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .registerBtn a {
