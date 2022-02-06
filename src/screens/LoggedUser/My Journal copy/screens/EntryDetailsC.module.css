@@ -5,8 +5,8 @@
 
 .entryModalBck {
   position: relative;
-  margin: 50% auto auto 5%;
-  height: 50vh;
+  margin: 30% auto auto 5%;
+  height: 60vh;
   width: 90vw;
   display: flex;
   background-color: #1e5656;
@@ -76,29 +76,39 @@
 }
 
 .title {
+  padding: 0.5rem;
   position: absolute;
   top: 3.5rem;
-  left: 3rem;
-  width: 90%;
+  left: 1.5rem;
+  width: 110%;
+  height: max(4rem);
+  overflow: hidden;
   font-family: Merriweather;
-  font-size: 1.75rem;
-  line-height: 1.75rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
   color: #fff8e1;
+  border: 0.5px solid #78ddb1;
+  border-radius: 8px;
+  background: rgba(5, 55, 55, 0.4);
 }
 
 .title p {
   text-align: center;
+  word-wrap: break-word;
 }
 
 .date {
+  padding: 0.5rem;
   position: absolute;
-  top: 5.5rem;
-  left: 3rem;
-  width: 90%;
+  top: 7.5rem;
+  left: 1.5rem;
+  width: 100%;
   font-size: 1rem;
   line-height: 1.15rem;
   opacity: 0.5;
   color: #fff8e1;
+  border-radius: 8px;
 }
 
 .date p {
@@ -107,22 +117,70 @@
 
 .message {
   position: absolute;
-  top: 8rem;
-  left: 3rem;
-  width: 90%;
+  padding: 0.5rem;
+  top: 10rem;
+  left: 1.5rem;
+  overflow: scroll;
   font-family: Lato;
   font-size: 1.15rem;
   line-height: 1.5rem;
   color: #fff8e1;
-  text-align: center;
+  text-align: justify;
+  border: 0.5px solid #78ddb1;
+  border-radius: 8px;
+  background: rgba(5, 55, 55, 0.4);
+  height: 12rem;
+  width: 110%;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 375px) {
+  .entryModalBck {
+    height: 70vh;
+  }
+}
+
+@media only screen and (min-width: 390px) {
+  .entryModalBck {
+    height: 55vh;
+  }
+}
+
+@media only screen and (min-width: 412px) {
+  .entryModalBck {
+    margin: 30% auto auto 12.5%;
+    height: 60vh;
+    width: 80vw;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    left: -0.5rem;
+    line-height: 1.5rem;
+    height: 3rem;
+    width: 120%;
+  }
+  .date {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    width: 200%;
+    left: -6rem;
+  }
+  .message {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    width: 120%;
+    height: 16rem;
+    left: -0.5rem;
+    margin-top: 1.5rem;
+  }
+
   .entry {
     margin-left: min(2.5rem);
   }
   .buttons {
-    left: 3rem;
+    left: 1.5rem;
   }
 }
 
@@ -163,69 +221,95 @@
   }
 }
 
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 540px) {
   .entryModalBck {
-    margin: 35% auto auto 10%;
-    height: 50vh;
+    margin: 20% auto auto 10%;
+    height: 80vh;
     width: 80vw;
   }
-  .entry {
-    margin-left: min(4.5rem);
-  }
+
   .buttons {
     left: min(6rem);
   }
+  .title {
+    font-size: 1.5rem;
+    margin-left: -6rem;
+    width: 160%;
+  }
+  .date {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-left: -3rem;
+    width: 160%;
+  }
+  .message {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    margin-left: -2.5rem;
+    width: 160%;
+    height: 18rem;
+  }
 }
 
-@media only screen and (min-width: 600px) {
-  .entry {
-    margin-left: min(5.5rem);
+@media only screen and (min-width: 768px) {
+  .entryModalBck {
+    margin: 20% auto auto 12.5%;
+    height: 60vh;
+    width: 70vw;
   }
-  .buttons {
-    left: min(7rem);
+
+  .title {
+    margin-left: -5.5rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    width: 200%;
   }
-}
-@media only screen and (min-width: 650px) {
-  .entry {
-    margin-left: min(6.5rem);
+  .date {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    width: 200%;
+  }
+  .message {
+    margin-top: 2.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    width: 200%;
+    left: 0.5rem;
   }
   .buttons {
     left: min(8rem);
   }
 }
-@media only screen and (min-width: 700px) {
-}
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 820px) {
   .entryModalBck {
-    margin: 30% auto auto 12.5%;
-    height: 50vh;
-    width: 80vw;
+    width: 75vw;
   }
 
   .title {
-    font-size: 3rem;
+    margin-left: -2rem;
     line-height: 3rem;
+    height: 4.5rem;
+    width: 180%;
   }
   .date {
+    margin-top: 2.5rem;
     font-size: 1.5rem;
     line-height: 3rem;
     width: 200%;
-    left: -2rem;
+    margin-left: -1rem;
   }
   .message {
+    margin-top: 5.5rem;
     font-size: 1.75rem;
-    line-height: 2rem;
+    line-height: 1.75rem;
     text-align: center;
     width: 180%;
-    left: -1rem;
-    margin-top: 5%;
-  }
-}
-
-@media only screen and (min-width: 840px) {
-  .entry {
-    margin-left: min(9.5rem);
+    height: 22rem;
+    margin-left: 1rem;
   }
   .buttons {
     left: min(11rem);
@@ -233,43 +317,53 @@
 }
 
 @media only screen and (min-width: 900px) {
-  .entry {
-    margin-left: min(10.5rem);
-  }
-  .buttons {
-    left: min(12rem);
-  }
-}
-
-@media only screen and (min-width: 960px) {
   .entryModalBck {
-    margin: 20% auto auto 20%;
-    height: 50vh;
-    width: 70vw;
+    margin: 20% auto auto 17.5%;
+    width: 65vw;
+    height: 55vh;
   }
   .entry {
-    margin-left: min(10.5rem);
+    margin-left: min(3.5rem);
   }
   .buttons {
-    left: min(12rem);
+    left: min(10rem);
   }
 }
 
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 1024px) {
+  .entryModalBck {
+    margin: 10% auto auto 20%;
+    height: 28rem;
+    width: 60vw;
+  }
   .entry {
-    margin-left: min(11.5rem);
+    margin-left: min(2.5rem);
+  }
+  .title {
+    line-height: 1.75rem;
+    height: 3rem;
+    width: 215%;
+  }
+  .date {
+    margin-top: -2rem;
+    font-size: 1.25rem;
+    margin-left: 1rem;
+  }
+  .message {
+    margin-top: 0rem;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+    text-align: center;
+    width: 215%;
+    height: 12rem;
+    margin-left: 1rem;
   }
   .buttons {
-    left: min(13rem);
+    left: min(10rem);
   }
 }
 
 @media only screen and (min-width: 1100px) {
-  .entryModalBck {
-    margin: 17.5% auto auto 20%;
-    height: 50vh;
-    width: 60vw;
-  }
   .entry {
     margin-left: min(10.5rem);
   }

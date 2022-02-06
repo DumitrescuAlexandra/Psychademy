@@ -6,6 +6,7 @@ import classes from "./EditForm.module.css";
 import { db } from "../../../../Firebase/index";
 import { updateDoc, doc } from "firebase/firestore";
 import { useAuth } from "../../../../contexts/AuthContext";
+import close from "../../../../Images/close.svg";
 
 function EditForm(props) {
   const history = useHistory();
@@ -64,7 +65,7 @@ function EditForm(props) {
             }}
           >
             <img
-              src="/Images/close.svg"
+              src={close}
               alt=""
               height="28px"
               width="28px"

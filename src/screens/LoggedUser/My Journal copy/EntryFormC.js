@@ -7,6 +7,8 @@ import { collection, addDoc } from "firebase/firestore";
 import LoadingSpinner from "../../../UI/LoadingSpinner";
 import classes from "./EntryFormC.module.css";
 
+import close from "../../../Images/close.svg";
+
 const EntryForm = (props) => {
   const titleInputRef = useRef();
   const messageInputRef = useRef();
@@ -26,14 +28,10 @@ const EntryForm = (props) => {
   const submitFormHandler = (event) => {
     event.preventDefault();
     const enteredTitle = titleInputRef.current.value;
-    const trimmedTitle =
-      enteredTitle.length > 15
-        ? enteredTitle.slice(0, 15) + "..."
-        : enteredTitle;
     const enteredMessage = messageInputRef.current.value;
 
     addDoc(collection(db, "journal"), {
-      title: trimmedTitle,
+      title: enteredTitle,
       message: enteredMessage,
       date: date,
     });
@@ -59,7 +57,7 @@ const EntryForm = (props) => {
         }}
       >
         <img
-          src="/Images/close.svg"
+          src={close}
           alt=""
           height="28px"
           width="28px"
