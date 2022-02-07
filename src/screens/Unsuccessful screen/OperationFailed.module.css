@@ -4,8 +4,8 @@
 
 .failModalBck {
   position: relative;
-  margin: 50% auto auto 5%;
-  height: 55vh;
+  margin: 30% auto auto 5%;
+  height: 60vh;
   width: 90vw;
   display: flex;
   background-color: #1e5656;
@@ -46,6 +46,14 @@
   font-weight: 500;
   color: #fff8e1;
 }
+@media (min-width: 768px) {
+  .title p {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    text-align: center;
+    letter-spacing: 0.75px;
+  }
+}
 
 .failMessage {
   margin-top: 5%;
@@ -57,6 +65,12 @@
   font-weight: 300;
   color: #fff8e1;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .failMessage p {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
 }
 
 .okayBtn {
@@ -85,8 +99,8 @@
 
 @media only screen and (min-width: 375px) {
   .failModalBck {
-    margin: 20% auto;
-    width: 90vw;
+    margin: 25% auto;
+    width: 85vw;
     height: 65vh;
   }
   .title p {
@@ -98,12 +112,15 @@
   }
 
   .failMessage {
-    margin-top: 12.5%;
+    margin-top: 5%;
     padding: 0 5%;
   }
   .failMessage p {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     font-weight: 400;
+  }
+  .okayBtn {
+    margin-top: 10%;
   }
 }
 
@@ -126,61 +143,58 @@
   }
 }
 
-@media only screen and (min-width: 635px) {
-  .failModalBck {
-    margin: 20% auto;
-    width: 70vw;
-    height: 55vh;
-  }
-  .header {
-    margin-top: 5%;
-  }
-  .failMessage {
-    margin-top: 5%;
-  }
-  .okayBtn {
-    margin-top: 10%;
-  }
-  .okayBtn a {
-    font-size: 1.5rem;
-  }
-}
-
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 540px) {
   .failModalBck {
     margin: 15% auto;
     width: 65vw;
     height: 65vh;
   }
-  .checkImg {
-    width: 12.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .failModalBck {
+    margin: 10% auto;
+    width: 60vw;
+    height: 50vh;
   }
-  .title {
-    margin-top: 2rem;
-  }
-  .title p {
-    font-size: 2rem;
-    line-height: 2.15rem;
-    text-align: center;
-    letter-spacing: 0.75px;
+}
+
+@media only screen and (min-width: 800px) {
+  .failModalBck {
+    width: 60vw;
+    height: 50vh;
   }
   .failMessage p {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+  }
+  .okayBtn a {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    padding-bottom: 0.25rem;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .failModalBck {
-    width: 70vw;
-    height: 70vh;
+    width: 50vw;
+    height: 30rem;
+  }
+  .checkImg {
+    width: 7.5rem;
+  }
+  .okayBtn {
+    margin-top: 2.5rem;
+  }
+  .failMessage {
+    margin-top: 1rem;
+    padding: 0 5%;
   }
 }
 
 @media only screen and (min-width: 1280px) {
   .failModalBck {
-    margin: 8% auto;
     width: 30vw;
-    height: 60vh;
+    height: 57.5vh;
   }
 }

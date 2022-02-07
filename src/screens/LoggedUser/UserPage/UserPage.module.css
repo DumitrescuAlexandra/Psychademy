@@ -104,6 +104,12 @@
   color: #78ddb1;
 }
 
+@media (min-width: 540px) {
+  .userLink {
+    width: 55vw;
+  }
+}
+
 @media (min-width: 768px) {
   .userPage p {
     margin-top: 15%;
@@ -125,10 +131,24 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .userPage p {
+    margin-top: 10%;
+  }
+  .userLinks {
+    margin: 1.5rem auto;
+  }
+  .userLink {
+    margin-top: 5%;
+    height: min(5rem);
+    width: 32.5vw;
+  }
+}
+
 @media (min-width: 1280px) {
   .userLink {
     height: min(5rem);
-    width: 20vw;
+    width: 27.5vw;
     margin-top: 7.5%;
   }
 }

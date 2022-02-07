@@ -4,8 +4,8 @@
 
 .successModalBck {
   position: relative;
-  margin: 50% auto auto 5%;
-  height: 50vh;
+  margin: 30% auto auto 5%;
+  height: 60vh;
   width: 90vw;
   display: flex;
   background-color: #1e5656;
@@ -99,12 +99,12 @@
 
 @media only screen and (min-width: 375px) {
   .successModalBck {
-    margin: 20% auto;
-    width: 90vw;
-    height: 55vh;
+    margin: 25% auto;
+    width: 85vw;
+    height: 65vh;
   }
   .title p {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .okayBtn {
@@ -112,12 +112,15 @@
   }
 
   .successMessage {
-    margin-top: 12.5%;
+    margin-top: 5%;
     padding: 0 5%;
   }
   .successMessage p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 400;
+  }
+  .okayBtn {
+    margin-top: 10%;
   }
 }
 
@@ -140,41 +143,58 @@
   }
 }
 
-@media only screen and (min-width: 635px) {
-  .header {
-    margin-top: 5%;
-  }
-  .successMessage {
-    margin-top: 5%;
-  }
-  .okayBtn {
-    margin-top: 10%;
-  }
-  .okayBtn a {
-    font-size: 1.5rem;
+@media only screen and (min-width: 540px) {
+  .successModalBck {
+    margin: 15% auto;
+    width: 65vw;
+    height: 65vh;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .successModalBck {
     margin: 10% auto;
-    width: 90vw;
-    height: 70vh;
+    width: 60vw;
+    height: 50vh;
   }
-  .checkImg {
-    width: 12.5rem;
+}
+
+@media only screen and (min-width: 800px) {
+  .successModalBck {
+    width: 60vw;
+    height: 50vh;
+  }
+  .successMessage p {
+    font-size: 1.7rem;
+    font-weight: 400;
+  }
+  .okayBtn a {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    padding-bottom: 0.25rem;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .successModalBck {
-    width: 70vw;
-    height: 70vh;
+    width: 50vw;
+    height: 30rem;
+  }
+  .checkImg {
+    width: 7.5rem;
+  }
+  .okayBtn {
+    margin-top: 2.5rem;
+  }
+  .successMessage {
+    margin-top: 1rem;
+    padding: 0 5%;
   }
 }
 
 @media only screen and (min-width: 1280px) {
   .successModalBck {
-    width: 50vw;
+    width: 30vw;
+    height: 57.5vh;
   }
 }

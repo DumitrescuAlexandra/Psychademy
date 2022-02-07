@@ -28,11 +28,16 @@
 }
 @media only screen and (min-width: 768px) {
   .homeworkItem {
-    width: max(40vw);
-    height: 5rem;
+    width: max(50vw);
+    height: 4.5rem;
   }
   .homeworkName p {
     font-size: 1.65rem;
     line-height: 1.85rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .homeworkItem {
+    width: max(30vw);
   }
 }
