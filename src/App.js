@@ -39,11 +39,10 @@ function App() {
       <Switch>
         <Route path="/" exact>
           <Redirect to="/welcome" />
-          <Route path="/welcome">
-            <Welcome />
-          </Route>
         </Route>
-
+        <Route path="/welcome">
+          <Welcome />
+        </Route>
         <Route path="/about">
           <About />
           <Redirect to="/about/aboutMe" />
