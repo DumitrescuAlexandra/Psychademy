@@ -1,4 +1,5 @@
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect, useEffect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import "./App.module.css";
 import { Fragment } from "react";
@@ -32,11 +33,26 @@ import PrivateRoute from "./screens/LoggedUser/Private Route/PrivateRoute";
 import AccountInfo from "./screens/LoggedUser/UserProfile/Account Info/AccountInfo";
 
 function App() {
+  const history = useHistory();
+
+  useEffect(() => {
+    let mounted = true;
+    const getToHomescreen = () => {
+      if (mounted) {
+        history.push("/welcome");
+      }
+    };
+
+    getToHomescreen();
+
+    return function cleanup() {
+      mounted = false;
+    };
+  }, []);
   return (
     <Fragment>
       <MainNavigation />
       <Switch>
-        <Welcome />
         <Route path="/" exact>
           <Redirect to="/welcome" />
         </Route>
