@@ -1,5 +1,5 @@
-import { Route, Switch, Redirect, useEffect } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Route, Switch, Redirect, useHistory } from "react-router-dom";
 
 import "./App.module.css";
 import { Fragment } from "react";
@@ -48,7 +48,7 @@ function App() {
     return function cleanup() {
       mounted = false;
     };
-  }, []);
+  }, [history]);
   return (
     <Fragment>
       <MainNavigation />
