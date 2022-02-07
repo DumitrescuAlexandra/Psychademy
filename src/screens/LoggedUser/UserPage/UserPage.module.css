@@ -104,6 +104,12 @@
   color: #78ddb1;
 }
 
+@media (min-width: 540px) {
+  .userLink {
+    width: 55vw;
+  }
+}
+
 @media (min-width: 768px) {
   .userPage p {
     margin-top: 15%;
