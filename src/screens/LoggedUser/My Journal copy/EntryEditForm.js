@@ -5,6 +5,7 @@ import LoadingSpinner from "../../../UI/LoadingSpinner";
 import { useHistory } from "react-router";
 import { db } from "../../../Firebase/index";
 import { updateDoc, doc } from "firebase/firestore";
+import close from "../../../Images/close.svg";
 
 function EntryEditForm(props) {
   const titleInputRef = useRef();
@@ -67,7 +68,7 @@ function EntryEditForm(props) {
         }}
       >
         <img
-          src="/Images/close.svg"
+          src={close}
           alt=""
           height="28px"
           width="28px"
