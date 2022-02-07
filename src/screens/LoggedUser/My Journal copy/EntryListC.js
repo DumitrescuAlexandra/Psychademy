@@ -7,6 +7,7 @@ import JournalEntry from "./JournalEntryC";
 import { db } from "../../../Firebase/index";
 import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
 import BackArrow from "../../../UI/Buttons/BackArrow";
+import Success from "../../Success screen/Success";
 
 import sort from "../../../Images/sort.png";
 
@@ -55,7 +56,10 @@ const EntryList = () => {
               message={entry.message}
               deleteEntryHandler={() => {
                 deleteDoc(doc(db, "journal", entry.id));
-                alert("Done! Entry deleted!");
+                <Success
+                  successMessage={"Your entry has been deleted"}
+                  path={"/journal"}
+                />;
               }}
             />
           ))}
