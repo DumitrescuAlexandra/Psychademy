@@ -35,11 +35,11 @@ function App() {
   return (
     <Fragment>
       <MainNavigation />
-      <Welcome />
+
       <Switch>
-        {/* <Route path="/" exact>
+        <Route path="/" exact>
           <Redirect to="/welcome" />
-        </Route> */}
+        </Route>
 
         <Route path="/welcome">
           <Welcome />
