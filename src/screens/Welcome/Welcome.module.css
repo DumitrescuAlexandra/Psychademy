@@ -3,26 +3,22 @@
   align-items: center;
 }
 
-.contents {
-  display: flex;
-  flex-direction: column;
-}
-
 .welcomeImg {
   overflow: hidden;
-  max-width: 50%;
+  width: 50vw;
   height: 100vh;
 }
 
 .hero {
-  margin-top: 2.5rem;
+  margin-top: 15%;
   margin-left: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .title {
+  width: 50%;
   margin-bottom: 1rem;
   font-family: Merriweather;
   font-weight: 550;
@@ -34,7 +30,6 @@
 .motto {
   color: #ffffff;
   font-family: Lato;
-
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -47,19 +42,13 @@
 }
 
 @media (min-width: 768px) {
-  .contents {
-    width: 50%;
-  }
-
   .hero {
     width: 50%;
-    align-self: flex-start;
     margin-left: 2rem;
     flex-wrap: wrap;
   }
   .motto {
-    width: 80%;
-    align-self: flex-start;
+    width: 100%;
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 300;
