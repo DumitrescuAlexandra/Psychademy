@@ -36,17 +36,14 @@ function App() {
     <Fragment>
       <MainNavigation />
       <Switch>
-        <Route path="/">
-          <Welcome />
-        </Route>
-
-        {/* <Route path="/" exact>
+        <Welcome />
+        <Route path="/" exact>
           <Redirect to="/welcome" />
         </Route>
 
         <Route path="/welcome">
           <Welcome />
-        </Route> */}
+        </Route>
 
         <Route path="/about">
           <About />
