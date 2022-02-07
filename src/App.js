@@ -38,13 +38,11 @@ function App() {
       <MainNavigation />
       <Switch>
         <Route path="/" exact>
-          {/* <Redirect to="/welcome" /> */}
-          <Welcome />
+          <Redirect to="/welcome" />
+          <Route path="/welcome">
+            <Welcome />
+          </Route>
         </Route>
-
-        {/* <Route path="/welcome">
-          <Welcome />
-        </Route> */}
 
         <Route path="/about">
           <About />
@@ -58,20 +56,16 @@ function App() {
             <AboutCBT />
           </Route>
         </Route>
-
         <Route path="/services" exact>
           {" "}
           <Redirect to="/services/adults" />
         </Route>
-
         <Route path="/services/:clientType">
           <ServicesAndFees />
         </Route>
-
         <Route path="/contact">
           <Contact />
         </Route>
-
         <AuthProvider>
           <Route path="/PatientSignup">
             <Signup />
@@ -143,7 +137,6 @@ function App() {
 
           <PrivateRoute path="/Assignments/my-uploads" component={MyUploads} />
         </AuthProvider>
-
         <Route path="*">
           <NotFound />
         </Route>
