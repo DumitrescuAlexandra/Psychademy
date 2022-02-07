@@ -35,7 +35,6 @@ function App() {
   return (
     <Fragment>
       <MainNavigation />
-
       <Switch>
         <Route path="/" exact>
           <Redirect to="/welcome" />
