@@ -1,4 +1,3 @@
-import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 import "./App.module.css";
@@ -40,9 +39,11 @@ function App() {
         <Route path="/" exact>
           <Redirect to="/welcome" />
         </Route>
+
         <Route path="/welcome">
           <Welcome />
         </Route>
+
         <Route path="/about">
           <About />
           <Redirect to="/about/aboutMe" />
@@ -55,16 +56,20 @@ function App() {
             <AboutCBT />
           </Route>
         </Route>
+
         <Route path="/services" exact>
           {" "}
           <Redirect to="/services/adults" />
         </Route>
+
         <Route path="/services/:clientType">
           <ServicesAndFees />
         </Route>
+
         <Route path="/contact">
           <Contact />
         </Route>
+
         <AuthProvider>
           <Route path="/PatientSignup">
             <Signup />
@@ -136,6 +141,7 @@ function App() {
 
           <PrivateRoute path="/Assignments/my-uploads" component={MyUploads} />
         </AuthProvider>
+
         <Route path="*">
           <NotFound />
         </Route>
