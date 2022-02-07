@@ -93,3 +93,35 @@
     line-height: 1.75rem;
   }
 }
+
+@media only screen and (min-width: 1024px) {
+  .title {
+    margin-top: min(10rem);
+  }
+  .setting {
+    width: 32.5vw;
+    margin-top: 0.75rem;
+    line-height: 3.5rem;
+    padding: 5%;
+  }
+
+  .backBtn {
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .title {
+    margin-top: min(7.5rem);
+  }
+  .setting {
+    width: 27.5vw;
+    margin-top: 1rem;
+    line-height: 3.5rem;
+    padding: 5.5%;
+  }
+
+  .backBtn {
+    margin-top: 2rem;
+  }
+}

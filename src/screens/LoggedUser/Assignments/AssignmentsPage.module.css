@@ -5,12 +5,6 @@
   margin: 10% 0;
 }
 
-@media only screen and (min-width: 768px) {
-  .homeworkType {
-    margin: 2rem 0;
-  }
-}
-
 .homeworkType a {
   padding: 1%;
   text-decoration: none;
@@ -18,12 +12,6 @@
 
 .homeworkType a:last-child {
   margin-left: 0.75rem;
-}
-
-@media only screen and (min-width: 768px) {
-  .homeworkType a:last-child {
-    margin-left: 1.5rem;
-  }
 }
 
 .homework_active,
@@ -41,7 +29,18 @@
   font-weight: 600;
 }
 
+.homework_inactive:hover {
+  background-color: #78ddb1;
+  color: #074343;
+}
+
 @media only screen and (min-width: 768px) {
+  .homeworkType {
+    margin: 2rem 0;
+  }
+  .homeworkType a:last-child {
+    margin-left: 1.5rem;
+  }
   .homework_active,
   .homework_inactive {
     display: flex;
@@ -52,9 +51,4 @@
     width: 9rem;
     height: 2.75rem;
   }
-}
-
-.homework_inactive:hover {
-  background-color: #78ddb1;
-  color: #074343;
 }
