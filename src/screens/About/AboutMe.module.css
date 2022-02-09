@@ -23,10 +23,16 @@
   }
 }
 
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
   .therapistCard {
-    width: 40vw;
-    height: 10rem;
+    width: 45vw;
+    height: 8rem;
+    margin: 6.5% auto;
+  }
+}
+@media (min-width: 1280px) {
+  .therapistCard {
+    width: 35vw;
   }
 }
 
@@ -37,7 +43,7 @@
   margin: 5% auto;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .therapistCard img {
 
     height: 96px;
@@ -47,10 +53,10 @@
   }
 }
 
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
   .therapistCard img {
-    height: 128px;
-    width: 128px;
+    height: 100px;
+    width: 100px;
     margin-left: 2.5%;
   }
 }
@@ -67,11 +73,13 @@
     height: 6rem;
   }
 }
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
   .vl {
     border-left: 2px solid #377676;
     margin-right: 5%;
-    height: 7rem;
+    margin-left: 2.5rem;
+    height: 6rem;
+    opacity: 0.75;
   }
 }
 
@@ -90,9 +98,9 @@
     line-height: 3rem;
   }
 }
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
   .therapistName {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -145,9 +153,15 @@
   }
 }
 
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
   .theStory {
-    width: 40vw;
+    width: 45vw;
+  }
+}
+
+@media (min-width: 1280px) {
+  .theStory {
+    width: 35vw;
   }
 }
 

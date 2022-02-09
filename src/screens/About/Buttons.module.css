@@ -51,8 +51,8 @@
 
 @media only screen and (min-width: 768px) {
   .sectionTitle p {
-    font-size: 3rem;
-    line-height: 3.5rem;
+    font-size: 2.25rem;
+    line-height: 3rem;
     text-align: center;
   }
 }
@@ -126,4 +126,21 @@
 .btn_active {
   background-color: #78ddb1;
   color: #074343;
+}
+
+@media only screen and (min-width: 1024px) {
+  .sectionTitle p {
+    font-family: Merriweather;
+    font-weight: 900;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    color: #fff8e1;
+  }
+  .btn_inactive {
+    width: 8rem;
+    margin-top: 2rem;
+    font-size: 1.15rem;
+    line-height: 2rem;
+    height: 2.75rem;
+  }
 }

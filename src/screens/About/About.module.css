@@ -13,3 +13,12 @@
     margin-top: 7.5%;
   }
 }
+
+@media only screen and (min-width: 1024px) {
+  .aboutPage {
+    margin-left: 0;
+    align-self: center;
+    align-items: center;
+    margin-top: 5%;
+  }
+}
