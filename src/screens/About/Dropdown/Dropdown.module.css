@@ -59,10 +59,9 @@
   line-height: 1.25rem;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 540px) {
   .faqs {
-    width: 90vw;
-    margin-left: 10%;
+    width: 80vw;
   }
 }
 
@@ -101,10 +100,13 @@
 @media (min-width: 1024px) {
   .faqs {
     margin-left: min(27.5%);
+    width: 50vw;
   }
 }
 @media (min-width: 1280px) {
   .faqs {
-    margin-left: min(35%);
+    width: 30rem;
+    margin-top: 2.5rem;
+    margin-left: min(37.5%);
   }
 }
