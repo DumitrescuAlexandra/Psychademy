@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Psychademy/static/css/main.efb4e0a7.chunk.css",
-    "main.js": "/Psychademy/static/js/main.3addb2e6.chunk.js",
-    "main.js.map": "/Psychademy/static/js/main.3addb2e6.chunk.js.map",
+    "main.js": "/Psychademy/static/js/main.85452bef.chunk.js",
+    "main.js.map": "/Psychademy/static/js/main.85452bef.chunk.js.map",
     "runtime-main.js": "/Psychademy/static/js/runtime-main.45dc845c.js",
     "runtime-main.js.map": "/Psychademy/static/js/runtime-main.45dc845c.js.map",
     "static/css/2.e4a638ce.chunk.css": "/Psychademy/static/css/2.e4a638ce.chunk.css",
@@ -61,6 +61,6 @@
     "static/css/2.e4a638ce.chunk.css",
     "static/js/2.c457742d.chunk.js",
     "static/css/main.efb4e0a7.chunk.css",
-    "static/js/main.3addb2e6.chunk.js"
+    "static/js/main.85452bef.chunk.js"
   ]
 }
