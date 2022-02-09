@@ -39,12 +39,12 @@ function AccountInfo() {
         } else {
           console.log("No such account!");
           setDoc(doc(db, "accountDetails", id), {
-            fullName: "Please update your info",
-            birthDate: "Please update your info",
-            phone: "Please update your info",
-            contactName: "Please update your info",
-            contactRelationship: "Please update your info",
-            contactPhone: "Please update your info",
+            fullName: "Please edit info",
+            birthDate: "Please edit info",
+            phone: "Please edit info",
+            contactName: "Please edit info",
+            contactRelationship: "Please edit info",
+            contactPhone: "Please edit info",
           });
         }
       };
