@@ -97,3 +97,14 @@
     line-height: 1.5rem;
   }
 }
+
+@media (min-width: 1024px) {
+  .faqs {
+    margin-left: min(27.5%);
+  }
+}
+@media (min-width: 1280px) {
+  .faqs {
+    margin-left: min(35%);
+  }
+}
