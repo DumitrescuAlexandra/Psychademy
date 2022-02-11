@@ -9,6 +9,7 @@ import whapp from "../../Images/whapp.svg";
 import mail from "../../Images/mail.svg";
 import schedule from "../../Images/schedule.svg";
 import gps from "../../Images/gps.svg";
+import PatientZone from "../../UI/Buttons/PatientZone";
 
 const Contact = () => {
   const history = useHistory();
@@ -18,6 +19,7 @@ const Contact = () => {
   return (
     <Fragment>
       <BackArrow backHandler={backHandler} />
+      <PatientZone />
       <div className={classes.contactPage}>
         <p className={classes.contactTitle}> Contact </p>
 

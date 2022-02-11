@@ -36,41 +36,41 @@ function App() {
     <Fragment>
       <MainNavigation />
       <Switch>
-        <Route path="/" exact>
-          <Redirect to="/welcome" />
-        </Route>
-
-        <Route path="/welcome">
-          <Welcome />
-        </Route>
-
-        <Route path="/about">
-          <About />
-          <Redirect to="/about/aboutMe" />
-
-          <Route path="/about/aboutMe">
-            <AboutMe />
-          </Route>
-
-          <Route path="/about/aboutCBT">
-            <AboutCBT />
-          </Route>
-        </Route>
-
-        <Route path="/services" exact>
-          {" "}
-          <Redirect to="/services/adults" />
-        </Route>
-
-        <Route path="/services/:clientType">
-          <ServicesAndFees />
-        </Route>
-
-        <Route path="/contact">
-          <Contact />
-        </Route>
-
         <AuthProvider>
+          <Route path="/" exact>
+            <Redirect to="/welcome" />
+          </Route>
+
+          <Route path="/welcome">
+            <Welcome />
+          </Route>
+
+          <Route path="/about">
+            <About />
+            <Redirect to="/about/aboutMe" />
+
+            <Route path="/about/aboutMe">
+              <AboutMe />
+            </Route>
+
+            <Route path="/about/aboutCBT">
+              <AboutCBT />
+            </Route>
+          </Route>
+
+          <Route path="/services" exact>
+            {" "}
+            <Redirect to="/services/adults" />
+          </Route>
+
+          <Route path="/services/:clientType">
+            <ServicesAndFees />
+          </Route>
+
+          <Route path="/contact">
+            <Contact />
+          </Route>
+
           <Route path="/PatientSignup">
             <Signup />
           </Route>
