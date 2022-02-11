@@ -1,10 +1,10 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import classes from "./Contact.module.css";
 import LocationMap from "./LocationMap";
 import BackArrow from "../../UI/Buttons/BackArrow";
 import LocationMapBigger from "./LocationMapBigger";
-
+import { useAuth } from "../../contexts/AuthContext";
 import whapp from "../../Images/whapp.svg";
 import mail from "../../Images/mail.svg";
 import schedule from "../../Images/schedule.svg";
@@ -16,10 +16,31 @@ const Contact = () => {
   const backHandler = () => {
     history.push("/welcome");
   };
+
+  const [userLogged, setUserLogged] = useState(false);
+
+  const { getCurrentUserId } = useAuth();
+
+  useEffect(() => {
+    let mounted = true;
+    setUserLogged(false);
+    const checkLogged = () => {
+      const userUID = getCurrentUserId();
+      if (mounted) {
+        userUID !== undefined ? setUserLogged(true) : setUserLogged(false);
+      }
+    };
+
+    checkLogged();
+
+    return function cleanup() {
+      mounted = false;
+    };
+  }, [getCurrentUserId]);
   return (
     <Fragment>
       <BackArrow backHandler={backHandler} />
-      <PatientZone />
+      {userLogged && <PatientZone />}
       <div className={classes.contactPage}>
         <p className={classes.contactTitle}> Contact </p>
 

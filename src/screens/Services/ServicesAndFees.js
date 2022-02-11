@@ -1,6 +1,7 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { NavLink, Route, useHistory } from "react-router-dom";
 import classes from "./Services.module.css";
+import { useAuth } from "../../contexts/AuthContext";
 import BackArrow from "../../UI/Buttons/BackArrow";
 import Services from "./Services";
 import ServicesChildren from "./ServicesChildren";
@@ -11,11 +12,30 @@ const ServicesAndFees = (props) => {
   const backHandler = () => {
     history.push("/welcome");
   };
+  const [userLogged, setUserLogged] = useState(false);
 
+  const { getCurrentUserId } = useAuth();
+
+  useEffect(() => {
+    let mounted = true;
+    setUserLogged(false);
+    const checkLogged = () => {
+      const userUID = getCurrentUserId();
+      if (mounted) {
+        userUID !== undefined ? setUserLogged(true) : setUserLogged(false);
+      }
+    };
+
+    checkLogged();
+
+    return function cleanup() {
+      mounted = false;
+    };
+  }, [getCurrentUserId]);
   return (
     <Fragment>
       <BackArrow backHandler={backHandler} />
-      <PatientZone />
+      {userLogged && <PatientZone />}
       <div className={classes.servicesAndFees}>
         <div className={classes.servicesTitle}>
           <p className={classes.title}>
