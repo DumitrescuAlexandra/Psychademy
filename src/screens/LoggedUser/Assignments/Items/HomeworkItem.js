@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
 
 import classes from "./HomeworkItem.module.css";
 
@@ -21,13 +20,9 @@ function HomeworkItem(props) {
           <p>{displayedName}</p>
         </div>
 
-        <Link
-          to={`/${props.url}`}
-          className={classes.downloadHomeworkBtn}
-          onClick={props.onDownload}
-        >
+        <p className={classes.downloadHomeworkBtn} onClick={props.onDownload}>
           <img src={download} alt="" height="24px"></img>
-        </Link>
+        </p>
       </li>
     </Fragment>
   );

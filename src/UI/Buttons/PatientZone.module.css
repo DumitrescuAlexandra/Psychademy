@@ -1,0 +1,94 @@
+.zoneBtn {
+  position: absolute;
+  right: 7vw;
+  top: 7.5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: start;
+  line-height: 1.5rem;
+  cursor: pointer;
+}
+
+.zoneBtn a {
+  color: #6ea5a5;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  text-decoration: none;
+}
+
+.zoneBtn a:hover {
+  font-weight: 600;
+  color: #fff8e1;
+}
+
+@media only screen and (min-width: 375px) {
+  .zoneBtn {
+    top: 9vh;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .zoneBtn {
+    top: 8.5vh;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .zoneBtn {
+    top: 6vh;
+    right: 6vw;
+  }
+  .zoneBtn a {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .zoneBtn {
+    top: 5vh;
+    right: 7.5vw;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  .zoneBtn {
+    top: 5.5vh;
+    right: 8.5vw;
+  }
+}
+
+@media only screen and (min-width: 912px) {
+  .zoneBtn {
+    top: 5vh;
+    right: 13vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .zoneBtn {
+    top: 4rem;
+    right: 11rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .zoneBtn {
+    top: 4rem;
+    right: 18.5rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .zoneBtn {
+    top: 4rem;
+    right: 24rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .zoneBtn {
+    top: 4.5rem;
+    right: 47.5%;
+  }
+}

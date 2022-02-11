@@ -4,6 +4,12 @@
   align-items: center;
 }
 
+.backAndZoneBtns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .title {
   margin: 2.75rem auto;
   font-family: Merriweather;

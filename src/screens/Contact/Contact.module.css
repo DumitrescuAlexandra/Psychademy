@@ -131,3 +131,9 @@
     margin-bottom: min(2.5rem);
   }
 }
+
+@media (min-width: 1280px) {
+  .contactTitle {
+    margin-top: 7.5%;
+  }
+}

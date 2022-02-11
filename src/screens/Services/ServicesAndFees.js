@@ -4,6 +4,7 @@ import classes from "./Services.module.css";
 import BackArrow from "../../UI/Buttons/BackArrow";
 import Services from "./Services";
 import ServicesChildren from "./ServicesChildren";
+import PatientZone from "../../UI/Buttons/PatientZone";
 
 const ServicesAndFees = (props) => {
   const history = useHistory();
@@ -14,6 +15,7 @@ const ServicesAndFees = (props) => {
   return (
     <Fragment>
       <BackArrow backHandler={backHandler} />
+      <PatientZone />
       <div className={classes.servicesAndFees}>
         <div className={classes.servicesTitle}>
           <p className={classes.title}>
