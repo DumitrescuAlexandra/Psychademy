@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Psychademy/static/css/main.749ec86c.chunk.css",
-    "main.js": "/Psychademy/static/js/main.74d052e7.chunk.js",
-    "main.js.map": "/Psychademy/static/js/main.74d052e7.chunk.js.map",
+    "main.css": "/Psychademy/static/css/main.ec260ce7.chunk.css",
+    "main.js": "/Psychademy/static/js/main.5c9e9947.chunk.js",
+    "main.js.map": "/Psychademy/static/js/main.5c9e9947.chunk.js.map",
     "runtime-main.js": "/Psychademy/static/js/runtime-main.45dc845c.js",
     "runtime-main.js.map": "/Psychademy/static/js/runtime-main.45dc845c.js.map",
     "static/css/2.e4a638ce.chunk.css": "/Psychademy/static/css/2.e4a638ce.chunk.css",
-    "static/js/2.c457742d.chunk.js": "/Psychademy/static/js/2.c457742d.chunk.js",
-    "static/js/2.c457742d.chunk.js.map": "/Psychademy/static/js/2.c457742d.chunk.js.map",
+    "static/js/2.91e87432.chunk.js": "/Psychademy/static/js/2.91e87432.chunk.js",
+    "static/js/2.91e87432.chunk.js.map": "/Psychademy/static/js/2.91e87432.chunk.js.map",
     "index.html": "/Psychademy/index.html",
     "static/css/2.e4a638ce.chunk.css.map": "/Psychademy/static/css/2.e4a638ce.chunk.css.map",
-    "static/css/main.749ec86c.chunk.css.map": "/Psychademy/static/css/main.749ec86c.chunk.css.map",
-    "static/js/2.c457742d.chunk.js.LICENSE.txt": "/Psychademy/static/js/2.c457742d.chunk.js.LICENSE.txt",
+    "static/css/main.ec260ce7.chunk.css.map": "/Psychademy/static/css/main.ec260ce7.chunk.css.map",
+    "static/js/2.91e87432.chunk.js.LICENSE.txt": "/Psychademy/static/js/2.91e87432.chunk.js.LICENSE.txt",
     "static/media/Brain.ee1f48cf.svg": "/Psychademy/static/media/Brain.ee1f48cf.svg",
     "static/media/Masters.7aaf2375.svg": "/Psychademy/static/media/Masters.7aaf2375.svg",
     "static/media/about.6bff69f6.svg": "/Psychademy/static/media/about.6bff69f6.svg",
@@ -41,6 +41,7 @@
     "static/media/meh.fbaff43a.svg": "/Psychademy/static/media/meh.fbaff43a.svg",
     "static/media/open.7fec6516.svg": "/Psychademy/static/media/open.7fec6516.svg",
     "static/media/patient-dark.e57a0c17.svg": "/Psychademy/static/media/patient-dark.e57a0c17.svg",
+    "static/media/patient-zone.82874bbb.svg": "/Psychademy/static/media/patient-zone.82874bbb.svg",
     "static/media/price.6935e0f7.svg": "/Psychademy/static/media/price.6935e0f7.svg",
     "static/media/sad.05041c50.svg": "/Psychademy/static/media/sad.05041c50.svg",
     "static/media/schedule.4bce098e.svg": "/Psychademy/static/media/schedule.4bce098e.svg",
@@ -59,8 +60,8 @@
   "entrypoints": [
     "static/js/runtime-main.45dc845c.js",
     "static/css/2.e4a638ce.chunk.css",
-    "static/js/2.c457742d.chunk.js",
-    "static/css/main.749ec86c.chunk.css",
-    "static/js/main.74d052e7.chunk.js"
+    "static/js/2.91e87432.chunk.js",
+    "static/css/main.ec260ce7.chunk.css",
+    "static/js/main.5c9e9947.chunk.js"
   ]
 }
